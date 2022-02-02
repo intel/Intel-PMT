@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:TELI="http://schemas.intel.com/telemetry/interface/aggregatorinterface" xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TELC="http://schemas.intel.com/telemetry/base/common" xmlns:TELEM="http://schemas.intel.com/telemetry/base/aggregator" xmlns:xi="http://www.w3.org/2001/XInclude" targetNamespace="http://schemas.intel.com/telemetry/interface/aggregatorinterface" elementFormDefault="qualified">
+	<xs:import namespace="http://schemas.intel.com/telemetry/base/common" schemaLocation="telemetry_common.xsd"/>
+	<xs:import namespace="http://schemas.intel.com/telemetry/base/aggregator" schemaLocation="telemetryAggregator.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2005/08/xml.xsd"/>
+	<xs:complexType name="AggregatorSample">
+		<xs:sequence>
+			<xs:element name="redfish_url" type="xs:anyURI" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>THis points to a uri for the DMTF Redfish Definition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A desciption of the field</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SampleType" type="TELC:eSampleType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>SampleType</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="TELC:TransFormInputs" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="transformREF" type="xs:IDREF" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Points to the mathematical transformation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="sampleName" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>This is the unique name of the sample</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="sampleGroup" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>This is the group name of the sample</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="sampleID" type="xs:nonNegativeInteger">
+			<xs:annotation>
+				<xs:documentation>This is the uniqueID for the sample</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="datatypeIDREF" type="xs:IDREF" use="required">
+			<xs:annotation>
+				<xs:documentation>The name of the field</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="T_AggregatorSample" type="TELI:AggregatorSample"/>
+	<xs:complexType name="T_AggregatorSamples">
+		<xs:sequence>
+			<xs:element ref="TELI:T_AggregatorSample" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AggregatorSamples" type="TELI:T_AggregatorSamples"/>
+	<xs:element name="TransFormations" type="TELC:T_Transformations"/>
+	<xs:complexType name="AggregratorInterface_t">
+		<xs:sequence>
+			<xs:element ref="TELEM:Aggregator" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="TELC:TransFormations" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The name of the field</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A desciption of the field</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uniqueid" type="TELC:tUUID32" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The unique id for this aggregator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NDA" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The associated NDA of the field</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="samplePeriod" type="xs:integer" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Minimum sample period in milliseconds that this Aggregator Supports</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="revisionDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Revision date</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="TELI:AggregatorSamples" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref="xml:base"/>
+	</xs:complexType>
+	<xs:element name="AggregatorInterface" type="TELI:AggregratorInterface_t"/>
+</xs:schema>

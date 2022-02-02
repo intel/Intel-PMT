@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:TELEM="http://schemas.intel.com/telemetry/base/aggregator" xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TELC="http://schemas.intel.com/telemetry/base/common" targetNamespace="http://schemas.intel.com/telemetry/base/aggregator" elementFormDefault="qualified">
+	<xs:import namespace="http://schemas.intel.com/telemetry/base/common" schemaLocation="telemetry_common.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2005/08/xml.xsd"/>
+	<xs:complexType name="Aggregator_t">
+		<xs:sequence>
+			
+			<xs:element ref="TELC:DataTypesInclude" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The name of the field</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A desciption of the field</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NDA" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The associated NDA of the field</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="samplePeriod" type="xs:integer" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Minimum sample period in milliseconds that this Aggregator Supports</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uniqueid" type="TELC:tUUID32" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The unique id for this aggregator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="productid" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>ProductIDr</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="address" type="TELC:tAddress" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The base address of the Aggregator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="revisionDate" type="xs:date" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Revision date</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SampleGroup" type="TELC:sampleContainer" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The fields located in the container</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="xml:base"/>
+	</xs:complexType>
+	<xs:element name="Aggregator" type="TELEM:Aggregator_t">
+		<xs:unique name="addressUnique">
+			<xs:selector xpath="./TELEM:SampleGroup"/>
+			<xs:field xpath="@sampleID"/>
+		</xs:unique>
+	</xs:element>
+</xs:schema>
