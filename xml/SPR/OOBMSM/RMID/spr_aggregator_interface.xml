@@ -24,7 +24,7 @@
 	<TELI:uniqueid>199a906f</TELI:uniqueid>
 	<TELI:NDA>Public</TELI:NDA>
 	<TELI:samplePeriod>10</TELI:samplePeriod>
-	<TELI:revisionDate>2022-01-31</TELI:revisionDate>
+	<TELI:revisionDate>2022-09-08</TELI:revisionDate>
 	<TELI:AggregatorSamples>
 		<TELI:T_AggregatorSample sampleName="CHA0_RMID0_RDT_CMT" sampleGroup="CHA0_RMID_0_1_RDT_CMT" datatypeIDREF="trmid_usage_counter" sampleID="0">
 			<TELI:description>CHA 0 RMID 0 LLC cache line usage counter</TELI:description>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TELC:DataTypes xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/common telemetry_common.xsd">
+
+	<TELC:dataType name="txtal_strap" datatypeID="txtal_strap">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>24MHz</TELC:name>
+				<TELC:encoding>24000000</TELC:encoding>
+				<TELC:value>24MHz</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>24MHz clock rate</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>19.2MHz</TELC:name>
+				<TELC:encoding>19.2000000</TELC:encoding>
+				<TELC:value>19.2MHz</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>19.2MHz clock rate</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>38.4MHz</TELC:name>
+				<TELC:encoding>38.4000000</TELC:encoding>
+				<TELC:value>38.4MHz</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>38.4MHz clock rate</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>25MHz</TELC:name>
+				<TELC:encoding>25000000</TELC:encoding>
+				<TELC:value>25MHz</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>25MHz clock rate</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="tbandwidth_32b" datatypeID="tbandwidth_32b">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="count">
+				<TELC:symbol>count</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U32.0</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tU32.0" datatypeID="tU32.0">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="count">
+				<TELC:symbol>count</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U32.0</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tbandwidth_28b" datatypeID="tbandwidth_28b">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="count">
+				<TELC:symbol>count</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U28.0</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tratio" datatypeID="tratio">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="count">
+				<TELC:symbol>count</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U8.0</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tbandwidth_24b" datatypeID="tbandwidth_24b">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="count">
+				<TELC:symbol>count</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U24.0</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="ttemperature" datatypeID="ttemperature">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="celcius">
+				<TELC:symbol>C</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tU8.0" datatypeID="tU8.0">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>U8.0</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tdrm_energy" datatypeID="tdrm_energy">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="micro Joule">
+				<TELC:symbol>uJ</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tebb_energy" datatypeID="tebb_energy">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="micro Joule">
+				<TELC:symbol>uJ</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="ttw_unit" datatypeID="ttw_unit">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="Time window">
+				<TELC:symbol>ms</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tPEM_OWNER" datatypeID="tPEM_OWNER">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>HOST</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>HOST</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>HOST</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>OOB</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>OOB</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>OOB</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="tBOOL" datatypeID="tBOOL">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>FALSE</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>FALSE</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>FALSE</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>TRUE</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>TRUE</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>TRUE</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="ttsc" datatypeID="ttsc">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="time window">
+				<TELC:symbol>ms</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tproduct_id" datatypeID="tproduct_id">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>SPRSP</TELC:name>
+				<TELC:encoding>28</TELC:encoding>
+				<TELC:value>SPRSP</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Sapphire Rapids SP</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>SPRD</TELC:name>
+				<TELC:encoding>51</TELC:encoding>
+				<TELC:value>SPRD</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Sapphire Rapids D</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>SPRHBM</TELC:name>
+				<TELC:encoding>111</TELC:encoding>
+				<TELC:value>SPRHBM</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Sapphire Rapids HBM</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>EMRSP</TELC:name>
+				<TELC:encoding>121</TELC:encoding>
+				<TELC:value>EMRSP</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Emerald Rapids SP</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="tgeneric_counter" datatypeID="tgeneric_counter">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tgeneric_sample" datatypeID="tgeneric_sample">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tstring" datatypeID="tstring">
+		<TELC:dataclass>string</TELC:dataclass>
+	</TELC:dataType>
+</TELC:DataTypes>
