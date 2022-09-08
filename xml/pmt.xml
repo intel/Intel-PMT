@@ -1,8 +1,8 @@
 <pmt>
-	<lastupdated>2022-01-19</lastupdated>
+	<lastupdated>2022-09-08</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
-			<lastupdated>2022-01-31</lastupdated>
+			<lastupdated>2022-09-08</lastupdated>
 			<status>production</status>
 			<description>Sapphire Rapids OOBMSM CORE PMT Telemetry samples definition and transformation rules</description>
 			<xmlset>
@@ -14,11 +14,23 @@
 			</xmlset>
 		</mapping>
 		<mapping guid="0x199a906f" size="6160">
-			<lastupdated>2022-01-31</lastupdated>
+			<lastupdated>2022-09-08</lastupdated>
 			<status>production</status>
 			<description>Sapphire Rapids OOBMSM RMID PMT Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>SPR/OOBMSM/RMID</basedir>
+				<prefix>spr</prefix>
+				<common>spr_common.xml</common>
+				<aggregator>spr_aggregator.xml</aggregator>
+				<aggregatorinterface>spr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x9956f43f" size="2216">
+			<lastupdated>2022-09-08</lastupdated>
+			<status>production</status>
+			<description>Sapphire Rapids PM PMT Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>SPR/PM</basedir>
 				<prefix>spr</prefix>
 				<common>spr_common.xml</common>
 				<aggregator>spr_aggregator.xml</aggregator>
