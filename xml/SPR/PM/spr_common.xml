@@ -37,6 +37,13 @@
 			</TELC:enum_item>
 		</TELC:enum>
 	</TELC:dataType>
+	<TELC:dataType name="tdram_energy" datatypeID="tdram_energy">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="micro Joule">
+				<TELC:symbol>uJ</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
 	<TELC:dataType name="tbandwidth_32b" datatypeID="tbandwidth_32b">
 		<TELC:dataclass>counter</TELC:dataclass>
 			<TELC:units name="count">
