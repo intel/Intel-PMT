@@ -10,6 +10,13 @@
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="spr_aggregator.xml"/>
 
 	<TransFormations xmlns="http://schemas.intel.com/telemetry/base/common">
+		<TransFormation name="dram_energy" transformID="dram_energy">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 61 </transform>
+		</TransFormation>
 		<TransFormation name="U32.0" transformID="U32.0">
 			<output_dataclass>integer</output_dataclass>
 			<TransFormParameters>
@@ -88,7 +95,7 @@
 	<TELI:uniqueid>0x9956f43f</TELI:uniqueid>
 	<TELI:NDA>Public</TELI:NDA>
 	<TELI:samplePeriod>10</TELI:samplePeriod>
-	<TELI:revisionDate>2022-09-08</TELI:revisionDate>
+	<TELI:revisionDate>2022-09-09</TELI:revisionDate>
 	<TELI:AggregatorSamples>
 		<TELI:T_AggregatorSample sampleName="LOCAL_REVISION" sampleGroup="GLOBAL_ID" datatypeIDREF="tstring" sampleID="0">
 			<TELI:description>Local Revision ID for this product.</TELI:description>
@@ -5379,7 +5386,7 @@
 					<sampleIDREF>DRAM_ENERGY_LOW</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
+			<TELI:transformREF>dram_energy</TELI:transformREF>
 		</TELI:T_AggregatorSample>
 		<TELI:T_AggregatorSample sampleName="DRAM_ENERGY_HIGH" sampleGroup="DRAM_ENERGY_STATUS" datatypeIDREF="tdram_energy" sampleID="481">
 			<TELI:description>DRAM energy consumed by all the DIMMS in all the Channels.</TELI:description>
@@ -5390,7 +5397,7 @@
 					<sampleIDREF>DRAM_ENERGY_HIGH</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
+			<TELI:transformREF>dram_energy</TELI:transformREF>
 		</TELI:T_AggregatorSample>
 		<TELI:T_AggregatorSample sampleName="MEM_RD_BW" sampleGroup="RW_BW[0]" datatypeIDREF="tbandwidth_32b" sampleID="482">
 			<TELI:description>Memory Read Bandwidth IMC channel 0</TELI:description>
