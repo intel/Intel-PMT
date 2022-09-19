@@ -50,7 +50,7 @@
 			<TransFormParameters>
 				<parameterName>parameter_0</parameterName>
 			</TransFormParameters>
-			<transform> ( ( $parameter_0 >> 8 ) &amp; 0xff ) + ( ( $parameter_0 &amp; 0xff ) / ( 2 ** 8 ) ) - 64 </transform>
+			<transform> ( ( $parameter_0 &gt;&gt; 8 ) &amp; 0xff ) + ( ( $parameter_0 &amp; 0xff ) / ( 2 ** 8 ) ) - 64 </transform>
 		</TransFormation>
 		<TransFormation name="drm_energy" transformID="drm_energy">
 			<output_dataclass>float</output_dataclass>
