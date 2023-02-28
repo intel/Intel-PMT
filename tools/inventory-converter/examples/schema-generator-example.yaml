@@ -1,0 +1,10 @@
+- avroSchema: "schemas/AggregatorSchema.avsc"
+  telemetryInterfaceXml: "../../xml/SPR/PM/spr_aggregator_interface.xml"
+  sensorTypeYaml: "examples/SPR_PM_metadata.yaml"
+  output: "SPR_PM.avro"
+
+# - avroSchema: "path/to/schema.avsc"
+#   telemetryInterfaceXml: "path/to/telemetry_interface.xml"
+#   sensorTypeYaml: "path/to/sensorTypes.yaml"
+#   output: "path/to/output.avro"
+
