@@ -11,13 +11,16 @@
 import copy
 import json
 import platform
+import re
 import sys
 import urllib.request
+from urllib.parse import urlparse
 from mimetypes import guess_type
 from os import path, listdir
 from pathlib import Path
 import math
 from lxml import etree
+import argparse
 
 if sys.platform == "win32":
     import wmi
@@ -27,6 +30,7 @@ if sys.platform == "win32":
 
     FILE_DEVICE_INTEL_PMT = 0x9998
     INTEL_PMT_TELEMETRY_INTERFACE_GUID = "3dfb2563-5c44-4c59-8d80-baea7d06e6b8"
+
 
     def pmt_ioctl(id):
         return winioctlcon.CTL_CODE(FILE_DEVICE_INTEL_PMT, id,
@@ -255,7 +259,7 @@ class PmtXmlParser:
         return t_map
 
     @staticmethod
-    def get_pmt_dict(bp, guid, xs):
+    def get_pmt_dict(bp, guid, xs, allowlist):
         """Function get_pmt_dict loads PMT XML set for UID uid hosted at basepath bp with
         XML set relative path specified by xs. It returns a Python object specifying list of
         low level samples, data types, transformations and transformations mappings.
@@ -280,6 +284,7 @@ class PmtXmlParser:
         telem_size = ""
         agg_tree = etree.parse(agg_url, xmlparser)
         root = agg_tree.getroot()
+
         for node in list(root):
             lname = ""
             try:
@@ -291,8 +296,11 @@ class PmtXmlParser:
                 uniqueid = hex(int(node.text, base=16))
             elif lname == 'SampleGroup':
                 t_groups = PmtXmlParser.parse_sample_group(node)
+                allow_from_list = lambda entry: any(re.match(pattern, entry[0]) for pattern in allowlist)
+                filtered_samples = dict(filter(allow_from_list, t_groups["samples"].items()))
                 telem_size = t_groups["size"]
-                samp_groups.update(t_groups["samples"])
+                samp_groups.update(filtered_samples)
+
         # parse aggregator interface
         agi_tree = etree.parse(agi_url, xmlparser)
         root = agi_tree.getroot()
@@ -401,13 +409,14 @@ class PmtPlugin:
     LOG_INFO = 1
     LOG_ERROR = 2
 
-    def __init__(self, mode=AGENT, conf_url='', interval=5):
+    def __init__(self, mode=AGENT, conf_url='', interval=5, allowlist=[]):
         self.conf = {}
         self.pmt_files = {}
         self.pmt = {}
         self.mode = mode
         if self.mode == self.AGENT:
             self.conf['PMT_URL'] = conf_url
+            self.conf["ALLOWLIST"] = allowlist
             self.interval = interval
 
     def logger(self, log, level=LOG_INFO):
@@ -441,6 +450,13 @@ class PmtPlugin:
             self.logger("Option PMT_URL not specified in collectd plugin config. "
                         "No data will be reported.")
 
+        if 'ALLOWLIST_URL' not in self.conf:
+            self.conf["ALLOWLIST"] = ['.*']
+            self.logger("Option ALLOWLIST not specified in collectd plugin config. "
+                        "All metrics are allowed")
+        else:
+            self.conf["ALLOWLIST"] = file_lines_to_list(self.conf["ALLOWLIST_URL"])
+
     @staticmethod
     def assert_is_not_symlink(path):
         if Path(path).is_symlink():
@@ -452,6 +468,7 @@ class PmtPlugin:
         self.pmt_files = {}
         url_type = guess_type(self.conf['PMT_URL'])
         pmtmeta = {}
+
         if url_type[0] == 'application/xml' or url_type[0] == 'text/xml':
             xmlbaseurl = path.dirname(self.conf['PMT_URL'])
             pmtmeta = PmtXmlParser.get_metadata(self.conf['PMT_URL'])
@@ -505,7 +522,8 @@ class PmtPlugin:
         if sys.platform == "win32":
             device_ids = getDriverDeviceIds()
             for device_id in device_ids:
-                interface = "//?/" + device_id.DeviceID.replace("\\", "#") + "#{" + INTEL_PMT_TELEMETRY_INTERFACE_GUID + "}/"
+                interface = "//?/" + device_id.DeviceID.replace("\\",
+                                                                "#") + "#{" + INTEL_PMT_TELEMETRY_INTERFACE_GUID + "}/"
                 telemetry = get_telemetry(interface, use_qwords=True)
                 for t in telemetry:
                     t_id = hex(t["guid"]) + "_" + str(len(t["data"]))
@@ -526,18 +544,21 @@ class PmtPlugin:
             # Matching guid only
             if len(candidates) == 1:
                 d = PmtXmlParser.get_pmt_dict(xmlbaseurl, candidates[0],
-                                              pmtmeta["mappings"][candidates[0]]["xmlset"])
+                                              pmtmeta["mappings"][candidates[0]]["xmlset"],
+                                              allowlist=self.conf["ALLOWLIST"])
                 self.logger("Plugin PMT will decode PMT endpoint %s with specification of %s"
                             % (uid, candidates[0]))
                 self.pmt[uid] = d[candidates[0]]
             elif len(candidates) > 1:
                 if uid in pmtmeta["mappings"].keys():  # exact match
-                    d = PmtXmlParser.get_pmt_dict(xmlbaseurl, uid, pmtmeta["mappings"][uid]["xmlset"])
+                    d = PmtXmlParser.get_pmt_dict(xmlbaseurl, uid, pmtmeta["mappings"][uid]["xmlset"],
+                                                  allowlist=self.conf["ALLOWLIST"])
                     self.logger("Plugin PMT will decode PMT endpoint %s" % uid)
                     self.pmt[uid] = d[uid]
                 else:  # not matching any length, pick up the first instance
                     d = PmtXmlParser.get_pmt_dict(xmlbaseurl, candidates[0],
-                                                  pmtmeta["mappings"][candidates[0]]["xmlset"])
+                                                  pmtmeta["mappings"][candidates[0]]["xmlset"],
+                                                  allowlist=self.conf["ALLOWLIST"])
                     self.logger("Plugin PMT will try to decode PMT endpoint %s"
                                 " with specification %s", (uid, candidates[0]))
                     self.pmt[uid] = d[candidates[0]]
@@ -600,13 +621,19 @@ class PmtPlugin:
 
         parsed_samples = {}
 
-        for k in self.pmt[uid]['samples']:
-            t = self.pmt[uid]['samples'][k]
-            parsed_samples[k] = self.get_telem_sample(t, buffer)
+        for metric in self.pmt[uid]['samples']:
+            t = self.pmt[uid]['samples'][metric]
+            parsed_samples[metric] = self.get_telem_sample(t, buffer)
 
-        for k in self.pmt[uid]['transformations_mapping']:
+        for metric in self.pmt[uid]['transformations_mapping']:
             t = {}
-            tm = self.pmt[uid]['transformations_mapping'][k]
+
+            if len(self.conf["ALLOWLIST"]) != 0:
+                metric_name = metric.split(".")[1]
+                if not any([re.match(allowed_metric, metric_name) for allowed_metric in self.conf["ALLOWLIST"]]):
+                    continue
+
+            tm = self.pmt[uid]['transformations_mapping'][metric]
             tt = self.pmt[uid]['transformations'][tm['transformREF']]
             t["sampleName"] = tm["sampleName"]
             t["datatypeID"] = tm["datatypeID"]
@@ -687,7 +714,17 @@ class PmtPlugin:
                 for s_name, s_value in t_ret.items():
                     sn = s_name.lower().replace('[', '.').replace(']', '')
                     result += fmt.format(platform.uname()[1], idx, sn, s_value, ep_time)
-        print(result, end='')
+
+        # There are use cases, when agent is executed manually and output is piped to the STDOUT to Graphite server.
+        # Log INFO cannot be piped, so that's a workaround.
+        try:
+            if logging.getLogger().handlers[0].baseFilename != "":
+                logging.log(msg=result, level=logging.INFO)
+            else:
+                print(result)
+        except AttributeError:
+            print(result)
+
         if event is not None:
             event.set(sch.enter(self.interval, 1, self.periodic_readsamples, argument=(event, add_sample_id)))
 
@@ -700,6 +737,24 @@ class ScheduledEvent:
 
     def set(self, event):
         self.event = event
+
+
+def file_lines_to_list(path):
+    """Reads lines from given path and stores it as list"""
+    lines = []
+    try:
+        url = urlparse(path)
+        if url.scheme == "":
+            with open(path) as file:
+                lines = file.read().splitlines()
+        else:
+            with urllib.request.urlopen(path) as file:
+                lines = file.read().decode('utf-8').splitlines()
+
+    except Exception as e:
+        raise argparse.ArgumentTypeError(
+            f"Unable to read lines from given file: {e}")
+    return lines
 
 
 if __name__ != "__main__":
@@ -718,9 +773,6 @@ else:
     import sched
     import logging
     import signal
-    import argparse
-
-    logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s', level=logging.ERROR)
 
     parser = argparse.ArgumentParser(description="PMT agent, reporting telemetry to stdout.")
     parser.add_argument("-s", required=True, dest='url',
@@ -730,8 +782,18 @@ else:
     parser.add_argument("-r", required=False, dest='read', help="Read metrics and exit", action="store_true")
     parser.add_argument("-a", required=False, dest='id', help="Append sampleID to sample identifier",
                         action="store_true")
+    parser.add_argument("-w", required=False, default=['.*'], dest='allowlist',
+                        help="Path to file containing allowed metrics in form of list of regular expressions "
+                             "split by new line", type=file_lines_to_list)
+    parser.add_argument("-o", required=False, dest='output_log_file',
+                        help="Output log file. If file is not defined, logging is redirected to stdout", type=str)
     args = parser.parse_args()
-    plugin = PmtPlugin(mode=PmtPlugin.AGENT, conf_url=args.url, interval=args.interval)
+
+    plugin = PmtPlugin(mode=PmtPlugin.AGENT, conf_url=args.url, interval=args.interval,
+                       allowlist=args.allowlist)
+
+    logging.basicConfig(filename=args.output_log_file, format='%(asctime)s %(levelname)s %(message)s',
+                        level=logging.INFO)
 
     if not plugin.init():
         logging.error("Cannot initialize PMT agent. Exiting.")
