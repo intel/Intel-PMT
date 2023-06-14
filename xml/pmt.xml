@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2023-02-10</lastupdated>
+	<lastupdated>2023-06-14</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -19,6 +19,18 @@
 			<description>Sapphire Rapids OOBMSM RMID PMT Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>SPR/OOBMSM/RMID</basedir>
+				<prefix>spr</prefix>
+				<common>spr_common.xml</common>
+				<aggregator>spr_aggregator.xml</aggregator>
+				<aggregatorinterface>spr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x89d9ff48" size="6392">
+			<lastupdated>2023-06-14</lastupdated>
+			<status>production</status>
+			<description>Sapphire Rapids EE OOBMSM RMID PMT Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>SPR/OOBMSM/RMID-EE</basedir>
 				<prefix>spr</prefix>
 				<common>spr_common.xml</common>
 				<aggregator>spr_aggregator.xml</aggregator>
