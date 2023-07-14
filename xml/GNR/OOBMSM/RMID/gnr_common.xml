@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TELC:DataTypes xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/common telemetry_common.xsd">
+
+	<TELC:dataType name="trmid_usage_counter" datatypeID="trmid_usage_counter">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="ttsc_timer" datatypeID="ttsc_timer">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tnum_en_cha" datatypeID="tnum_en_cha">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tstring" datatypeID="tstring">
+		<TELC:dataclass>string</TELC:dataclass>
+	</TELC:dataType>
+</TELC:DataTypes>
