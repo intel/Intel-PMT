@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TELI:AggregatorInterface
+	xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELI="http://schemas.intel.com/telemetry/interface/aggregatorinterface"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/interface/aggregatorinterface telemetry.xsd" >
+
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gnr_aggregator.xml"/>
+
+	<TransFormations xmlns="http://schemas.intel.com/telemetry/base/common">
+		<TransFormation name="passthru" transformID="passthru">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0</transform>
+		</TransFormation>
+	</TransFormations>
+
+	<TELI:name>gnr</TELI:name>
+	<TELI:description>Granite Rapids OOBMSM Root SoC Topology Telemetry samples definition and transformation rules</TELI:description>
+	<TELI:uniqueid>3d4bb40a</TELI:uniqueid>
+	<TELI:NDA>Public</TELI:NDA>
+	<TELI:samplePeriod>10</TELI:samplePeriod>
+	<TELI:revisionDate>2023-09-21</TELI:revisionDate>
+	<TELI:AggregatorSamples>
+		<TELI:T_AggregatorSample sampleName="CPUID_STEPPING" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="tcpuid_stepping" sampleID="0">
+			<TELI:description>Processor stepping per CPUID</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>CPUID_STEPPING</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CPUID_MODEL" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="tcpuid_model" sampleID="1">
+			<TELI:description>Processor model per CPUID</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>CPUID_MODEL</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CPUID_FAMILY" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="tcpuid_family" sampleID="2">
+			<TELI:description>Processor family per CPUID</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>CPUID_FAMILY</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CPUID_TYPE" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="tcpuid_type" sampleID="3">
+			<TELI:description>Processor type per CPUID</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>CPUID_TYPE</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED_0" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="treserved" sampleID="4">
+			<TELI:description>Reserved for future use</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CPUID_EXT_MODEL" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="tcpuid_type" sampleID="5">
+			<TELI:description>Processor extended model per CPUID</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>CPUID_EXT_MODEL</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CPUID_EXT_FAMILY" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="tcpuid_type" sampleID="6">
+			<TELI:description>Processor extended family per CPUID</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>CPUID_EXT_FAMILY</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED_1" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="treserved" sampleID="7">
+			<TELI:description>Reserved for future use</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PLATFORM_ID" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="tplatform_id" sampleID="8">
+			<TELI:description>Intended platform for this processor</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>PLATFORM_ID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MINOR_STEPING_ID" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="tminor_stepping" sampleID="9">
+			<TELI:description>Processor minor stepping e.g., 0x0 for A0/B0, 0x1 for A1/B1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>MINOR_STEPING_ID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED_2" sampleGroup="CPUID_PLATFORM_ID" datatypeIDREF="treserved" sampleID="10">
+			<TELI:description>Reserved for future use</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_0_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="11">
+			<TELI:description>OOBMSM instance with DomainID of 0 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_0_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_1_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="12">
+			<TELI:description>OOBMSM instance with DomainID of 1 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_1_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_2_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="13">
+			<TELI:description>OOBMSM instance with DomainID of 2 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_2_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_3_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="14">
+			<TELI:description>OOBMSM instance with DomainID of 3 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_3_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_4_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="15">
+			<TELI:description>OOBMSM instance with DomainID of 4 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_4_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_5_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="16">
+			<TELI:description>OOBMSM instance with DomainID of 5 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_5_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_6_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="17">
+			<TELI:description>OOBMSM instance with DomainID of 6 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_6_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_7_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="18">
+			<TELI:description>OOBMSM instance with DomainID of 7 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_7_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_8_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="19">
+			<TELI:description>OOBMSM instance with DomainID of 8 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_8_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_9_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="20">
+			<TELI:description>OOBMSM instance with DomainID of 9 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_9_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_10_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="21">
+			<TELI:description>OOBMSM instance with DomainID of 10 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_10_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_11_EN" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tenabled_state" sampleID="22">
+			<TELI:description>OOBMSM instance with DomainID of 11 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_11_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED_3" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="treserved" sampleID="23">
+			<TELI:description>Reserved for future use</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_0_EID" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tmctp_eid" sampleID="24">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_0_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_1_EID" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tmctp_eid" sampleID="25">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_1_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_2_EID" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tmctp_eid" sampleID="26">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 2</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_2_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_3_EID" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tmctp_eid" sampleID="27">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 3</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_3_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_4_EID" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tmctp_eid" sampleID="28">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 4</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_4_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_5_EID" sampleGroup="DOMAIN_MASK_EIDS_0_5" datatypeIDREF="tmctp_eid" sampleID="29">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 5</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_5_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_6_EID" sampleGroup="DOMAIN_EIDS_6_11" datatypeIDREF="tmctp_eid" sampleID="30">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 6</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_6_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_7_EID" sampleGroup="DOMAIN_EIDS_6_11" datatypeIDREF="tmctp_eid" sampleID="31">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 7</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_7_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_8_EID" sampleGroup="DOMAIN_EIDS_6_11" datatypeIDREF="tmctp_eid" sampleID="32">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 8</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_8_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_9_EID" sampleGroup="DOMAIN_EIDS_6_11" datatypeIDREF="tmctp_eid" sampleID="33">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 9</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_9_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_10_EID" sampleGroup="DOMAIN_EIDS_6_11" datatypeIDREF="tmctp_eid" sampleID="34">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 10</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_10_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DOMAIN_11_EID" sampleGroup="DOMAIN_EIDS_6_11" datatypeIDREF="tmctp_eid" sampleID="35">
+			<TELI:description>MCTP EID of OOBMSM instance with DomainID of 11</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>DOMAIN_11_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED_4" sampleGroup="DOMAIN_EIDS_6_11" datatypeIDREF="treserved" sampleID="36">
+			<TELI:description>Reserved for future use</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CURR_DIE_EID" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tmctp_eid" sampleID="37">
+			<TELI:description>MCTP EID of this OOBMSM instance</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>CURR_DIE_EID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CURR_DIE_DOMAIN_ID" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tdomain_id" sampleID="38">
+			<TELI:description>DomainID of this OOBMSM instance</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>CURR_DIE_DOMAIN_ID</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="UPI_0_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="39">
+			<TELI:description>Intel UPI link 0 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>UPI_0_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="UPI_1_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="40">
+			<TELI:description>Intel UPI link 1 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>UPI_1_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="UPI_2_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="41">
+			<TELI:description>Intel UPI link 2 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>UPI_2_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="UPI_3_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="42">
+			<TELI:description>Intel UPI link 3 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>UPI_3_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="UPI_4_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="43">
+			<TELI:description>Intel UPI link 4 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>UPI_4_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="UPI_5_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="44">
+			<TELI:description>Intel UPI link 5 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>UPI_5_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="UPI_6_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="45">
+			<TELI:description>Intel UPI link 6 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>UPI_6_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="UPI_7_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="46">
+			<TELI:description>Intel UPI link 7 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>UPI_7_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED_5" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="treserved" sampleID="47">
+			<TELI:description>Reserved for future use</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_0_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="48">
+			<TELI:description>DDR memory instance 0 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_0_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_1_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="49">
+			<TELI:description>DDR memory instance 1 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_1_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_2_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="50">
+			<TELI:description>DDR memory instance 2 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_2_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_3_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="51">
+			<TELI:description>DDR memory instance 3 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_3_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_4_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="52">
+			<TELI:description>DDR memory instance 4 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_4_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_5_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="53">
+			<TELI:description>DDR memory instance 5 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_5_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_6_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="54">
+			<TELI:description>DDR memory instance 6 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_6_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_7_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="55">
+			<TELI:description>DDR memory instance 7 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_7_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_8_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="56">
+			<TELI:description>DDR memory instance 8 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_8_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_9_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="57">
+			<TELI:description>DDR memory instance 9 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_9_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_10_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="58">
+			<TELI:description>DDR memory instance 10 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_10_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_11_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="59">
+			<TELI:description>DDR memory instance 11 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_11_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_12_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="60">
+			<TELI:description>DDR memory instance 12 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_12_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_13_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="61">
+			<TELI:description>DDR memory instance 13 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_13_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_14_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="62">
+			<TELI:description>DDR memory instance 14 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_14_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DDR_MEM_15_EN" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tenabled_state" sampleID="63">
+			<TELI:description>DDR memory instance 15 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DDR_MEM_15_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED_6" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="treserved" sampleID="64">
+			<TELI:description>Reserved for future use</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C0_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="65">
+			<TELI:description>Core 0 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C0_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C1_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="66">
+			<TELI:description>Core 1 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C1_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C2_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="67">
+			<TELI:description>Core 2 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C2_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C3_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="68">
+			<TELI:description>Core 3 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C3_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C4_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="69">
+			<TELI:description>Core 4 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C4_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C5_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="70">
+			<TELI:description>Core 5 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C5_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C6_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="71">
+			<TELI:description>Core 6 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C6_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C7_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="72">
+			<TELI:description>Core 7 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C7_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C8_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="73">
+			<TELI:description>Core 8 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C8_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C9_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="74">
+			<TELI:description>Core 9 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C9_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C10_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="75">
+			<TELI:description>Core 10 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C10_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C11_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="76">
+			<TELI:description>Core 11 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C11_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C12_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="77">
+			<TELI:description>Core 12 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C12_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C13_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="78">
+			<TELI:description>Core 13 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C13_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C14_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="79">
+			<TELI:description>Core 14 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C14_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C15_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="80">
+			<TELI:description>Core 15 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C15_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C16_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="81">
+			<TELI:description>Core 16 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C16_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C17_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="82">
+			<TELI:description>Core 17 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C17_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C18_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="83">
+			<TELI:description>Core 18 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C18_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C19_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="84">
+			<TELI:description>Core 19 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C19_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C20_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="85">
+			<TELI:description>Core 20 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C20_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C21_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="86">
+			<TELI:description>Core 21 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C21_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C22_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="87">
+			<TELI:description>Core 22 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C22_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C23_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="88">
+			<TELI:description>Core 23 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C23_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C24_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="89">
+			<TELI:description>Core 24 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C24_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C25_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="90">
+			<TELI:description>Core 25 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C25_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C26_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="91">
+			<TELI:description>Core 26 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C26_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C27_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="92">
+			<TELI:description>Core 27 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C27_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C28_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="93">
+			<TELI:description>Core 28 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C28_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C29_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="94">
+			<TELI:description>Core 29 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C29_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C30_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="95">
+			<TELI:description>Core 30 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C30_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C31_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="96">
+			<TELI:description>Core 31 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C31_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C32_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="97">
+			<TELI:description>Core 32 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C32_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C33_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="98">
+			<TELI:description>Core 33 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C33_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C34_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="99">
+			<TELI:description>Core 34 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C34_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C35_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="100">
+			<TELI:description>Core 35 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C35_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C36_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="101">
+			<TELI:description>Core 36 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C36_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C37_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="102">
+			<TELI:description>Core 37 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C37_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C38_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="103">
+			<TELI:description>Core 38 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C38_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C39_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="104">
+			<TELI:description>Core 39 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C39_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C40_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="105">
+			<TELI:description>Core 40 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C40_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C41_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="106">
+			<TELI:description>Core 41 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C41_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C42_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="107">
+			<TELI:description>Core 42 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C42_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C43_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="108">
+			<TELI:description>Core 43 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C43_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C44_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="109">
+			<TELI:description>Core 44 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C44_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C45_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="110">
+			<TELI:description>Core 45 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C45_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C46_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="111">
+			<TELI:description>Core 46 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C46_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C47_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="112">
+			<TELI:description>Core 47 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C47_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C48_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="113">
+			<TELI:description>Core 48 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C48_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C49_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="114">
+			<TELI:description>Core 49 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C49_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C50_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="115">
+			<TELI:description>Core 50 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C50_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C51_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="116">
+			<TELI:description>Core 51 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C51_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C52_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="117">
+			<TELI:description>Core 52 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C52_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C53_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="118">
+			<TELI:description>Core 53 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C53_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C54_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="119">
+			<TELI:description>Core 54 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C54_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C55_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="120">
+			<TELI:description>Core 55 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C55_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C56_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="121">
+			<TELI:description>Core 56 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C56_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C57_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="122">
+			<TELI:description>Core 57 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C57_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C58_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="123">
+			<TELI:description>Core 58 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C58_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C59_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="124">
+			<TELI:description>Core 59 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C59_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C60_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="125">
+			<TELI:description>Core 60 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C60_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C61_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="126">
+			<TELI:description>Core 61 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C61_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C62_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="127">
+			<TELI:description>Core 62 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C62_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="C63_EN" sampleGroup="CORE_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="128">
+			<TELI:description>Core 63 is enabled, matches RESOLVED_CORES</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>C63_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_0_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="129">
+			<TELI:description>CHA instance 0 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_0_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_1_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="130">
+			<TELI:description>CHA instance 1 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_1_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_2_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="131">
+			<TELI:description>CHA instance 2 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_2_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_3_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="132">
+			<TELI:description>CHA instance 3 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_3_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_4_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="133">
+			<TELI:description>CHA instance 4 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_4_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_5_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="134">
+			<TELI:description>CHA instance 5 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_5_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_6_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="135">
+			<TELI:description>CHA instance 6 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_6_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_7_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="136">
+			<TELI:description>CHA instance 7 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_7_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_8_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="137">
+			<TELI:description>CHA instance 8 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_8_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_9_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="138">
+			<TELI:description>CHA instance 9 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_9_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_10_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="139">
+			<TELI:description>CHA instance 10 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_10_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_11_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="140">
+			<TELI:description>CHA instance 11 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_11_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_12_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="141">
+			<TELI:description>CHA instance 12 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_12_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_13_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="142">
+			<TELI:description>CHA instance 13 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_13_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_14_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="143">
+			<TELI:description>CHA instance 14 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_14_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_15_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="144">
+			<TELI:description>CHA instance 15 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_15_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_16_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="145">
+			<TELI:description>CHA instance 16 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_16_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_17_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="146">
+			<TELI:description>CHA instance 17 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_17_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_18_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="147">
+			<TELI:description>CHA instance 18 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_18_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_19_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="148">
+			<TELI:description>CHA instance 19 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_19_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_20_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="149">
+			<TELI:description>CHA instance 20 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_20_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_21_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="150">
+			<TELI:description>CHA instance 21 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_21_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_22_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="151">
+			<TELI:description>CHA instance 22 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_22_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_23_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="152">
+			<TELI:description>CHA instance 23 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_23_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_24_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="153">
+			<TELI:description>CHA instance 24 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_24_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_25_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="154">
+			<TELI:description>CHA instance 25 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_25_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_26_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="155">
+			<TELI:description>CHA instance 26 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_26_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_27_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="156">
+			<TELI:description>CHA instance 27 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_27_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_28_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="157">
+			<TELI:description>CHA instance 28 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_28_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_29_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="158">
+			<TELI:description>CHA instance 29 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_29_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_30_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="159">
+			<TELI:description>CHA instance 30 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_30_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_31_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="160">
+			<TELI:description>CHA instance 31 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_31_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_32_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="161">
+			<TELI:description>CHA instance 32 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_32_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_33_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="162">
+			<TELI:description>CHA instance 33 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_33_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_34_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="163">
+			<TELI:description>CHA instance 34 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_34_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_35_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="164">
+			<TELI:description>CHA instance 35 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_35_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_36_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="165">
+			<TELI:description>CHA instance 36 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_36_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_37_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="166">
+			<TELI:description>CHA instance 37 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_37_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_38_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="167">
+			<TELI:description>CHA instance 38 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_38_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_39_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="168">
+			<TELI:description>CHA instance 39 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_39_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_40_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="169">
+			<TELI:description>CHA instance 40 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_40_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_41_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="170">
+			<TELI:description>CHA instance 41 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_41_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_42_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="171">
+			<TELI:description>CHA instance 42 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_42_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_43_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="172">
+			<TELI:description>CHA instance 43 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_43_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_44_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="173">
+			<TELI:description>CHA instance 44 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_44_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_45_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="174">
+			<TELI:description>CHA instance 45 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_45_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_46_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="175">
+			<TELI:description>CHA instance 46 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_46_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_47_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="176">
+			<TELI:description>CHA instance 47 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_47_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_48_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="177">
+			<TELI:description>CHA instance 48 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_48_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_49_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="178">
+			<TELI:description>CHA instance 49 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_49_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_50_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="179">
+			<TELI:description>CHA instance 50 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_50_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_51_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="180">
+			<TELI:description>CHA instance 51 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_51_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_52_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="181">
+			<TELI:description>CHA instance 52 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_52_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_53_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="182">
+			<TELI:description>CHA instance 53 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_53_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_54_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="183">
+			<TELI:description>CHA instance 54 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_54_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_55_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="184">
+			<TELI:description>CHA instance 55 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_55_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_56_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="185">
+			<TELI:description>CHA instance 56 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_56_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_57_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="186">
+			<TELI:description>CHA instance 57 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_57_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_58_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="187">
+			<TELI:description>CHA instance 58 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_58_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_59_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="188">
+			<TELI:description>CHA instance 59 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_59_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_60_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="189">
+			<TELI:description>CHA instance 60 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_60_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_61_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="190">
+			<TELI:description>CHA instance 61 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_61_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_62_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="191">
+			<TELI:description>CHA instance 62 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_62_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CHA_63_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="192">
+			<TELI:description>CHA instance 63 is enabled</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CHA_63_EN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+	</TELI:AggregatorSamples>
+</TELI:AggregatorInterface>

@@ -10,6 +10,9 @@
 	<TELC:dataType name="ttsc_timer" datatypeID="ttsc_timer">
 		<TELC:dataclass>counter</TELC:dataclass>
 	</TELC:dataType>
+	<TELC:dataType name="timc_register" datatypeID="timc_register">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
 	<TELC:dataType name="tnum_en_cha" datatypeID="tnum_en_cha">
 		<TELC:dataclass>status</TELC:dataclass>
 	</TELC:dataType>

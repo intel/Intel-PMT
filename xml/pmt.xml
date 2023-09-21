@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2023-07-14</lastupdated>
+	<lastupdated>2023-09-21</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -61,12 +61,36 @@
 				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
-		<mapping guid="0x477e9373" size="6160">
-			<lastupdated>2023-07-14</lastupdated>
+		<mapping guid="0x477e9373" size="7056">
+			<lastupdated>2023-09-21</lastupdated>
 			<status>alpha</status>
 			<description>Granite Rapids OOBMSM RMID Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>GNR/OOBMSM/RMID</basedir>
+				<prefix>gnr</prefix>
+				<common>gnr_common.xml</common>
+				<aggregator>gnr_aggregator.xml</aggregator>
+				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x3d4bb41a" size="24">
+			<lastupdated>2023-09-21</lastupdated>
+			<status>alpha</status>
+			<description>Granite Rapids OOBMSM Leaf SoC Topology Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>GNR/OOBMSM/TOPO-LEAF</basedir>
+				<prefix>gnr</prefix>
+				<common>gnr_common.xml</common>
+				<aggregator>gnr_aggregator.xml</aggregator>
+				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x3d4bb40a" size="48">
+			<lastupdated>2023-09-21</lastupdated>
+			<status>alpha</status>
+			<description>Granite Rapids OOBMSM Root SoC Topology Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>GNR/OOBMSM/TOPO-ROOT</basedir>
 				<prefix>gnr</prefix>
 				<common>gnr_common.xml</common>
 				<aggregator>gnr_aggregator.xml</aggregator>
