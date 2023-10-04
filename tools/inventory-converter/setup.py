@@ -14,7 +14,7 @@ setup(name='inventory-converter',
           'console_scripts': ['inventory-converter=inventory_converter:main', 'schema-generator=schema_generator:main'],
       },
       install_requires=[
-          'avro==1.11.1',
+          'avro==1.11.3',
           'lxml==4.9.2',
           'PyYAML==6.0'
       ]
