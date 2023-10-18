@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2023-09-21</lastupdated>
+	<lastupdated>2023-10-18</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -91,6 +91,30 @@
 			<description>Granite Rapids OOBMSM Root SoC Topology Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>GNR/OOBMSM/TOPO-ROOT</basedir>
+				<prefix>gnr</prefix>
+				<common>gnr_common.xml</common>
+				<aggregator>gnr_aggregator.xml</aggregator>
+				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x13227778" size="6448">
+			<lastupdated>2022-10-18</lastupdated>
+			<status>production</status>
+			<description>Emerald Rapids OOBMSM RMID and QAT PMT Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>SPR/OOBMSM/RMID-QAT-EMR</basedir>
+				<prefix>emr</prefix>
+				<common>emr_common.xml</common>
+				<aggregator>emr_aggregator.xml</aggregator>
+				<aggregatorinterface>emr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x6e94ffa0" size="176">
+			<lastupdated>2022-10-18</lastupdated>
+			<status>alpha</status>
+			<description>Granite Rapids OOBMSM QAT Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>GNR/OOBMSM/QAT</basedir>
 				<prefix>gnr</prefix>
 				<common>gnr_common.xml</common>
 				<aggregator>gnr_aggregator.xml</aggregator>
