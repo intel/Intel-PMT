@@ -484,6 +484,8 @@ class PmtPlugin:
         pmt_root = "/sys/class/intel_pmt"
         pmt_dir = []
         if sys.platform == "linux":
+            if path.exists("/hostfs"):
+                pmt_root = "/hostfs" + pmt_root
             try:
                 pmt_dir = listdir(pmt_root)
             except FileNotFoundError:
