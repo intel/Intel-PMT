@@ -14,8 +14,10 @@ import struct
 import argparse
 import logging
 import tokenize
+import urllib.request
 from io import BytesIO
 from pathlib import Path
+from urllib.parse import urlparse
 from lxml import etree
 
 import yaml
@@ -27,7 +29,9 @@ from avro.datafile import DataFileWriter
 from avro.errors import AvroException
 
 logger = logging.getLogger()
-
+versions = {"EGS": 0, "BHS": 1}
+allowed_yaml_values = {"kafkaStream": ["ThresholdWatcher", "StreamingWatcher"], 
+                     "redfishSensor" : ["Aggregator", "ThresholdWatcher", "StreamingWatcher"]}
 
 def opener(path, flags):
     return os.open(path, flags, 0o600)
@@ -47,6 +51,9 @@ class LocalResolver(etree.Resolver):
 
     @staticmethod
     def parent_dir(path):
+        # Normalize path to system format in case url was provided
+        if(str(path).startswith("file:/")):
+            path = urllib.request.url2pathname(urlparse(path).path)
         return os.path.dirname(os.path.abspath(path))
 
     def resolve(self, url, id, context):
@@ -77,12 +84,46 @@ def try_load_aggregator_interface(interface_file):
     return ag_iface.getroot()
 
 
-def try_load_yaml_config(yaml_file_path):
+def try_load_yaml_config(yaml_file_path, version):
     """Load YAML file."""
     assert_is_not_symlink(yaml_file_path)
     with yaml_file_path.open("r") as yaml_file:
-        return yaml.load(yaml_file, Loader=yaml.SafeLoader)
+        loaded_yaml = yaml.load(yaml_file, Loader=yaml.SafeLoader)
+        validate_yaml_version(loaded_yaml, version)
+        validate_yaml_values(loaded_yaml.values(), version)
+        return loaded_yaml
 
+
+def validate_yaml_version(loaded_yaml, version):
+    for metric_value in loaded_yaml.values():
+        if isinstance(metric_value, dict):
+            if version == versions["EGS"]:
+                raise ValueError("Provided wrong yaml for version 0 of Avro")
+        else:
+            if version == versions["BHS"]:
+                raise ValueError("Provided wrong yaml for version 1 of Avro")
+
+
+def validate_yaml_values(yaml_values, version):
+    if version == versions["BHS"]:
+        for metric_value in yaml_values:
+            for name in allowed_yaml_values:
+                try:
+                    if metric_value[name]:
+                        validate_field(metric_value[name], allowed_yaml_values[name], name)
+                except KeyError:
+                    continue
+
+
+def validate_field(values, allowed_values, name):
+    invalid_values = [value for value in values if value not in allowed_values]
+    if invalid_values:
+        raise ValueError(f"Invalid value(s): [{', '.join(invalid_values)}] for {name} provided. "
+                         f"Valid values are: [{', '.join(allowed_values)}]")
+
+def check_reserved_metric(name, sample_id):
+    if "RESERVED" in name:
+        logger.warning(f"Reserved metric {name} with id: {sample_id} was provided in yaml!")
 
 def extract_namespaces(xml_data):
     """Extract XML namespaces, used for XPath traversal."""
@@ -191,8 +232,8 @@ def extract_sample_group(elem, agg_nsmap):
     sample_group["name"] = elem.get("name")
     sample_group["sampleId"] = int(elem.get("sampleID"))
     sample_group["sampleGroupId"] = elem.get("sampleGroupID")
-    sample_group["description"] = get_child_value(
-        "TELC:description", elem, agg_nsmap)
+    sample_group["description"] = str(get_child_value(
+        "TELC:description", elem, agg_nsmap))
     sample_group["length"] = int(
         get_child_value("TELC:length", elem, agg_nsmap))
     sample_group["samples"] = {}
@@ -201,8 +242,8 @@ def extract_sample_group(elem, agg_nsmap):
         sample_dtc["name"] = sample.get("name")
         sample_dtc["datatypeIDREF"] = sample.get("datatypeIDREF")
         sample_dtc["sampleId"] = sample.get("sampleID")
-        sample_dtc["description"] = get_child_value(
-            "TELC:description", sample, agg_nsmap)
+        sample_dtc["description"] = str(get_child_value(
+            "TELC:description", sample, agg_nsmap))
         sample_dtc["sampleSubGroup"] = get_child_value(
             "TELC:sampleSubGroup", sample, agg_nsmap)
         sample_dtc["sampleType"] = get_child_value(
@@ -221,27 +262,42 @@ def extract_sample_group(elem, agg_nsmap):
     return sample_group
 
 
-def extract_metric(elem, agg_nsmap, sensor_types):
+def extract_metric(elem, agg_nsmap, sensor_types, version):
     """Extracts metric from given element"""
     sample_id = int(elem.get("sampleID"))
+
     metric = {}
     metric["name"] = elem.get("sampleName")
     metric["sampleGroup"] = elem.get("sampleGroup")
     metric["datatypeIDREF"] = elem.get("datatypeIDREF")
     metric["sampleId"] = sample_id
-    metric["description"] = get_child_value(
-        "TELI:description", elem, agg_nsmap)
+    metric["description"] = str(get_child_value(
+        "TELI:description", elem, agg_nsmap))
     metric["sampleType"] = get_child_value(
         "TELI:SampleType", elem, agg_nsmap)
     if sample_id in sensor_types:
-        metric["sensorType"] = sensor_types[sample_id]["type"]
-        if bool(sensor_types[sample_id]["stream"]):
-            metric["streamed"] = bool(sensor_types[sample_id]["stream"])
+        if version == versions["EGS"]:
+            metric["sensorType"] = sensor_types[sample_id]
+        else:
+            metric["sensorType"] = sensor_types[sample_id]["type"]
+            try:
+                sensor_types[sample_id]["kafkaStream"]
+            except KeyError:
+                sensor_types[sample_id]["kafkaStream"] = None
+            try:
+                sensor_types[sample_id]["redfishSensor"]
+            except KeyError:
+                sensor_types[sample_id]["redfishSensor"] = None
+
+            if sensor_types[sample_id]["kafkaStream"]:
+                metric["kafkaStream"] = sensor_types[sample_id]["kafkaStream"]
+            if sensor_types[sample_id]["redfishSensor"]:
+                metric["redfishSensor"] = sensor_types[sample_id]["redfishSensor"]
+    metric["inputs"] = {}
     metric["redfishURL"] = get_child_value(
         "TELI:redfish_url", elem, agg_nsmap)
     metric["transformation"] = get_child_value(
         "TELI:transformREF", elem, agg_nsmap)
-    metric["inputs"] = {}
     for inp in elem.xpath("TELC:TransFormInputs/TELC:TransFormInput", namespaces=agg_nsmap):
         sample_input = {}
         sample_input["groupIDREF"] = get_child_value(
@@ -249,13 +305,16 @@ def extract_metric(elem, agg_nsmap, sensor_types):
         sample_input["sampleIDREF"] = get_child_value(
             "TELC:sampleIDREF", inp, agg_nsmap)
         metric["inputs"][inp.get("varName")] = sample_input
+    metric["redfishURL"] = get_child_value(
+        "TELI:redfish_url", elem, agg_nsmap)
     return metric
 
 
-def extract_aggregator(aggregator_interface, sensor_types):
+def extract_aggregator(aggregator_interface, sensor_types, version):
     """Extract aggregator data and pack it into python structures."""
     agg_nsmap = extract_namespaces(aggregator_interface)
     aggregator = {}
+
     aggregator["name"] = get_child_value(
         "TELI:name", aggregator_interface, agg_nsmap)
     aggregator["description"] = get_child_value(
@@ -289,9 +348,13 @@ def extract_aggregator(aggregator_interface, sensor_types):
     # Iterate over Metrics (high level data, exported outside):
     for elem in aggregator_interface.xpath(
             "TELI:AggregatorSamples/TELI:T_AggregatorSample", namespaces=agg_nsmap):
-        metric = extract_metric(elem, agg_nsmap, sensor_types)
+        metric = extract_metric(elem, agg_nsmap, sensor_types, version)
+        check_reserved_metric(metric["name"], metric["sampleId"])
         if str(metric["sampleId"]) in aggregator["metrics"]:
             raise NameError(f"Duplicated Metric ID: {metric['sampleId']}")
+        if version == versions["BHS"]:
+            if any(storedMetric["name"] == metric["name"] for storedMetric in aggregator["metrics"].values()):
+                raise NameError(f"Duplicated Metric Name: {metric['name']}")
         aggregator["metrics"][str(metric["sampleId"])] = metric
 
     logger.info("Processed Metrics: %d", len(aggregator["metrics"]))
@@ -324,6 +387,8 @@ def parse_cmdline():
         description='Convert XML Telemetry Aggregator data to Avro binary file with schema.')
     optional = parser.add_argument_group('Optional arguments')
     required = parser.add_argument_group('Required arguments')
+    required.add_argument('-v', '--version', metavar='VERSION', help='Avro version', required=True, type=int,
+                          choices=list(versions.values()))
     required.add_argument('-s', '--avro-schema', metavar='SCHEMA_FILE',
                           type=validate_path, help='Avro schema file (.avsc)', required=True)
     required.add_argument('-i', '--aggregator', metavar='AGGREGATOR_FILE',
@@ -376,17 +441,20 @@ def load_aggregator_interface(aggregator):
     return aggregator_xml
 
 
-def load_yaml_config(sensor_types):
+def load_yaml_config(sensor_types, version):
     """Loads yaml file with additional data"""
     logger.info("Loading YAML with sensor types: %s", repr(sensor_types))
     try:
-        sensor_types_map = try_load_yaml_config(Path(sensor_types))
+        sensor_types_map = try_load_yaml_config(Path(sensor_types), version)
     except IOError:
         logger.exception("Cannot open file with sensor types")
         sys.exit(1)
     except yaml.YAMLError:
         logger.exception("Cannot load file with sensor types")
         sys.exit(2)
+    except ValueError:
+        logger.exception("Cannot load yaml")
+        sys.exit(1)
     logger.info("File with sensor types loaded and parsed successfully.")
     return sensor_types_map
 
@@ -424,15 +492,15 @@ def dump_aggregator(json_output, aggregator):
             sys.exit(2)
 
 
-def inventory_converter(avro_schema_path, aggregator, yaml_config, output, metrics=None, json_output=None):
+def inventory_converter(avro_schema_path, aggregator, yaml_config, output, version, metrics=None, json_output=None):
     """Generates avro file"""
     avro_schema = open_avro_schema(avro_schema_path)
     aggregator_xml = load_aggregator_interface(aggregator)
-    sensor_types_map = load_yaml_config(yaml_config)
+    sensor_types_map = load_yaml_config(yaml_config, version)
     # Load YAML file with sensor types data:
 
     try:
-        aggregator = extract_aggregator(aggregator_xml, sensor_types_map)
+        aggregator = extract_aggregator(aggregator_xml, sensor_types_map, version)
     except NameError:
         logger.exception("Cannot process Aggregator")
         sys.exit(3)
@@ -479,7 +547,9 @@ def validate_path(path):
 
 
 def main():
+
     """Parses arguments and runs inventory converter"""
+
     args = parse_cmdline()
     if args.debug:
         logging_level = logging.DEBUG
@@ -491,7 +561,7 @@ def main():
     logging.basicConfig(level=logging_level)
 
     inventory_converter(args.avro_schema, args.aggregator,
-                        args.sensor_types, args.output, args.metrics, args.toJson)
+                        args.sensor_types, args.output, args.version, args.metrics, args.toJson)
 
 
 if __name__ == "__main__":

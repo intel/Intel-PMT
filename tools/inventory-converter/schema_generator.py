@@ -30,8 +30,8 @@ def main():
     config = Path(args.config)
 
     try:
-        for avro_schema, aggregator, sensor_types, output in generate_input(config):
-            inventory_converter(avro_schema, aggregator, sensor_types, output)
+        for avro_schema, aggregator, sensor_types, output, version in generate_input(config):
+            inventory_converter(avro_schema, aggregator, sensor_types, output, version)
     except ValidationException as exception:
         for error in exception.errors:
             logger.error(error.msg)
@@ -61,7 +61,7 @@ def generate_input(config_path: Path):
 
     for config_element in config:
         yield (config_element["avroSchema"], config_element["telemetryInterfaceXml"],
-               config_element["sensorTypeYaml"], config_element["output"])
+               config_element["sensorTypeYaml"], config_element["output"], config_element["version"])
 
 
 def validate_config(config):

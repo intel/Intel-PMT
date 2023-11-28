@@ -1,0 +1,29 @@
+receivers:
+  carbon:
+    endpoint: "127.0.0.1:10000"
+    transport: tcp
+    parser:
+      type: plaintext
+  
+processors:
+  batch:
+exporters:
+  prometheus:
+    endpoint: "0.0.0.0:9100"
+    send_timestamps: true
+    metric_expiration: 180m
+    enable_open_metrics: true
+    add_metric_suffixes: false
+    resource_to_telemetry_conversion:
+      enabled: true
+
+service:
+  telemetry:
+    metrics:
+      level: "none"
+
+  pipelines:
+    metrics:
+      receivers: [carbon]
+      processors: [batch]
+      exporters: [prometheus]
