@@ -24,7 +24,7 @@
 	<TELI:uniqueid>3d4bb41a</TELI:uniqueid>
 	<TELI:NDA>Public</TELI:NDA>
 	<TELI:samplePeriod>10</TELI:samplePeriod>
-	<TELI:revisionDate>2023-09-21</TELI:revisionDate>
+	<TELI:revisionDate>2023-12-06</TELI:revisionDate>
 	<TELI:AggregatorSamples>
 		<TELI:T_AggregatorSample sampleName="CURR_DIE_EID" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tmctp_eid" sampleID="0">
 			<TELI:description>MCTP EID of this OOBMSM instance</TELI:description>
@@ -136,13 +136,13 @@
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="RESERVED_0" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="treserved" sampleID="10">
-			<TELI:description>Reserved for future use</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CURR_SOCKET_ID" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="tsocket_id" sampleID="10">
+			<TELI:description>Socket ID of this OOBMSM instance</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
-					<sampleIDREF>RESERVED_0</sampleIDREF>
+					<sampleIDREF>CURR_SOCKET_ID</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
@@ -323,13 +323,13 @@
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="RESERVED_1" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="treserved" sampleID="27">
+		<TELI:T_AggregatorSample sampleName="RESERVED_0" sampleGroup="CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK" datatypeIDREF="treserved" sampleID="27">
 			<TELI:description>Reserved for future use</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
-					<sampleIDREF>RESERVED_1</sampleIDREF>
+					<sampleIDREF>RESERVED_0</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>

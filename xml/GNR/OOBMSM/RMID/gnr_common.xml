@@ -10,11 +10,24 @@
 	<TELC:dataType name="ttsc_timer" datatypeID="ttsc_timer">
 		<TELC:dataclass>counter</TELC:dataclass>
 	</TELC:dataType>
-	<TELC:dataType name="timc_register" datatypeID="timc_register">
+	<TELC:dataType name="tenabled_state" datatypeID="tenabled_state">
 		<TELC:dataclass>status</TELC:dataclass>
-	</TELC:dataType>
-	<TELC:dataType name="tnum_en_cha" datatypeID="tnum_en_cha">
-		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>ENABLED</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>ENABLED</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Enabled</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>DISABLED</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>DISABLED</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Disabled</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
 	</TELC:dataType>
 	<TELC:dataType name="tstring" datatypeID="tstring">
 		<TELC:dataclass>string</TELC:dataclass>

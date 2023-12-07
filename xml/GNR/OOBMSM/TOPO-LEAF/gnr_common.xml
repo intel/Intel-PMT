@@ -32,6 +32,9 @@
 	<TELC:dataType name="tmctp_eid" datatypeID="tmctp_eid">
 		<TELC:dataclass>status</TELC:dataclass>
 	</TELC:dataType>
+	<TELC:dataType name="tsocket_id" datatypeID="tsocket_id">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
 	<TELC:dataType name="tstring" datatypeID="tstring">
 		<TELC:dataclass>string</TELC:dataclass>
 	</TELC:dataType>

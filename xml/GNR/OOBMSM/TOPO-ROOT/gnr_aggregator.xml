@@ -405,8 +405,8 @@
 			<TELC:lsb>23</TELC:lsb>
 			<TELC:msb>23</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="RESERVED_5" datatypeIDREF="treserved" sampleID="RESERVED_5">
-			<TELC:description>Reserved for future use</TELC:description>
+		<TELC:sample name="CURR_SOCKET_ID" datatypeIDREF="tsocket_id" sampleID="CURR_SOCKET_ID">
+			<TELC:description>Socket ID of this OOBMSM instance</TELC:description>
 			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
 			<TELC:size>8</TELC:size>
@@ -541,7 +541,7 @@
 			<TELC:lsb>47</TELC:lsb>
 			<TELC:msb>47</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="RESERVED_6" datatypeIDREF="treserved" sampleID="RESERVED_6">
+		<TELC:sample name="RESERVED_5" datatypeIDREF="treserved" sampleID="RESERVED_5">
 			<TELC:description>Reserved for future use</TELC:description>
 			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>

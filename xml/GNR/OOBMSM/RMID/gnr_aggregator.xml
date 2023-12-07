@@ -15389,1996 +15389,516 @@
 	<TELEM:SampleGroup name="Container_769" sampleID="769" sampleGroupID="Container_769">
 		<TELC:description>Groupname 0x465808</TELC:description>
 		<TELC:length>64</TELC:length>
-		<TELC:sample name="NUM_EN_CHA" datatypeIDREF="tnum_en_cha" sampleID="NUM_EN_CHA">
-			<TELC:description>Number of enabled CHAs</TELC:description>
-			<TELC:sampleSubGroup>NUM_EN_CHA</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_770" sampleID="770" sampleGroupID="Container_770">
-		<TELC:description>Groupname 0x465810</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_CORRERRCNT_0" datatypeIDREF="timc_register" sampleID="IMC0_CORRERRCNT_0">
-			<TELC:description>CORRERRCNT register instance 0 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC0_CORRERRCNT_1" datatypeIDREF="timc_register" sampleID="IMC0_CORRERRCNT_1">
-			<TELC:description>CORRERRCNT register instance 1 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_771" sampleID="771" sampleGroupID="Container_771">
-		<TELC:description>Groupname 0x465818</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_CORRERRCNT_2" datatypeIDREF="timc_register" sampleID="IMC0_CORRERRCNT_2">
-			<TELC:description>CORRERRCNT register instance 2 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC0_CORRERRCNT_3" datatypeIDREF="timc_register" sampleID="IMC0_CORRERRCNT_3">
-			<TELC:description>CORRERRCNT register instance 3 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_772" sampleID="772" sampleGroupID="Container_772">
-		<TELC:description>Groupname 0x465820</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_CORRERRCNT_4" datatypeIDREF="timc_register" sampleID="IMC0_CORRERRCNT_4">
-			<TELC:description>CORRERRCNT register instance 4 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_CORRERRCNT_4_5</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC0_CORRERRCNT_5" datatypeIDREF="timc_register" sampleID="IMC0_CORRERRCNT_5">
-			<TELC:description>CORRERRCNT register instance 5 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_CORRERRCNT_4_5</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_773" sampleID="773" sampleGroupID="Container_773">
-		<TELC:description>Groupname 0x465828</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_CORRERRCNT_6" datatypeIDREF="timc_register" sampleID="IMC0_CORRERRCNT_6">
-			<TELC:description>CORRERRCNT register instance 6 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_CORRERRCNT_6_7</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC0_CORRERRCNT_7" datatypeIDREF="timc_register" sampleID="IMC0_CORRERRCNT_7">
-			<TELC:description>CORRERRCNT register instance 7 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_CORRERRCNT_6_7</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_774" sampleID="774" sampleGroupID="Container_774">
-		<TELC:description>Groupname 0x465830</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_0" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_0">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_1" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_1">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_775" sampleID="775" sampleGroupID="Container_775">
-		<TELC:description>Groupname 0x465838</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_2" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_2">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_3" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_3">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_776" sampleID="776" sampleGroupID="Container_776">
-		<TELC:description>Groupname 0x465840</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_PARITY_0">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_PARITY_0</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_777" sampleID="777" sampleGroupID="Container_777">
-		<TELC:description>Groupname 0x465848</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_PARITY_1">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_PARITY_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_778" sampleID="778" sampleGroupID="Container_778">
-		<TELC:description>Groupname 0x465850</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_PARITY_2">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_PARITY_2</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_779" sampleID="779" sampleGroupID="Container_779">
-		<TELC:description>Groupname 0x465858</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_PARITY_3">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_PARITY_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_780" sampleID="780" sampleGroupID="Container_780">
-		<TELC:description>Groupname 0x465860</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_0" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_1" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_781" sampleID="781" sampleGroupID="Container_781">
-		<TELC:description>Groupname 0x465868</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_2" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_3" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_782" sampleID="782" sampleGroupID="Container_782">
-		<TELC:description>Groupname 0x465870</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_0" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_1" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_783" sampleID="783" sampleGroupID="Container_783">
-		<TELC:description>Groupname 0x465878</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_2" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_3" datatypeIDREF="timc_register" sampleID="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 0</TELC:description>
-			<TELC:sampleSubGroup>IMC0_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_784" sampleID="784" sampleGroupID="Container_784">
-		<TELC:description>Groupname 0x465880</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_CORRERRCNT_0" datatypeIDREF="timc_register" sampleID="IMC1_CORRERRCNT_0">
-			<TELC:description>CORRERRCNT register instance 0 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC1_CORRERRCNT_1" datatypeIDREF="timc_register" sampleID="IMC1_CORRERRCNT_1">
-			<TELC:description>CORRERRCNT register instance 1 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_785" sampleID="785" sampleGroupID="Container_785">
-		<TELC:description>Groupname 0x465888</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_CORRERRCNT_2" datatypeIDREF="timc_register" sampleID="IMC1_CORRERRCNT_2">
-			<TELC:description>CORRERRCNT register instance 2 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC1_CORRERRCNT_3" datatypeIDREF="timc_register" sampleID="IMC1_CORRERRCNT_3">
-			<TELC:description>CORRERRCNT register instance 3 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_786" sampleID="786" sampleGroupID="Container_786">
-		<TELC:description>Groupname 0x465890</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_CORRERRCNT_4" datatypeIDREF="timc_register" sampleID="IMC1_CORRERRCNT_4">
-			<TELC:description>CORRERRCNT register instance 4 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_CORRERRCNT_4_5</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC1_CORRERRCNT_5" datatypeIDREF="timc_register" sampleID="IMC1_CORRERRCNT_5">
-			<TELC:description>CORRERRCNT register instance 5 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_CORRERRCNT_4_5</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_787" sampleID="787" sampleGroupID="Container_787">
-		<TELC:description>Groupname 0x465898</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_CORRERRCNT_6" datatypeIDREF="timc_register" sampleID="IMC1_CORRERRCNT_6">
-			<TELC:description>CORRERRCNT register instance 6 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_CORRERRCNT_6_7</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC1_CORRERRCNT_7" datatypeIDREF="timc_register" sampleID="IMC1_CORRERRCNT_7">
-			<TELC:description>CORRERRCNT register instance 7 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_CORRERRCNT_6_7</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_788" sampleID="788" sampleGroupID="Container_788">
-		<TELC:description>Groupname 0x4658a0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_0" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_0">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_1" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_1">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_789" sampleID="789" sampleGroupID="Container_789">
-		<TELC:description>Groupname 0x4658a8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_2" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_2">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_3" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_3">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_790" sampleID="790" sampleGroupID="Container_790">
-		<TELC:description>Groupname 0x4658b0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_PARITY_0">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_PARITY_0</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_791" sampleID="791" sampleGroupID="Container_791">
-		<TELC:description>Groupname 0x4658b8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_PARITY_1">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_PARITY_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_792" sampleID="792" sampleGroupID="Container_792">
-		<TELC:description>Groupname 0x4658c0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_PARITY_2">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_PARITY_2</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_793" sampleID="793" sampleGroupID="Container_793">
-		<TELC:description>Groupname 0x4658c8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_PARITY_3">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_PARITY_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_794" sampleID="794" sampleGroupID="Container_794">
-		<TELC:description>Groupname 0x4658d0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_0" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_1" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_795" sampleID="795" sampleGroupID="Container_795">
-		<TELC:description>Groupname 0x4658d8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_2" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_3" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_796" sampleID="796" sampleGroupID="Container_796">
-		<TELC:description>Groupname 0x4658e0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_0" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_1" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_797" sampleID="797" sampleGroupID="Container_797">
-		<TELC:description>Groupname 0x4658e8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_2" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_3" datatypeIDREF="timc_register" sampleID="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 1</TELC:description>
-			<TELC:sampleSubGroup>IMC1_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_798" sampleID="798" sampleGroupID="Container_798">
-		<TELC:description>Groupname 0x4658f0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_CORRERRCNT_0" datatypeIDREF="timc_register" sampleID="IMC2_CORRERRCNT_0">
-			<TELC:description>CORRERRCNT register instance 0 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC2_CORRERRCNT_1" datatypeIDREF="timc_register" sampleID="IMC2_CORRERRCNT_1">
-			<TELC:description>CORRERRCNT register instance 1 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_799" sampleID="799" sampleGroupID="Container_799">
-		<TELC:description>Groupname 0x4658f8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_CORRERRCNT_2" datatypeIDREF="timc_register" sampleID="IMC2_CORRERRCNT_2">
-			<TELC:description>CORRERRCNT register instance 2 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC2_CORRERRCNT_3" datatypeIDREF="timc_register" sampleID="IMC2_CORRERRCNT_3">
-			<TELC:description>CORRERRCNT register instance 3 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_800" sampleID="800" sampleGroupID="Container_800">
-		<TELC:description>Groupname 0x465900</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_CORRERRCNT_4" datatypeIDREF="timc_register" sampleID="IMC2_CORRERRCNT_4">
-			<TELC:description>CORRERRCNT register instance 4 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_CORRERRCNT_4_5</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC2_CORRERRCNT_5" datatypeIDREF="timc_register" sampleID="IMC2_CORRERRCNT_5">
-			<TELC:description>CORRERRCNT register instance 5 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_CORRERRCNT_4_5</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_0_EN" datatypeIDREF="tenabled_state" sampleID="CHA_0_EN">
+			<TELC:description>CHA instance 0 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_801" sampleID="801" sampleGroupID="Container_801">
-		<TELC:description>Groupname 0x465908</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_CORRERRCNT_6" datatypeIDREF="timc_register" sampleID="IMC2_CORRERRCNT_6">
-			<TELC:description>CORRERRCNT register instance 6 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_CORRERRCNT_6_7</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
+			<TELC:size>1</TELC:size>
 			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:msb>0</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC2_CORRERRCNT_7" datatypeIDREF="timc_register" sampleID="IMC2_CORRERRCNT_7">
-			<TELC:description>CORRERRCNT register instance 7 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_CORRERRCNT_6_7</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_1_EN" datatypeIDREF="tenabled_state" sampleID="CHA_1_EN">
+			<TELC:description>CHA instance 1 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_802" sampleID="802" sampleGroupID="Container_802">
-		<TELC:description>Groupname 0x465910</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_0" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_0">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>1</TELC:lsb>
+			<TELC:msb>1</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_1" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_1">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_2_EN" datatypeIDREF="tenabled_state" sampleID="CHA_2_EN">
+			<TELC:description>CHA instance 2 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_803" sampleID="803" sampleGroupID="Container_803">
-		<TELC:description>Groupname 0x465918</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_2" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_2">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>2</TELC:lsb>
+			<TELC:msb>2</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_3" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_3">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_3_EN" datatypeIDREF="tenabled_state" sampleID="CHA_3_EN">
+			<TELC:description>CHA instance 3 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_804" sampleID="804" sampleGroupID="Container_804">
-		<TELC:description>Groupname 0x465920</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_PARITY_0">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_PARITY_0</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_805" sampleID="805" sampleGroupID="Container_805">
-		<TELC:description>Groupname 0x465928</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_PARITY_1">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_PARITY_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_806" sampleID="806" sampleGroupID="Container_806">
-		<TELC:description>Groupname 0x465930</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_PARITY_2">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_PARITY_2</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_807" sampleID="807" sampleGroupID="Container_807">
-		<TELC:description>Groupname 0x465938</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_PARITY_3">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_PARITY_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_808" sampleID="808" sampleGroupID="Container_808">
-		<TELC:description>Groupname 0x465940</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_0" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>3</TELC:lsb>
+			<TELC:msb>3</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_1" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_4_EN" datatypeIDREF="tenabled_state" sampleID="CHA_4_EN">
+			<TELC:description>CHA instance 4 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_809" sampleID="809" sampleGroupID="Container_809">
-		<TELC:description>Groupname 0x465948</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_2" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>4</TELC:lsb>
+			<TELC:msb>4</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_3" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_5_EN" datatypeIDREF="tenabled_state" sampleID="CHA_5_EN">
+			<TELC:description>CHA instance 5 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_810" sampleID="810" sampleGroupID="Container_810">
-		<TELC:description>Groupname 0x465950</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_0" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>5</TELC:lsb>
+			<TELC:msb>5</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_1" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_6_EN" datatypeIDREF="tenabled_state" sampleID="CHA_6_EN">
+			<TELC:description>CHA instance 6 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_811" sampleID="811" sampleGroupID="Container_811">
-		<TELC:description>Groupname 0x465958</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_2" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>6</TELC:lsb>
+			<TELC:msb>6</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_3" datatypeIDREF="timc_register" sampleID="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 2</TELC:description>
-			<TELC:sampleSubGroup>IMC2_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_7_EN" datatypeIDREF="tenabled_state" sampleID="CHA_7_EN">
+			<TELC:description>CHA instance 7 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_812" sampleID="812" sampleGroupID="Container_812">
-		<TELC:description>Groupname 0x465960</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_CORRERRCNT_0" datatypeIDREF="timc_register" sampleID="IMC3_CORRERRCNT_0">
-			<TELC:description>CORRERRCNT register instance 0 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>7</TELC:lsb>
+			<TELC:msb>7</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC3_CORRERRCNT_1" datatypeIDREF="timc_register" sampleID="IMC3_CORRERRCNT_1">
-			<TELC:description>CORRERRCNT register instance 1 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_CORRERRCNT_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_8_EN" datatypeIDREF="tenabled_state" sampleID="CHA_8_EN">
+			<TELC:description>CHA instance 8 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_813" sampleID="813" sampleGroupID="Container_813">
-		<TELC:description>Groupname 0x465968</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_CORRERRCNT_2" datatypeIDREF="timc_register" sampleID="IMC3_CORRERRCNT_2">
-			<TELC:description>CORRERRCNT register instance 2 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>8</TELC:lsb>
+			<TELC:msb>8</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC3_CORRERRCNT_3" datatypeIDREF="timc_register" sampleID="IMC3_CORRERRCNT_3">
-			<TELC:description>CORRERRCNT register instance 3 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_CORRERRCNT_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_9_EN" datatypeIDREF="tenabled_state" sampleID="CHA_9_EN">
+			<TELC:description>CHA instance 9 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_814" sampleID="814" sampleGroupID="Container_814">
-		<TELC:description>Groupname 0x465970</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_CORRERRCNT_4" datatypeIDREF="timc_register" sampleID="IMC3_CORRERRCNT_4">
-			<TELC:description>CORRERRCNT register instance 4 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_CORRERRCNT_4_5</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>9</TELC:lsb>
+			<TELC:msb>9</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC3_CORRERRCNT_5" datatypeIDREF="timc_register" sampleID="IMC3_CORRERRCNT_5">
-			<TELC:description>CORRERRCNT register instance 5 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_CORRERRCNT_4_5</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_10_EN" datatypeIDREF="tenabled_state" sampleID="CHA_10_EN">
+			<TELC:description>CHA instance 10 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_815" sampleID="815" sampleGroupID="Container_815">
-		<TELC:description>Groupname 0x465978</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_CORRERRCNT_6" datatypeIDREF="timc_register" sampleID="IMC3_CORRERRCNT_6">
-			<TELC:description>CORRERRCNT register instance 6 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_CORRERRCNT_6_7</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>10</TELC:lsb>
+			<TELC:msb>10</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC3_CORRERRCNT_7" datatypeIDREF="timc_register" sampleID="IMC3_CORRERRCNT_7">
-			<TELC:description>CORRERRCNT register instance 7 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_CORRERRCNT_6_7</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_11_EN" datatypeIDREF="tenabled_state" sampleID="CHA_11_EN">
+			<TELC:description>CHA instance 11 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_816" sampleID="816" sampleGroupID="Container_816">
-		<TELC:description>Groupname 0x465980</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_0" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_0">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>11</TELC:lsb>
+			<TELC:msb>11</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_1" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_1">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_12_EN" datatypeIDREF="tenabled_state" sampleID="CHA_12_EN">
+			<TELC:description>CHA instance 12 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_817" sampleID="817" sampleGroupID="Container_817">
-		<TELC:description>Groupname 0x465988</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_2" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_2">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
-		</TELC:sample>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_3" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_3">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>12</TELC:lsb>
+			<TELC:msb>12</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_13_EN" datatypeIDREF="tenabled_state" sampleID="CHA_13_EN">
+			<TELC:description>CHA instance 13 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>13</TELC:lsb>
+			<TELC:msb>13</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_14_EN" datatypeIDREF="tenabled_state" sampleID="CHA_14_EN">
+			<TELC:description>CHA instance 14 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>14</TELC:lsb>
+			<TELC:msb>14</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_15_EN" datatypeIDREF="tenabled_state" sampleID="CHA_15_EN">
+			<TELC:description>CHA instance 15 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>15</TELC:lsb>
+			<TELC:msb>15</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_16_EN" datatypeIDREF="tenabled_state" sampleID="CHA_16_EN">
+			<TELC:description>CHA instance 16 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>16</TELC:lsb>
+			<TELC:msb>16</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_17_EN" datatypeIDREF="tenabled_state" sampleID="CHA_17_EN">
+			<TELC:description>CHA instance 17 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>17</TELC:lsb>
+			<TELC:msb>17</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_18_EN" datatypeIDREF="tenabled_state" sampleID="CHA_18_EN">
+			<TELC:description>CHA instance 18 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>18</TELC:lsb>
+			<TELC:msb>18</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_19_EN" datatypeIDREF="tenabled_state" sampleID="CHA_19_EN">
+			<TELC:description>CHA instance 19 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_818" sampleID="818" sampleGroupID="Container_818">
-		<TELC:description>Groupname 0x465990</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_PARITY_0">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_PARITY_0</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_819" sampleID="819" sampleGroupID="Container_819">
-		<TELC:description>Groupname 0x465998</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_PARITY_1">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_PARITY_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_820" sampleID="820" sampleGroupID="Container_820">
-		<TELC:description>Groupname 0x4659a0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_PARITY_2">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_PARITY_2</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_821" sampleID="821" sampleGroupID="Container_821">
-		<TELC:description>Groupname 0x4659a8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_PARITY_3">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_PARITY_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_822" sampleID="822" sampleGroupID="Container_822">
-		<TELC:description>Groupname 0x4659b0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_0" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>19</TELC:lsb>
+			<TELC:msb>19</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_1" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_20_EN" datatypeIDREF="tenabled_state" sampleID="CHA_20_EN">
+			<TELC:description>CHA instance 20 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_823" sampleID="823" sampleGroupID="Container_823">
-		<TELC:description>Groupname 0x4659b8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_2" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>20</TELC:lsb>
+			<TELC:msb>20</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_3" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_21_EN" datatypeIDREF="tenabled_state" sampleID="CHA_21_EN">
+			<TELC:description>CHA instance 21 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_824" sampleID="824" sampleGroupID="Container_824">
-		<TELC:description>Groupname 0x4659c0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_0" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>21</TELC:lsb>
+			<TELC:msb>21</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_1" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_22_EN" datatypeIDREF="tenabled_state" sampleID="CHA_22_EN">
+			<TELC:description>CHA instance 22 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_825" sampleID="825" sampleGroupID="Container_825">
-		<TELC:description>Groupname 0x4659c8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_2" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>22</TELC:lsb>
+			<TELC:msb>22</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_3" datatypeIDREF="timc_register" sampleID="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 3</TELC:description>
-			<TELC:sampleSubGroup>IMC3_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_23_EN" datatypeIDREF="tenabled_state" sampleID="CHA_23_EN">
+			<TELC:description>CHA instance 23 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_826" sampleID="826" sampleGroupID="Container_826">
-		<TELC:description>Groupname 0x4659d0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_CORRERRCNT_0" datatypeIDREF="timc_register" sampleID="IMC4_CORRERRCNT_0">
-			<TELC:description>CORRERRCNT register instance 0 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>23</TELC:lsb>
+			<TELC:msb>23</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC4_CORRERRCNT_1" datatypeIDREF="timc_register" sampleID="IMC4_CORRERRCNT_1">
-			<TELC:description>CORRERRCNT register instance 1 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_CORRERRCNT_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_24_EN" datatypeIDREF="tenabled_state" sampleID="CHA_24_EN">
+			<TELC:description>CHA instance 24 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_827" sampleID="827" sampleGroupID="Container_827">
-		<TELC:description>Groupname 0x4659d8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_CORRERRCNT_2" datatypeIDREF="timc_register" sampleID="IMC4_CORRERRCNT_2">
-			<TELC:description>CORRERRCNT register instance 2 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>24</TELC:lsb>
+			<TELC:msb>24</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC4_CORRERRCNT_3" datatypeIDREF="timc_register" sampleID="IMC4_CORRERRCNT_3">
-			<TELC:description>CORRERRCNT register instance 3 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_CORRERRCNT_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_25_EN" datatypeIDREF="tenabled_state" sampleID="CHA_25_EN">
+			<TELC:description>CHA instance 25 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_828" sampleID="828" sampleGroupID="Container_828">
-		<TELC:description>Groupname 0x4659e0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_CORRERRCNT_4" datatypeIDREF="timc_register" sampleID="IMC4_CORRERRCNT_4">
-			<TELC:description>CORRERRCNT register instance 4 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_CORRERRCNT_4_5</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>25</TELC:lsb>
+			<TELC:msb>25</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC4_CORRERRCNT_5" datatypeIDREF="timc_register" sampleID="IMC4_CORRERRCNT_5">
-			<TELC:description>CORRERRCNT register instance 5 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_CORRERRCNT_4_5</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_26_EN" datatypeIDREF="tenabled_state" sampleID="CHA_26_EN">
+			<TELC:description>CHA instance 26 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_829" sampleID="829" sampleGroupID="Container_829">
-		<TELC:description>Groupname 0x4659e8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_CORRERRCNT_6" datatypeIDREF="timc_register" sampleID="IMC4_CORRERRCNT_6">
-			<TELC:description>CORRERRCNT register instance 6 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_CORRERRCNT_6_7</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>26</TELC:lsb>
+			<TELC:msb>26</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC4_CORRERRCNT_7" datatypeIDREF="timc_register" sampleID="IMC4_CORRERRCNT_7">
-			<TELC:description>CORRERRCNT register instance 7 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_CORRERRCNT_6_7</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_27_EN" datatypeIDREF="tenabled_state" sampleID="CHA_27_EN">
+			<TELC:description>CHA instance 27 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_830" sampleID="830" sampleGroupID="Container_830">
-		<TELC:description>Groupname 0x4659f0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_0" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_0">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>27</TELC:lsb>
+			<TELC:msb>27</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_1" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_1">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_28_EN" datatypeIDREF="tenabled_state" sampleID="CHA_28_EN">
+			<TELC:description>CHA instance 28 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_831" sampleID="831" sampleGroupID="Container_831">
-		<TELC:description>Groupname 0x4659f8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_2" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_2">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>28</TELC:lsb>
+			<TELC:msb>28</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_3" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_3">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_29_EN" datatypeIDREF="tenabled_state" sampleID="CHA_29_EN">
+			<TELC:description>CHA instance 29 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_832" sampleID="832" sampleGroupID="Container_832">
-		<TELC:description>Groupname 0x465a00</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_PARITY_0">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_PARITY_0</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_833" sampleID="833" sampleGroupID="Container_833">
-		<TELC:description>Groupname 0x465a08</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_PARITY_1">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_PARITY_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_834" sampleID="834" sampleGroupID="Container_834">
-		<TELC:description>Groupname 0x465a10</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_PARITY_2">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_PARITY_2</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_835" sampleID="835" sampleGroupID="Container_835">
-		<TELC:description>Groupname 0x465a18</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_PARITY_3">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_PARITY_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_836" sampleID="836" sampleGroupID="Container_836">
-		<TELC:description>Groupname 0x465a20</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_0" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>29</TELC:lsb>
+			<TELC:msb>29</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_1" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_30_EN" datatypeIDREF="tenabled_state" sampleID="CHA_30_EN">
+			<TELC:description>CHA instance 30 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_837" sampleID="837" sampleGroupID="Container_837">
-		<TELC:description>Groupname 0x465a28</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_2" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>30</TELC:lsb>
+			<TELC:msb>30</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_3" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_31_EN" datatypeIDREF="tenabled_state" sampleID="CHA_31_EN">
+			<TELC:description>CHA instance 31 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_838" sampleID="838" sampleGroupID="Container_838">
-		<TELC:description>Groupname 0x465a30</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_0" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>31</TELC:lsb>
 			<TELC:msb>31</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_1" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_32_EN" datatypeIDREF="tenabled_state" sampleID="CHA_32_EN">
+			<TELC:description>CHA instance 32 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
+			<TELC:size>1</TELC:size>
 			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_839" sampleID="839" sampleGroupID="Container_839">
-		<TELC:description>Groupname 0x465a38</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_2" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:msb>32</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_3" datatypeIDREF="timc_register" sampleID="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 4</TELC:description>
-			<TELC:sampleSubGroup>IMC4_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_33_EN" datatypeIDREF="tenabled_state" sampleID="CHA_33_EN">
+			<TELC:description>CHA instance 33 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_840" sampleID="840" sampleGroupID="Container_840">
-		<TELC:description>Groupname 0x465a40</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_CORRERRCNT_0" datatypeIDREF="timc_register" sampleID="IMC5_CORRERRCNT_0">
-			<TELC:description>CORRERRCNT register instance 0 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>33</TELC:lsb>
+			<TELC:msb>33</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC5_CORRERRCNT_1" datatypeIDREF="timc_register" sampleID="IMC5_CORRERRCNT_1">
-			<TELC:description>CORRERRCNT register instance 1 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_CORRERRCNT_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_34_EN" datatypeIDREF="tenabled_state" sampleID="CHA_34_EN">
+			<TELC:description>CHA instance 34 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_841" sampleID="841" sampleGroupID="Container_841">
-		<TELC:description>Groupname 0x465a48</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_CORRERRCNT_2" datatypeIDREF="timc_register" sampleID="IMC5_CORRERRCNT_2">
-			<TELC:description>CORRERRCNT register instance 2 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>34</TELC:lsb>
+			<TELC:msb>34</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC5_CORRERRCNT_3" datatypeIDREF="timc_register" sampleID="IMC5_CORRERRCNT_3">
-			<TELC:description>CORRERRCNT register instance 3 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_CORRERRCNT_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_35_EN" datatypeIDREF="tenabled_state" sampleID="CHA_35_EN">
+			<TELC:description>CHA instance 35 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_842" sampleID="842" sampleGroupID="Container_842">
-		<TELC:description>Groupname 0x465a50</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_CORRERRCNT_4" datatypeIDREF="timc_register" sampleID="IMC5_CORRERRCNT_4">
-			<TELC:description>CORRERRCNT register instance 4 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_CORRERRCNT_4_5</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>35</TELC:lsb>
+			<TELC:msb>35</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC5_CORRERRCNT_5" datatypeIDREF="timc_register" sampleID="IMC5_CORRERRCNT_5">
-			<TELC:description>CORRERRCNT register instance 5 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_CORRERRCNT_4_5</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_36_EN" datatypeIDREF="tenabled_state" sampleID="CHA_36_EN">
+			<TELC:description>CHA instance 36 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_843" sampleID="843" sampleGroupID="Container_843">
-		<TELC:description>Groupname 0x465a58</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_CORRERRCNT_6" datatypeIDREF="timc_register" sampleID="IMC5_CORRERRCNT_6">
-			<TELC:description>CORRERRCNT register instance 6 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_CORRERRCNT_6_7</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>36</TELC:lsb>
+			<TELC:msb>36</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC5_CORRERRCNT_7" datatypeIDREF="timc_register" sampleID="IMC5_CORRERRCNT_7">
-			<TELC:description>CORRERRCNT register instance 7 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_CORRERRCNT_6_7</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_37_EN" datatypeIDREF="tenabled_state" sampleID="CHA_37_EN">
+			<TELC:description>CHA instance 37 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_844" sampleID="844" sampleGroupID="Container_844">
-		<TELC:description>Groupname 0x465a60</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_0" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_0">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>37</TELC:lsb>
+			<TELC:msb>37</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_1" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_1">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_38_EN" datatypeIDREF="tenabled_state" sampleID="CHA_38_EN">
+			<TELC:description>CHA instance 38 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_845" sampleID="845" sampleGroupID="Container_845">
-		<TELC:description>Groupname 0x465a68</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_2" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_2">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>38</TELC:lsb>
+			<TELC:msb>38</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_3" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_3">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_39_EN" datatypeIDREF="tenabled_state" sampleID="CHA_39_EN">
+			<TELC:description>CHA instance 39 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_846" sampleID="846" sampleGroupID="Container_846">
-		<TELC:description>Groupname 0x465a70</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_PARITY_0">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_PARITY_0</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_847" sampleID="847" sampleGroupID="Container_847">
-		<TELC:description>Groupname 0x465a78</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_PARITY_1">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_PARITY_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_848" sampleID="848" sampleGroupID="Container_848">
-		<TELC:description>Groupname 0x465a80</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_PARITY_2">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_PARITY_2</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_849" sampleID="849" sampleGroupID="Container_849">
-		<TELC:description>Groupname 0x465a88</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_PARITY_3">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_PARITY_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_850" sampleID="850" sampleGroupID="Container_850">
-		<TELC:description>Groupname 0x465a90</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_0" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>39</TELC:lsb>
+			<TELC:msb>39</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_1" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_40_EN" datatypeIDREF="tenabled_state" sampleID="CHA_40_EN">
+			<TELC:description>CHA instance 40 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_851" sampleID="851" sampleGroupID="Container_851">
-		<TELC:description>Groupname 0x465a98</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_2" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>40</TELC:lsb>
+			<TELC:msb>40</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_3" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_41_EN" datatypeIDREF="tenabled_state" sampleID="CHA_41_EN">
+			<TELC:description>CHA instance 41 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_852" sampleID="852" sampleGroupID="Container_852">
-		<TELC:description>Groupname 0x465aa0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_0" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>41</TELC:lsb>
+			<TELC:msb>41</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_1" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_42_EN" datatypeIDREF="tenabled_state" sampleID="CHA_42_EN">
+			<TELC:description>CHA instance 42 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_853" sampleID="853" sampleGroupID="Container_853">
-		<TELC:description>Groupname 0x465aa8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_2" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>42</TELC:lsb>
+			<TELC:msb>42</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_3" datatypeIDREF="timc_register" sampleID="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 5</TELC:description>
-			<TELC:sampleSubGroup>IMC5_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_43_EN" datatypeIDREF="tenabled_state" sampleID="CHA_43_EN">
+			<TELC:description>CHA instance 43 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_854" sampleID="854" sampleGroupID="Container_854">
-		<TELC:description>Groupname 0x465ab0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_CORRERRCNT_0" datatypeIDREF="timc_register" sampleID="IMC6_CORRERRCNT_0">
-			<TELC:description>CORRERRCNT register instance 0 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>43</TELC:lsb>
+			<TELC:msb>43</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC6_CORRERRCNT_1" datatypeIDREF="timc_register" sampleID="IMC6_CORRERRCNT_1">
-			<TELC:description>CORRERRCNT register instance 1 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_CORRERRCNT_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_44_EN" datatypeIDREF="tenabled_state" sampleID="CHA_44_EN">
+			<TELC:description>CHA instance 44 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_855" sampleID="855" sampleGroupID="Container_855">
-		<TELC:description>Groupname 0x465ab8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_CORRERRCNT_2" datatypeIDREF="timc_register" sampleID="IMC6_CORRERRCNT_2">
-			<TELC:description>CORRERRCNT register instance 2 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>44</TELC:lsb>
+			<TELC:msb>44</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC6_CORRERRCNT_3" datatypeIDREF="timc_register" sampleID="IMC6_CORRERRCNT_3">
-			<TELC:description>CORRERRCNT register instance 3 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_CORRERRCNT_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_45_EN" datatypeIDREF="tenabled_state" sampleID="CHA_45_EN">
+			<TELC:description>CHA instance 45 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_856" sampleID="856" sampleGroupID="Container_856">
-		<TELC:description>Groupname 0x465ac0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_CORRERRCNT_4" datatypeIDREF="timc_register" sampleID="IMC6_CORRERRCNT_4">
-			<TELC:description>CORRERRCNT register instance 4 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_CORRERRCNT_4_5</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>45</TELC:lsb>
+			<TELC:msb>45</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC6_CORRERRCNT_5" datatypeIDREF="timc_register" sampleID="IMC6_CORRERRCNT_5">
-			<TELC:description>CORRERRCNT register instance 5 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_CORRERRCNT_4_5</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_46_EN" datatypeIDREF="tenabled_state" sampleID="CHA_46_EN">
+			<TELC:description>CHA instance 46 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_857" sampleID="857" sampleGroupID="Container_857">
-		<TELC:description>Groupname 0x465ac8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_CORRERRCNT_6" datatypeIDREF="timc_register" sampleID="IMC6_CORRERRCNT_6">
-			<TELC:description>CORRERRCNT register instance 6 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_CORRERRCNT_6_7</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>46</TELC:lsb>
+			<TELC:msb>46</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC6_CORRERRCNT_7" datatypeIDREF="timc_register" sampleID="IMC6_CORRERRCNT_7">
-			<TELC:description>CORRERRCNT register instance 7 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_CORRERRCNT_6_7</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_47_EN" datatypeIDREF="tenabled_state" sampleID="CHA_47_EN">
+			<TELC:description>CHA instance 47 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_858" sampleID="858" sampleGroupID="Container_858">
-		<TELC:description>Groupname 0x465ad0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_0" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_0">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>47</TELC:lsb>
+			<TELC:msb>47</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_1" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_1">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_48_EN" datatypeIDREF="tenabled_state" sampleID="CHA_48_EN">
+			<TELC:description>CHA instance 48 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_859" sampleID="859" sampleGroupID="Container_859">
-		<TELC:description>Groupname 0x465ad8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_2" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_2">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>48</TELC:lsb>
+			<TELC:msb>48</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_3" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_3">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_49_EN" datatypeIDREF="tenabled_state" sampleID="CHA_49_EN">
+			<TELC:description>CHA instance 49 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_860" sampleID="860" sampleGroupID="Container_860">
-		<TELC:description>Groupname 0x465ae0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_PARITY_0">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_PARITY_0</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_861" sampleID="861" sampleGroupID="Container_861">
-		<TELC:description>Groupname 0x465ae8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_PARITY_1">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_PARITY_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_862" sampleID="862" sampleGroupID="Container_862">
-		<TELC:description>Groupname 0x465af0</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_PARITY_2">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_PARITY_2</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_863" sampleID="863" sampleGroupID="Container_863">
-		<TELC:description>Groupname 0x465af8</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_PARITY_3">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_PARITY_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_864" sampleID="864" sampleGroupID="Container_864">
-		<TELC:description>Groupname 0x465b00</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_0" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>49</TELC:lsb>
+			<TELC:msb>49</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_1" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_50_EN" datatypeIDREF="tenabled_state" sampleID="CHA_50_EN">
+			<TELC:description>CHA instance 50 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_865" sampleID="865" sampleGroupID="Container_865">
-		<TELC:description>Groupname 0x465b08</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_2" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>50</TELC:lsb>
+			<TELC:msb>50</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_3" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_51_EN" datatypeIDREF="tenabled_state" sampleID="CHA_51_EN">
+			<TELC:description>CHA instance 51 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_866" sampleID="866" sampleGroupID="Container_866">
-		<TELC:description>Groupname 0x465b10</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_0" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>51</TELC:lsb>
+			<TELC:msb>51</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_1" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_52_EN" datatypeIDREF="tenabled_state" sampleID="CHA_52_EN">
+			<TELC:description>CHA instance 52 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_867" sampleID="867" sampleGroupID="Container_867">
-		<TELC:description>Groupname 0x465b18</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_2" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>52</TELC:lsb>
+			<TELC:msb>52</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_3" datatypeIDREF="timc_register" sampleID="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 6</TELC:description>
-			<TELC:sampleSubGroup>IMC6_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_53_EN" datatypeIDREF="tenabled_state" sampleID="CHA_53_EN">
+			<TELC:description>CHA instance 53 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_868" sampleID="868" sampleGroupID="Container_868">
-		<TELC:description>Groupname 0x465b20</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_CORRERRCNT_0" datatypeIDREF="timc_register" sampleID="IMC7_CORRERRCNT_0">
-			<TELC:description>CORRERRCNT register instance 0 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_CORRERRCNT_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>53</TELC:lsb>
+			<TELC:msb>53</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC7_CORRERRCNT_1" datatypeIDREF="timc_register" sampleID="IMC7_CORRERRCNT_1">
-			<TELC:description>CORRERRCNT register instance 1 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_CORRERRCNT_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_54_EN" datatypeIDREF="tenabled_state" sampleID="CHA_54_EN">
+			<TELC:description>CHA instance 54 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_869" sampleID="869" sampleGroupID="Container_869">
-		<TELC:description>Groupname 0x465b28</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_CORRERRCNT_2" datatypeIDREF="timc_register" sampleID="IMC7_CORRERRCNT_2">
-			<TELC:description>CORRERRCNT register instance 2 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_CORRERRCNT_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>54</TELC:lsb>
+			<TELC:msb>54</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC7_CORRERRCNT_3" datatypeIDREF="timc_register" sampleID="IMC7_CORRERRCNT_3">
-			<TELC:description>CORRERRCNT register instance 3 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_CORRERRCNT_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_55_EN" datatypeIDREF="tenabled_state" sampleID="CHA_55_EN">
+			<TELC:description>CHA instance 55 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_870" sampleID="870" sampleGroupID="Container_870">
-		<TELC:description>Groupname 0x465b30</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_CORRERRCNT_4" datatypeIDREF="timc_register" sampleID="IMC7_CORRERRCNT_4">
-			<TELC:description>CORRERRCNT register instance 4 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_CORRERRCNT_4_5</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>55</TELC:lsb>
+			<TELC:msb>55</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC7_CORRERRCNT_5" datatypeIDREF="timc_register" sampleID="IMC7_CORRERRCNT_5">
-			<TELC:description>CORRERRCNT register instance 5 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_CORRERRCNT_4_5</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_56_EN" datatypeIDREF="tenabled_state" sampleID="CHA_56_EN">
+			<TELC:description>CHA instance 56 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_871" sampleID="871" sampleGroupID="Container_871">
-		<TELC:description>Groupname 0x465b38</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_CORRERRCNT_6" datatypeIDREF="timc_register" sampleID="IMC7_CORRERRCNT_6">
-			<TELC:description>CORRERRCNT register instance 6 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_CORRERRCNT_6_7</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>56</TELC:lsb>
+			<TELC:msb>56</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC7_CORRERRCNT_7" datatypeIDREF="timc_register" sampleID="IMC7_CORRERRCNT_7">
-			<TELC:description>CORRERRCNT register instance 7 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_CORRERRCNT_6_7</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_57_EN" datatypeIDREF="tenabled_state" sampleID="CHA_57_EN">
+			<TELC:description>CHA instance 57 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_872" sampleID="872" sampleGroupID="Container_872">
-		<TELC:description>Groupname 0x465b40</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_0" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_0">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>57</TELC:lsb>
+			<TELC:msb>57</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_1" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_1">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_58_EN" datatypeIDREF="tenabled_state" sampleID="CHA_58_EN">
+			<TELC:description>CHA instance 58 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_873" sampleID="873" sampleGroupID="Container_873">
-		<TELC:description>Groupname 0x465b48</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_2" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_2">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>58</TELC:lsb>
+			<TELC:msb>58</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_3" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_3">
-			<TELC:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_59_EN" datatypeIDREF="tenabled_state" sampleID="CHA_59_EN">
+			<TELC:description>CHA instance 59 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_874" sampleID="874" sampleGroupID="Container_874">
-		<TELC:description>Groupname 0x465b50</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_PARITY_0">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_PARITY_0</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_875" sampleID="875" sampleGroupID="Container_875">
-		<TELC:description>Groupname 0x465b58</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_PARITY_1">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_PARITY_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_876" sampleID="876" sampleGroupID="Container_876">
-		<TELC:description>Groupname 0x465b60</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_PARITY_2">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_PARITY_2</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_877" sampleID="877" sampleGroupID="Container_877">
-		<TELC:description>Groupname 0x465b68</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_PARITY_3">
-			<TELC:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_PARITY_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>64</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_878" sampleID="878" sampleGroupID="Container_878">
-		<TELC:description>Groupname 0x465b70</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_0" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>59</TELC:lsb>
+			<TELC:msb>59</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_1" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_ADDRESS1_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_60_EN" datatypeIDREF="tenabled_state" sampleID="CHA_60_EN">
+			<TELC:description>CHA instance 60 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_879" sampleID="879" sampleGroupID="Container_879">
-		<TELC:description>Groupname 0x465b78</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_2" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>60</TELC:lsb>
+			<TELC:msb>60</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_3" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_ADDRESS1_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_61_EN" datatypeIDREF="tenabled_state" sampleID="CHA_61_EN">
+			<TELC:description>CHA instance 61 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_880" sampleID="880" sampleGroupID="Container_880">
-		<TELC:description>Groupname 0x465b80</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_0" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_0">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>61</TELC:lsb>
+			<TELC:msb>61</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_1" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_1">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_ADDRESS2_0_1</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_62_EN" datatypeIDREF="tenabled_state" sampleID="CHA_62_EN">
+			<TELC:description>CHA instance 62 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
-			<TELC:msb>63</TELC:msb>
-		</TELC:sample>
-	</TELEM:SampleGroup>
-	<TELEM:SampleGroup name="Container_881" sampleID="881" sampleGroupID="Container_881">
-		<TELC:description>Groupname 0x465b88</TELC:description>
-		<TELC:length>64</TELC:length>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_2" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_2">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
-			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>0</TELC:lsb>
-			<TELC:msb>31</TELC:msb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>62</TELC:lsb>
+			<TELC:msb>62</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_3" datatypeIDREF="timc_register" sampleID="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_3">
-			<TELC:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 7</TELC:description>
-			<TELC:sampleSubGroup>IMC7_RETRY_RD_ERR_LOG_ADDRESS2_2_3</TELC:sampleSubGroup>
+		<TELC:sample name="CHA_63_EN" datatypeIDREF="tenabled_state" sampleID="CHA_63_EN">
+			<TELC:description>CHA instance 63 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
-			<TELC:size>32</TELC:size>
-			<TELC:lsb>32</TELC:lsb>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>63</TELC:lsb>
 			<TELC:msb>63</TELC:msb>
 		</TELC:sample>
 	</TELEM:SampleGroup>

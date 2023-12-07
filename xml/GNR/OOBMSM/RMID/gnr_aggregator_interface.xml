@@ -24,7 +24,7 @@
 	<TELI:uniqueid>477e9373</TELI:uniqueid>
 	<TELI:NDA>Public</TELI:NDA>
 	<TELI:samplePeriod>10</TELI:samplePeriod>
-	<TELI:revisionDate>2023-09-21</TELI:revisionDate>
+	<TELI:revisionDate>2023-12-06</TELI:revisionDate>
 	<TELI:AggregatorSamples>
 		<TELI:T_AggregatorSample sampleName="CHA0_RMID0_RDT_CMT" sampleGroup="CHA0_RMID_0_1_RDT_CMT" datatypeIDREF="trmid_usage_counter" sampleID="0">
 			<TELI:description>CHA 0 RMID 0 LLC cache line usage counter</TELI:description>
@@ -16933,2125 +16933,706 @@
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="NUM_EN_CHA" sampleGroup="NUM_EN_CHA" datatypeIDREF="tnum_en_cha" sampleID="1537">
-			<TELI:description>Number of enabled CHAs</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_0_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1537">
+			<TELI:description>CHA instance 0 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
-					<sampleIDREF>NUM_EN_CHA</sampleIDREF>
+					<sampleIDREF>CHA_0_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_CORRERRCNT_0" sampleGroup="IMC0_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1538">
-			<TELI:description>CORRERRCNT register instance 0 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_1_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1538">
+			<TELI:description>CHA instance 1 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_770</sampleGroupIDREF>
-					<sampleIDREF>IMC0_CORRERRCNT_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_1_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_CORRERRCNT_1" sampleGroup="IMC0_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1539">
-			<TELI:description>CORRERRCNT register instance 1 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_2_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1539">
+			<TELI:description>CHA instance 2 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_770</sampleGroupIDREF>
-					<sampleIDREF>IMC0_CORRERRCNT_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_2_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_CORRERRCNT_2" sampleGroup="IMC0_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1540">
-			<TELI:description>CORRERRCNT register instance 2 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_3_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1540">
+			<TELI:description>CHA instance 3 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_771</sampleGroupIDREF>
-					<sampleIDREF>IMC0_CORRERRCNT_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_3_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_CORRERRCNT_3" sampleGroup="IMC0_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1541">
-			<TELI:description>CORRERRCNT register instance 3 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_4_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1541">
+			<TELI:description>CHA instance 4 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_771</sampleGroupIDREF>
-					<sampleIDREF>IMC0_CORRERRCNT_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_4_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_CORRERRCNT_4" sampleGroup="IMC0_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1542">
-			<TELI:description>CORRERRCNT register instance 4 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_5_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1542">
+			<TELI:description>CHA instance 5 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_772</sampleGroupIDREF>
-					<sampleIDREF>IMC0_CORRERRCNT_4</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_5_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_CORRERRCNT_5" sampleGroup="IMC0_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1543">
-			<TELI:description>CORRERRCNT register instance 5 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_6_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1543">
+			<TELI:description>CHA instance 6 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_772</sampleGroupIDREF>
-					<sampleIDREF>IMC0_CORRERRCNT_5</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_6_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_CORRERRCNT_6" sampleGroup="IMC0_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1544">
-			<TELI:description>CORRERRCNT register instance 6 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_7_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1544">
+			<TELI:description>CHA instance 7 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_773</sampleGroupIDREF>
-					<sampleIDREF>IMC0_CORRERRCNT_6</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_7_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_CORRERRCNT_7" sampleGroup="IMC0_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1545">
-			<TELI:description>CORRERRCNT register instance 7 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_8_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1545">
+			<TELI:description>CHA instance 8 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_773</sampleGroupIDREF>
-					<sampleIDREF>IMC0_CORRERRCNT_7</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_8_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_0" sampleGroup="IMC0_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1546">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_9_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1546">
+			<TELI:description>CHA instance 9 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_774</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_9_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_1" sampleGroup="IMC0_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1547">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_10_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1547">
+			<TELI:description>CHA instance 10 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_774</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_10_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_2" sampleGroup="IMC0_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1548">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_11_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1548">
+			<TELI:description>CHA instance 11 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_775</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_11_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_3" sampleGroup="IMC0_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1549">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_12_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1549">
+			<TELI:description>CHA instance 12 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_775</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_12_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_PARITY_0" sampleGroup="IMC0_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="1550">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_13_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1550">
+			<TELI:description>CHA instance 13 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_776</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_PARITY_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_13_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_PARITY_1" sampleGroup="IMC0_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="1551">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_14_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1551">
+			<TELI:description>CHA instance 14 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_777</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_PARITY_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_14_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_PARITY_2" sampleGroup="IMC0_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="1552">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_15_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1552">
+			<TELI:description>CHA instance 15 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_778</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_PARITY_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_15_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_PARITY_3" sampleGroup="IMC0_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="1553">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_16_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1553">
+			<TELI:description>CHA instance 16 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_779</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_PARITY_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_16_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_0" sampleGroup="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1554">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_17_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1554">
+			<TELI:description>CHA instance 17 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_780</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_ADDRESS1_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_17_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_1" sampleGroup="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1555">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_18_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1555">
+			<TELI:description>CHA instance 18 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_780</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_ADDRESS1_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_18_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_2" sampleGroup="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1556">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_19_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1556">
+			<TELI:description>CHA instance 19 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_781</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_ADDRESS1_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_19_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_3" sampleGroup="IMC0_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1557">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_20_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1557">
+			<TELI:description>CHA instance 20 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_781</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_ADDRESS1_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_20_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_0" sampleGroup="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1558">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_21_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1558">
+			<TELI:description>CHA instance 21 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_782</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_ADDRESS2_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_21_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_1" sampleGroup="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1559">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_22_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1559">
+			<TELI:description>CHA instance 22 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_782</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_ADDRESS2_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_22_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_2" sampleGroup="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1560">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_23_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1560">
+			<TELI:description>CHA instance 23 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_783</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_ADDRESS2_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_23_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_3" sampleGroup="IMC0_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1561">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 0</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_24_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1561">
+			<TELI:description>CHA instance 24 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_783</sampleGroupIDREF>
-					<sampleIDREF>IMC0_RETRY_RD_ERR_LOG_ADDRESS2_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_24_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_CORRERRCNT_0" sampleGroup="IMC1_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1562">
-			<TELI:description>CORRERRCNT register instance 0 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_25_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1562">
+			<TELI:description>CHA instance 25 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_784</sampleGroupIDREF>
-					<sampleIDREF>IMC1_CORRERRCNT_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_25_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_CORRERRCNT_1" sampleGroup="IMC1_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1563">
-			<TELI:description>CORRERRCNT register instance 1 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_26_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1563">
+			<TELI:description>CHA instance 26 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_784</sampleGroupIDREF>
-					<sampleIDREF>IMC1_CORRERRCNT_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_26_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_CORRERRCNT_2" sampleGroup="IMC1_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1564">
-			<TELI:description>CORRERRCNT register instance 2 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_27_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1564">
+			<TELI:description>CHA instance 27 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_785</sampleGroupIDREF>
-					<sampleIDREF>IMC1_CORRERRCNT_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_27_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_CORRERRCNT_3" sampleGroup="IMC1_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1565">
-			<TELI:description>CORRERRCNT register instance 3 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_28_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1565">
+			<TELI:description>CHA instance 28 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_785</sampleGroupIDREF>
-					<sampleIDREF>IMC1_CORRERRCNT_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_28_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_CORRERRCNT_4" sampleGroup="IMC1_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1566">
-			<TELI:description>CORRERRCNT register instance 4 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_29_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1566">
+			<TELI:description>CHA instance 29 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_786</sampleGroupIDREF>
-					<sampleIDREF>IMC1_CORRERRCNT_4</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_29_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_CORRERRCNT_5" sampleGroup="IMC1_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1567">
-			<TELI:description>CORRERRCNT register instance 5 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_30_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1567">
+			<TELI:description>CHA instance 30 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_786</sampleGroupIDREF>
-					<sampleIDREF>IMC1_CORRERRCNT_5</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_30_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_CORRERRCNT_6" sampleGroup="IMC1_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1568">
-			<TELI:description>CORRERRCNT register instance 6 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_31_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1568">
+			<TELI:description>CHA instance 31 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_787</sampleGroupIDREF>
-					<sampleIDREF>IMC1_CORRERRCNT_6</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_31_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_CORRERRCNT_7" sampleGroup="IMC1_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1569">
-			<TELI:description>CORRERRCNT register instance 7 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_32_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1569">
+			<TELI:description>CHA instance 32 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_787</sampleGroupIDREF>
-					<sampleIDREF>IMC1_CORRERRCNT_7</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_32_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_0" sampleGroup="IMC1_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1570">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_33_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1570">
+			<TELI:description>CHA instance 33 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_788</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_33_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_1" sampleGroup="IMC1_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1571">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_34_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1571">
+			<TELI:description>CHA instance 34 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_788</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_34_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_2" sampleGroup="IMC1_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1572">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_35_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1572">
+			<TELI:description>CHA instance 35 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_789</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_35_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_3" sampleGroup="IMC1_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1573">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_36_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1573">
+			<TELI:description>CHA instance 36 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_789</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_36_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_PARITY_0" sampleGroup="IMC1_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="1574">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_37_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1574">
+			<TELI:description>CHA instance 37 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_790</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_PARITY_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_37_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_PARITY_1" sampleGroup="IMC1_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="1575">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_38_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1575">
+			<TELI:description>CHA instance 38 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_791</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_PARITY_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_38_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_PARITY_2" sampleGroup="IMC1_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="1576">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_39_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1576">
+			<TELI:description>CHA instance 39 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_792</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_PARITY_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_39_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_PARITY_3" sampleGroup="IMC1_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="1577">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_40_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1577">
+			<TELI:description>CHA instance 40 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_793</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_PARITY_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_40_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_0" sampleGroup="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1578">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_41_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1578">
+			<TELI:description>CHA instance 41 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_794</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_ADDRESS1_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_41_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_1" sampleGroup="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1579">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_42_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1579">
+			<TELI:description>CHA instance 42 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_794</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_ADDRESS1_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_42_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_2" sampleGroup="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1580">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_43_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1580">
+			<TELI:description>CHA instance 43 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_795</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_ADDRESS1_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_43_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_3" sampleGroup="IMC1_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1581">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_44_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1581">
+			<TELI:description>CHA instance 44 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_795</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_ADDRESS1_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_44_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_0" sampleGroup="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1582">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_45_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1582">
+			<TELI:description>CHA instance 45 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_796</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_ADDRESS2_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_45_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_1" sampleGroup="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1583">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_46_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1583">
+			<TELI:description>CHA instance 46 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_796</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_ADDRESS2_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_46_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_2" sampleGroup="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1584">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_47_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1584">
+			<TELI:description>CHA instance 47 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_797</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_ADDRESS2_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_47_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_3" sampleGroup="IMC1_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1585">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 1</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_48_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1585">
+			<TELI:description>CHA instance 48 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_797</sampleGroupIDREF>
-					<sampleIDREF>IMC1_RETRY_RD_ERR_LOG_ADDRESS2_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_48_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_CORRERRCNT_0" sampleGroup="IMC2_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1586">
-			<TELI:description>CORRERRCNT register instance 0 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_49_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1586">
+			<TELI:description>CHA instance 49 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_798</sampleGroupIDREF>
-					<sampleIDREF>IMC2_CORRERRCNT_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_49_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_CORRERRCNT_1" sampleGroup="IMC2_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1587">
-			<TELI:description>CORRERRCNT register instance 1 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_50_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1587">
+			<TELI:description>CHA instance 50 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_798</sampleGroupIDREF>
-					<sampleIDREF>IMC2_CORRERRCNT_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_50_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_CORRERRCNT_2" sampleGroup="IMC2_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1588">
-			<TELI:description>CORRERRCNT register instance 2 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_51_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1588">
+			<TELI:description>CHA instance 51 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_799</sampleGroupIDREF>
-					<sampleIDREF>IMC2_CORRERRCNT_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_51_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_CORRERRCNT_3" sampleGroup="IMC2_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1589">
-			<TELI:description>CORRERRCNT register instance 3 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_52_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1589">
+			<TELI:description>CHA instance 52 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_799</sampleGroupIDREF>
-					<sampleIDREF>IMC2_CORRERRCNT_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_52_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_CORRERRCNT_4" sampleGroup="IMC2_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1590">
-			<TELI:description>CORRERRCNT register instance 4 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_53_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1590">
+			<TELI:description>CHA instance 53 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_800</sampleGroupIDREF>
-					<sampleIDREF>IMC2_CORRERRCNT_4</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_53_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_CORRERRCNT_5" sampleGroup="IMC2_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1591">
-			<TELI:description>CORRERRCNT register instance 5 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_54_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1591">
+			<TELI:description>CHA instance 54 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_800</sampleGroupIDREF>
-					<sampleIDREF>IMC2_CORRERRCNT_5</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_54_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_CORRERRCNT_6" sampleGroup="IMC2_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1592">
-			<TELI:description>CORRERRCNT register instance 6 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_55_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1592">
+			<TELI:description>CHA instance 55 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_801</sampleGroupIDREF>
-					<sampleIDREF>IMC2_CORRERRCNT_6</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_55_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_CORRERRCNT_7" sampleGroup="IMC2_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1593">
-			<TELI:description>CORRERRCNT register instance 7 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_56_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1593">
+			<TELI:description>CHA instance 56 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_801</sampleGroupIDREF>
-					<sampleIDREF>IMC2_CORRERRCNT_7</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_56_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_0" sampleGroup="IMC2_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1594">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_57_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1594">
+			<TELI:description>CHA instance 57 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_802</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_57_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_1" sampleGroup="IMC2_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1595">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_58_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1595">
+			<TELI:description>CHA instance 58 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_802</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_58_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_2" sampleGroup="IMC2_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1596">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_59_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1596">
+			<TELI:description>CHA instance 59 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_803</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_2</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_59_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_3" sampleGroup="IMC2_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1597">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_60_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1597">
+			<TELI:description>CHA instance 60 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_803</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_60_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_PARITY_0" sampleGroup="IMC2_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="1598">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_61_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1598">
+			<TELI:description>CHA instance 61 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_804</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_PARITY_0</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_61_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_PARITY_1" sampleGroup="IMC2_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="1599">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_62_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1599">
+			<TELI:description>CHA instance 62 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_805</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_PARITY_1</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_62_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_PARITY_2" sampleGroup="IMC2_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="1600">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 2</TELI:description>
+		<TELI:T_AggregatorSample sampleName="CHA_63_EN" sampleGroup="CHA_ENABLED_MASK" datatypeIDREF="tenabled_state" sampleID="1600">
+			<TELI:description>CHA instance 63 is enabled</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_806</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_PARITY_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_PARITY_3" sampleGroup="IMC2_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="1601">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 2</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_807</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_PARITY_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_0" sampleGroup="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1602">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 2</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_808</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_ADDRESS1_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_1" sampleGroup="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1603">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 2</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_808</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_ADDRESS1_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_2" sampleGroup="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1604">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 2</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_809</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_ADDRESS1_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_3" sampleGroup="IMC2_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1605">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 2</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_809</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_ADDRESS1_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_0" sampleGroup="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1606">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 2</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_810</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_ADDRESS2_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_1" sampleGroup="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1607">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 2</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_810</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_ADDRESS2_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_2" sampleGroup="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1608">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 2</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_811</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_ADDRESS2_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_3" sampleGroup="IMC2_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1609">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 2</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_811</sampleGroupIDREF>
-					<sampleIDREF>IMC2_RETRY_RD_ERR_LOG_ADDRESS2_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_CORRERRCNT_0" sampleGroup="IMC3_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1610">
-			<TELI:description>CORRERRCNT register instance 0 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_812</sampleGroupIDREF>
-					<sampleIDREF>IMC3_CORRERRCNT_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_CORRERRCNT_1" sampleGroup="IMC3_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1611">
-			<TELI:description>CORRERRCNT register instance 1 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_812</sampleGroupIDREF>
-					<sampleIDREF>IMC3_CORRERRCNT_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_CORRERRCNT_2" sampleGroup="IMC3_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1612">
-			<TELI:description>CORRERRCNT register instance 2 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_813</sampleGroupIDREF>
-					<sampleIDREF>IMC3_CORRERRCNT_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_CORRERRCNT_3" sampleGroup="IMC3_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1613">
-			<TELI:description>CORRERRCNT register instance 3 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_813</sampleGroupIDREF>
-					<sampleIDREF>IMC3_CORRERRCNT_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_CORRERRCNT_4" sampleGroup="IMC3_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1614">
-			<TELI:description>CORRERRCNT register instance 4 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_814</sampleGroupIDREF>
-					<sampleIDREF>IMC3_CORRERRCNT_4</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_CORRERRCNT_5" sampleGroup="IMC3_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1615">
-			<TELI:description>CORRERRCNT register instance 5 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_814</sampleGroupIDREF>
-					<sampleIDREF>IMC3_CORRERRCNT_5</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_CORRERRCNT_6" sampleGroup="IMC3_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1616">
-			<TELI:description>CORRERRCNT register instance 6 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_815</sampleGroupIDREF>
-					<sampleIDREF>IMC3_CORRERRCNT_6</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_CORRERRCNT_7" sampleGroup="IMC3_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1617">
-			<TELI:description>CORRERRCNT register instance 7 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_815</sampleGroupIDREF>
-					<sampleIDREF>IMC3_CORRERRCNT_7</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_0" sampleGroup="IMC3_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1618">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_816</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_1" sampleGroup="IMC3_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1619">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_816</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_2" sampleGroup="IMC3_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1620">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_817</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_3" sampleGroup="IMC3_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1621">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_817</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_PARITY_0" sampleGroup="IMC3_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="1622">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_818</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_PARITY_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_PARITY_1" sampleGroup="IMC3_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="1623">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_819</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_PARITY_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_PARITY_2" sampleGroup="IMC3_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="1624">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_820</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_PARITY_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_PARITY_3" sampleGroup="IMC3_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="1625">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_821</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_PARITY_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_0" sampleGroup="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1626">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_822</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_ADDRESS1_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_1" sampleGroup="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1627">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_822</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_ADDRESS1_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_2" sampleGroup="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1628">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_823</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_ADDRESS1_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_3" sampleGroup="IMC3_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1629">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_823</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_ADDRESS1_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_0" sampleGroup="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1630">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_824</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_ADDRESS2_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_1" sampleGroup="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1631">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_824</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_ADDRESS2_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_2" sampleGroup="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1632">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_825</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_ADDRESS2_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_3" sampleGroup="IMC3_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1633">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 3</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_825</sampleGroupIDREF>
-					<sampleIDREF>IMC3_RETRY_RD_ERR_LOG_ADDRESS2_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_CORRERRCNT_0" sampleGroup="IMC4_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1634">
-			<TELI:description>CORRERRCNT register instance 0 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_826</sampleGroupIDREF>
-					<sampleIDREF>IMC4_CORRERRCNT_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_CORRERRCNT_1" sampleGroup="IMC4_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1635">
-			<TELI:description>CORRERRCNT register instance 1 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_826</sampleGroupIDREF>
-					<sampleIDREF>IMC4_CORRERRCNT_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_CORRERRCNT_2" sampleGroup="IMC4_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1636">
-			<TELI:description>CORRERRCNT register instance 2 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_827</sampleGroupIDREF>
-					<sampleIDREF>IMC4_CORRERRCNT_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_CORRERRCNT_3" sampleGroup="IMC4_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1637">
-			<TELI:description>CORRERRCNT register instance 3 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_827</sampleGroupIDREF>
-					<sampleIDREF>IMC4_CORRERRCNT_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_CORRERRCNT_4" sampleGroup="IMC4_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1638">
-			<TELI:description>CORRERRCNT register instance 4 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_828</sampleGroupIDREF>
-					<sampleIDREF>IMC4_CORRERRCNT_4</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_CORRERRCNT_5" sampleGroup="IMC4_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1639">
-			<TELI:description>CORRERRCNT register instance 5 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_828</sampleGroupIDREF>
-					<sampleIDREF>IMC4_CORRERRCNT_5</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_CORRERRCNT_6" sampleGroup="IMC4_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1640">
-			<TELI:description>CORRERRCNT register instance 6 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_829</sampleGroupIDREF>
-					<sampleIDREF>IMC4_CORRERRCNT_6</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_CORRERRCNT_7" sampleGroup="IMC4_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1641">
-			<TELI:description>CORRERRCNT register instance 7 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_829</sampleGroupIDREF>
-					<sampleIDREF>IMC4_CORRERRCNT_7</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_0" sampleGroup="IMC4_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1642">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_830</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_1" sampleGroup="IMC4_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1643">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_830</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_2" sampleGroup="IMC4_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1644">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_831</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_3" sampleGroup="IMC4_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1645">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_831</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_PARITY_0" sampleGroup="IMC4_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="1646">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_832</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_PARITY_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_PARITY_1" sampleGroup="IMC4_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="1647">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_833</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_PARITY_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_PARITY_2" sampleGroup="IMC4_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="1648">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_834</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_PARITY_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_PARITY_3" sampleGroup="IMC4_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="1649">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_835</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_PARITY_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_0" sampleGroup="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1650">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_836</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_ADDRESS1_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_1" sampleGroup="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1651">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_836</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_ADDRESS1_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_2" sampleGroup="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1652">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_837</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_ADDRESS1_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_3" sampleGroup="IMC4_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1653">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_837</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_ADDRESS1_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_0" sampleGroup="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1654">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_838</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_ADDRESS2_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_1" sampleGroup="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1655">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_838</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_ADDRESS2_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_2" sampleGroup="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1656">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_839</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_ADDRESS2_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_3" sampleGroup="IMC4_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1657">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 4</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_839</sampleGroupIDREF>
-					<sampleIDREF>IMC4_RETRY_RD_ERR_LOG_ADDRESS2_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_CORRERRCNT_0" sampleGroup="IMC5_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1658">
-			<TELI:description>CORRERRCNT register instance 0 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_840</sampleGroupIDREF>
-					<sampleIDREF>IMC5_CORRERRCNT_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_CORRERRCNT_1" sampleGroup="IMC5_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1659">
-			<TELI:description>CORRERRCNT register instance 1 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_840</sampleGroupIDREF>
-					<sampleIDREF>IMC5_CORRERRCNT_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_CORRERRCNT_2" sampleGroup="IMC5_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1660">
-			<TELI:description>CORRERRCNT register instance 2 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_841</sampleGroupIDREF>
-					<sampleIDREF>IMC5_CORRERRCNT_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_CORRERRCNT_3" sampleGroup="IMC5_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1661">
-			<TELI:description>CORRERRCNT register instance 3 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_841</sampleGroupIDREF>
-					<sampleIDREF>IMC5_CORRERRCNT_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_CORRERRCNT_4" sampleGroup="IMC5_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1662">
-			<TELI:description>CORRERRCNT register instance 4 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_842</sampleGroupIDREF>
-					<sampleIDREF>IMC5_CORRERRCNT_4</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_CORRERRCNT_5" sampleGroup="IMC5_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1663">
-			<TELI:description>CORRERRCNT register instance 5 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_842</sampleGroupIDREF>
-					<sampleIDREF>IMC5_CORRERRCNT_5</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_CORRERRCNT_6" sampleGroup="IMC5_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1664">
-			<TELI:description>CORRERRCNT register instance 6 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_843</sampleGroupIDREF>
-					<sampleIDREF>IMC5_CORRERRCNT_6</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_CORRERRCNT_7" sampleGroup="IMC5_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1665">
-			<TELI:description>CORRERRCNT register instance 7 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_843</sampleGroupIDREF>
-					<sampleIDREF>IMC5_CORRERRCNT_7</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_0" sampleGroup="IMC5_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1666">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_844</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_1" sampleGroup="IMC5_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1667">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_844</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_2" sampleGroup="IMC5_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1668">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_845</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_3" sampleGroup="IMC5_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1669">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_845</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_PARITY_0" sampleGroup="IMC5_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="1670">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_846</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_PARITY_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_PARITY_1" sampleGroup="IMC5_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="1671">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_847</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_PARITY_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_PARITY_2" sampleGroup="IMC5_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="1672">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_848</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_PARITY_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_PARITY_3" sampleGroup="IMC5_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="1673">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_849</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_PARITY_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_0" sampleGroup="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1674">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_850</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_ADDRESS1_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_1" sampleGroup="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1675">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_850</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_ADDRESS1_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_2" sampleGroup="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1676">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_851</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_ADDRESS1_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_3" sampleGroup="IMC5_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1677">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_851</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_ADDRESS1_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_0" sampleGroup="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1678">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_852</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_ADDRESS2_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_1" sampleGroup="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1679">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_852</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_ADDRESS2_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_2" sampleGroup="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1680">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_853</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_ADDRESS2_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_3" sampleGroup="IMC5_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1681">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 5</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_853</sampleGroupIDREF>
-					<sampleIDREF>IMC5_RETRY_RD_ERR_LOG_ADDRESS2_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_CORRERRCNT_0" sampleGroup="IMC6_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1682">
-			<TELI:description>CORRERRCNT register instance 0 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_854</sampleGroupIDREF>
-					<sampleIDREF>IMC6_CORRERRCNT_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_CORRERRCNT_1" sampleGroup="IMC6_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1683">
-			<TELI:description>CORRERRCNT register instance 1 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_854</sampleGroupIDREF>
-					<sampleIDREF>IMC6_CORRERRCNT_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_CORRERRCNT_2" sampleGroup="IMC6_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1684">
-			<TELI:description>CORRERRCNT register instance 2 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_855</sampleGroupIDREF>
-					<sampleIDREF>IMC6_CORRERRCNT_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_CORRERRCNT_3" sampleGroup="IMC6_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1685">
-			<TELI:description>CORRERRCNT register instance 3 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_855</sampleGroupIDREF>
-					<sampleIDREF>IMC6_CORRERRCNT_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_CORRERRCNT_4" sampleGroup="IMC6_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1686">
-			<TELI:description>CORRERRCNT register instance 4 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_856</sampleGroupIDREF>
-					<sampleIDREF>IMC6_CORRERRCNT_4</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_CORRERRCNT_5" sampleGroup="IMC6_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1687">
-			<TELI:description>CORRERRCNT register instance 5 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_856</sampleGroupIDREF>
-					<sampleIDREF>IMC6_CORRERRCNT_5</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_CORRERRCNT_6" sampleGroup="IMC6_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1688">
-			<TELI:description>CORRERRCNT register instance 6 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_857</sampleGroupIDREF>
-					<sampleIDREF>IMC6_CORRERRCNT_6</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_CORRERRCNT_7" sampleGroup="IMC6_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1689">
-			<TELI:description>CORRERRCNT register instance 7 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_857</sampleGroupIDREF>
-					<sampleIDREF>IMC6_CORRERRCNT_7</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_0" sampleGroup="IMC6_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1690">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_858</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_1" sampleGroup="IMC6_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1691">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_858</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_2" sampleGroup="IMC6_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1692">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_859</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_3" sampleGroup="IMC6_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1693">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_859</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_PARITY_0" sampleGroup="IMC6_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="1694">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_860</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_PARITY_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_PARITY_1" sampleGroup="IMC6_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="1695">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_861</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_PARITY_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_PARITY_2" sampleGroup="IMC6_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="1696">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_862</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_PARITY_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_PARITY_3" sampleGroup="IMC6_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="1697">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_863</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_PARITY_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_0" sampleGroup="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1698">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_864</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_ADDRESS1_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_1" sampleGroup="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1699">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_864</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_ADDRESS1_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_2" sampleGroup="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1700">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_865</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_ADDRESS1_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_3" sampleGroup="IMC6_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1701">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_865</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_ADDRESS1_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_0" sampleGroup="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1702">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_866</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_ADDRESS2_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_1" sampleGroup="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1703">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_866</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_ADDRESS2_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_2" sampleGroup="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1704">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_867</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_ADDRESS2_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_3" sampleGroup="IMC6_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1705">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 6</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_867</sampleGroupIDREF>
-					<sampleIDREF>IMC6_RETRY_RD_ERR_LOG_ADDRESS2_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_CORRERRCNT_0" sampleGroup="IMC7_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1706">
-			<TELI:description>CORRERRCNT register instance 0 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_868</sampleGroupIDREF>
-					<sampleIDREF>IMC7_CORRERRCNT_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_CORRERRCNT_1" sampleGroup="IMC7_CORRERRCNT_0_1" datatypeIDREF="timc_register" sampleID="1707">
-			<TELI:description>CORRERRCNT register instance 1 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_868</sampleGroupIDREF>
-					<sampleIDREF>IMC7_CORRERRCNT_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_CORRERRCNT_2" sampleGroup="IMC7_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1708">
-			<TELI:description>CORRERRCNT register instance 2 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_869</sampleGroupIDREF>
-					<sampleIDREF>IMC7_CORRERRCNT_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_CORRERRCNT_3" sampleGroup="IMC7_CORRERRCNT_2_3" datatypeIDREF="timc_register" sampleID="1709">
-			<TELI:description>CORRERRCNT register instance 3 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_869</sampleGroupIDREF>
-					<sampleIDREF>IMC7_CORRERRCNT_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_CORRERRCNT_4" sampleGroup="IMC7_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1710">
-			<TELI:description>CORRERRCNT register instance 4 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_870</sampleGroupIDREF>
-					<sampleIDREF>IMC7_CORRERRCNT_4</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_CORRERRCNT_5" sampleGroup="IMC7_CORRERRCNT_4_5" datatypeIDREF="timc_register" sampleID="1711">
-			<TELI:description>CORRERRCNT register instance 5 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_870</sampleGroupIDREF>
-					<sampleIDREF>IMC7_CORRERRCNT_5</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_CORRERRCNT_6" sampleGroup="IMC7_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1712">
-			<TELI:description>CORRERRCNT register instance 6 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_871</sampleGroupIDREF>
-					<sampleIDREF>IMC7_CORRERRCNT_6</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_CORRERRCNT_7" sampleGroup="IMC7_CORRERRCNT_6_7" datatypeIDREF="timc_register" sampleID="1713">
-			<TELI:description>CORRERRCNT register instance 7 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_871</sampleGroupIDREF>
-					<sampleIDREF>IMC7_CORRERRCNT_7</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_0" sampleGroup="IMC7_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1714">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 0 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_872</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_1" sampleGroup="IMC7_RETRY_RD_ERR_LOG_0_1" datatypeIDREF="timc_register" sampleID="1715">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 1 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_872</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_2" sampleGroup="IMC7_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1716">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 2 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_873</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_3" sampleGroup="IMC7_RETRY_RD_ERR_LOG_2_3" datatypeIDREF="timc_register" sampleID="1717">
-			<TELI:description>RETRY_RD_ERR_LOG register instance 3 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_873</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_PARITY_0" sampleGroup="IMC7_RETRY_RD_ERR_LOG_PARITY_0" datatypeIDREF="timc_register" sampleID="1718">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 0 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_874</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_PARITY_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_PARITY_1" sampleGroup="IMC7_RETRY_RD_ERR_LOG_PARITY_1" datatypeIDREF="timc_register" sampleID="1719">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 1 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_875</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_PARITY_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_PARITY_2" sampleGroup="IMC7_RETRY_RD_ERR_LOG_PARITY_2" datatypeIDREF="timc_register" sampleID="1720">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 2 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_876</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_PARITY_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_PARITY_3" sampleGroup="IMC7_RETRY_RD_ERR_LOG_PARITY_3" datatypeIDREF="timc_register" sampleID="1721">
-			<TELI:description>RETRY_RD_ERR_LOG_PARITY register instance 3 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_877</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_PARITY_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_0" sampleGroup="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1722">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 0 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_878</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_ADDRESS1_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_1" sampleGroup="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_0_1" datatypeIDREF="timc_register" sampleID="1723">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 1 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_878</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_ADDRESS1_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_2" sampleGroup="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1724">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 2 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_879</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_ADDRESS1_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_3" sampleGroup="IMC7_RETRY_RD_ERR_LOG_ADDRESS1_2_3" datatypeIDREF="timc_register" sampleID="1725">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS1 register instance 3 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_879</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_ADDRESS1_3</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_0" sampleGroup="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1726">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 0 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_880</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_ADDRESS2_0</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_1" sampleGroup="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_0_1" datatypeIDREF="timc_register" sampleID="1727">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 1 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_880</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_ADDRESS2_1</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_2" sampleGroup="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1728">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 2 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_881</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_ADDRESS2_2</sampleIDREF>
-				</TransFormInput>
-			</TransFormInputs>
-			<TELI:transformREF>passthru</TELI:transformREF>
-		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_3" sampleGroup="IMC7_RETRY_RD_ERR_LOG_ADDRESS2_2_3" datatypeIDREF="timc_register" sampleID="1729">
-			<TELI:description>RETRY_RD_ERR_LOG_ADDRESS2 register instance 3 value for IMC instance 7</TELI:description>
-			<TELI:SampleType>Snapshot</TELI:SampleType>
-			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
-				<TransFormInput varName="parameter_0">
-					<sampleGroupIDREF>Container_881</sampleGroupIDREF>
-					<sampleIDREF>IMC7_RETRY_RD_ERR_LOG_ADDRESS2_3</sampleIDREF>
+					<sampleGroupIDREF>Container_769</sampleGroupIDREF>
+					<sampleIDREF>CHA_63_EN</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
