@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TELC:DataTypes xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/common telemetry_common.xsd">
+
+	<TELC:dataType name="treserved" datatypeID="treserved">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="trmid_usage_counter" datatypeID="trmid_usage_counter">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="ttsc_timer" datatypeID="ttsc_timer">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_counter" datatypeID="tvrb_counter">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_0" datatypeID="tvrb_pm_a_k_cnt_vf_0">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_1" datatypeID="tvrb_pm_a_k_cnt_vf_1">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_10" datatypeID="tvrb_pm_a_k_cnt_vf_10">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_11" datatypeID="tvrb_pm_a_k_cnt_vf_11">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_12" datatypeID="tvrb_pm_a_k_cnt_vf_12">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_13" datatypeID="tvrb_pm_a_k_cnt_vf_13">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_14" datatypeID="tvrb_pm_a_k_cnt_vf_14">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_15" datatypeID="tvrb_pm_a_k_cnt_vf_15">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_2" datatypeID="tvrb_pm_a_k_cnt_vf_2">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_3" datatypeID="tvrb_pm_a_k_cnt_vf_3">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_4" datatypeID="tvrb_pm_a_k_cnt_vf_4">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_5" datatypeID="tvrb_pm_a_k_cnt_vf_5">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_6" datatypeID="tvrb_pm_a_k_cnt_vf_6">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_7" datatypeID="tvrb_pm_a_k_cnt_vf_7">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_8" datatypeID="tvrb_pm_a_k_cnt_vf_8">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_a_k_cnt_vf_9" datatypeID="tvrb_pm_a_k_cnt_vf_9">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_0" datatypeID="tvrb_pm_b_k_cnt_vf_0">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_1" datatypeID="tvrb_pm_b_k_cnt_vf_1">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_10" datatypeID="tvrb_pm_b_k_cnt_vf_10">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_11" datatypeID="tvrb_pm_b_k_cnt_vf_11">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_12" datatypeID="tvrb_pm_b_k_cnt_vf_12">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_13" datatypeID="tvrb_pm_b_k_cnt_vf_13">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_14" datatypeID="tvrb_pm_b_k_cnt_vf_14">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_15" datatypeID="tvrb_pm_b_k_cnt_vf_15">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_2" datatypeID="tvrb_pm_b_k_cnt_vf_2">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_3" datatypeID="tvrb_pm_b_k_cnt_vf_3">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_4" datatypeID="tvrb_pm_b_k_cnt_vf_4">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_5" datatypeID="tvrb_pm_b_k_cnt_vf_5">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_6" datatypeID="tvrb_pm_b_k_cnt_vf_6">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_7" datatypeID="tvrb_pm_b_k_cnt_vf_7">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_8" datatypeID="tvrb_pm_b_k_cnt_vf_8">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_b_k_cnt_vf_9" datatypeID="tvrb_pm_b_k_cnt_vf_9">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_0" datatypeID="tvrb_pm_fft_k_cnt_vf_0">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_1" datatypeID="tvrb_pm_fft_k_cnt_vf_1">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_10" datatypeID="tvrb_pm_fft_k_cnt_vf_10">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_11" datatypeID="tvrb_pm_fft_k_cnt_vf_11">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_12" datatypeID="tvrb_pm_fft_k_cnt_vf_12">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_13" datatypeID="tvrb_pm_fft_k_cnt_vf_13">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_14" datatypeID="tvrb_pm_fft_k_cnt_vf_14">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_15" datatypeID="tvrb_pm_fft_k_cnt_vf_15">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_2" datatypeID="tvrb_pm_fft_k_cnt_vf_2">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_3" datatypeID="tvrb_pm_fft_k_cnt_vf_3">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_4" datatypeID="tvrb_pm_fft_k_cnt_vf_4">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_5" datatypeID="tvrb_pm_fft_k_cnt_vf_5">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_6" datatypeID="tvrb_pm_fft_k_cnt_vf_6">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_7" datatypeID="tvrb_pm_fft_k_cnt_vf_7">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_8" datatypeID="tvrb_pm_fft_k_cnt_vf_8">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvrb_pm_fft_k_cnt_vf_9" datatypeID="tvrb_pm_fft_k_cnt_vf_9">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="terror_status" datatypeID="terror_status">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>ERROR</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>ERROR</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Error detected</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>NO_ERROR</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>NO_ERROR</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>No error detected</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="tnum_en_cha" datatypeID="tnum_en_cha">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="toverflow_status" datatypeID="toverflow_status">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>OVERFLOW</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>OVERFLOW</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Overflow occured</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>NO_OVERFLOW</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>NO_OVERFLOW</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Overflow did not occur</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="tparity_err_status" datatypeID="tparity_err_status">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>PARITY_ERR</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>PARITY_ERR</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Parity error detected</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>NO_PARITY_ERR</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>NO_PARITY_ERR</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>No parity error</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="ttimeout_status" datatypeID="ttimeout_status">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>TIMEOUT</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>TIMEOUT</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Timeout occured</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>NO_TIMEOUT</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>NO_TIMEOUT</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Timeout did not occur</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="tstring" datatypeID="tstring">
+		<TELC:dataclass>string</TELC:dataclass>
+	</TELC:dataType>
+</TELC:DataTypes>

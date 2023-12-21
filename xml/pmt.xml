@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2023-12-06</lastupdated>
+	<lastupdated>2023-12-21</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -111,7 +111,7 @@
 		</mapping>
 		<mapping guid="0x6e94ffa0" size="176">
 			<lastupdated>2022-10-18</lastupdated>
-			<status>production</status>
+			<status>alpha</status>
 			<description>Granite Rapids OOBMSM QAT Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>GNR/OOBMSM/QAT</basedir>
@@ -167,6 +167,18 @@
 				<common>mtl_common.xml</common>
 				<aggregator>mtl_aggregator.xml</aggregator>
 				<aggregatorinterface>mtl_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x16399885" size="6776">
+			<lastupdated>2023-12-21</lastupdated>
+			<status>production</status>
+			<description>Sapphire Rapids EE OOBMSM RMID and vRAN Boost PMT Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>SPR/OOBMSM/RMID-VRB-EE</basedir>
+				<prefix>spr</prefix>
+				<common>spr_common.xml</common>
+				<aggregator>spr_aggregator.xml</aggregator>
+				<aggregatorinterface>spr_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
 	</mappings>
