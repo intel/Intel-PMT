@@ -1,0 +1,391 @@
+
+# Metedata generated for following Telemetry Aggregator:
+
+# name : gnr
+# description : Granite Rapids OOBMSM Core Telemetry samples definition and transformation rules
+# uniqueId : 0x6e94ffb0
+
+2304: # Current temperature for core 0
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2305: # Current temperature for core 1
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2306: # Current temperature for core 2
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2307: # Current temperature for core 3
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2308: # Current temperature for core 4
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2309: # Current temperature for core 5
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2310: # Current temperature for core 6
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2311: # Current temperature for core 7
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2312: # Current temperature for core 8
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2313: # Current temperature for core 9
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2314: # Current temperature for core 10
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2315: # Current temperature for core 11
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2316: # Current temperature for core 12
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2317: # Current temperature for core 13
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2318: # Current temperature for core 14
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2319: # Current temperature for core 15
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2320: # Current temperature for core 16
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2321: # Current temperature for core 17
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2322: # Current temperature for core 18
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2323: # Current temperature for core 19
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2324: # Current temperature for core 20
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2325: # Current temperature for core 21
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2326: # Current temperature for core 22
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2327: # Current temperature for core 23
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2328: # Current temperature for core 24
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2329: # Current temperature for core 25
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2330: # Current temperature for core 26
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2331: # Current temperature for core 27
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2332: # Current temperature for core 28
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2333: # Current temperature for core 29
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2334: # Current temperature for core 30
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2335: # Current temperature for core 31
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2336: # Current temperature for core 32
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2337: # Current temperature for core 33
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2338: # Current temperature for core 34
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2339: # Current temperature for core 35
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2340: # Current temperature for core 36
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2341: # Current temperature for core 37
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2342: # Current temperature for core 38
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2343: # Current temperature for core 39
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2344: # Current temperature for core 40
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2345: # Current temperature for core 41
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2346: # Current temperature for core 42
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2347: # Current temperature for core 43
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2348: # Current temperature for core 44
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2349: # Current temperature for core 45
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2350: # Current temperature for core 46
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2351: # Current temperature for core 47
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2352: # Current temperature for core 48
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2353: # Current temperature for core 49
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2354: # Current temperature for core 50
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2355: # Current temperature for core 51
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2356: # Current temperature for core 52
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2357: # Current temperature for core 53
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2358: # Current temperature for core 54
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2359: # Current temperature for core 55
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2360: # Current temperature for core 56
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2361: # Current temperature for core 57
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2362: # Current temperature for core 58
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2363: # Current temperature for core 59
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2364: # Current temperature for core 60
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2365: # Current temperature for core 61
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2366: # Current temperature for core 62
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature
+2367: # Current temperature for core 63
+    kafkaStream:
+    - StreamingWatcher
+    redfishSensor:
+    - Aggregator
+    type: Temperature

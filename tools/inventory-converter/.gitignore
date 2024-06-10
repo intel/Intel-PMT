@@ -1,0 +1,3 @@
+# pip install files
+build/lib/*
+inventory_converter.egg-info

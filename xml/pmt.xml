@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2022-09-09</lastupdated>
+	<lastupdated>2023-12-21</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -25,12 +25,156 @@
 				<aggregatorinterface>spr_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
+		<mapping guid="0x89d9ff48" size="6392">
+			<lastupdated>2023-06-14</lastupdated>
+			<status>production</status>
+			<description>Sapphire Rapids EE OOBMSM RMID PMT Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>SPR/OOBMSM/RMID-EE</basedir>
+				<prefix>spr</prefix>
+				<common>spr_common.xml</common>
+				<aggregator>spr_aggregator.xml</aggregator>
+				<aggregatorinterface>spr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
 		<mapping guid="0x9956f43f" size="2216">
 			<lastupdated>2022-09-09</lastupdated>
 			<status>production</status>
 			<description>Sapphire Rapids PM PMT Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>SPR/PM</basedir>
+				<prefix>spr</prefix>
+				<common>spr_common.xml</common>
+				<aggregator>spr_aggregator.xml</aggregator>
+				<aggregatorinterface>spr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x6e94ffb0" size="13968">
+			<lastupdated>2023-07-14</lastupdated>
+			<status>alpha</status>
+			<description>Granite Rapids OOBMSM Core Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>GNR/OOBMSM/CORE</basedir>
+				<prefix>gnr</prefix>
+				<common>gnr_common.xml</common>
+				<aggregator>gnr_aggregator.xml</aggregator>
+				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x477e9373" size="6160">
+			<lastupdated>2023-12-06</lastupdated>
+			<status>alpha</status>
+			<description>Granite Rapids OOBMSM RMID Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>GNR/OOBMSM/RMID</basedir>
+				<prefix>gnr</prefix>
+				<common>gnr_common.xml</common>
+				<aggregator>gnr_aggregator.xml</aggregator>
+				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x3d4bb41a" size="24">
+			<lastupdated>2023-12-06</lastupdated>
+			<status>alpha</status>
+			<description>Granite Rapids OOBMSM Leaf SoC Topology Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>GNR/OOBMSM/TOPO-LEAF</basedir>
+				<prefix>gnr</prefix>
+				<common>gnr_common.xml</common>
+				<aggregator>gnr_aggregator.xml</aggregator>
+				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x3d4bb40a" size="48">
+			<lastupdated>2023-12-06</lastupdated>
+			<status>alpha</status>
+			<description>Granite Rapids OOBMSM Root SoC Topology Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>GNR/OOBMSM/TOPO-ROOT</basedir>
+				<prefix>gnr</prefix>
+				<common>gnr_common.xml</common>
+				<aggregator>gnr_aggregator.xml</aggregator>
+				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x13227778" size="6448">
+			<lastupdated>2022-10-18</lastupdated>
+			<status>production</status>
+			<description>Emerald Rapids OOBMSM RMID and QAT PMT Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>SPR/OOBMSM/RMID-QAT-EMR</basedir>
+				<prefix>emr</prefix>
+				<common>emr_common.xml</common>
+				<aggregator>emr_aggregator.xml</aggregator>
+				<aggregatorinterface>emr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x6e94ffa0" size="176">
+			<lastupdated>2022-10-18</lastupdated>
+			<status>alpha</status>
+			<description>Granite Rapids OOBMSM QAT Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>GNR/OOBMSM/QAT</basedir>
+				<prefix>gnr</prefix>
+				<common>gnr_common.xml</common>
+				<aggregator>gnr_aggregator.xml</aggregator>
+				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x130670b2" size="3336">
+			<lastupdated>2023-11-28</lastupdated>
+			<status>production</status>
+			<description>MTL M/P PMT Normal telemetry in Punit samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>MTL/0</basedir>
+				<prefix>mtl</prefix>
+				<common>mtl_common.xml</common>
+				<aggregator>mtl_aggregator.xml</aggregator>
+				<aggregatorinterface>mtl_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x130671b2" size="704">
+			<lastupdated>2023-11-28</lastupdated>
+			<status>production</status>
+			<description>MTL M/P PMT Fixed telemetry in Punit samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>MTL/1</basedir>
+				<prefix>mtl</prefix>
+				<common>mtl_common.xml</common>
+				<aggregator>mtl_aggregator.xml</aggregator>
+				<aggregatorinterface>mtl_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1a067002" size="1216">
+			<lastupdated>2023-11-28</lastupdated>
+			<status>production</status>
+			<description>MTL M/P PMT Normal telemetry in DMU samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>MTL/2</basedir>
+				<prefix>mtl</prefix>
+				<common>mtl_common.xml</common>
+				<aggregator>mtl_aggregator.xml</aggregator>
+				<aggregatorinterface>mtl_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1a067102" size="200">
+			<lastupdated>2023-11-28</lastupdated>
+			<status>production</status>
+			<description>MTL M/P PMT Fixed telemetry in DMU samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>MTL/3</basedir>
+				<prefix>mtl</prefix>
+				<common>mtl_common.xml</common>
+				<aggregator>mtl_aggregator.xml</aggregator>
+				<aggregatorinterface>mtl_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x16399885" size="6776">
+			<lastupdated>2023-12-21</lastupdated>
+			<status>production</status>
+			<description>Sapphire Rapids EE OOBMSM RMID and vRAN Boost PMT Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>SPR/OOBMSM/RMID-VRB-EE</basedir>
 				<prefix>spr</prefix>
 				<common>spr_common.xml</common>
 				<aggregator>spr_aggregator.xml</aggregator>

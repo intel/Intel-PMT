@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TELI:AggregatorInterface
+	xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELI="http://schemas.intel.com/telemetry/interface/aggregatorinterface"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/interface/aggregatorinterface telemetry.xsd" >
+
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gnr_aggregator.xml"/>
+
+	<TransFormations xmlns="http://schemas.intel.com/telemetry/base/common">
+		<TransFormation name="qat_latency_acc" transformID="qat_latency_acc">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>2 * ( ( ( $parameter_0 &amp; 0xFFFFFFFF ) &lt;&lt; 32 ) + ( $parameter_0 &gt;&gt; 32 ) )  </transform>
+		</TransFormation>
+		<TransFormation name="qat_bandwidth" transformID="qat_bandwidth">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 64 / 1048576 </transform>
+		</TransFormation>
+		<TransFormation name="qat_latency" transformID="qat_latency">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>2 * $parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="passthru" transformID="passthru">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0</transform>
+		</TransFormation>
+	</TransFormations>
+
+	<TELI:name>gnr</TELI:name>
+	<TELI:description>Granite Rapids OOBMSM QAT Telemetry samples definition and transformation rules</TELI:description>
+	<TELI:uniqueid>6e94ffa0</TELI:uniqueid>
+	<TELI:NDA>Public</TELI:NDA>
+	<TELI:samplePeriod>10</TELI:samplePeriod>
+	<TELI:revisionDate>2022-10-18</TELI:revisionDate>
+	<TELI:AggregatorSamples>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_PRT_TRANS_CNT" sampleGroup="QAT0_TL_PRT_TRANS_CNT_MAX_RD_LAT" datatypeIDREF="tqat_counter" sampleID="0">
+			<TELI:description>Partial transaction count for all rings for QAT device 0. The accumulated value is cummulative sum of all split transactions. For write transaction, this counter gets incremented for every split due to MPS or 4K crossing. For read transaction, this counter gets incremented for every split due to MRRS or 4K crossing.</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_PRT_TRANS_CNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_MAX_RD_LAT" sampleGroup="QAT0_TL_PRT_TRANS_CNT_MAX_RD_LAT" datatypeIDREF="tqat_latency" sampleID="1">
+			<TELI:description>Maximum read latency across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_MAX_RD_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_RD_LAT_ACC" sampleGroup="QAT0_TL_RD_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="2">
+			<TELI:description>Read latency accumulator value for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_RD_LAT_ACC</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency_acc</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_RD_CMPL_CNT" sampleGroup="QAT0_TL_RD_CMPL_CNT_MAX_GP_LAT" datatypeIDREF="tqat_counter" sampleID="3">
+			<TELI:description>Total count of read transactions across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_RD_CMPL_CNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_MAX_GP_LAT" sampleGroup="QAT0_TL_RD_CMPL_CNT_MAX_GP_LAT" datatypeIDREF="tqat_latency" sampleID="4">
+			<TELI:description>Maximum get to put latency across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_MAX_GP_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_GP_LAT_ACC" sampleGroup="QAT0_TL_GP_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="5">
+			<TELI:description>Accumulated value of get to put latency across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_GP_LAT_ACC</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency_acc</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_ME_PUT_CNT" sampleGroup="QAT0_TL_ME_PUT_CNT_BW_IN" datatypeIDREF="tqat_counter" sampleID="6">
+			<TELI:description>Total ME put count across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_ME_PUT_CNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_BW_IN" sampleGroup="QAT0_TL_ME_PUT_CNT_BW_IN" datatypeIDREF="tqat_bandwidth" sampleID="7">
+			<TELI:description>PCIe write bandwidth across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_BW_IN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_bandwidth</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_BW_OUT" sampleGroup="QAT0_TL_BW_OUT_AT_PAGE_REQ_CNT" datatypeIDREF="tqat_bandwidth" sampleID="8">
+			<TELI:description>PCIe read bandwidth across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_BW_OUT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_bandwidth</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_AT_PAGE_REQ_CNT" sampleGroup="QAT0_TL_BW_OUT_AT_PAGE_REQ_CNT" datatypeIDREF="tqat_counter" sampleID="9">
+			<TELI:description>Page request count across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_AT_PAGE_REQ_CNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_AT_PAGE_REQ_LAT_ACC" sampleGroup="QAT0_TL_AT_PAGE_REQ_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="10">
+			<TELI:description>Page request latency accumulator value across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_AT_PAGE_REQ_LAT_ACC</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency_acc</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_AT_TRANS_LAT_ACC" sampleGroup="QAT0_TL_AT_TRANS_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="11">
+			<TELI:description>Translation latency accumulator value across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_AT_TRANS_LAT_ACC</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency_acc</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_AT_TRANS_LAT_CNT" sampleGroup="QAT0_TL_AT_TRANS_LAT_CNT_MAX_UTLB_USED" datatypeIDREF="tqat_counter" sampleID="12">
+			<TELI:description>Translation latency count across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_AT_TRANS_LAT_CNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_TL_AT_MAX_UTLB_USED" sampleGroup="QAT0_TL_AT_TRANS_LAT_CNT_MAX_UTLB_USED" datatypeIDREF="tqat_max_utlb_used" sampleID="13">
+			<TELI:description>Maximum uTLB consumed by a context for QAT device 0. Maximum possible value is 32.</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>QAT0_TL_AT_MAX_UTLB_USED</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED_0" sampleGroup="QAT0_TL_AT_TRANS_LAT_CNT_MAX_UTLB_USED" datatypeIDREF="treserved" sampleID="14">
+			<TELI:description>Reserved for future use</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_AVG_RD_LAT" sampleGroup="QAT0_AVG_RD_LAT_GP_LAT" datatypeIDREF="tqat_latency" sampleID="15">
+			<TELI:description>Average read latency across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>QAT0_AVG_RD_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_AVG_GP_LAT" sampleGroup="QAT0_AVG_RD_LAT_GP_LAT" datatypeIDREF="tqat_latency" sampleID="16">
+			<TELI:description>Average get to put latency across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>QAT0_AVG_GP_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_AVG_PAGE_REQ_LAT" sampleGroup="QAT0_AVG_PAGE_REQ_LAT_TRANS_LAT" datatypeIDREF="tqat_latency" sampleID="17">
+			<TELI:description>Average page request latency across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>QAT0_AVG_PAGE_REQ_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT0_AVG_TRANS_LAT" sampleGroup="QAT0_AVG_PAGE_REQ_LAT_TRANS_LAT" datatypeIDREF="tqat_latency" sampleID="18">
+			<TELI:description>Average translation latency across all rings for QAT device 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>QAT0_AVG_TRANS_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_PRT_TRANS_CNT" sampleGroup="QAT1_TL_PRT_TRANS_CNT_MAX_RD_LAT" datatypeIDREF="tqat_counter" sampleID="19">
+			<TELI:description>Partial transaction count for all rings for QAT device 1. The accumulated value is cummulative sum of all split transactions. For write transaction, this counter gets incremented for every split due to MPS or 4K crossing. For read transaction, this counter gets incremented for every split due to MRRS or 4K crossing.</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_11</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_PRT_TRANS_CNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_MAX_RD_LAT" sampleGroup="QAT1_TL_PRT_TRANS_CNT_MAX_RD_LAT" datatypeIDREF="tqat_latency" sampleID="20">
+			<TELI:description>Maximum read latency across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_11</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_MAX_RD_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_RD_LAT_ACC" sampleGroup="QAT1_TL_RD_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="21">
+			<TELI:description>Read latency accumulator value for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_12</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_RD_LAT_ACC</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency_acc</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_RD_CMPL_CNT" sampleGroup="QAT1_TL_RD_CMPL_CNT_MAX_GP_LAT" datatypeIDREF="tqat_counter" sampleID="22">
+			<TELI:description>Total count of read transactions across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_13</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_RD_CMPL_CNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_MAX_GP_LAT" sampleGroup="QAT1_TL_RD_CMPL_CNT_MAX_GP_LAT" datatypeIDREF="tqat_latency" sampleID="23">
+			<TELI:description>Maximum get to put latency across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_13</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_MAX_GP_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_GP_LAT_ACC" sampleGroup="QAT1_TL_GP_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="24">
+			<TELI:description>Accumulated value of get to put latency across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_14</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_GP_LAT_ACC</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency_acc</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_ME_PUT_CNT" sampleGroup="QAT1_TL_ME_PUT_CNT_BW_IN" datatypeIDREF="tqat_counter" sampleID="25">
+			<TELI:description>Total ME put count across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_15</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_ME_PUT_CNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_BW_IN" sampleGroup="QAT1_TL_ME_PUT_CNT_BW_IN" datatypeIDREF="tqat_bandwidth" sampleID="26">
+			<TELI:description>PCIe write bandwidth across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_15</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_BW_IN</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_bandwidth</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_BW_OUT" sampleGroup="QAT1_TL_BW_OUT_AT_PAGE_REQ_CNT" datatypeIDREF="tqat_bandwidth" sampleID="27">
+			<TELI:description>PCIe read bandwidth across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_16</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_BW_OUT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_bandwidth</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_AT_PAGE_REQ_CNT" sampleGroup="QAT1_TL_BW_OUT_AT_PAGE_REQ_CNT" datatypeIDREF="tqat_counter" sampleID="28">
+			<TELI:description>Page request count across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_16</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_AT_PAGE_REQ_CNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_AT_PAGE_REQ_LAT_ACC" sampleGroup="QAT1_TL_AT_PAGE_REQ_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="29">
+			<TELI:description>Page request latency accumulator value across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_17</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_AT_PAGE_REQ_LAT_ACC</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency_acc</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_AT_TRANS_LAT_ACC" sampleGroup="QAT1_TL_AT_TRANS_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="30">
+			<TELI:description>Translation latency accumulator value across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_18</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_AT_TRANS_LAT_ACC</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency_acc</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_AT_TRANS_LAT_CNT" sampleGroup="QAT1_TL_AT_TRANS_LAT_CNT_MAX_UTLB_USED" datatypeIDREF="tqat_counter" sampleID="31">
+			<TELI:description>Translation latency count across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_19</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_AT_TRANS_LAT_CNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_TL_AT_MAX_UTLB_USED" sampleGroup="QAT1_TL_AT_TRANS_LAT_CNT_MAX_UTLB_USED" datatypeIDREF="tqat_max_utlb_used" sampleID="32">
+			<TELI:description>Maximum uTLB consumed by a context for QAT device 1. Maximum possible value is 32.</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_19</sampleGroupIDREF>
+					<sampleIDREF>QAT1_TL_AT_MAX_UTLB_USED</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED_1" sampleGroup="QAT1_TL_AT_TRANS_LAT_CNT_MAX_UTLB_USED" datatypeIDREF="treserved" sampleID="33">
+			<TELI:description>Reserved for future use</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_19</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_AVG_RD_LAT" sampleGroup="QAT1_AVG_RD_LAT_GP_LAT" datatypeIDREF="tqat_latency" sampleID="34">
+			<TELI:description>Average read latency across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_20</sampleGroupIDREF>
+					<sampleIDREF>QAT1_AVG_RD_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_AVG_GP_LAT" sampleGroup="QAT1_AVG_RD_LAT_GP_LAT" datatypeIDREF="tqat_latency" sampleID="35">
+			<TELI:description>Average get to put latency across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_20</sampleGroupIDREF>
+					<sampleIDREF>QAT1_AVG_GP_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_AVG_PAGE_REQ_LAT" sampleGroup="QAT1_AVG_PAGE_REQ_LAT_TRANS_LAT" datatypeIDREF="tqat_latency" sampleID="36">
+			<TELI:description>Average page request latency across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_21</sampleGroupIDREF>
+					<sampleIDREF>QAT1_AVG_PAGE_REQ_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="QAT1_AVG_TRANS_LAT" sampleGroup="QAT1_AVG_PAGE_REQ_LAT_TRANS_LAT" datatypeIDREF="tqat_latency" sampleID="37">
+			<TELI:description>Average translation latency across all rings for QAT device 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_21</sampleGroupIDREF>
+					<sampleIDREF>QAT1_AVG_TRANS_LAT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>qat_latency</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+	</TELI:AggregatorSamples>
+</TELI:AggregatorInterface>
