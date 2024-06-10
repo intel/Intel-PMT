@@ -1,0 +1,161 @@
+
+# Metedata generated for following Telemetry Aggregator:
+
+# name : spr
+# description : Sapphire Rapids PM PMT Telemetry samples definition and transformation rules
+# uniqueId : 0x9956f43f
+
+260: Count # Core 0 C0 Residency
+261: Count # Core 0 C1 Residency
+262: Count # Core 1 C0 Residency
+263: Count # Core 1 C1 Residency
+264: Count # Core 2 C0 Residency
+265: Count # Core 2 C1 Residency
+266: Count # Core 3 C0 Residency
+267: Count # Core 3 C1 Residency
+268: Count # Core 4 C0 Residency
+269: Count # Core 4 C1 Residency
+270: Count # Core 5 C0 Residency
+271: Count # Core 5 C1 Residency
+272: Count # Core 6 C0 Residency
+273: Count # Core 6 C1 Residency
+274: Count # Core 7 C0 Residency
+275: Count # Core 7 C1 Residency
+276: Count # Core 8 C0 Residency
+277: Count # Core 8 C1 Residency
+278: Count # Core 9 C0 Residency
+279: Count # Core 9 C1 Residency
+280: Count # Core 10 C0 Residency
+281: Count # Core 10 C1 Residency
+282: Count # Core 11 C0 Residency
+283: Count # Core 11 C1 Residency
+284: Count # Core 12 C0 Residency
+285: Count # Core 12 C1 Residency
+286: Count # Core 13 C0 Residency
+287: Count # Core 13 C1 Residency
+288: Count # Core 14 C0 Residency
+289: Count # Core 14 C1 Residency
+290: Count # Core 15 C0 Residency
+291: Count # Core 15 C1 Residency
+292: Count # Core 16 C0 Residency
+293: Count # Core 16 C1 Residency
+294: Count # Core 17 C0 Residency
+295: Count # Core 17 C1 Residency
+296: Count # Core 18 C0 Residency
+297: Count # Core 18 C1 Residency
+298: Count # Core 19 C0 Residency
+299: Count # Core 19 C1 Residency
+300: Count # Core 20 C0 Residency
+301: Count # Core 20 C1 Residency
+302: Count # Core 21 C0 Residency
+303: Count # Core 21 C1 Residency
+304: Count # Core 22 C0 Residency
+305: Count # Core 22 C1 Residency
+306: Count # Core 23 C0 Residency
+307: Count # Core 23 C1 Residency
+308: Count # Core 24 C0 Residency
+309: Count # Core 24 C1 Residency
+310: Count # Core 25 C0 Residency
+311: Count # Core 25 C1 Residency
+312: Count # Core 26 C0 Residency
+313: Count # Core 26 C1 Residency
+314: Count # Core 27 C0 Residency
+315: Count # Core 27 C1 Residency
+316: Count # Core 28 C0 Residency
+317: Count # Core 28 C1 Residency
+318: Count # Core 29 C0 Residency
+319: Count # Core 29 C1 Residency
+320: Count # Core 30 C0 Residency
+321: Count # Core 30 C1 Residency
+322: Count # Core 31 C0 Residency
+323: Count # Core 31 C1 Residency
+324: Count # Core 32 C0 Residency
+325: Count # Core 32 C1 Residency
+326: Count # Core 33 C0 Residency
+327: Count # Core 33 C1 Residency
+328: Count # Core 34 C0 Residency
+329: Count # Core 34 C1 Residency
+330: Count # Core 35 C0 Residency
+331: Count # Core 35 C1 Residency
+332: Count # Core 36 C0 Residency
+333: Count # Core 36 C1 Residency
+334: Count # Core 37 C0 Residency
+335: Count # Core 37 C1 Residency
+336: Count # Core 38 C0 Residency
+337: Count # Core 38 C1 Residency
+338: Count # Core 39 C0 Residency
+339: Count # Core 39 C1 Residency
+340: Count # Core 40 C0 Residency
+341: Count # Core 40 C1 Residency
+342: Count # Core 41 C0 Residency
+343: Count # Core 41 C1 Residency
+344: Count # Core 42 C0 Residency
+345: Count # Core 42 C1 Residency
+346: Count # Core 43 C0 Residency
+347: Count # Core 43 C1 Residency
+348: Count # Core 44 C0 Residency
+349: Count # Core 44 C1 Residency
+350: Count # Core 45 C0 Residency
+351: Count # Core 45 C1 Residency
+352: Count # Core 46 C0 Residency
+353: Count # Core 46 C1 Residency
+354: Count # Core 47 C0 Residency
+355: Count # Core 47 C1 Residency
+356: Count # Core 48 C0 Residency
+357: Count # Core 48 C1 Residency
+358: Count # Core 49 C0 Residency
+359: Count # Core 49 C1 Residency
+360: Count # Core 50 C0 Residency
+361: Count # Core 50 C1 Residency
+362: Count # Core 51 C0 Residency
+363: Count # Core 51 C1 Residency
+364: Count # Core 52 C0 Residency
+365: Count # Core 52 C1 Residency
+366: Count # Core 53 C0 Residency
+367: Count # Core 53 C1 Residency
+368: Count # Core 54 C0 Residency
+369: Count # Core 54 C1 Residency
+370: Count # Core 55 C0 Residency
+371: Count # Core 55 C1 Residency
+372: Count # Core 56 C0 Residency
+373: Count # Core 56 C1 Residency
+374: Count # Core 57 C0 Residency
+375: Count # Core 57 C1 Residency
+376: Count # Core 58 C0 Residency
+377: Count # Core 58 C1 Residency
+378: Count # Core 59 C0 Residency
+379: Count # Core 59 C1 Residency
+380: Count # Core 60 C0 Residency
+381: Count # Core 60 C1 Residency
+382: Count # Core 61 C0 Residency
+383: Count # Core 61 C1 Residency
+384: Count # Core 62 C0 Residency
+385: Count # Core 62 C1 Residency
+386: Count # Core 63 C0 Residency
+387: Count # Core 63 C1 Residency
+454: Count # Time spent in the Package C-State 6 (PC6)
+455: Count # Time spent in the Package C-State 6 (PC6)
+472: Count # UPI Bandwidth 0
+473: Count # UPI Bandwidth 1
+474: Count # UPI Bandwidth 2
+475: Count # UPI Bandwidth 3
+476: Count # UPI Bandwidth 4
+477: Count # UPI Bandwidth 5
+478: Count # UPI Bandwidth 6
+479: Count # UPI Bandwidth 7
+482: Count # Memory Read Bandwidth IMC channel 0
+483: Count # Memory Write Bandwidth channelIMC 0
+484: Count # Memory Read Bandwidth IMC channel 1
+485: Count # Memory Write Bandwidth channelIMC 1
+486: Count # Memory Read Bandwidth IMC channel 2
+487: Count # Memory Write Bandwidth channelIMC 2
+488: Count # Memory Read Bandwidth IMC channel 3
+489: Count # Memory Write Bandwidth channelIMC 3
+490: Count # Memory Read Bandwidth IMC channel 4
+491: Count # Memory Write Bandwidth channelIMC 4
+492: Count # Memory Read Bandwidth IMC channel 5
+493: Count # Memory Write Bandwidth channelIMC 5
+494: Count # Memory Read Bandwidth IMC channel 6
+495: Count # Memory Write Bandwidth channelIMC 6
+496: Count # Memory Read Bandwidth IMC channel 7
+497: Count # Memory Write Bandwidth channelIMC 7

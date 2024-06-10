@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TELC:DataTypes xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/common telemetry_common.xsd">
+
+	<TELC:dataType name="tcore_stress_level" datatypeID="tcore_stress_level">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="stress_level">
+				<TELC:symbol>stress</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U64.38.26</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="thist_counter" datatypeID="thist_counter">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tpvp_level_res" datatypeID="tpvp_level_res">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="percent">
+				<TELC:symbol>%</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tpvp_throttle_counter" datatypeID="tpvp_throttle_counter">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="treserved" datatypeID="treserved">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="ttsc_timer" datatypeID="ttsc_timer">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tcore_state" datatypeID="tcore_state">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>ENABLED</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>ENABLED</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Enabled</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>DISABLED</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>DISABLED</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Disabled</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="ttemperature" datatypeID="ttemperature">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="celcius">
+				<TELC:symbol>C</TELC:symbol>
+			</TELC:units>
+		<TELC:format>S16.15.1</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tstring" datatypeID="tstring">
+		<TELC:dataclass>string</TELC:dataclass>
+	</TELC:dataType>
+</TELC:DataTypes>

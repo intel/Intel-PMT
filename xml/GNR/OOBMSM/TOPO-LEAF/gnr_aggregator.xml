@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Aggregator [<!ENTITY otherfile SYSTEM "gnr_common.xml">]>
+<TELEM:Aggregator xmlns="http://schemas.intel.com/telemetry/base/1/" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common" 
+	xmlns:TELEM="http://schemas.intel.com/telemetry/base/aggregator" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+ 	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/aggregator telemetryAggregator.xsd"> 
+
+	<TELC:DataTypesInclude>&otherfile;</TELC:DataTypesInclude>
+	<TELEM:name>gnr</TELEM:name>
+	<TELEM:description>Granite Rapids OOBMSM Leaf SoC Topology Telemetry samples definition and transformation rules</TELEM:description>
+	<TELEM:uniqueid>3d4bb41a</TELEM:uniqueid>
+	<TELEM:productid>gnr</TELEM:productid>
+	<TELEM:address>0</TELEM:address>
+
+	<TELEM:SampleGroup name="Container_0" sampleID="0" sampleGroupID="Container_0">
+		<TELC:description>Groupname 0x464000</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CURR_DIE_EID" datatypeIDREF="tmctp_eid" sampleID="CURR_DIE_EID">
+			<TELC:description>MCTP EID of this OOBMSM instance</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>8</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>7</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CURR_DIE_DOMAIN_ID" datatypeIDREF="tdomain_id" sampleID="CURR_DIE_DOMAIN_ID">
+			<TELC:description>DomainID of this OOBMSM instance</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>8</TELC:size>
+			<TELC:lsb>8</TELC:lsb>
+			<TELC:msb>15</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="UPI_0_EN" datatypeIDREF="tenabled_state" sampleID="UPI_0_EN">
+			<TELC:description>Intel UPI link 0 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>16</TELC:lsb>
+			<TELC:msb>16</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="UPI_1_EN" datatypeIDREF="tenabled_state" sampleID="UPI_1_EN">
+			<TELC:description>Intel UPI link 1 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>17</TELC:lsb>
+			<TELC:msb>17</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="UPI_2_EN" datatypeIDREF="tenabled_state" sampleID="UPI_2_EN">
+			<TELC:description>Intel UPI link 2 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>18</TELC:lsb>
+			<TELC:msb>18</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="UPI_3_EN" datatypeIDREF="tenabled_state" sampleID="UPI_3_EN">
+			<TELC:description>Intel UPI link 3 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>19</TELC:lsb>
+			<TELC:msb>19</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="UPI_4_EN" datatypeIDREF="tenabled_state" sampleID="UPI_4_EN">
+			<TELC:description>Intel UPI link 4 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>20</TELC:lsb>
+			<TELC:msb>20</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="UPI_5_EN" datatypeIDREF="tenabled_state" sampleID="UPI_5_EN">
+			<TELC:description>Intel UPI link 5 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>21</TELC:lsb>
+			<TELC:msb>21</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="UPI_6_EN" datatypeIDREF="tenabled_state" sampleID="UPI_6_EN">
+			<TELC:description>Intel UPI link 6 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>22</TELC:lsb>
+			<TELC:msb>22</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="UPI_7_EN" datatypeIDREF="tenabled_state" sampleID="UPI_7_EN">
+			<TELC:description>Intel UPI link 7 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>23</TELC:lsb>
+			<TELC:msb>23</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CURR_SOCKET_ID" datatypeIDREF="tsocket_id" sampleID="CURR_SOCKET_ID">
+			<TELC:description>Socket ID of this OOBMSM instance</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>8</TELC:size>
+			<TELC:lsb>24</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_0_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_0_EN">
+			<TELC:description>DDR memory instance 0 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>32</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_1_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_1_EN">
+			<TELC:description>DDR memory instance 1 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>33</TELC:lsb>
+			<TELC:msb>33</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_2_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_2_EN">
+			<TELC:description>DDR memory instance 2 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>34</TELC:lsb>
+			<TELC:msb>34</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_3_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_3_EN">
+			<TELC:description>DDR memory instance 3 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>35</TELC:lsb>
+			<TELC:msb>35</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_4_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_4_EN">
+			<TELC:description>DDR memory instance 4 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>36</TELC:lsb>
+			<TELC:msb>36</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_5_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_5_EN">
+			<TELC:description>DDR memory instance 5 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>37</TELC:lsb>
+			<TELC:msb>37</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_6_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_6_EN">
+			<TELC:description>DDR memory instance 6 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>38</TELC:lsb>
+			<TELC:msb>38</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_7_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_7_EN">
+			<TELC:description>DDR memory instance 7 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>39</TELC:lsb>
+			<TELC:msb>39</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_8_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_8_EN">
+			<TELC:description>DDR memory instance 8 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>40</TELC:lsb>
+			<TELC:msb>40</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_9_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_9_EN">
+			<TELC:description>DDR memory instance 9 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>41</TELC:lsb>
+			<TELC:msb>41</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_10_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_10_EN">
+			<TELC:description>DDR memory instance 10 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>42</TELC:lsb>
+			<TELC:msb>42</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_11_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_11_EN">
+			<TELC:description>DDR memory instance 11 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>43</TELC:lsb>
+			<TELC:msb>43</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_12_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_12_EN">
+			<TELC:description>DDR memory instance 12 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>44</TELC:lsb>
+			<TELC:msb>44</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_13_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_13_EN">
+			<TELC:description>DDR memory instance 13 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>45</TELC:lsb>
+			<TELC:msb>45</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_14_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_14_EN">
+			<TELC:description>DDR memory instance 14 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>46</TELC:lsb>
+			<TELC:msb>46</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="DDR_MEM_15_EN" datatypeIDREF="tenabled_state" sampleID="DDR_MEM_15_EN">
+			<TELC:description>DDR memory instance 15 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>47</TELC:lsb>
+			<TELC:msb>47</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="RESERVED_0" datatypeIDREF="treserved" sampleID="RESERVED_0">
+			<TELC:description>Reserved for future use</TELC:description>
+			<TELC:sampleSubGroup>CURR_DIE_IDS_ENABLED_UPI_DDR_MEM_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>16</TELC:size>
+			<TELC:lsb>48</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_1" sampleID="1" sampleGroupID="Container_1">
+		<TELC:description>Groupname 0x464008</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="C0_EN" datatypeIDREF="tenabled_state" sampleID="C0_EN">
+			<TELC:description>Core 0 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>0</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C1_EN" datatypeIDREF="tenabled_state" sampleID="C1_EN">
+			<TELC:description>Core 1 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>1</TELC:lsb>
+			<TELC:msb>1</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C2_EN" datatypeIDREF="tenabled_state" sampleID="C2_EN">
+			<TELC:description>Core 2 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>2</TELC:lsb>
+			<TELC:msb>2</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C3_EN" datatypeIDREF="tenabled_state" sampleID="C3_EN">
+			<TELC:description>Core 3 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>3</TELC:lsb>
+			<TELC:msb>3</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C4_EN" datatypeIDREF="tenabled_state" sampleID="C4_EN">
+			<TELC:description>Core 4 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>4</TELC:lsb>
+			<TELC:msb>4</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C5_EN" datatypeIDREF="tenabled_state" sampleID="C5_EN">
+			<TELC:description>Core 5 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>5</TELC:lsb>
+			<TELC:msb>5</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C6_EN" datatypeIDREF="tenabled_state" sampleID="C6_EN">
+			<TELC:description>Core 6 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>6</TELC:lsb>
+			<TELC:msb>6</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C7_EN" datatypeIDREF="tenabled_state" sampleID="C7_EN">
+			<TELC:description>Core 7 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>7</TELC:lsb>
+			<TELC:msb>7</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C8_EN" datatypeIDREF="tenabled_state" sampleID="C8_EN">
+			<TELC:description>Core 8 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>8</TELC:lsb>
+			<TELC:msb>8</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C9_EN" datatypeIDREF="tenabled_state" sampleID="C9_EN">
+			<TELC:description>Core 9 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>9</TELC:lsb>
+			<TELC:msb>9</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C10_EN" datatypeIDREF="tenabled_state" sampleID="C10_EN">
+			<TELC:description>Core 10 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>10</TELC:lsb>
+			<TELC:msb>10</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C11_EN" datatypeIDREF="tenabled_state" sampleID="C11_EN">
+			<TELC:description>Core 11 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>11</TELC:lsb>
+			<TELC:msb>11</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C12_EN" datatypeIDREF="tenabled_state" sampleID="C12_EN">
+			<TELC:description>Core 12 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>12</TELC:lsb>
+			<TELC:msb>12</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C13_EN" datatypeIDREF="tenabled_state" sampleID="C13_EN">
+			<TELC:description>Core 13 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>13</TELC:lsb>
+			<TELC:msb>13</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C14_EN" datatypeIDREF="tenabled_state" sampleID="C14_EN">
+			<TELC:description>Core 14 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>14</TELC:lsb>
+			<TELC:msb>14</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C15_EN" datatypeIDREF="tenabled_state" sampleID="C15_EN">
+			<TELC:description>Core 15 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>15</TELC:lsb>
+			<TELC:msb>15</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C16_EN" datatypeIDREF="tenabled_state" sampleID="C16_EN">
+			<TELC:description>Core 16 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>16</TELC:lsb>
+			<TELC:msb>16</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C17_EN" datatypeIDREF="tenabled_state" sampleID="C17_EN">
+			<TELC:description>Core 17 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>17</TELC:lsb>
+			<TELC:msb>17</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C18_EN" datatypeIDREF="tenabled_state" sampleID="C18_EN">
+			<TELC:description>Core 18 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>18</TELC:lsb>
+			<TELC:msb>18</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C19_EN" datatypeIDREF="tenabled_state" sampleID="C19_EN">
+			<TELC:description>Core 19 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>19</TELC:lsb>
+			<TELC:msb>19</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C20_EN" datatypeIDREF="tenabled_state" sampleID="C20_EN">
+			<TELC:description>Core 20 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>20</TELC:lsb>
+			<TELC:msb>20</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C21_EN" datatypeIDREF="tenabled_state" sampleID="C21_EN">
+			<TELC:description>Core 21 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>21</TELC:lsb>
+			<TELC:msb>21</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C22_EN" datatypeIDREF="tenabled_state" sampleID="C22_EN">
+			<TELC:description>Core 22 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>22</TELC:lsb>
+			<TELC:msb>22</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C23_EN" datatypeIDREF="tenabled_state" sampleID="C23_EN">
+			<TELC:description>Core 23 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>23</TELC:lsb>
+			<TELC:msb>23</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C24_EN" datatypeIDREF="tenabled_state" sampleID="C24_EN">
+			<TELC:description>Core 24 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>24</TELC:lsb>
+			<TELC:msb>24</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C25_EN" datatypeIDREF="tenabled_state" sampleID="C25_EN">
+			<TELC:description>Core 25 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>25</TELC:lsb>
+			<TELC:msb>25</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C26_EN" datatypeIDREF="tenabled_state" sampleID="C26_EN">
+			<TELC:description>Core 26 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>26</TELC:lsb>
+			<TELC:msb>26</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C27_EN" datatypeIDREF="tenabled_state" sampleID="C27_EN">
+			<TELC:description>Core 27 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>27</TELC:lsb>
+			<TELC:msb>27</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C28_EN" datatypeIDREF="tenabled_state" sampleID="C28_EN">
+			<TELC:description>Core 28 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>28</TELC:lsb>
+			<TELC:msb>28</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C29_EN" datatypeIDREF="tenabled_state" sampleID="C29_EN">
+			<TELC:description>Core 29 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>29</TELC:lsb>
+			<TELC:msb>29</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C30_EN" datatypeIDREF="tenabled_state" sampleID="C30_EN">
+			<TELC:description>Core 30 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>30</TELC:lsb>
+			<TELC:msb>30</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C31_EN" datatypeIDREF="tenabled_state" sampleID="C31_EN">
+			<TELC:description>Core 31 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>31</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C32_EN" datatypeIDREF="tenabled_state" sampleID="C32_EN">
+			<TELC:description>Core 32 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>32</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C33_EN" datatypeIDREF="tenabled_state" sampleID="C33_EN">
+			<TELC:description>Core 33 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>33</TELC:lsb>
+			<TELC:msb>33</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C34_EN" datatypeIDREF="tenabled_state" sampleID="C34_EN">
+			<TELC:description>Core 34 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>34</TELC:lsb>
+			<TELC:msb>34</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C35_EN" datatypeIDREF="tenabled_state" sampleID="C35_EN">
+			<TELC:description>Core 35 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>35</TELC:lsb>
+			<TELC:msb>35</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C36_EN" datatypeIDREF="tenabled_state" sampleID="C36_EN">
+			<TELC:description>Core 36 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>36</TELC:lsb>
+			<TELC:msb>36</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C37_EN" datatypeIDREF="tenabled_state" sampleID="C37_EN">
+			<TELC:description>Core 37 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>37</TELC:lsb>
+			<TELC:msb>37</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C38_EN" datatypeIDREF="tenabled_state" sampleID="C38_EN">
+			<TELC:description>Core 38 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>38</TELC:lsb>
+			<TELC:msb>38</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C39_EN" datatypeIDREF="tenabled_state" sampleID="C39_EN">
+			<TELC:description>Core 39 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>39</TELC:lsb>
+			<TELC:msb>39</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C40_EN" datatypeIDREF="tenabled_state" sampleID="C40_EN">
+			<TELC:description>Core 40 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>40</TELC:lsb>
+			<TELC:msb>40</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C41_EN" datatypeIDREF="tenabled_state" sampleID="C41_EN">
+			<TELC:description>Core 41 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>41</TELC:lsb>
+			<TELC:msb>41</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C42_EN" datatypeIDREF="tenabled_state" sampleID="C42_EN">
+			<TELC:description>Core 42 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>42</TELC:lsb>
+			<TELC:msb>42</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C43_EN" datatypeIDREF="tenabled_state" sampleID="C43_EN">
+			<TELC:description>Core 43 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>43</TELC:lsb>
+			<TELC:msb>43</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C44_EN" datatypeIDREF="tenabled_state" sampleID="C44_EN">
+			<TELC:description>Core 44 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>44</TELC:lsb>
+			<TELC:msb>44</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C45_EN" datatypeIDREF="tenabled_state" sampleID="C45_EN">
+			<TELC:description>Core 45 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>45</TELC:lsb>
+			<TELC:msb>45</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C46_EN" datatypeIDREF="tenabled_state" sampleID="C46_EN">
+			<TELC:description>Core 46 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>46</TELC:lsb>
+			<TELC:msb>46</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C47_EN" datatypeIDREF="tenabled_state" sampleID="C47_EN">
+			<TELC:description>Core 47 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>47</TELC:lsb>
+			<TELC:msb>47</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C48_EN" datatypeIDREF="tenabled_state" sampleID="C48_EN">
+			<TELC:description>Core 48 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>48</TELC:lsb>
+			<TELC:msb>48</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C49_EN" datatypeIDREF="tenabled_state" sampleID="C49_EN">
+			<TELC:description>Core 49 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>49</TELC:lsb>
+			<TELC:msb>49</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C50_EN" datatypeIDREF="tenabled_state" sampleID="C50_EN">
+			<TELC:description>Core 50 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>50</TELC:lsb>
+			<TELC:msb>50</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C51_EN" datatypeIDREF="tenabled_state" sampleID="C51_EN">
+			<TELC:description>Core 51 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>51</TELC:lsb>
+			<TELC:msb>51</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C52_EN" datatypeIDREF="tenabled_state" sampleID="C52_EN">
+			<TELC:description>Core 52 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>52</TELC:lsb>
+			<TELC:msb>52</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C53_EN" datatypeIDREF="tenabled_state" sampleID="C53_EN">
+			<TELC:description>Core 53 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>53</TELC:lsb>
+			<TELC:msb>53</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C54_EN" datatypeIDREF="tenabled_state" sampleID="C54_EN">
+			<TELC:description>Core 54 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>54</TELC:lsb>
+			<TELC:msb>54</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C55_EN" datatypeIDREF="tenabled_state" sampleID="C55_EN">
+			<TELC:description>Core 55 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>55</TELC:lsb>
+			<TELC:msb>55</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C56_EN" datatypeIDREF="tenabled_state" sampleID="C56_EN">
+			<TELC:description>Core 56 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>56</TELC:lsb>
+			<TELC:msb>56</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C57_EN" datatypeIDREF="tenabled_state" sampleID="C57_EN">
+			<TELC:description>Core 57 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>57</TELC:lsb>
+			<TELC:msb>57</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C58_EN" datatypeIDREF="tenabled_state" sampleID="C58_EN">
+			<TELC:description>Core 58 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>58</TELC:lsb>
+			<TELC:msb>58</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C59_EN" datatypeIDREF="tenabled_state" sampleID="C59_EN">
+			<TELC:description>Core 59 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>59</TELC:lsb>
+			<TELC:msb>59</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C60_EN" datatypeIDREF="tenabled_state" sampleID="C60_EN">
+			<TELC:description>Core 60 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>60</TELC:lsb>
+			<TELC:msb>60</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C61_EN" datatypeIDREF="tenabled_state" sampleID="C61_EN">
+			<TELC:description>Core 61 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>61</TELC:lsb>
+			<TELC:msb>61</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C62_EN" datatypeIDREF="tenabled_state" sampleID="C62_EN">
+			<TELC:description>Core 62 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>62</TELC:lsb>
+			<TELC:msb>62</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="C63_EN" datatypeIDREF="tenabled_state" sampleID="C63_EN">
+			<TELC:description>Core 63 is enabled, matches RESOLVED_CORES</TELC:description>
+			<TELC:sampleSubGroup>CORE_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>63</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_2" sampleID="2" sampleGroupID="Container_2">
+		<TELC:description>Groupname 0x464010</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CHA_0_EN" datatypeIDREF="tenabled_state" sampleID="CHA_0_EN">
+			<TELC:description>CHA instance 0 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>0</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_1_EN" datatypeIDREF="tenabled_state" sampleID="CHA_1_EN">
+			<TELC:description>CHA instance 1 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>1</TELC:lsb>
+			<TELC:msb>1</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_2_EN" datatypeIDREF="tenabled_state" sampleID="CHA_2_EN">
+			<TELC:description>CHA instance 2 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>2</TELC:lsb>
+			<TELC:msb>2</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_3_EN" datatypeIDREF="tenabled_state" sampleID="CHA_3_EN">
+			<TELC:description>CHA instance 3 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>3</TELC:lsb>
+			<TELC:msb>3</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_4_EN" datatypeIDREF="tenabled_state" sampleID="CHA_4_EN">
+			<TELC:description>CHA instance 4 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>4</TELC:lsb>
+			<TELC:msb>4</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_5_EN" datatypeIDREF="tenabled_state" sampleID="CHA_5_EN">
+			<TELC:description>CHA instance 5 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>5</TELC:lsb>
+			<TELC:msb>5</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_6_EN" datatypeIDREF="tenabled_state" sampleID="CHA_6_EN">
+			<TELC:description>CHA instance 6 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>6</TELC:lsb>
+			<TELC:msb>6</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_7_EN" datatypeIDREF="tenabled_state" sampleID="CHA_7_EN">
+			<TELC:description>CHA instance 7 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>7</TELC:lsb>
+			<TELC:msb>7</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_8_EN" datatypeIDREF="tenabled_state" sampleID="CHA_8_EN">
+			<TELC:description>CHA instance 8 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>8</TELC:lsb>
+			<TELC:msb>8</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_9_EN" datatypeIDREF="tenabled_state" sampleID="CHA_9_EN">
+			<TELC:description>CHA instance 9 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>9</TELC:lsb>
+			<TELC:msb>9</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_10_EN" datatypeIDREF="tenabled_state" sampleID="CHA_10_EN">
+			<TELC:description>CHA instance 10 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>10</TELC:lsb>
+			<TELC:msb>10</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_11_EN" datatypeIDREF="tenabled_state" sampleID="CHA_11_EN">
+			<TELC:description>CHA instance 11 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>11</TELC:lsb>
+			<TELC:msb>11</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_12_EN" datatypeIDREF="tenabled_state" sampleID="CHA_12_EN">
+			<TELC:description>CHA instance 12 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>12</TELC:lsb>
+			<TELC:msb>12</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_13_EN" datatypeIDREF="tenabled_state" sampleID="CHA_13_EN">
+			<TELC:description>CHA instance 13 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>13</TELC:lsb>
+			<TELC:msb>13</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_14_EN" datatypeIDREF="tenabled_state" sampleID="CHA_14_EN">
+			<TELC:description>CHA instance 14 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>14</TELC:lsb>
+			<TELC:msb>14</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_15_EN" datatypeIDREF="tenabled_state" sampleID="CHA_15_EN">
+			<TELC:description>CHA instance 15 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>15</TELC:lsb>
+			<TELC:msb>15</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_16_EN" datatypeIDREF="tenabled_state" sampleID="CHA_16_EN">
+			<TELC:description>CHA instance 16 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>16</TELC:lsb>
+			<TELC:msb>16</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_17_EN" datatypeIDREF="tenabled_state" sampleID="CHA_17_EN">
+			<TELC:description>CHA instance 17 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>17</TELC:lsb>
+			<TELC:msb>17</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_18_EN" datatypeIDREF="tenabled_state" sampleID="CHA_18_EN">
+			<TELC:description>CHA instance 18 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>18</TELC:lsb>
+			<TELC:msb>18</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_19_EN" datatypeIDREF="tenabled_state" sampleID="CHA_19_EN">
+			<TELC:description>CHA instance 19 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>19</TELC:lsb>
+			<TELC:msb>19</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_20_EN" datatypeIDREF="tenabled_state" sampleID="CHA_20_EN">
+			<TELC:description>CHA instance 20 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>20</TELC:lsb>
+			<TELC:msb>20</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_21_EN" datatypeIDREF="tenabled_state" sampleID="CHA_21_EN">
+			<TELC:description>CHA instance 21 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>21</TELC:lsb>
+			<TELC:msb>21</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_22_EN" datatypeIDREF="tenabled_state" sampleID="CHA_22_EN">
+			<TELC:description>CHA instance 22 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>22</TELC:lsb>
+			<TELC:msb>22</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_23_EN" datatypeIDREF="tenabled_state" sampleID="CHA_23_EN">
+			<TELC:description>CHA instance 23 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>23</TELC:lsb>
+			<TELC:msb>23</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_24_EN" datatypeIDREF="tenabled_state" sampleID="CHA_24_EN">
+			<TELC:description>CHA instance 24 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>24</TELC:lsb>
+			<TELC:msb>24</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_25_EN" datatypeIDREF="tenabled_state" sampleID="CHA_25_EN">
+			<TELC:description>CHA instance 25 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>25</TELC:lsb>
+			<TELC:msb>25</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_26_EN" datatypeIDREF="tenabled_state" sampleID="CHA_26_EN">
+			<TELC:description>CHA instance 26 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>26</TELC:lsb>
+			<TELC:msb>26</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_27_EN" datatypeIDREF="tenabled_state" sampleID="CHA_27_EN">
+			<TELC:description>CHA instance 27 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>27</TELC:lsb>
+			<TELC:msb>27</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_28_EN" datatypeIDREF="tenabled_state" sampleID="CHA_28_EN">
+			<TELC:description>CHA instance 28 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>28</TELC:lsb>
+			<TELC:msb>28</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_29_EN" datatypeIDREF="tenabled_state" sampleID="CHA_29_EN">
+			<TELC:description>CHA instance 29 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>29</TELC:lsb>
+			<TELC:msb>29</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_30_EN" datatypeIDREF="tenabled_state" sampleID="CHA_30_EN">
+			<TELC:description>CHA instance 30 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>30</TELC:lsb>
+			<TELC:msb>30</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_31_EN" datatypeIDREF="tenabled_state" sampleID="CHA_31_EN">
+			<TELC:description>CHA instance 31 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>31</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_32_EN" datatypeIDREF="tenabled_state" sampleID="CHA_32_EN">
+			<TELC:description>CHA instance 32 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>32</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_33_EN" datatypeIDREF="tenabled_state" sampleID="CHA_33_EN">
+			<TELC:description>CHA instance 33 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>33</TELC:lsb>
+			<TELC:msb>33</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_34_EN" datatypeIDREF="tenabled_state" sampleID="CHA_34_EN">
+			<TELC:description>CHA instance 34 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>34</TELC:lsb>
+			<TELC:msb>34</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_35_EN" datatypeIDREF="tenabled_state" sampleID="CHA_35_EN">
+			<TELC:description>CHA instance 35 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>35</TELC:lsb>
+			<TELC:msb>35</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_36_EN" datatypeIDREF="tenabled_state" sampleID="CHA_36_EN">
+			<TELC:description>CHA instance 36 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>36</TELC:lsb>
+			<TELC:msb>36</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_37_EN" datatypeIDREF="tenabled_state" sampleID="CHA_37_EN">
+			<TELC:description>CHA instance 37 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>37</TELC:lsb>
+			<TELC:msb>37</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_38_EN" datatypeIDREF="tenabled_state" sampleID="CHA_38_EN">
+			<TELC:description>CHA instance 38 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>38</TELC:lsb>
+			<TELC:msb>38</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_39_EN" datatypeIDREF="tenabled_state" sampleID="CHA_39_EN">
+			<TELC:description>CHA instance 39 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>39</TELC:lsb>
+			<TELC:msb>39</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_40_EN" datatypeIDREF="tenabled_state" sampleID="CHA_40_EN">
+			<TELC:description>CHA instance 40 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>40</TELC:lsb>
+			<TELC:msb>40</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_41_EN" datatypeIDREF="tenabled_state" sampleID="CHA_41_EN">
+			<TELC:description>CHA instance 41 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>41</TELC:lsb>
+			<TELC:msb>41</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_42_EN" datatypeIDREF="tenabled_state" sampleID="CHA_42_EN">
+			<TELC:description>CHA instance 42 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>42</TELC:lsb>
+			<TELC:msb>42</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_43_EN" datatypeIDREF="tenabled_state" sampleID="CHA_43_EN">
+			<TELC:description>CHA instance 43 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>43</TELC:lsb>
+			<TELC:msb>43</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_44_EN" datatypeIDREF="tenabled_state" sampleID="CHA_44_EN">
+			<TELC:description>CHA instance 44 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>44</TELC:lsb>
+			<TELC:msb>44</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_45_EN" datatypeIDREF="tenabled_state" sampleID="CHA_45_EN">
+			<TELC:description>CHA instance 45 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>45</TELC:lsb>
+			<TELC:msb>45</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_46_EN" datatypeIDREF="tenabled_state" sampleID="CHA_46_EN">
+			<TELC:description>CHA instance 46 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>46</TELC:lsb>
+			<TELC:msb>46</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_47_EN" datatypeIDREF="tenabled_state" sampleID="CHA_47_EN">
+			<TELC:description>CHA instance 47 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>47</TELC:lsb>
+			<TELC:msb>47</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_48_EN" datatypeIDREF="tenabled_state" sampleID="CHA_48_EN">
+			<TELC:description>CHA instance 48 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>48</TELC:lsb>
+			<TELC:msb>48</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_49_EN" datatypeIDREF="tenabled_state" sampleID="CHA_49_EN">
+			<TELC:description>CHA instance 49 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>49</TELC:lsb>
+			<TELC:msb>49</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_50_EN" datatypeIDREF="tenabled_state" sampleID="CHA_50_EN">
+			<TELC:description>CHA instance 50 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>50</TELC:lsb>
+			<TELC:msb>50</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_51_EN" datatypeIDREF="tenabled_state" sampleID="CHA_51_EN">
+			<TELC:description>CHA instance 51 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>51</TELC:lsb>
+			<TELC:msb>51</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_52_EN" datatypeIDREF="tenabled_state" sampleID="CHA_52_EN">
+			<TELC:description>CHA instance 52 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>52</TELC:lsb>
+			<TELC:msb>52</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_53_EN" datatypeIDREF="tenabled_state" sampleID="CHA_53_EN">
+			<TELC:description>CHA instance 53 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>53</TELC:lsb>
+			<TELC:msb>53</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_54_EN" datatypeIDREF="tenabled_state" sampleID="CHA_54_EN">
+			<TELC:description>CHA instance 54 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>54</TELC:lsb>
+			<TELC:msb>54</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_55_EN" datatypeIDREF="tenabled_state" sampleID="CHA_55_EN">
+			<TELC:description>CHA instance 55 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>55</TELC:lsb>
+			<TELC:msb>55</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_56_EN" datatypeIDREF="tenabled_state" sampleID="CHA_56_EN">
+			<TELC:description>CHA instance 56 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>56</TELC:lsb>
+			<TELC:msb>56</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_57_EN" datatypeIDREF="tenabled_state" sampleID="CHA_57_EN">
+			<TELC:description>CHA instance 57 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>57</TELC:lsb>
+			<TELC:msb>57</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_58_EN" datatypeIDREF="tenabled_state" sampleID="CHA_58_EN">
+			<TELC:description>CHA instance 58 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>58</TELC:lsb>
+			<TELC:msb>58</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_59_EN" datatypeIDREF="tenabled_state" sampleID="CHA_59_EN">
+			<TELC:description>CHA instance 59 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>59</TELC:lsb>
+			<TELC:msb>59</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_60_EN" datatypeIDREF="tenabled_state" sampleID="CHA_60_EN">
+			<TELC:description>CHA instance 60 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>60</TELC:lsb>
+			<TELC:msb>60</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_61_EN" datatypeIDREF="tenabled_state" sampleID="CHA_61_EN">
+			<TELC:description>CHA instance 61 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>61</TELC:lsb>
+			<TELC:msb>61</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_62_EN" datatypeIDREF="tenabled_state" sampleID="CHA_62_EN">
+			<TELC:description>CHA instance 62 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>62</TELC:lsb>
+			<TELC:msb>62</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="CHA_63_EN" datatypeIDREF="tenabled_state" sampleID="CHA_63_EN">
+			<TELC:description>CHA instance 63 is enabled</TELC:description>
+			<TELC:sampleSubGroup>CHA_ENABLED_MASK</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>1</TELC:size>
+			<TELC:lsb>63</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+</TELEM:Aggregator>

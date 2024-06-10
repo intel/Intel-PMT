@@ -1,0 +1,71 @@
+protocol TelemetryAggregator {
+
+    enum SampleTypes {
+        Reserved, Counter, Snapshot, FixedValue, Status
+    } = Reserved;
+
+    enum SensorTypes {
+        Temperature, FanTach, Voltage, Altitude, Current,
+        Power, Energy, Utilization, Airflow, Pressure, Count
+    }
+
+    record TransformInput {
+        string groupIDREF;
+        string sampleIDREF;
+    }
+
+    record Transformation {
+        string name;
+        string transformId;
+        string output_dataclass;
+        array<string> parameters;
+        string transform;
+    }
+
+    record Sample {
+        string name;
+        string sampleId;
+        string datatypeIDREF;
+        string description;
+        string sampleSubGroup;
+        SampleTypes sampleType;
+        int size;
+        int lsb;
+        int msb;
+    }
+
+    record SampleGroup {
+        string name;
+        int sampleId;
+        string sampleGroupId;
+        string description;
+        int length;
+        map<Sample> samples;
+    }
+
+    /* Sample from Aggregator Interface, avoiding name clash */
+    record Metric {
+        string name;
+        string sampleGroup;
+        string datatypeIDREF;
+        int sampleId; // Unique on aggregator level
+        union { null, SampleTypes }  sampleType;
+        union { null, SensorTypes }  sensorType;
+        union { null, string }  description;
+        map<TransformInput> inputs;
+        string transformation;
+        union { null, string } redfishURL;
+
+    }
+    record AggregatorSchema {
+        string name;
+        string description;
+        int uniqueId;
+        union { null, string } NDA;
+        union { null, int } samplePeriod;
+        union { null, date } revisionDate;
+        map<Metric> metrics;
+        map<SampleGroup> groups;
+        map<Transformation> transformations;
+    }
+}

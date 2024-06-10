@@ -1,0 +1,178 @@
+{
+  "type" : "record",
+  "name" : "AggregatorSchema",
+  "fields" : [ {
+    "name" : "name",
+    "type" : "string"
+  }, {
+    "name" : "description",
+    "type" : "string"
+  }, {
+    "name" : "uniqueId",
+    "type" : "int"
+  }, {
+    "name" : "NDA",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "samplePeriod",
+    "type" : [ "null", "int" ]
+  }, {
+    "name" : "revisionDate",
+    "type" : [ "null", {
+      "type" : "int",
+      "logicalType" : "date"
+    } ]
+  }, {
+    "name" : "metrics",
+    "type" : {
+      "type" : "map",
+      "values" : {
+        "type" : "record",
+        "name" : "Metric",
+        "fields" : [ {
+          "name" : "name",
+          "type" : "string"
+        }, {
+          "name" : "sampleGroup",
+          "type" : "string"
+        }, {
+          "name" : "datatypeIDREF",
+          "type" : "string"
+        }, {
+          "name" : "sampleId",
+          "type" : "int"
+        }, {
+          "name" : "sampleType",
+          "type" : [ "null", {
+            "type" : "enum",
+            "name" : "SampleTypes",
+            "symbols" : [ "Reserved", "Counter", "Snapshot", "FixedValue", "Status" ],
+            "default" : "Reserved"
+          } ]
+        }, {
+          "name" : "sensorType",
+          "type" : [ "null", {
+            "type" : "enum",
+            "name" : "SensorTypes",
+            "symbols" : [ "Temperature", "FanTach", "Voltage", "Altitude", "Current", "Power", "Energy", "Utilization", "Airflow", "Pressure", "Count" ]
+          } ]
+        }, {
+          "name" : "description",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "inputs",
+          "type" : {
+            "type" : "map",
+            "values" : {
+              "type" : "record",
+              "name" : "TransformInput",
+              "fields" : [ {
+                "name" : "groupIDREF",
+                "type" : "string"
+              }, {
+                "name" : "sampleIDREF",
+                "type" : "string"
+              } ]
+            }
+          }
+        }, {
+          "name" : "transformation",
+          "type" : "string"
+        }, {
+          "name" : "redfishURL",
+          "type" : [ "null", "string" ]
+        } ]
+      }
+    }
+  }, {
+    "name" : "groups",
+    "type" : {
+      "type" : "map",
+      "values" : {
+        "type" : "record",
+        "name" : "SampleGroup",
+        "fields" : [ {
+          "name" : "name",
+          "type" : "string"
+        }, {
+          "name" : "sampleId",
+          "type" : "int"
+        }, {
+          "name" : "sampleGroupId",
+          "type" : "string"
+        }, {
+          "name" : "description",
+          "type" : "string"
+        }, {
+          "name" : "length",
+          "type" : "int"
+        }, {
+          "name" : "samples",
+          "type" : {
+            "type" : "map",
+            "values" : {
+              "type" : "record",
+              "name" : "Sample",
+              "fields" : [ {
+                "name" : "name",
+                "type" : "string"
+              }, {
+                "name" : "sampleId",
+                "type" : "string"
+              }, {
+                "name" : "datatypeIDREF",
+                "type" : "string"
+              }, {
+                "name" : "description",
+                "type" : "string"
+              }, {
+                "name" : "sampleSubGroup",
+                "type" : "string"
+              }, {
+                "name" : "sampleType",
+                "type" : "SampleTypes"
+              }, {
+                "name" : "size",
+                "type" : "int"
+              }, {
+                "name" : "lsb",
+                "type" : "int"
+              }, {
+                "name" : "msb",
+                "type" : "int"
+              } ]
+            }
+          }
+        } ]
+      }
+    }
+  }, {
+    "name" : "transformations",
+    "type" : {
+      "type" : "map",
+      "values" : {
+        "type" : "record",
+        "name" : "Transformation",
+        "fields" : [ {
+          "name" : "name",
+          "type" : "string"
+        }, {
+          "name" : "transformId",
+          "type" : "string"
+        }, {
+          "name" : "output_dataclass",
+          "type" : "string"
+        }, {
+          "name" : "parameters",
+          "type" : {
+            "type" : "array",
+            "items" : "string"
+          }
+        }, {
+          "name" : "transform",
+          "type" : "string"
+        } ]
+      }
+    }
+  } ]
+}
