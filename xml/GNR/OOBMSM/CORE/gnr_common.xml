@@ -4,30 +4,30 @@
 	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
 	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/common telemetry_common.xsd">
 
-	<TELC:dataType name="tcore_stress_level" datatypeID="tcore_stress_level">
+	<TELC:dataType name="tagg_data_loss_count" datatypeID="tagg_data_loss_count">
 		<TELC:dataclass>counter</TELC:dataclass>
-			<TELC:units name="stress_level">
-				<TELC:symbol>stress</TELC:symbol>
+	</TELC:dataType>
+	<TELC:dataType name="tcore_time" datatypeID="tcore_time">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="second">
+				<TELC:symbol>s</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tcore_usage" datatypeID="tcore_usage">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="core_usage">
+				<TELC:symbol></TELC:symbol>
 			</TELC:units>
 		<TELC:format>U64.38.26</TELC:format>
 	</TELC:dataType>
-	<TELC:dataType name="thist_counter" datatypeID="thist_counter">
+	<TELC:dataType name="tcrystal_tsc_timestamp" datatypeID="tcrystal_tsc_timestamp">
 		<TELC:dataclass>counter</TELC:dataclass>
-	</TELC:dataType>
-	<TELC:dataType name="tpvp_level_res" datatypeID="tpvp_level_res">
-		<TELC:dataclass>counter</TELC:dataclass>
-			<TELC:units name="percent">
-				<TELC:symbol>%</TELC:symbol>
-			</TELC:units>
-		<TELC:format>ANY</TELC:format>
 	</TELC:dataType>
 	<TELC:dataType name="tpvp_throttle_counter" datatypeID="tpvp_throttle_counter">
 		<TELC:dataclass>counter</TELC:dataclass>
 	</TELC:dataType>
 	<TELC:dataType name="treserved" datatypeID="treserved">
-		<TELC:dataclass>counter</TELC:dataclass>
-	</TELC:dataType>
-	<TELC:dataType name="ttsc_timer" datatypeID="ttsc_timer">
 		<TELC:dataclass>counter</TELC:dataclass>
 	</TELC:dataType>
 	<TELC:dataType name="tcore_state" datatypeID="tcore_state">

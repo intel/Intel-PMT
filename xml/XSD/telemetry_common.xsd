@@ -1,1 +1,477 @@
-<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:TELC="http://schemas.intel.com/telemetry/base/common" xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://schemas.intel.com/telemetry/base/common" elementFormDefault="qualified">	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>	<xs:simpleType name="eAccessType" id="TELC.eAccessType" final="restriction">		<xs:annotation>			<xs:documentation>The datatype of the field</xs:documentation>		</xs:annotation>		<xs:restriction base="xs:token">			<xs:enumeration value="Reserved">				<xs:annotation>					<xs:documentation>0</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="BDF_BAR_OFFSET">				<xs:annotation>					<xs:documentation>1</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="BAR_OFFSET">				<xs:annotation>					<xs:documentation>2</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="LOCAL">				<xs:annotation>					<xs:documentation>3</xs:documentation>				</xs:annotation>			</xs:enumeration>		</xs:restriction>	</xs:simpleType>	<xs:simpleType name="eAggregatorType" id="TELC.eAggregatorType" final="restriction">		<xs:annotation>			<xs:documentation>The Type of Aggregtor</xs:documentation>		</xs:annotation>		<xs:restriction base="xs:token">			<xs:enumeration value="Standard">				<xs:annotation>					<xs:documentation>0</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="Reserved">				<xs:annotation>					<xs:documentation>1</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="Fixed">				<xs:annotation>					<xs:documentation>2</xs:documentation>				</xs:annotation>			</xs:enumeration>		</xs:restriction>	</xs:simpleType>	<xs:simpleType name="eSampleType" id="TELC.eSampleType" final="restriction">		<xs:annotation>			<xs:documentation>Indicates whether the sample is free running or snapshot</xs:documentation>		</xs:annotation>		<xs:restriction base="xs:token">			<xs:enumeration value="Reserved">				<xs:annotation>					<xs:documentation>0</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="Counter">				<xs:annotation>					<xs:documentation>1</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="Snapshot">				<xs:annotation>					<xs:documentation>2</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="FixedValue">				<xs:annotation>					<xs:documentation>3</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="Status">				<xs:annotation>					<xs:documentation>4</xs:documentation>				</xs:annotation>			</xs:enumeration>		</xs:restriction>	</xs:simpleType>	<xs:simpleType name="eSimpleDataTypes" id="TELC.eSimpleDataTypes" final="restriction">		<xs:annotation>			<xs:documentation>Simple DataTypes</xs:documentation>		</xs:annotation>		<xs:restriction base="xs:token">			<xs:enumeration value="Reserved">				<xs:annotation>					<xs:documentation>0</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="integer">				<xs:annotation>					<xs:documentation>1</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="string">				<xs:annotation>					<xs:documentation>2</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="byte">				<xs:annotation>					<xs:documentation>3</xs:documentation>				</xs:annotation>			</xs:enumeration>			<xs:enumeration value="float">				<xs:annotation>					<xs:documentation>4</xs:documentation>				</xs:annotation>			</xs:enumeration>		</xs:restriction>	</xs:simpleType>	<xs:simpleType name="recordcount">		<xs:restriction base="xs:nonNegativeInteger">			<xs:minInclusive value="0"/>			<xs:maxInclusive value="131071"/>		</xs:restriction>	</xs:simpleType>	<xs:simpleType name="fieldlength">		<xs:restriction base="xs:integer">			<xs:minInclusive value="0"/>			<xs:maxInclusive value="64"/>		</xs:restriction>	</xs:simpleType>	<xs:simpleType name="fieldoffset">		<xs:restriction base="xs:integer">			<xs:minInclusive value="0"/>			<xs:maxInclusive value="64"/>		</xs:restriction>	</xs:simpleType>	<xs:simpleType name="tAddress">		<xs:restriction base="xs:string">			<xs:pattern value="0x[0-9A-Fa-f]+|[0-9]+"/>		</xs:restriction>	</xs:simpleType>	<xs:complexType name="globalparameter">		<xs:attribute name="name" type="xs:string" use="required"/>		<xs:attribute name="value" type="xs:string" use="required"/>		<xs:attribute name="type" type="TELC:eSimpleDataTypes" use="optional"/>	</xs:complexType>	<xs:complexType name="globals">		<xs:sequence>			<xs:element name="global" type="TELC:globalparameter" minOccurs="1" maxOccurs="unbounded"/>		</xs:sequence>	</xs:complexType>	<xs:simpleType name="tUUID128">		<xs:annotation>			<xs:documentation xml:lang="en">        The representation of a GUID, generally the id of an element.      </xs:documentation>		</xs:annotation>		<xs:restriction base="xs:string">			<xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>		</xs:restriction>	</xs:simpleType>	<xs:simpleType name="tUUID32">		<xs:annotation>			<xs:documentation xml:lang="en">        The representation of a GUID, generally the id of an element.      </xs:documentation>		</xs:annotation>		<xs:restriction base="xs:string">			<xs:pattern value="[a-fA-F0-9]{8}"/>		</xs:restriction>	</xs:simpleType>	<xs:complexType name="bitfield" id="TELC.bitfield">		<xs:sequence>			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The name of the enumeration</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="start" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The start bit</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="end" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The end bit</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="datatype" type="TELC:eDataType" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The end bit</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="enumeration" type="TELC:enumerationdefinition" minOccurs="0" maxOccurs="1"/>		</xs:sequence>		<xs:attribute name="width" type="xs:nonNegativeInteger"/>	</xs:complexType>	<xs:complexType name="bitfields" id="TELC.bitfields">		<xs:sequence>			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The name of the bitfield struct</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="width" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The width of the bitfield</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="bitfield" type="TELC:bitfield" minOccurs="1" maxOccurs="unbounded">				<xs:annotation>					<xs:documentation>The width of the bitfield</xs:documentation>				</xs:annotation>			</xs:element>		</xs:sequence>	</xs:complexType>	<xs:simpleType name="eDataType" id="TELC.eDataType" final="restriction">		<xs:annotation>			<xs:documentation>The datatype of the field</xs:documentation>		</xs:annotation>		<xs:restriction base="xs:token">			<xs:enumeration value="status"/>			<xs:enumeration value="integer"/>			<xs:enumeration value="float"/>			<xs:enumeration value="string"/>			<xs:enumeration value="counter"/>			<xs:enumeration value="long"/>			<xs:enumeration value="double"/>			<xs:enumeration value="boolean"/>			<xs:enumeration value="word"/>			<xs:enumeration value="byte"/>		</xs:restriction>	</xs:simpleType>	<xs:simpleType name="eDataFormat" id="TELC.eDataFormat" final="restriction">		<xs:annotation>			<xs:documentation>The datatype of the field</xs:documentation>		</xs:annotation>		<xs:restriction base="xs:token">			<xs:enumeration value="U22.10"/>			<xs:enumeration value="U18.14"/>			<xs:enumeration value="U29.3"/>			<xs:enumeration value="S7.8"/>			<xs:enumeration value="U12.3"/>			<xs:enumeration value="U7.0"/>			<xs:enumeration value="U9.1.8"/>			<xs:enumeration value="U8.3.5"/>			<xs:enumeration value="U16.8.8"/>			<xs:enumeration value="U10.7.3"/>			<xs:enumeration value="U8.1.7"/>			<xs:enumeration value="S8.7.0"/>			<xs:enumeration value="U1.8"/>			<xs:enumeration value="U1.7"/>			<xs:enumeration value="U8.0"/>			<xs:enumeration value="U16.0"/>			<xs:enumeration value="U5.0"/>			<xs:enumeration value="U4.0"/>			<xs:enumeration value="U1.0"/>			<xs:enumeration value="U32.0"/>			<xs:enumeration value="U31.0"/>			<xs:enumeration value="U9.0"/>			<xs:enumeration value="U0.8"/>			<xs:enumeration value="ANY"/>		</xs:restriction>	</xs:simpleType>	<xs:complexType name="enumeration" id="TELC.enumeration">		<xs:sequence>			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The name of the enumeration</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="encoding" type="xs:integer" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The encoding for the enumeration</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="value" type="xs:string" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The encoding for the enumeration</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="dataType" type="TELC:eDataType" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The data type to convert the value to.</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">				<xs:annotation>					<xs:documentation>Description</xs:documentation>				</xs:annotation>			</xs:element>		</xs:sequence>	</xs:complexType>	<xs:complexType name="enumerationdefinition">		<xs:sequence>			<xs:element name="enum_item" type="TELC:enumeration" minOccurs="1" maxOccurs="unbounded"/>		</xs:sequence>	</xs:complexType>	<xs:complexType name="unit" id="TELC.unit">		<xs:sequence>			<xs:element name="symbol" type="xs:string" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The symbol representing the unit</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="representation" type="xs:string" minOccurs="0" maxOccurs="1">				<xs:annotation>					<xs:documentation>Fixed Point Representation</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="precision" type="xs:integer" minOccurs="0" maxOccurs="1">				<xs:annotation>					<xs:documentation>Fixed Point Representation</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="transformation" type="xs:string" minOccurs="0" maxOccurs="1">				<xs:annotation>					<xs:documentation>Provides a transformation. Format will be convered into an Reverse Polish notation</xs:documentation>				</xs:annotation>			</xs:element>		</xs:sequence>		<xs:attribute name="name" type="xs:string" use="required"/>	</xs:complexType>	<xs:complexType name="dataType_t">		<xs:sequence>			<xs:element name="dataclass" type="TELC:eDataType" minOccurs="1" maxOccurs="1"/>			<xs:element name="units" type="TELC:unit" minOccurs="0" maxOccurs="1"/>			<xs:element name="enum" type="TELC:enumerationdefinition" minOccurs="0" maxOccurs="1"/>			<xs:element name="format" type="TELC:eDataFormat" minOccurs="0" maxOccurs="1"/>		</xs:sequence>		<xs:attribute name="name" type="xs:string" use="required"/>		<xs:attribute name="datatypeID" type="xs:ID" use="required"/>	</xs:complexType>	<xs:complexType name="sample_t">		<xs:sequence>			<xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>A desciption of the field</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="sampleSubGroup" type="xs:string" minOccurs="0" maxOccurs="1">				<xs:annotation>					<xs:documentation>A desciption of the field</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="sampleType" type="TELC:eSampleType" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>Describes the behavior of the sample</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="size" type="TELC:fieldlength" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The size of the field.</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="lsb" type="TELC:fieldoffset" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The start offset of the field.</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="msb" type="TELC:fieldoffset" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The endoffset of the field.</xs:documentation>				</xs:annotation>			</xs:element>		</xs:sequence>		<xs:attribute name="name" type="xs:string" use="required">			<xs:annotation>				<xs:documentation>The name of the field</xs:documentation>			</xs:annotation>		</xs:attribute>		<xs:attribute name="datatypeIDREF" type="xs:IDREF" use="required">			<xs:annotation>				<xs:documentation>The name of the field</xs:documentation>			</xs:annotation>		</xs:attribute>		<xs:attribute name="sampleID" type="xs:ID" use="required">			<xs:annotation>				<xs:documentation>The name of the field</xs:documentation>			</xs:annotation>		</xs:attribute>	</xs:complexType>	<xs:complexType name="sampleContainer">		<xs:sequence>			<xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>A desciption of the field</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="length" type="TELC:fieldlength" minOccurs="1" maxOccurs="1">				<xs:annotation>					<xs:documentation>The length of the field.</xs:documentation>				</xs:annotation>			</xs:element>			<xs:element name="sample" type="TELC:sample_t" minOccurs="1" maxOccurs="unbounded"/>		</xs:sequence>		<xs:attribute name="name" type="xs:string" use="required">			<xs:annotation>				<xs:documentation>The name of the field</xs:documentation>			</xs:annotation>		</xs:attribute>		<xs:attribute name="sampleID" type="TELC:tAddress" use="required">			<xs:annotation>				<xs:documentation>The address in the Aggregator</xs:documentation>			</xs:annotation>		</xs:attribute>		<xs:attribute name="sampleGroupID" type="xs:ID" use="required">			<xs:annotation>				<xs:documentation>A unqiueID for SampleGroup Aggregator</xs:documentation>			</xs:annotation>		</xs:attribute>	</xs:complexType>	<xs:element name="dataType" type="TELC:dataType_t"/>	<xs:element name="sample" type="TELC:sample_t"/>	<xs:element name="sampleGroup" type="TELC:sampleContainer"/>	<xs:complexType name="T_DataTypes">		<xs:sequence>			<xs:element ref="TELC:dataType" minOccurs="0" maxOccurs="unbounded"/>		</xs:sequence>	</xs:complexType>	<xs:element name="DataTypes" type="TELC:T_DataTypes"/>	<xs:complexType name="T_DataTypeInclude">		<xs:sequence>			<xs:element ref="TELC:DataTypes" minOccurs="0" maxOccurs="unbounded"/>		</xs:sequence>	</xs:complexType>	<xs:element name="DataTypesInclude" type="TELC:T_DataTypeInclude"/>	<xs:complexType name="T_TransFormInput">		<xs:sequence>			<xs:element name="sampleGroupIDREF" type="xs:IDREF" maxOccurs="1"/>			<xs:element name="sampleIDREF" type="xs:IDREF" maxOccurs="1"/>		</xs:sequence>		<xs:attribute name="varName"/>		<xs:attribute ref="xlink:href"/>	</xs:complexType>	<xs:complexType name="T_TransFormParameters">		<xs:sequence>			<xs:element name="parameterName" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>		</xs:sequence>	</xs:complexType>	<xs:element name="TransFormInput" type="TELC:T_TransFormInput"/>	<xs:element name="TransFormParameters" type="TELC:T_TransFormParameters"/>	<xs:complexType name="T_TransformInputs">		<xs:sequence>			<xs:element ref="TELC:TransFormInput" minOccurs="0" maxOccurs="unbounded"/>		</xs:sequence>	</xs:complexType>	<xs:element name="TransFormInputs" type="TELC:T_TransformInputs"/>	<xs:complexType name="transformation_t">		<xs:sequence>			<xs:element name="output_dataclass" type="TELC:eDataType" minOccurs="1" maxOccurs="1"/>			<xs:element name="enum" type="TELC:enumerationdefinition" minOccurs="0" maxOccurs="1"/>			<xs:element ref="TELC:TransFormParameters" minOccurs="1" maxOccurs="1"/>			<xs:element name="transform" type="xs:string" minOccurs="1" maxOccurs="1"/>		</xs:sequence>		<xs:attribute name="name" type="xs:string" use="required"/>		<xs:attribute name="transformID" type="xs:ID" use="required"/>		<xs:attribute ref="xlink:href"/>	</xs:complexType>	<xs:element name="TransFormation" type="TELC:transformation_t"/>	<xs:complexType name="T_Transformations">		<xs:sequence>			<xs:element ref="TELC:TransFormation" minOccurs="0" maxOccurs="unbounded"/>		</xs:sequence>	</xs:complexType>	<xs:element name="TransFormations" type="TELC:T_Transformations"/></xs:schema>
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:TELC="http://schemas.intel.com/telemetry/base/common" xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://schemas.intel.com/telemetry/base/common" elementFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<xs:simpleType name="eAccessType" id="TELC.eAccessType" final="restriction">
+		<xs:annotation>
+			<xs:documentation>The datatype of the field</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Reserved">
+				<xs:annotation>
+					<xs:documentation>0</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BDF_BAR_OFFSET">
+				<xs:annotation>
+					<xs:documentation>1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BAR_OFFSET">
+				<xs:annotation>
+					<xs:documentation>2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LOCAL">
+				<xs:annotation>
+					<xs:documentation>3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="eAggregatorType" id="TELC.eAggregatorType" final="restriction">
+		<xs:annotation>
+			<xs:documentation>The Type of Aggregtor</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Standard">
+				<xs:annotation>
+					<xs:documentation>0</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Reserved">
+				<xs:annotation>
+					<xs:documentation>1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Fixed">
+				<xs:annotation>
+					<xs:documentation>2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="eSampleType" id="TELC.eSampleType" final="restriction">
+		<xs:annotation>
+			<xs:documentation>Indicates whether the sample is free running or snapshot</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Reserved">
+				<xs:annotation>
+					<xs:documentation>0</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Counter">
+				<xs:annotation>
+					<xs:documentation>1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Snapshot">
+				<xs:annotation>
+					<xs:documentation>2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FixedValue">
+				<xs:annotation>
+					<xs:documentation>3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Status">
+				<xs:annotation>
+					<xs:documentation>4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="eSimpleDataTypes" id="TELC.eSimpleDataTypes" final="restriction">
+		<xs:annotation>
+			<xs:documentation>Simple DataTypes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Reserved">
+				<xs:annotation>
+					<xs:documentation>0</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="integer">
+				<xs:annotation>
+					<xs:documentation>1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="string">
+				<xs:annotation>
+					<xs:documentation>2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="byte">
+				<xs:annotation>
+					<xs:documentation>3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="float">
+				<xs:annotation>
+					<xs:documentation>4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="recordcount">
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="131071"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fieldlength">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="64"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fieldoffset">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="64"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tAddress">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="0x[0-9A-Fa-f]+|[0-9]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="globalparameter">
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="value" type="xs:string" use="required"/>
+		<xs:attribute name="type" type="TELC:eSimpleDataTypes" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="globals">
+		<xs:sequence>
+			<xs:element name="global" type="TELC:globalparameter" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="tUUID128">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+        The representation of a GUID, generally the id of an element.
+      </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tUUID32">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+        The representation of a GUID, generally the id of an element.
+      </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(0x)?[a-fA-F0-9]{8}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="bitfield" id="TELC.bitfield">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The name of the enumeration</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="start" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The start bit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="end" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The end bit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="datatype" type="TELC:eDataType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The end bit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="enumeration" type="TELC:enumerationdefinition" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="width" type="xs:nonNegativeInteger"/>
+	</xs:complexType>
+	<xs:complexType name="bitfields" id="TELC.bitfields">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The name of the bitfield struct</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="width" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The width of the bitfield</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bitfield" type="TELC:bitfield" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The width of the bitfield</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="eDataType" id="TELC.eDataType" final="restriction">
+		<xs:annotation>
+			<xs:documentation>The datatype of the field</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="status"/>
+			<xs:enumeration value="integer"/>
+			<xs:enumeration value="float"/>
+			<xs:enumeration value="string"/>
+			<xs:enumeration value="counter"/>
+			<xs:enumeration value="long"/>
+			<xs:enumeration value="double"/>
+			<xs:enumeration value="boolean"/>
+			<xs:enumeration value="word"/>
+			<xs:enumeration value="byte"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="eDataFormat" id="TELC.eDataFormat" final="restriction">
+		<xs:annotation>
+			<xs:documentation>The datatype of the field</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="ANY|[US][0-9]*(\.[0-9]*)*"/>
+		</xs:restriction>
+		<!--
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="U22.10"/>
+			<xs:enumeration value="U18.14"/>
+			<xs:enumeration value="U29.3"/>
+			<xs:enumeration value="S7.8"/>
+			<xs:enumeration value="U11.9.2"/>
+			<xs:enumeration value="U12.3"/>
+			<xs:enumeration value="U7.0"/>
+			<xs:enumeration value="U9.1.8"/>
+			<xs:enumeration value="U8.3.5"/>
+			<xs:enumeration value="U16.8.8"/>
+			<xs:enumeration value="U16.1.15"/>
+			<xs:enumeration value="S16.15.1"/>
+			<xs:enumeration value="U10.7.3"/>
+			<xs:enumeration value="U8.1.7"/>
+			<xs:enumeration value="S8.7.0"/>
+			<xs:enumeration value="U1.8"/>
+			<xs:enumeration value="U1.7"/>
+			<xs:enumeration value="U8.0"/>
+			<xs:enumeration value="U16.0"/>
+			<xs:enumeration value="U5.0"/>
+			<xs:enumeration value="U4.0"/>
+			<xs:enumeration value="U1.0"/>
+			<xs:enumeration value="U32.0"/>
+			<xs:enumeration value="U32.18.14"/>
+			<xs:enumeration value="U31.0"/>
+			<xs:enumeration value="U9.0"/>
+			<xs:enumeration value="U0.8"/>
+			<xs:enumeration value="U24.0"/>
+			<xs:enumeration value="U28.0"/>
+			<xs:enumeration value="U64.38.26"/>
+			<xs:enumeration value="ANY"/>
+		</xs:restriction>
+	-->
+	</xs:simpleType>
+	<xs:complexType name="enumeration" id="TELC.enumeration">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The name of the enumeration</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="encoding" type="xs:decimal" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The encoding for the enumeration</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The encoding for the enumeration</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataType" type="TELC:eDataType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The data type to convert the value to.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Description</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="enumerationdefinition">
+		<xs:sequence>
+			<xs:element name="enum_item" type="TELC:enumeration" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="unit" id="TELC.unit">
+		<xs:sequence>
+			<xs:element name="symbol" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The symbol representing the unit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="representation" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Fixed Point Representation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="precision" type="xs:integer" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Fixed Point Representation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="transformation" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Provides a transformation. Format will be convered into an Reverse Polish notation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="dataType_t">
+		<xs:sequence>
+			<xs:element name="dataclass" type="TELC:eDataType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="units" type="TELC:unit" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="enum" type="TELC:enumerationdefinition" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="format" type="TELC:eDataFormat" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="datatypeID" type="xs:ID" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="sample_t">
+		<xs:sequence>
+			<xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A desciption of the field</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sampleSubGroup" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A desciption of the field</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sampleType" type="TELC:eSampleType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Describes the behavior of the sample</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="size" type="TELC:fieldlength" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The size of the field.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lsb" type="TELC:fieldoffset" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The start offset of the field.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msb" type="TELC:fieldoffset" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The endoffset of the field.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The name of the field</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="datatypeIDREF" type="xs:IDREF" use="required">
+			<xs:annotation>
+				<xs:documentation>The name of the field</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="sampleID" type="xs:ID" use="required">
+			<xs:annotation>
+				<xs:documentation>The name of the field</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="sampleContainer">
+		<xs:sequence>
+			<xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A desciption of the field</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="length" type="TELC:fieldlength" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The length of the field.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sample" type="TELC:sample_t" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The name of the field</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="sampleID" type="TELC:tAddress" use="required">
+			<xs:annotation>
+				<xs:documentation>The address in the Aggregator</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="sampleGroupID" type="xs:ID" use="required">
+			<xs:annotation>
+				<xs:documentation>A unqiueID for SampleGroup Aggregator</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="dataType" type="TELC:dataType_t"/>
+	<xs:element name="sample" type="TELC:sample_t"/>
+	<xs:element name="sampleGroup" type="TELC:sampleContainer"/>
+	<xs:complexType name="T_DataTypes">
+		<xs:sequence>
+			<xs:element ref="TELC:dataType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DataTypes" type="TELC:T_DataTypes"/>
+	<xs:complexType name="T_DataTypeInclude">
+		<xs:sequence>
+			<xs:element ref="TELC:DataTypes" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DataTypesInclude" type="TELC:T_DataTypeInclude"/>
+	<xs:complexType name="T_TransFormInput">
+		<xs:sequence>
+			<xs:element name="sampleGroupIDREF" type="xs:IDREF" maxOccurs="1"/>
+			<xs:element name="sampleIDREF" type="xs:IDREF" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="varName"/>
+		<xs:attribute ref="xlink:href"/>
+	</xs:complexType>
+	<xs:complexType name="T_TransFormParameters">
+		<xs:sequence>
+			<xs:element name="parameterName" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TransFormInput" type="TELC:T_TransFormInput"/>
+	<xs:element name="TransFormParameters" type="TELC:T_TransFormParameters"/>
+	<xs:complexType name="T_TransformInputs">
+		<xs:sequence>
+			<xs:element ref="TELC:TransFormInput" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TransFormInputs" type="TELC:T_TransformInputs"/>
+	<xs:complexType name="transformation_t">
+		<xs:sequence>
+			<xs:element name="output_dataclass" type="TELC:eDataType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="enum" type="TELC:enumerationdefinition" minOccurs="0" maxOccurs="1"/>
+			<xs:element ref="TELC:TransFormParameters" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="transform" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="transformID" type="xs:ID" use="required"/>
+		<xs:attribute ref="xlink:href"/>
+	</xs:complexType>
+	<xs:element name="TransFormation" type="TELC:transformation_t"/>
+	<xs:complexType name="T_Transformations">
+		<xs:sequence>
+			<xs:element ref="TELC:TransFormation" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TransFormations" type="TELC:T_Transformations"/>
+</xs:schema>

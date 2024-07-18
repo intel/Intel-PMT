@@ -866,90 +866,90 @@
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="Atom Core0" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="56">
+		<TELI:T_AggregatorSample sampleName="Atom_Core0" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="56">
 			<TELI:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
-					<sampleIDREF>Atom Core0</sampleIDREF>
+					<sampleIDREF>Atom_Core0</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="Atom Core1" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="57">
+		<TELI:T_AggregatorSample sampleName="Atom_Core1" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="57">
 			<TELI:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
-					<sampleIDREF>Atom Core1</sampleIDREF>
+					<sampleIDREF>Atom_Core1</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="Atom Core2" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="58">
+		<TELI:T_AggregatorSample sampleName="Atom_Core2" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="58">
 			<TELI:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
-					<sampleIDREF>Atom Core2</sampleIDREF>
+					<sampleIDREF>Atom_Core2</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="Atom Core3" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="59">
+		<TELI:T_AggregatorSample sampleName="Atom_Core3" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="59">
 			<TELI:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
-					<sampleIDREF>Atom Core3</sampleIDREF>
+					<sampleIDREF>Atom_Core3</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="Atom Core4" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="60">
+		<TELI:T_AggregatorSample sampleName="Atom_Core4" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="60">
 			<TELI:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
-					<sampleIDREF>Atom Core4</sampleIDREF>
+					<sampleIDREF>Atom_Core4</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="Atom Core5" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="61">
+		<TELI:T_AggregatorSample sampleName="Atom_Core5" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="61">
 			<TELI:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
-					<sampleIDREF>Atom Core5</sampleIDREF>
+					<sampleIDREF>Atom_Core5</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="Atom Core6" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="62">
+		<TELI:T_AggregatorSample sampleName="Atom_Core6" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="62">
 			<TELI:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
-					<sampleIDREF>Atom Core6</sampleIDREF>
+					<sampleIDREF>Atom_Core6</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="Atom Core7" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="63">
+		<TELI:T_AggregatorSample sampleName="Atom_Core7" sampleGroup="IA_RING_CSTATES" datatypeIDREF="tgeneric_sample" sampleID="63">
 			<TELI:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
-					<sampleIDREF>Atom Core7</sampleIDREF>
+					<sampleIDREF>Atom_Core7</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
 			<TELI:transformREF>passthru</TELI:transformREF>
