@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2023-12-21</lastupdated>
+	<lastupdated>2024-07-18</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -49,8 +49,8 @@
 				<aggregatorinterface>spr_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
-		<mapping guid="0x6e94ffb0" size="13968">
-			<lastupdated>2023-07-14</lastupdated>
+		<mapping guid="0x22473996" size="14496">
+			<lastupdated>2024-07-18</lastupdated>
 			<status>alpha</status>
 			<description>Granite Rapids OOBMSM Core Telemetry samples definition and transformation rules</description>
 			<xmlset>

@@ -493,7 +493,7 @@
 			<TELC:lsb>15</TELC:lsb>
 			<TELC:msb>17</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="Atom Core0" datatypeIDREF="tgeneric_sample" sampleID="Atom Core0">
+		<TELC:sample name="Atom_Core0" datatypeIDREF="tgeneric_sample" sampleID="Atom_Core0">
 			<TELC:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELC:description>
 			<TELC:sampleSubGroup>IA_RING_CSTATES</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
@@ -501,7 +501,7 @@
 			<TELC:lsb>18</TELC:lsb>
 			<TELC:msb>20</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="Atom Core1" datatypeIDREF="tgeneric_sample" sampleID="Atom Core1">
+		<TELC:sample name="Atom_Core1" datatypeIDREF="tgeneric_sample" sampleID="Atom_Core1">
 			<TELC:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELC:description>
 			<TELC:sampleSubGroup>IA_RING_CSTATES</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
@@ -509,7 +509,7 @@
 			<TELC:lsb>21</TELC:lsb>
 			<TELC:msb>23</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="Atom Core2" datatypeIDREF="tgeneric_sample" sampleID="Atom Core2">
+		<TELC:sample name="Atom_Core2" datatypeIDREF="tgeneric_sample" sampleID="Atom_Core2">
 			<TELC:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELC:description>
 			<TELC:sampleSubGroup>IA_RING_CSTATES</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
@@ -517,7 +517,7 @@
 			<TELC:lsb>24</TELC:lsb>
 			<TELC:msb>26</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="Atom Core3" datatypeIDREF="tgeneric_sample" sampleID="Atom Core3">
+		<TELC:sample name="Atom_Core3" datatypeIDREF="tgeneric_sample" sampleID="Atom_Core3">
 			<TELC:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELC:description>
 			<TELC:sampleSubGroup>IA_RING_CSTATES</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
@@ -525,7 +525,7 @@
 			<TELC:lsb>27</TELC:lsb>
 			<TELC:msb>29</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="Atom Core4" datatypeIDREF="tgeneric_sample" sampleID="Atom Core4">
+		<TELC:sample name="Atom_Core4" datatypeIDREF="tgeneric_sample" sampleID="Atom_Core4">
 			<TELC:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELC:description>
 			<TELC:sampleSubGroup>IA_RING_CSTATES</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
@@ -533,7 +533,7 @@
 			<TELC:lsb>30</TELC:lsb>
 			<TELC:msb>32</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="Atom Core5" datatypeIDREF="tgeneric_sample" sampleID="Atom Core5">
+		<TELC:sample name="Atom_Core5" datatypeIDREF="tgeneric_sample" sampleID="Atom_Core5">
 			<TELC:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELC:description>
 			<TELC:sampleSubGroup>IA_RING_CSTATES</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
@@ -541,7 +541,7 @@
 			<TELC:lsb>33</TELC:lsb>
 			<TELC:msb>35</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="Atom Core6" datatypeIDREF="tgeneric_sample" sampleID="Atom Core6">
+		<TELC:sample name="Atom_Core6" datatypeIDREF="tgeneric_sample" sampleID="Atom_Core6">
 			<TELC:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELC:description>
 			<TELC:sampleSubGroup>IA_RING_CSTATES</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
@@ -549,7 +549,7 @@
 			<TELC:lsb>36</TELC:lsb>
 			<TELC:msb>38</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="Atom Core7" datatypeIDREF="tgeneric_sample" sampleID="Atom Core7">
+		<TELC:sample name="Atom_Core7" datatypeIDREF="tgeneric_sample" sampleID="Atom_Core7">
 			<TELC:description>IA Core C-state of Atom core0: C01: C13: C67: CRST</TELC:description>
 			<TELC:sampleSubGroup>IA_RING_CSTATES</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
