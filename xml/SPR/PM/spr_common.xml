@@ -9,28 +9,28 @@
 		<TELC:enum>
 			<TELC:enum_item>
 				<TELC:name>24MHz</TELC:name>
-				<TELC:encoding>24000000</TELC:encoding>
+				<TELC:encoding>0</TELC:encoding>
 				<TELC:value>24MHz</TELC:value>
 				<TELC:dataType>string</TELC:dataType>
 				<TELC:description>24MHz clock rate</TELC:description>
 			</TELC:enum_item>
 			<TELC:enum_item>
 				<TELC:name>19.2MHz</TELC:name>
-				<TELC:encoding>19.2000000</TELC:encoding>
+				<TELC:encoding>1</TELC:encoding>
 				<TELC:value>19.2MHz</TELC:value>
 				<TELC:dataType>string</TELC:dataType>
 				<TELC:description>19.2MHz clock rate</TELC:description>
 			</TELC:enum_item>
 			<TELC:enum_item>
 				<TELC:name>38.4MHz</TELC:name>
-				<TELC:encoding>38.4000000</TELC:encoding>
+				<TELC:encoding>2</TELC:encoding>
 				<TELC:value>38.4MHz</TELC:value>
 				<TELC:dataType>string</TELC:dataType>
 				<TELC:description>38.4MHz clock rate</TELC:description>
 			</TELC:enum_item>
 			<TELC:enum_item>
 				<TELC:name>25MHz</TELC:name>
-				<TELC:encoding>25000000</TELC:encoding>
+				<TELC:encoding>3</TELC:encoding>
 				<TELC:value>25MHz</TELC:value>
 				<TELC:dataType>string</TELC:dataType>
 				<TELC:description>25MHz clock rate</TELC:description>
