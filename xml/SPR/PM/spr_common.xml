@@ -164,28 +164,28 @@
 		<TELC:enum>
 			<TELC:enum_item>
 				<TELC:name>SPRSP</TELC:name>
-				<TELC:encoding>0x1C</TELC:encoding>
+				<TELC:encoding>28</TELC:encoding>
 				<TELC:value>SPRSP</TELC:value>
 				<TELC:dataType>string</TELC:dataType>
 				<TELC:description>Sapphire Rapids SP</TELC:description>
 			</TELC:enum_item>
 			<TELC:enum_item>
 				<TELC:name>SPRD</TELC:name>
-				<TELC:encoding>0x33</TELC:encoding>
+				<TELC:encoding>51</TELC:encoding>
 				<TELC:value>SPRD</TELC:value>
 				<TELC:dataType>string</TELC:dataType>
 				<TELC:description>Sapphire Rapids D</TELC:description>
 			</TELC:enum_item>
 			<TELC:enum_item>
 				<TELC:name>SPRHBM</TELC:name>
-				<TELC:encoding>0x6F</TELC:encoding>
+				<TELC:encoding>111</TELC:encoding>
 				<TELC:value>SPRHBM</TELC:value>
 				<TELC:dataType>string</TELC:dataType>
 				<TELC:description>Sapphire Rapids HBM</TELC:description>
 			</TELC:enum_item>
 			<TELC:enum_item>
 				<TELC:name>EMRSP</TELC:name>
-				<TELC:encoding>0x79</TELC:encoding>
+				<TELC:encoding>121</TELC:encoding>
 				<TELC:value>EMRSP</TELC:value>
 				<TELC:dataType>string</TELC:dataType>
 				<TELC:description>Emerald Rapids SP</TELC:description>
