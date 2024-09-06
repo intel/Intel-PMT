@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2024-07-23</lastupdated>
+	<lastupdated>2024-09-06</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -122,7 +122,7 @@
 			</xmlset>
 		</mapping>
 		<mapping guid="0x130670b2" size="3336">
-			<lastupdated>2023-11-28</lastupdated>
+			<lastupdated>2024-09-06</lastupdated>
 			<status>production</status>
 			<description>MTL M/P PMT Normal telemetry in Punit samples definition and transformation rules</description>
 			<xmlset>
@@ -134,7 +134,7 @@
 			</xmlset>
 		</mapping>
 		<mapping guid="0x130671b2" size="704">
-			<lastupdated>2023-11-28</lastupdated>
+			<lastupdated>2024-09-06</lastupdated>
 			<status>production</status>
 			<description>MTL M/P PMT Fixed telemetry in Punit samples definition and transformation rules</description>
 			<xmlset>
@@ -146,7 +146,7 @@
 			</xmlset>
 		</mapping>
 		<mapping guid="0x1a067002" size="1216">
-			<lastupdated>2023-11-28</lastupdated>
+			<lastupdated>2024-09-06</lastupdated>
 			<status>production</status>
 			<description>MTL M/P PMT Normal telemetry in DMU samples definition and transformation rules</description>
 			<xmlset>
@@ -158,7 +158,7 @@
 			</xmlset>
 		</mapping>
 		<mapping guid="0x1a067102" size="200">
-			<lastupdated>2023-11-28</lastupdated>
+			<lastupdated>2024-09-06</lastupdated>
 			<status>production</status>
 			<description>MTL M/P PMT Fixed telemetry in DMU samples definition and transformation rules</description>
 			<xmlset>

@@ -49,7 +49,7 @@
 	<TELEM:SampleGroup name="Container_2" sampleID="2" sampleGroupID="Container_2">
 		<TELC:description>Groupname 0x16010</TELC:description>
 		<TELC:length>64</TELC:length>
-		<TELC:sample name="DIE_CSTATE_BLOCK_CAUSE_CORE" datatypeIDREF="tpkgc_block_cause" sampleID="DIE_CSTATE_BLOCK_CAUSE_CORE">
+		<TELC:sample name="DIE_CSTATE_BLOCK_CAUSE_CORE" datatypeIDREF="tdiec_block_cause" sampleID="DIE_CSTATE_BLOCK_CAUSE_CORE">
 			<TELC:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by CORE</TELC:description>
 			<TELC:sampleSubGroup>DIE_CSTATE_BLOCK_CAUSE_CORE</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -57,7 +57,7 @@
 			<TELC:lsb>0</TELC:lsb>
 			<TELC:msb>31</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="DIE_CSTATE_BLOCK_CAUSE_RING" datatypeIDREF="tpkgc_block_cause" sampleID="DIE_CSTATE_BLOCK_CAUSE_RING">
+		<TELC:sample name="DIE_CSTATE_BLOCK_CAUSE_RING" datatypeIDREF="tdiec_block_cause" sampleID="DIE_CSTATE_BLOCK_CAUSE_RING">
 			<TELC:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by RING</TELC:description>
 			<TELC:sampleSubGroup>DIE_CSTATE_BLOCK_CAUSE_RING</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -69,7 +69,7 @@
 	<TELEM:SampleGroup name="Container_3" sampleID="3" sampleGroupID="Container_3">
 		<TELC:description>Groupname 0x16018</TELC:description>
 		<TELC:length>64</TELC:length>
-		<TELC:sample name="DIE_CSTATE_BLOCK_CAUSE_GPSB" datatypeIDREF="tpkgc_block_cause" sampleID="DIE_CSTATE_BLOCK_CAUSE_GPSB">
+		<TELC:sample name="DIE_CSTATE_BLOCK_CAUSE_GPSB" datatypeIDREF="tdiec_block_cause" sampleID="DIE_CSTATE_BLOCK_CAUSE_GPSB">
 			<TELC:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by GPSB</TELC:description>
 			<TELC:sampleSubGroup>DIE_CSTATE_BLOCK_CAUSE_GPSB</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -77,7 +77,7 @@
 			<TELC:lsb>0</TELC:lsb>
 			<TELC:msb>31</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="DIE_CSTATE_BLOCK_CAUSE_PUNIT" datatypeIDREF="tpkgc_block_cause" sampleID="DIE_CSTATE_BLOCK_CAUSE_PUNIT">
+		<TELC:sample name="DIE_CSTATE_BLOCK_CAUSE_PUNIT" datatypeIDREF="tdiec_block_cause" sampleID="DIE_CSTATE_BLOCK_CAUSE_PUNIT">
 			<TELC:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by PUNIT</TELC:description>
 			<TELC:sampleSubGroup>DIE_CSTATE_BLOCK_CAUSE_PUNIT</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -89,7 +89,7 @@
 	<TELEM:SampleGroup name="Container_4" sampleID="4" sampleGroupID="Container_4">
 		<TELC:description>Groupname 0x16020</TELC:description>
 		<TELC:length>64</TELC:length>
-		<TELC:sample name="DIE_CSTATE_BLOCK_CAUSE_ARAT" datatypeIDREF="tpkgc_block_cause" sampleID="DIE_CSTATE_BLOCK_CAUSE_ARAT">
+		<TELC:sample name="DIE_CSTATE_BLOCK_CAUSE_ARAT" datatypeIDREF="tdiec_block_cause" sampleID="DIE_CSTATE_BLOCK_CAUSE_ARAT">
 			<TELC:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by ARAT timers</TELC:description>
 			<TELC:sampleSubGroup>DIE_CSTATE_BLOCK_CAUSE_ARAT</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -97,7 +97,7 @@
 			<TELC:lsb>0</TELC:lsb>
 			<TELC:msb>31</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="DIE_CSTATE_WAKE_REASON_PUNIT" datatypeIDREF="tpkgc_wake_cause" sampleID="DIE_CSTATE_WAKE_REASON_PUNIT">
+		<TELC:sample name="DIE_CSTATE_WAKE_REASON_PUNIT" datatypeIDREF="tdiec_wake_cause" sampleID="DIE_CSTATE_WAKE_REASON_PUNIT">
 			<TELC:description>Die C-state wake due to Punit</TELC:description>
 			<TELC:sampleSubGroup>DIE_CSTATE_WAKE_REASON_PUNIT</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -109,7 +109,7 @@
 	<TELEM:SampleGroup name="Container_5" sampleID="5" sampleGroupID="Container_5">
 		<TELC:description>Groupname 0x16028</TELC:description>
 		<TELC:length>64</TELC:length>
-		<TELC:sample name="DIE_CSTATE_WAKE_REASON_RING" datatypeIDREF="tpkgc_wake_cause" sampleID="DIE_CSTATE_WAKE_REASON_RING">
+		<TELC:sample name="DIE_CSTATE_WAKE_REASON_RING" datatypeIDREF="tdiec_wake_cause" sampleID="DIE_CSTATE_WAKE_REASON_RING">
 			<TELC:description>Die C-state wake due to SNOOP</TELC:description>
 			<TELC:sampleSubGroup>DIE_CSTATE_WAKE_REASON_RING</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -117,7 +117,7 @@
 			<TELC:lsb>0</TELC:lsb>
 			<TELC:msb>31</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="DIE_CSTATE_WAKE_REASON_SB" datatypeIDREF="tpkgc_wake_cause" sampleID="DIE_CSTATE_WAKE_REASON_SB">
+		<TELC:sample name="DIE_CSTATE_WAKE_REASON_SB" datatypeIDREF="tdiec_wake_cause" sampleID="DIE_CSTATE_WAKE_REASON_SB">
 			<TELC:description>Die C-state wake due to any SB transaction</TELC:description>
 			<TELC:sampleSubGroup>DIE_CSTATE_WAKE_REASON_SB</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -129,7 +129,7 @@
 	<TELEM:SampleGroup name="Container_6" sampleID="6" sampleGroupID="Container_6">
 		<TELC:description>Groupname 0x16030</TELC:description>
 		<TELC:length>64</TELC:length>
-		<TELC:sample name="DIE_CSTATE_WAKE_REASON_CORE" datatypeIDREF="tpkgc_wake_cause" sampleID="DIE_CSTATE_WAKE_REASON_CORE">
+		<TELC:sample name="DIE_CSTATE_WAKE_REASON_CORE" datatypeIDREF="tdiec_wake_cause" sampleID="DIE_CSTATE_WAKE_REASON_CORE">
 			<TELC:description>Die C-state wake due to TIMER expiry</TELC:description>
 			<TELC:sampleSubGroup>DIE_CSTATE_WAKE_REASON_CORE</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -137,7 +137,7 @@
 			<TELC:lsb>0</TELC:lsb>
 			<TELC:msb>31</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="BLOCK_CAUSE_CATEGORY_TIMER" datatypeIDREF="tpkgc_block_cause" sampleID="BLOCK_CAUSE_CATEGORY_TIMER">
+		<TELC:sample name="BLOCK_CAUSE_CATEGORY_TIMER" datatypeIDREF="tdiec_block_cause" sampleID="BLOCK_CAUSE_CATEGORY_TIMER">
 			<TELC:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by TIMER.</TELC:description>
 			<TELC:sampleSubGroup>BLOCK_CAUSE_CATEGORY_TIMER</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -149,7 +149,7 @@
 	<TELEM:SampleGroup name="Container_7" sampleID="7" sampleGroupID="Container_7">
 		<TELC:description>Groupname 0x16038</TELC:description>
 		<TELC:length>64</TELC:length>
-		<TELC:sample name="BLOCK_CAUSE_CATEGORY_DEMOTION" datatypeIDREF="tpkgc_block_cause" sampleID="BLOCK_CAUSE_CATEGORY_DEMOTION">
+		<TELC:sample name="BLOCK_CAUSE_CATEGORY_DEMOTION" datatypeIDREF="tdiec_block_cause" sampleID="BLOCK_CAUSE_CATEGORY_DEMOTION">
 			<TELC:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by DEMOTION.</TELC:description>
 			<TELC:sampleSubGroup>BLOCK_CAUSE_CATEGORY_DEMOTION</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -157,7 +157,7 @@
 			<TELC:lsb>0</TELC:lsb>
 			<TELC:msb>31</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="BLOCK_CAUSE_CATEGORY_MISC" datatypeIDREF="tpkgc_block_cause" sampleID="BLOCK_CAUSE_CATEGORY_MISC">
+		<TELC:sample name="BLOCK_CAUSE_CATEGORY_MISC" datatypeIDREF="tdiec_block_cause" sampleID="BLOCK_CAUSE_CATEGORY_MISC">
 			<TELC:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by MISC.</TELC:description>
 			<TELC:sampleSubGroup>BLOCK_CAUSE_CATEGORY_MISC</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -169,7 +169,7 @@
 	<TELEM:SampleGroup name="Container_8" sampleID="8" sampleGroupID="Container_8">
 		<TELC:description>Groupname 0x16040</TELC:description>
 		<TELC:length>64</TELC:length>
-		<TELC:sample name="BLOCK_CAUSE_CATEGORY_IP_BUSY" datatypeIDREF="tpkgc_block_cause" sampleID="BLOCK_CAUSE_CATEGORY_IP_BUSY">
+		<TELC:sample name="BLOCK_CAUSE_CATEGORY_IP_BUSY" datatypeIDREF="tdiec_block_cause" sampleID="BLOCK_CAUSE_CATEGORY_IP_BUSY">
 			<TELC:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by IP_BUSY.</TELC:description>
 			<TELC:sampleSubGroup>BLOCK_CAUSE_CATEGORY_IP_BUSY</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
@@ -177,7 +177,7 @@
 			<TELC:lsb>0</TELC:lsb>
 			<TELC:msb>31</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="BLOCK_CAUSE_CATEGORY_HYSTERSIS" datatypeIDREF="tpkgc_block_cause" sampleID="BLOCK_CAUSE_CATEGORY_HYSTERSIS">
+		<TELC:sample name="BLOCK_CAUSE_CATEGORY_HYSTERSIS" datatypeIDREF="tdiec_block_cause" sampleID="BLOCK_CAUSE_CATEGORY_HYSTERSIS">
 			<TELC:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by HYSTERESIS.</TELC:description>
 			<TELC:sampleSubGroup>BLOCK_CAUSE_CATEGORY_HYSTERSIS</TELC:sampleSubGroup>
 			<TELC:sampleType>Counter</TELC:sampleType>
