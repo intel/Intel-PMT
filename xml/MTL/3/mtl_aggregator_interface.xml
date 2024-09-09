@@ -17,19 +17,21 @@
 			</TransFormParameters>
 			<transform>$parameter_0 / 38.4 * 1e6 </transform>
 		</TransFormation>
-		<TransFormation name="pkgc_wake_cause" transformID="pkgc_wake_cause">
+		<TransFormation name="diec_wake_cause" transformID="diec_wake_cause">
 			<output_dataclass>float</output_dataclass>
 			<TransFormParameters>
 				<parameterName>parameter_0</parameterName>
+				<parameterName>parameter_1</parameterName>
 			</TransFormParameters>
-			<transform>$parameter_0 / PACKAGE_CSTATE_WAKE_REFCNT * 100 </transform>
+			<transform>$parameter_0 / $parameter_1 * 100 </transform>
 		</TransFormation>
-		<TransFormation name="pkgc_block_cause" transformID="pkgc_block_cause">
+		<TransFormation name="diec_block_cause" transformID="diec_block_cause">
 			<output_dataclass>float</output_dataclass>
 			<TransFormParameters>
 				<parameterName>parameter_0</parameterName>
+				<parameterName>parameter_1</parameterName>
 			</TransFormParameters>
-			<transform>$parameter_0 / PACKAGE_CSTATE_BLOCK_REFCNT * 100 </transform>
+			<transform>$parameter_0 / $parameter_1 * 100 </transform>
 		</TransFormation>
 		<TransFormation name="wp_volts" transformID="wp_volts">
 			<output_dataclass>float</output_dataclass>
@@ -248,7 +250,7 @@
 	<TELI:uniqueid>0x1A067102</TELI:uniqueid>
 	<TELI:NDA>Public</TELI:NDA>
 	<TELI:samplePeriod>10</TELI:samplePeriod>
-	<TELI:revisionDate>2023-11-28</TELI:revisionDate>
+	<TELI:revisionDate>2024-09-06</TELI:revisionDate>
 	<TELI:AggregatorSamples>
 		<TELI:T_AggregatorSample sampleName="XTAL" sampleGroup="XTAL" datatypeIDREF="txtal_time" sampleID="0">
 			<TELI:description>Crystal clock count. Used as a reference count in converting many of the counters presented in this telemetry space.</TELI:description>
@@ -283,7 +285,7 @@
 			</TransFormInputs>
 			<TELI:transformREF>event_counter</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_CAUSE_CORE" sampleGroup="DIE_CSTATE_BLOCK_CAUSE_CORE" datatypeIDREF="tpkgc_block_cause" sampleID="3">
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_CAUSE_CORE" sampleGroup="DIE_CSTATE_BLOCK_CAUSE_CORE" datatypeIDREF="tdiec_block_cause" sampleID="3">
 			<TELI:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by CORE</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -291,10 +293,14 @@
 					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
 					<sampleIDREF>DIE_CSTATE_BLOCK_CAUSE_CORE</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_block_cause</TELI:transformREF>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_CAUSE_RING" sampleGroup="DIE_CSTATE_BLOCK_CAUSE_RING" datatypeIDREF="tpkgc_block_cause" sampleID="4">
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_CAUSE_RING" sampleGroup="DIE_CSTATE_BLOCK_CAUSE_RING" datatypeIDREF="tdiec_block_cause" sampleID="4">
 			<TELI:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by RING</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -302,10 +308,14 @@
 					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
 					<sampleIDREF>DIE_CSTATE_BLOCK_CAUSE_RING</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_block_cause</TELI:transformREF>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_CAUSE_GPSB" sampleGroup="DIE_CSTATE_BLOCK_CAUSE_GPSB" datatypeIDREF="tpkgc_block_cause" sampleID="5">
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_CAUSE_GPSB" sampleGroup="DIE_CSTATE_BLOCK_CAUSE_GPSB" datatypeIDREF="tdiec_block_cause" sampleID="5">
 			<TELI:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by GPSB</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -313,10 +323,14 @@
 					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
 					<sampleIDREF>DIE_CSTATE_BLOCK_CAUSE_GPSB</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_block_cause</TELI:transformREF>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_CAUSE_PUNIT" sampleGroup="DIE_CSTATE_BLOCK_CAUSE_PUNIT" datatypeIDREF="tpkgc_block_cause" sampleID="6">
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_CAUSE_PUNIT" sampleGroup="DIE_CSTATE_BLOCK_CAUSE_PUNIT" datatypeIDREF="tdiec_block_cause" sampleID="6">
 			<TELI:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by PUNIT</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -324,10 +338,14 @@
 					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
 					<sampleIDREF>DIE_CSTATE_BLOCK_CAUSE_PUNIT</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_block_cause</TELI:transformREF>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_CAUSE_ARAT" sampleGroup="DIE_CSTATE_BLOCK_CAUSE_ARAT" datatypeIDREF="tpkgc_block_cause" sampleID="7">
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_CAUSE_ARAT" sampleGroup="DIE_CSTATE_BLOCK_CAUSE_ARAT" datatypeIDREF="tdiec_block_cause" sampleID="7">
 			<TELI:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by ARAT timers</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -335,10 +353,14 @@
 					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
 					<sampleIDREF>DIE_CSTATE_BLOCK_CAUSE_ARAT</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_block_cause</TELI:transformREF>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_PUNIT" sampleGroup="DIE_CSTATE_WAKE_REASON_PUNIT" datatypeIDREF="tpkgc_wake_cause" sampleID="8">
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_PUNIT" sampleGroup="DIE_CSTATE_WAKE_REASON_PUNIT" datatypeIDREF="tdiec_wake_cause" sampleID="8">
 			<TELI:description>Die C-state wake due to Punit</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -346,10 +368,14 @@
 					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
 					<sampleIDREF>DIE_CSTATE_WAKE_REASON_PUNIT</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_wake_cause</TELI:transformREF>
+			<TELI:transformREF>diec_wake_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_RING" sampleGroup="DIE_CSTATE_WAKE_REASON_RING" datatypeIDREF="tpkgc_wake_cause" sampleID="9">
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_RING" sampleGroup="DIE_CSTATE_WAKE_REASON_RING" datatypeIDREF="tdiec_wake_cause" sampleID="9">
 			<TELI:description>Die C-state wake due to SNOOP</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -357,10 +383,14 @@
 					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
 					<sampleIDREF>DIE_CSTATE_WAKE_REASON_RING</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_wake_cause</TELI:transformREF>
+			<TELI:transformREF>diec_wake_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_SB" sampleGroup="DIE_CSTATE_WAKE_REASON_SB" datatypeIDREF="tpkgc_wake_cause" sampleID="10">
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_SB" sampleGroup="DIE_CSTATE_WAKE_REASON_SB" datatypeIDREF="tdiec_wake_cause" sampleID="10">
 			<TELI:description>Die C-state wake due to any SB transaction</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -368,10 +398,14 @@
 					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
 					<sampleIDREF>DIE_CSTATE_WAKE_REASON_SB</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_wake_cause</TELI:transformREF>
+			<TELI:transformREF>diec_wake_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_CORE" sampleGroup="DIE_CSTATE_WAKE_REASON_CORE" datatypeIDREF="tpkgc_wake_cause" sampleID="11">
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_CORE" sampleGroup="DIE_CSTATE_WAKE_REASON_CORE" datatypeIDREF="tdiec_wake_cause" sampleID="11">
 			<TELI:description>Die C-state wake due to TIMER expiry</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -379,10 +413,14 @@
 					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
 					<sampleIDREF>DIE_CSTATE_WAKE_REASON_CORE</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_wake_cause</TELI:transformREF>
+			<TELI:transformREF>diec_wake_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="BLOCK_CAUSE_CATEGORY_TIMER" sampleGroup="BLOCK_CAUSE_CATEGORY_TIMER" datatypeIDREF="tpkgc_block_cause" sampleID="12">
+		<TELI:T_AggregatorSample sampleName="BLOCK_CAUSE_CATEGORY_TIMER" sampleGroup="BLOCK_CAUSE_CATEGORY_TIMER" datatypeIDREF="tdiec_block_cause" sampleID="12">
 			<TELI:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by TIMER.</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -390,10 +428,14 @@
 					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
 					<sampleIDREF>BLOCK_CAUSE_CATEGORY_TIMER</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_block_cause</TELI:transformREF>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="BLOCK_CAUSE_CATEGORY_DEMOTION" sampleGroup="BLOCK_CAUSE_CATEGORY_DEMOTION" datatypeIDREF="tpkgc_block_cause" sampleID="13">
+		<TELI:T_AggregatorSample sampleName="BLOCK_CAUSE_CATEGORY_DEMOTION" sampleGroup="BLOCK_CAUSE_CATEGORY_DEMOTION" datatypeIDREF="tdiec_block_cause" sampleID="13">
 			<TELI:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by DEMOTION.</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -401,10 +443,14 @@
 					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
 					<sampleIDREF>BLOCK_CAUSE_CATEGORY_DEMOTION</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_block_cause</TELI:transformREF>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="BLOCK_CAUSE_CATEGORY_MISC" sampleGroup="BLOCK_CAUSE_CATEGORY_MISC" datatypeIDREF="tpkgc_block_cause" sampleID="14">
+		<TELI:T_AggregatorSample sampleName="BLOCK_CAUSE_CATEGORY_MISC" sampleGroup="BLOCK_CAUSE_CATEGORY_MISC" datatypeIDREF="tdiec_block_cause" sampleID="14">
 			<TELI:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by MISC.</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -412,10 +458,14 @@
 					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
 					<sampleIDREF>BLOCK_CAUSE_CATEGORY_MISC</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_block_cause</TELI:transformREF>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="BLOCK_CAUSE_CATEGORY_IP_BUSY" sampleGroup="BLOCK_CAUSE_CATEGORY_IP_BUSY" datatypeIDREF="tpkgc_block_cause" sampleID="15">
+		<TELI:T_AggregatorSample sampleName="BLOCK_CAUSE_CATEGORY_IP_BUSY" sampleGroup="BLOCK_CAUSE_CATEGORY_IP_BUSY" datatypeIDREF="tdiec_block_cause" sampleID="15">
 			<TELI:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by IP_BUSY.</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -423,10 +473,14 @@
 					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
 					<sampleIDREF>BLOCK_CAUSE_CATEGORY_IP_BUSY</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_block_cause</TELI:transformREF>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="BLOCK_CAUSE_CATEGORY_HYSTERSIS" sampleGroup="BLOCK_CAUSE_CATEGORY_HYSTERSIS" datatypeIDREF="tpkgc_block_cause" sampleID="16">
+		<TELI:T_AggregatorSample sampleName="BLOCK_CAUSE_CATEGORY_HYSTERSIS" sampleGroup="BLOCK_CAUSE_CATEGORY_HYSTERSIS" datatypeIDREF="tdiec_block_cause" sampleID="16">
 			<TELI:description>Counts the number of 1ms intervals during which DieC entry was blocked at least once by HYSTERESIS.</TELI:description>
 			<TELI:SampleType>Counter</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
@@ -434,8 +488,12 @@
 					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
 					<sampleIDREF>BLOCK_CAUSE_CATEGORY_HYSTERSIS</sampleIDREF>
 				</TransFormInput>
+				<TransFormInput varName="parameter_1">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>pkgc_block_cause</TELI:transformREF>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
 		</TELI:T_AggregatorSample>
 		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_LTR_THRESHOLDS_DC2p1" sampleGroup="DIE_CSTATE_LTR_THRESHOLDS_DC2p1" datatypeIDREF="tltr" sampleID="17">
 			<TELI:description>Die C State LTR thresholds.</TELI:description>

@@ -25,6 +25,20 @@
 			</TELC:units>
 		<TELC:format>ANY</TELC:format>
 	</TELC:dataType>
+	<TELC:dataType name="tdiec_wake_cause" datatypeID="tdiec_wake_cause">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="percent">
+				<TELC:symbol>%</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tdiec_block_cause" datatypeID="tdiec_block_cause">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="percent">
+				<TELC:symbol>%</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
 	<TELC:dataType name="twp_volts" datatypeID="twp_volts">
 		<TELC:dataclass>status</TELC:dataclass>
 			<TELC:units name="volts">
