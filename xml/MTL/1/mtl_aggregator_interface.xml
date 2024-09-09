@@ -250,7 +250,7 @@
 	<TELI:uniqueid>0x130671B2</TELI:uniqueid>
 	<TELI:NDA>Public</TELI:NDA>
 	<TELI:samplePeriod>10</TELI:samplePeriod>
-	<TELI:revisionDate>2023-11-28</TELI:revisionDate>
+	<TELI:revisionDate>2024-09-06</TELI:revisionDate>
 	<TELI:AggregatorSamples>
 		<TELI:T_AggregatorSample sampleName="EXTENDED_TELE_ID_SPECIFIC_HEADER" sampleGroup="EXTENDED_TELE_ID_SPECIFIC_HEADER" datatypeIDREF="tgeneric_counter" sampleID="0">
 			<TELI:description>NOT a counter. Indicates the format of extended fixed telemetry regionBits 7:0 - NUM_RAW_BLOCK_REASONS - Number of counters in &quot;raw block reasons&quot; sub-categoryBits 15:8 - NUM_RAW_WAKE_REASONS_PC6_PC10Bits 23:16 - NUM_DEMOTION_CAUSES_PC6_PC10Bits 31:24 - NUM_BLOCK_CAUSES_PC6_PC10</TELI:description>
