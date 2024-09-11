@@ -85,7 +85,7 @@
 			<TransFormParameters>
 				<parameterName>parameter_0</parameterName>
 			</TransFormParameters>
-			<transform>( ( ( 1 - ( ( $parameter_0 >> 7 ) &amp; 0x1 ) ) * ( $parameter_0 &amp; 0xff ) ) - ( ( ( $parameter_0 >> 7 ) &amp; 0x1 ) * ( ( ( $parameter_0 &amp; 0x7f ) ^  0x7f ) + 1 ) ) )</transform>
+			<transform>( ( ( 1 - ( ( $parameter_0 &gt;&gt; 7 ) &amp; 0x1 ) ) * ( $parameter_0 &amp; 0xff ) ) - ( ( ( $parameter_0 &gt;&gt; 7 ) &amp; 0x1 ) * ( ( ( $parameter_0 &amp; 0x7f ) ^  0x7f ) + 1 ) ) )</transform>
 		</TransFormation>
 		<TransFormation name="event_counter" transformID="event_counter">
 			<output_dataclass>float</output_dataclass>
