@@ -15,7 +15,7 @@
 			<TransFormParameters>
 				<parameterName>parameter_0</parameterName>
 			</TransFormParameters>
-			<transform>( ( ( 1 - ( ( $parameter_0 >> 15 ) &amp; 0x1 ) ) * ( $parameter_0 &amp; 0xffff ) ) - ( ( ( $parameter_0 >> 15 ) &amp; 0x1 ) * ( ( ( $parameter_0 &amp; 0x7fff ) ^  0x7fff ) + 1 ) ) ) / ( 2**1 ) </transform>
+			<transform>( ( ( 1 - ( ( $parameter_0 &gt;&gt; 15 ) &amp; 0x1 ) ) * ( $parameter_0 &amp; 0xffff ) ) - ( ( ( $parameter_0 &gt;&gt; 15 ) &amp; 0x1 ) * ( ( ( $parameter_0 &amp; 0x7fff ) ^  0x7fff ) + 1 ) ) ) / ( 2**1 ) </transform>
 		</TransFormation>
 		<TransFormation name="pvp_level_res" transformID="pvp_level_res">
 			<output_dataclass>float</output_dataclass>
