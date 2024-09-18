@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2024-09-11</lastupdated>
+	<lastupdated>2024-09-18</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -179,6 +179,30 @@
 				<common>spr_common.xml</common>
 				<aggregator>spr_aggregator.xml</aggregator>
 				<aggregatorinterface>spr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x3072005" size="3352">
+			<lastupdated>2024-09-18</lastupdated>
+			<status>production</status>
+			<description>LNL M/P PMT Telemetry aggregator 0 samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>LNL/0</basedir>
+				<prefix>lnla0_0r5</prefix>
+				<common>lnla0_0r5_common.xml</common>
+				<aggregator>lnla0_0r5_aggregator.xml</aggregator>
+				<aggregatorinterface>lnla0_0r5_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x3072105" size="744">
+			<lastupdated>2024-09-18</lastupdated>
+			<status>production</status>
+			<description>LNL M/P PMT Telemetry aggregator 1 samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>LNL/1</basedir>
+				<prefix>lnla0_1r5</prefix>
+				<common>lnla0_1r5_common.xml</common>
+				<aggregator>lnla0_1r5_aggregator.xml</aggregator>
+				<aggregatorinterface>lnla0_1r5_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
 	</mappings>
