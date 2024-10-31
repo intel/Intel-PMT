@@ -1,0 +1,2937 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Aggregator [<!ENTITY otherfile SYSTEM "gnr_common.xml">]>
+<TELEM:Aggregator xmlns="http://schemas.intel.com/telemetry/base/1/" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common" 
+	xmlns:TELEM="http://schemas.intel.com/telemetry/base/aggregator" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+ 	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/aggregator telemetryAggregator.xsd"> 
+
+	<TELC:DataTypesInclude>&otherfile;</TELC:DataTypesInclude>
+	<TELEM:name>gnr</TELEM:name>
+	<TELEM:description>Granite Rapids PUNIT C-Die Telemetry samples definition and transformation rules</TELEM:description>
+	<TELEM:uniqueid>0x22806802</TELEM:uniqueid>
+	<TELEM:productid>gnr</TELEM:productid>
+	<TELEM:address>0</TELEM:address>
+
+	<TELEM:SampleGroup name="Container_0" sampleID="0" sampleGroupID="Container_0">
+		<TELC:description>Groupname 0x464000</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="FIRMWARE_VERSION" datatypeIDREF="tstring" sampleID="FIRMWARE_VERSION">
+			<TELC:description>Version of Firmware Image</TELC:description>
+			<TELC:sampleSubGroup>GLOBAL_INFO</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="GLOBAL_INFO_RESERVED" datatypeIDREF="tstring" sampleID="GLOBAL_INFO_RESERVED">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>GLOBAL_INFO</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_1" sampleID="1" sampleGroupID="Container_1">
+		<TELC:description>Groupname 0x464008</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="DIE_CSTATE_RESIDENCY_C1E" datatypeIDREF="tcore_residency_time" sampleID="DIE_CSTATE_RESIDENCY_C1E">
+			<TELC:description>Die C1E Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>DIE_CSTATE_RESIDENCY_C1E</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_2" sampleID="2" sampleGroupID="Container_2">
+		<TELC:description>Groupname 0x464010</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="AGGREGATE_CORE_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="AGGREGATE_CORE_CSTATE_RESIDENCY_C0">
+			<TELC:description>Aggregate Core C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>AGGREGATE_CORE_CSTATE_RESIDENCY_C0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_3" sampleID="3" sampleGroupID="Container_3">
+		<TELC:description>Groupname 0x464018</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_0_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_0_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  0 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_0_CSTATE_RESIDENCY_C0[0]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_4" sampleID="4" sampleGroupID="Container_4">
+		<TELC:description>Groupname 0x464020</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_1_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_1_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  1 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_1_CSTATE_RESIDENCY_C0[1]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_5" sampleID="5" sampleGroupID="Container_5">
+		<TELC:description>Groupname 0x464028</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_2_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_2_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  2 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_2_CSTATE_RESIDENCY_C0[2]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_6" sampleID="6" sampleGroupID="Container_6">
+		<TELC:description>Groupname 0x464030</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_3_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_3_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  3 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_3_CSTATE_RESIDENCY_C0[3]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_7" sampleID="7" sampleGroupID="Container_7">
+		<TELC:description>Groupname 0x464038</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_4_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_4_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  4 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_4_CSTATE_RESIDENCY_C0[4]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_8" sampleID="8" sampleGroupID="Container_8">
+		<TELC:description>Groupname 0x464040</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_5_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_5_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  5 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_5_CSTATE_RESIDENCY_C0[5]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_9" sampleID="9" sampleGroupID="Container_9">
+		<TELC:description>Groupname 0x464048</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_6_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_6_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  6 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_6_CSTATE_RESIDENCY_C0[6]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_10" sampleID="10" sampleGroupID="Container_10">
+		<TELC:description>Groupname 0x464050</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_7_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_7_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  7 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_7_CSTATE_RESIDENCY_C0[7]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_11" sampleID="11" sampleGroupID="Container_11">
+		<TELC:description>Groupname 0x464058</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_8_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_8_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  8 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_8_CSTATE_RESIDENCY_C0[8]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_12" sampleID="12" sampleGroupID="Container_12">
+		<TELC:description>Groupname 0x464060</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_9_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_9_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  9 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_9_CSTATE_RESIDENCY_C0[9]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_13" sampleID="13" sampleGroupID="Container_13">
+		<TELC:description>Groupname 0x464068</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_10_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_10_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  10 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_10_CSTATE_RESIDENCY_C0[10]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_14" sampleID="14" sampleGroupID="Container_14">
+		<TELC:description>Groupname 0x464070</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_11_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_11_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  11 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_11_CSTATE_RESIDENCY_C0[11]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_15" sampleID="15" sampleGroupID="Container_15">
+		<TELC:description>Groupname 0x464078</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_12_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_12_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  12 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_12_CSTATE_RESIDENCY_C0[12]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_16" sampleID="16" sampleGroupID="Container_16">
+		<TELC:description>Groupname 0x464080</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_13_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_13_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  13 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_13_CSTATE_RESIDENCY_C0[13]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_17" sampleID="17" sampleGroupID="Container_17">
+		<TELC:description>Groupname 0x464088</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_14_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_14_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  14 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_14_CSTATE_RESIDENCY_C0[14]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_18" sampleID="18" sampleGroupID="Container_18">
+		<TELC:description>Groupname 0x464090</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_15_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_15_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  15 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_15_CSTATE_RESIDENCY_C0[15]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_19" sampleID="19" sampleGroupID="Container_19">
+		<TELC:description>Groupname 0x464098</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_16_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_16_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  16 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_16_CSTATE_RESIDENCY_C0[16]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_20" sampleID="20" sampleGroupID="Container_20">
+		<TELC:description>Groupname 0x4640a0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_17_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_17_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  17 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_17_CSTATE_RESIDENCY_C0[17]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_21" sampleID="21" sampleGroupID="Container_21">
+		<TELC:description>Groupname 0x4640a8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_18_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_18_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  18 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_18_CSTATE_RESIDENCY_C0[18]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_22" sampleID="22" sampleGroupID="Container_22">
+		<TELC:description>Groupname 0x4640b0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_19_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_19_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  19 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_19_CSTATE_RESIDENCY_C0[19]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_23" sampleID="23" sampleGroupID="Container_23">
+		<TELC:description>Groupname 0x4640b8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_20_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_20_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  20 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_20_CSTATE_RESIDENCY_C0[20]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_24" sampleID="24" sampleGroupID="Container_24">
+		<TELC:description>Groupname 0x4640c0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_21_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_21_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  21 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_21_CSTATE_RESIDENCY_C0[21]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_25" sampleID="25" sampleGroupID="Container_25">
+		<TELC:description>Groupname 0x4640c8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_22_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_22_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  22 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_22_CSTATE_RESIDENCY_C0[22]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_26" sampleID="26" sampleGroupID="Container_26">
+		<TELC:description>Groupname 0x4640d0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_23_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_23_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  23 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_23_CSTATE_RESIDENCY_C0[23]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_27" sampleID="27" sampleGroupID="Container_27">
+		<TELC:description>Groupname 0x4640d8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_24_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_24_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  24 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_24_CSTATE_RESIDENCY_C0[24]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_28" sampleID="28" sampleGroupID="Container_28">
+		<TELC:description>Groupname 0x4640e0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_25_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_25_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  25 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_25_CSTATE_RESIDENCY_C0[25]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_29" sampleID="29" sampleGroupID="Container_29">
+		<TELC:description>Groupname 0x4640e8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_26_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_26_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  26 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_26_CSTATE_RESIDENCY_C0[26]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_30" sampleID="30" sampleGroupID="Container_30">
+		<TELC:description>Groupname 0x4640f0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_27_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_27_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  27 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_27_CSTATE_RESIDENCY_C0[27]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_31" sampleID="31" sampleGroupID="Container_31">
+		<TELC:description>Groupname 0x4640f8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_28_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_28_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  28 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_28_CSTATE_RESIDENCY_C0[28]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_32" sampleID="32" sampleGroupID="Container_32">
+		<TELC:description>Groupname 0x464100</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_29_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_29_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  29 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_29_CSTATE_RESIDENCY_C0[29]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_33" sampleID="33" sampleGroupID="Container_33">
+		<TELC:description>Groupname 0x464108</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_30_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_30_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  30 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_30_CSTATE_RESIDENCY_C0[30]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_34" sampleID="34" sampleGroupID="Container_34">
+		<TELC:description>Groupname 0x464110</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_31_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_31_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  31 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_31_CSTATE_RESIDENCY_C0[31]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_35" sampleID="35" sampleGroupID="Container_35">
+		<TELC:description>Groupname 0x464118</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_32_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_32_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  32 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_32_CSTATE_RESIDENCY_C0[32]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_36" sampleID="36" sampleGroupID="Container_36">
+		<TELC:description>Groupname 0x464120</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_33_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_33_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  33 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_33_CSTATE_RESIDENCY_C0[33]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_37" sampleID="37" sampleGroupID="Container_37">
+		<TELC:description>Groupname 0x464128</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_34_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_34_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  34 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_34_CSTATE_RESIDENCY_C0[34]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_38" sampleID="38" sampleGroupID="Container_38">
+		<TELC:description>Groupname 0x464130</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_35_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_35_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  35 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_35_CSTATE_RESIDENCY_C0[35]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_39" sampleID="39" sampleGroupID="Container_39">
+		<TELC:description>Groupname 0x464138</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_36_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_36_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  36 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_36_CSTATE_RESIDENCY_C0[36]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_40" sampleID="40" sampleGroupID="Container_40">
+		<TELC:description>Groupname 0x464140</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_37_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_37_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  37 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_37_CSTATE_RESIDENCY_C0[37]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_41" sampleID="41" sampleGroupID="Container_41">
+		<TELC:description>Groupname 0x464148</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_38_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_38_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  38 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_38_CSTATE_RESIDENCY_C0[38]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_42" sampleID="42" sampleGroupID="Container_42">
+		<TELC:description>Groupname 0x464150</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_39_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_39_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  39 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_39_CSTATE_RESIDENCY_C0[39]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_43" sampleID="43" sampleGroupID="Container_43">
+		<TELC:description>Groupname 0x464158</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_40_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_40_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  40 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_40_CSTATE_RESIDENCY_C0[40]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_44" sampleID="44" sampleGroupID="Container_44">
+		<TELC:description>Groupname 0x464160</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_41_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_41_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  41 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_41_CSTATE_RESIDENCY_C0[41]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_45" sampleID="45" sampleGroupID="Container_45">
+		<TELC:description>Groupname 0x464168</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_42_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_42_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  42 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_42_CSTATE_RESIDENCY_C0[42]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_46" sampleID="46" sampleGroupID="Container_46">
+		<TELC:description>Groupname 0x464170</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_43_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_43_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  43 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_43_CSTATE_RESIDENCY_C0[43]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_47" sampleID="47" sampleGroupID="Container_47">
+		<TELC:description>Groupname 0x464178</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_44_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_44_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  44 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_44_CSTATE_RESIDENCY_C0[44]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_48" sampleID="48" sampleGroupID="Container_48">
+		<TELC:description>Groupname 0x464180</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_45_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_45_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  45 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_45_CSTATE_RESIDENCY_C0[45]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_49" sampleID="49" sampleGroupID="Container_49">
+		<TELC:description>Groupname 0x464188</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_46_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_46_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  46 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_46_CSTATE_RESIDENCY_C0[46]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_50" sampleID="50" sampleGroupID="Container_50">
+		<TELC:description>Groupname 0x464190</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_47_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_47_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  47 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_47_CSTATE_RESIDENCY_C0[47]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_51" sampleID="51" sampleGroupID="Container_51">
+		<TELC:description>Groupname 0x464198</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_48_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_48_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  48 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_48_CSTATE_RESIDENCY_C0[48]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_52" sampleID="52" sampleGroupID="Container_52">
+		<TELC:description>Groupname 0x4641a0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_49_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_49_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  49 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_49_CSTATE_RESIDENCY_C0[49]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_53" sampleID="53" sampleGroupID="Container_53">
+		<TELC:description>Groupname 0x4641a8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_50_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_50_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  50 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_50_CSTATE_RESIDENCY_C0[50]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_54" sampleID="54" sampleGroupID="Container_54">
+		<TELC:description>Groupname 0x4641b0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_51_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_51_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  51 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_51_CSTATE_RESIDENCY_C0[51]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_55" sampleID="55" sampleGroupID="Container_55">
+		<TELC:description>Groupname 0x4641b8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_52_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_52_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  52 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_52_CSTATE_RESIDENCY_C0[52]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_56" sampleID="56" sampleGroupID="Container_56">
+		<TELC:description>Groupname 0x4641c0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_53_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_53_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  53 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_53_CSTATE_RESIDENCY_C0[53]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_57" sampleID="57" sampleGroupID="Container_57">
+		<TELC:description>Groupname 0x4641c8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_54_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_54_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  54 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_54_CSTATE_RESIDENCY_C0[54]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_58" sampleID="58" sampleGroupID="Container_58">
+		<TELC:description>Groupname 0x4641d0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_55_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_55_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  55 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_55_CSTATE_RESIDENCY_C0[55]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_59" sampleID="59" sampleGroupID="Container_59">
+		<TELC:description>Groupname 0x4641d8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_56_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_56_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  56 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_56_CSTATE_RESIDENCY_C0[56]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_60" sampleID="60" sampleGroupID="Container_60">
+		<TELC:description>Groupname 0x4641e0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_57_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_57_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  57 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_57_CSTATE_RESIDENCY_C0[57]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_61" sampleID="61" sampleGroupID="Container_61">
+		<TELC:description>Groupname 0x4641e8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_58_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_58_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  58 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_58_CSTATE_RESIDENCY_C0[58]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_62" sampleID="62" sampleGroupID="Container_62">
+		<TELC:description>Groupname 0x4641f0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_59_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_59_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  59 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_59_CSTATE_RESIDENCY_C0[59]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_63" sampleID="63" sampleGroupID="Container_63">
+		<TELC:description>Groupname 0x4641f8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_60_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_60_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  60 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_60_CSTATE_RESIDENCY_C0[60]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_64" sampleID="64" sampleGroupID="Container_64">
+		<TELC:description>Groupname 0x464200</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_61_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_61_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  61 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_61_CSTATE_RESIDENCY_C0[61]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_65" sampleID="65" sampleGroupID="Container_65">
+		<TELC:description>Groupname 0x464208</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_62_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_62_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  62 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_62_CSTATE_RESIDENCY_C0[62]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_66" sampleID="66" sampleGroupID="Container_66">
+		<TELC:description>Groupname 0x464210</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_63_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="CORE_63_CSTATE_RESIDENCY_C0">
+			<TELC:description>Core  63 C0 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_63_CSTATE_RESIDENCY_C0[63]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_67" sampleID="67" sampleGroupID="Container_67">
+		<TELC:description>Groupname 0x464218</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_0_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_0_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  0 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_0_CSTATE_RESIDENCY_C1[0]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_68" sampleID="68" sampleGroupID="Container_68">
+		<TELC:description>Groupname 0x464220</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_1_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_1_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  1 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_1_CSTATE_RESIDENCY_C1[1]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_69" sampleID="69" sampleGroupID="Container_69">
+		<TELC:description>Groupname 0x464228</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_2_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_2_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  2 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_2_CSTATE_RESIDENCY_C1[2]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_70" sampleID="70" sampleGroupID="Container_70">
+		<TELC:description>Groupname 0x464230</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_3_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_3_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  3 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_3_CSTATE_RESIDENCY_C1[3]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_71" sampleID="71" sampleGroupID="Container_71">
+		<TELC:description>Groupname 0x464238</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_4_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_4_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  4 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_4_CSTATE_RESIDENCY_C1[4]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_72" sampleID="72" sampleGroupID="Container_72">
+		<TELC:description>Groupname 0x464240</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_5_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_5_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  5 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_5_CSTATE_RESIDENCY_C1[5]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_73" sampleID="73" sampleGroupID="Container_73">
+		<TELC:description>Groupname 0x464248</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_6_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_6_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  6 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_6_CSTATE_RESIDENCY_C1[6]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_74" sampleID="74" sampleGroupID="Container_74">
+		<TELC:description>Groupname 0x464250</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_7_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_7_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  7 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_7_CSTATE_RESIDENCY_C1[7]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_75" sampleID="75" sampleGroupID="Container_75">
+		<TELC:description>Groupname 0x464258</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_8_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_8_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  8 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_8_CSTATE_RESIDENCY_C1[8]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_76" sampleID="76" sampleGroupID="Container_76">
+		<TELC:description>Groupname 0x464260</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_9_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_9_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  9 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_9_CSTATE_RESIDENCY_C1[9]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_77" sampleID="77" sampleGroupID="Container_77">
+		<TELC:description>Groupname 0x464268</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_10_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_10_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  10 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_10_CSTATE_RESIDENCY_C1[10]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_78" sampleID="78" sampleGroupID="Container_78">
+		<TELC:description>Groupname 0x464270</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_11_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_11_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  11 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_11_CSTATE_RESIDENCY_C1[11]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_79" sampleID="79" sampleGroupID="Container_79">
+		<TELC:description>Groupname 0x464278</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_12_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_12_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  12 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_12_CSTATE_RESIDENCY_C1[12]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_80" sampleID="80" sampleGroupID="Container_80">
+		<TELC:description>Groupname 0x464280</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_13_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_13_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  13 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_13_CSTATE_RESIDENCY_C1[13]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_81" sampleID="81" sampleGroupID="Container_81">
+		<TELC:description>Groupname 0x464288</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_14_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_14_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  14 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_14_CSTATE_RESIDENCY_C1[14]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_82" sampleID="82" sampleGroupID="Container_82">
+		<TELC:description>Groupname 0x464290</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_15_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_15_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  15 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_15_CSTATE_RESIDENCY_C1[15]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_83" sampleID="83" sampleGroupID="Container_83">
+		<TELC:description>Groupname 0x464298</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_16_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_16_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  16 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_16_CSTATE_RESIDENCY_C1[16]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_84" sampleID="84" sampleGroupID="Container_84">
+		<TELC:description>Groupname 0x4642a0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_17_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_17_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  17 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_17_CSTATE_RESIDENCY_C1[17]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_85" sampleID="85" sampleGroupID="Container_85">
+		<TELC:description>Groupname 0x4642a8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_18_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_18_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  18 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_18_CSTATE_RESIDENCY_C1[18]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_86" sampleID="86" sampleGroupID="Container_86">
+		<TELC:description>Groupname 0x4642b0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_19_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_19_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  19 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_19_CSTATE_RESIDENCY_C1[19]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_87" sampleID="87" sampleGroupID="Container_87">
+		<TELC:description>Groupname 0x4642b8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_20_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_20_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  20 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_20_CSTATE_RESIDENCY_C1[20]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_88" sampleID="88" sampleGroupID="Container_88">
+		<TELC:description>Groupname 0x4642c0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_21_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_21_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  21 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_21_CSTATE_RESIDENCY_C1[21]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_89" sampleID="89" sampleGroupID="Container_89">
+		<TELC:description>Groupname 0x4642c8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_22_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_22_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  22 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_22_CSTATE_RESIDENCY_C1[22]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_90" sampleID="90" sampleGroupID="Container_90">
+		<TELC:description>Groupname 0x4642d0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_23_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_23_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  23 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_23_CSTATE_RESIDENCY_C1[23]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_91" sampleID="91" sampleGroupID="Container_91">
+		<TELC:description>Groupname 0x4642d8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_24_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_24_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  24 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_24_CSTATE_RESIDENCY_C1[24]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_92" sampleID="92" sampleGroupID="Container_92">
+		<TELC:description>Groupname 0x4642e0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_25_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_25_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  25 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_25_CSTATE_RESIDENCY_C1[25]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_93" sampleID="93" sampleGroupID="Container_93">
+		<TELC:description>Groupname 0x4642e8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_26_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_26_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  26 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_26_CSTATE_RESIDENCY_C1[26]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_94" sampleID="94" sampleGroupID="Container_94">
+		<TELC:description>Groupname 0x4642f0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_27_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_27_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  27 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_27_CSTATE_RESIDENCY_C1[27]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_95" sampleID="95" sampleGroupID="Container_95">
+		<TELC:description>Groupname 0x4642f8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_28_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_28_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  28 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_28_CSTATE_RESIDENCY_C1[28]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_96" sampleID="96" sampleGroupID="Container_96">
+		<TELC:description>Groupname 0x464300</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_29_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_29_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  29 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_29_CSTATE_RESIDENCY_C1[29]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_97" sampleID="97" sampleGroupID="Container_97">
+		<TELC:description>Groupname 0x464308</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_30_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_30_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  30 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_30_CSTATE_RESIDENCY_C1[30]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_98" sampleID="98" sampleGroupID="Container_98">
+		<TELC:description>Groupname 0x464310</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_31_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_31_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  31 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_31_CSTATE_RESIDENCY_C1[31]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_99" sampleID="99" sampleGroupID="Container_99">
+		<TELC:description>Groupname 0x464318</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_32_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_32_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  32 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_32_CSTATE_RESIDENCY_C1[32]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_100" sampleID="100" sampleGroupID="Container_100">
+		<TELC:description>Groupname 0x464320</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_33_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_33_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  33 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_33_CSTATE_RESIDENCY_C1[33]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_101" sampleID="101" sampleGroupID="Container_101">
+		<TELC:description>Groupname 0x464328</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_34_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_34_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  34 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_34_CSTATE_RESIDENCY_C1[34]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_102" sampleID="102" sampleGroupID="Container_102">
+		<TELC:description>Groupname 0x464330</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_35_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_35_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  35 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_35_CSTATE_RESIDENCY_C1[35]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_103" sampleID="103" sampleGroupID="Container_103">
+		<TELC:description>Groupname 0x464338</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_36_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_36_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  36 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_36_CSTATE_RESIDENCY_C1[36]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_104" sampleID="104" sampleGroupID="Container_104">
+		<TELC:description>Groupname 0x464340</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_37_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_37_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  37 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_37_CSTATE_RESIDENCY_C1[37]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_105" sampleID="105" sampleGroupID="Container_105">
+		<TELC:description>Groupname 0x464348</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_38_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_38_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  38 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_38_CSTATE_RESIDENCY_C1[38]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_106" sampleID="106" sampleGroupID="Container_106">
+		<TELC:description>Groupname 0x464350</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_39_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_39_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  39 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_39_CSTATE_RESIDENCY_C1[39]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_107" sampleID="107" sampleGroupID="Container_107">
+		<TELC:description>Groupname 0x464358</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_40_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_40_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  40 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_40_CSTATE_RESIDENCY_C1[40]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_108" sampleID="108" sampleGroupID="Container_108">
+		<TELC:description>Groupname 0x464360</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_41_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_41_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  41 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_41_CSTATE_RESIDENCY_C1[41]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_109" sampleID="109" sampleGroupID="Container_109">
+		<TELC:description>Groupname 0x464368</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_42_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_42_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  42 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_42_CSTATE_RESIDENCY_C1[42]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_110" sampleID="110" sampleGroupID="Container_110">
+		<TELC:description>Groupname 0x464370</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_43_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_43_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  43 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_43_CSTATE_RESIDENCY_C1[43]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_111" sampleID="111" sampleGroupID="Container_111">
+		<TELC:description>Groupname 0x464378</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_44_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_44_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  44 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_44_CSTATE_RESIDENCY_C1[44]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_112" sampleID="112" sampleGroupID="Container_112">
+		<TELC:description>Groupname 0x464380</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_45_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_45_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  45 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_45_CSTATE_RESIDENCY_C1[45]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_113" sampleID="113" sampleGroupID="Container_113">
+		<TELC:description>Groupname 0x464388</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_46_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_46_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  46 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_46_CSTATE_RESIDENCY_C1[46]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_114" sampleID="114" sampleGroupID="Container_114">
+		<TELC:description>Groupname 0x464390</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_47_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_47_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  47 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_47_CSTATE_RESIDENCY_C1[47]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_115" sampleID="115" sampleGroupID="Container_115">
+		<TELC:description>Groupname 0x464398</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_48_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_48_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  48 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_48_CSTATE_RESIDENCY_C1[48]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_116" sampleID="116" sampleGroupID="Container_116">
+		<TELC:description>Groupname 0x4643a0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_49_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_49_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  49 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_49_CSTATE_RESIDENCY_C1[49]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_117" sampleID="117" sampleGroupID="Container_117">
+		<TELC:description>Groupname 0x4643a8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_50_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_50_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  50 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_50_CSTATE_RESIDENCY_C1[50]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_118" sampleID="118" sampleGroupID="Container_118">
+		<TELC:description>Groupname 0x4643b0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_51_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_51_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  51 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_51_CSTATE_RESIDENCY_C1[51]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_119" sampleID="119" sampleGroupID="Container_119">
+		<TELC:description>Groupname 0x4643b8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_52_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_52_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  52 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_52_CSTATE_RESIDENCY_C1[52]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_120" sampleID="120" sampleGroupID="Container_120">
+		<TELC:description>Groupname 0x4643c0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_53_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_53_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  53 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_53_CSTATE_RESIDENCY_C1[53]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_121" sampleID="121" sampleGroupID="Container_121">
+		<TELC:description>Groupname 0x4643c8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_54_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_54_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  54 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_54_CSTATE_RESIDENCY_C1[54]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_122" sampleID="122" sampleGroupID="Container_122">
+		<TELC:description>Groupname 0x4643d0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_55_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_55_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  55 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_55_CSTATE_RESIDENCY_C1[55]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_123" sampleID="123" sampleGroupID="Container_123">
+		<TELC:description>Groupname 0x4643d8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_56_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_56_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  56 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_56_CSTATE_RESIDENCY_C1[56]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_124" sampleID="124" sampleGroupID="Container_124">
+		<TELC:description>Groupname 0x4643e0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_57_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_57_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  57 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_57_CSTATE_RESIDENCY_C1[57]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_125" sampleID="125" sampleGroupID="Container_125">
+		<TELC:description>Groupname 0x4643e8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_58_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_58_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  58 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_58_CSTATE_RESIDENCY_C1[58]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_126" sampleID="126" sampleGroupID="Container_126">
+		<TELC:description>Groupname 0x4643f0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_59_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_59_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  59 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_59_CSTATE_RESIDENCY_C1[59]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_127" sampleID="127" sampleGroupID="Container_127">
+		<TELC:description>Groupname 0x4643f8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_60_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_60_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  60 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_60_CSTATE_RESIDENCY_C1[60]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_128" sampleID="128" sampleGroupID="Container_128">
+		<TELC:description>Groupname 0x464400</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_61_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_61_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  61 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_61_CSTATE_RESIDENCY_C1[61]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_129" sampleID="129" sampleGroupID="Container_129">
+		<TELC:description>Groupname 0x464408</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_62_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_62_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  62 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_62_CSTATE_RESIDENCY_C1[62]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_130" sampleID="130" sampleGroupID="Container_130">
+		<TELC:description>Groupname 0x464410</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="CORE_63_CSTATE_RESIDENCY_C1" datatypeIDREF="tcore_residency_time" sampleID="CORE_63_CSTATE_RESIDENCY_C1">
+			<TELC:description>Core  63 C1 Residency in units of ?</TELC:description>
+			<TELC:sampleSubGroup>CORE_63_CSTATE_RESIDENCY_C1[63]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_131" sampleID="131" sampleGroupID="Container_131">
+		<TELC:description>Groupname 0x464418</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_CONTROL" datatypeIDREF="tstring" sampleID="PEM_CONTROL">
+			<TELC:description>PEM Control</TELC:description>
+			<TELC:sampleSubGroup>PEM_CONTROL_AND_STATUS</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_STATUS" datatypeIDREF="tstring" sampleID="PEM_STATUS">
+			<TELC:description>PEM Status</TELC:description>
+			<TELC:sampleSubGroup>PEM_CONTROL_AND_STATUS</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_132" sampleID="132" sampleGroupID="Container_132">
+		<TELC:description>Groupname 0x464420</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_ANY" datatypeIDREF="tpem_counter" sampleID="PEM_ANY">
+			<TELC:description>PEM_ANY - Increments if any of the events are true</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_0_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_RSVD1" datatypeIDREF="tpem_counter" sampleID="PEM_RSVD1">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_0_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_133" sampleID="133" sampleGroupID="Container_133">
+		<TELC:description>Groupname 0x464428</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_RSVD2" datatypeIDREF="tpem_counter" sampleID="PEM_RSVD2">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_2_3</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_RSVD3" datatypeIDREF="tpem_counter" sampleID="PEM_RSVD3">
+			<TELC:description>PEM_RSVD3</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_2_3</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_134" sampleID="134" sampleGroupID="Container_134">
+		<TELC:description>Groupname 0x464430</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_RSVD5" datatypeIDREF="tpem_counter" sampleID="PEM_RSVD5">
+			<TELC:description>PEM_RSVD1</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_4_5</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_135" sampleID="135" sampleGroupID="Container_135">
+		<TELC:description>Groupname 0x464438</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_FCT" datatypeIDREF="tpem_counter" sampleID="PEM_FCT">
+			<TELC:description>Favored Core Technology</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_6_7</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_SST_PP" datatypeIDREF="tpem_counter" sampleID="PEM_SST_PP">
+			<TELC:description>Speed Select Technology - Performance Profile</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_6_7</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_136" sampleID="136" sampleGroupID="Container_136">
+		<TELC:description>Groupname 0x464440</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_MT_PMAX" datatypeIDREF="tpem_counter" sampleID="PEM_MT_PMAX">
+			<TELC:description>Mulit-Threshold PMAX</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_8_9</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_RSVD9" datatypeIDREF="tpem_counter" sampleID="PEM_RSVD9">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_8_9</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_137" sampleID="137" sampleGroupID="Container_137">
+		<TELC:description>Groupname 0x464448</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_FAST_RAPL" datatypeIDREF="tpem_counter" sampleID="PEM_FAST_RAPL">
+			<TELC:description>Fast RAPL</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_10_11</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_PKG_PL1_MSR_TPMI" datatypeIDREF="tpem_counter" sampleID="PEM_PKG_PL1_MSR_TPMI">
+			<TELC:description>Package PL1 from MSR/TPMI</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_10_11</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_138" sampleID="138" sampleGroupID="Container_138">
+		<TELC:description>Groupname 0x464450</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_PKG_PL1_MMIO" datatypeIDREF="tpem_counter" sampleID="PEM_PKG_PL1_MMIO">
+			<TELC:description>Package PL1 from MMIO</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_12_13</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_PKG_PL1_PCS" datatypeIDREF="tpem_counter" sampleID="PEM_PKG_PL1_PCS">
+			<TELC:description>Package PL1 from PCS</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_12_13</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_139" sampleID="139" sampleGroupID="Container_139">
+		<TELC:description>Groupname 0x464458</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_PKG_PL2_MSR_TPMI" datatypeIDREF="tpem_counter" sampleID="PEM_PKG_PL2_MSR_TPMI">
+			<TELC:description>Package PL2 from MSR/TPMI</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_14_15</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_PKG_PL2_MMIO" datatypeIDREF="tpem_counter" sampleID="PEM_PKG_PL2_MMIO">
+			<TELC:description>Package PL1 from MMIO</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_14_15</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_140" sampleID="140" sampleGroupID="Container_140">
+		<TELC:description>Groupname 0x464460</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_PKG_PL2_PCS" datatypeIDREF="tpem_counter" sampleID="PEM_PKG_PL2_PCS">
+			<TELC:description>Package PL2 from PCS</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_16_17</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_PLATFORM_PL1_MSR_TPMI" datatypeIDREF="tpem_counter" sampleID="PEM_PLATFORM_PL1_MSR_TPMI">
+			<TELC:description>Platform PL1 from MSR/TPMI</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_16_17</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_141" sampleID="141" sampleGroupID="Container_141">
+		<TELC:description>Groupname 0x464468</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_PLATFORM_PL1_MMIO" datatypeIDREF="tpem_counter" sampleID="PEM_PLATFORM_PL1_MMIO">
+			<TELC:description>Platform PL1 from MMIO</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_18_19</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_PLATFORM_PL1_PCS" datatypeIDREF="tpem_counter" sampleID="PEM_PLATFORM_PL1_PCS">
+			<TELC:description>Platform PL1 from PCS</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_18_19</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_142" sampleID="142" sampleGroupID="Container_142">
+		<TELC:description>Groupname 0x464470</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_PLATFORM_PL2_MSR_TPMI" datatypeIDREF="tpem_counter" sampleID="PEM_PLATFORM_PL2_MSR_TPMI">
+			<TELC:description>Platform PL2 from MSR/TPMI</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_20_21</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_PLATFORM_PL2_MMIO" datatypeIDREF="tpem_counter" sampleID="PEM_PLATFORM_PL2_MMIO">
+			<TELC:description>Platform PL1 from MMIO</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_20_21</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_143" sampleID="143" sampleGroupID="Container_143">
+		<TELC:description>Groupname 0x464478</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_PLATFORM_PL2_PCS" datatypeIDREF="tpem_counter" sampleID="PEM_PLATFORM_PL2_PCS">
+			<TELC:description>Platform PL2 from PCS</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_22_23</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_RSVD23" datatypeIDREF="tpem_counter" sampleID="PEM_RSVD23">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_22_23</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_144" sampleID="144" sampleGroupID="Container_144">
+		<TELC:description>Groupname 0x464480</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_PER_CORE_THERMAL" datatypeIDREF="tpem_counter" sampleID="PEM_PER_CORE_THERMAL">
+			<TELC:description>Per Core Thermal</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_24_25</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_RSVD25" datatypeIDREF="tpem_counter" sampleID="PEM_RSVD25">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_24_25</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_145" sampleID="145" sampleGroupID="Container_145">
+		<TELC:description>Groupname 0x464488</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_XXPROCHOT" datatypeIDREF="tpem_counter" sampleID="PEM_XXPROCHOT">
+			<TELC:description>XXPROCHOT</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_26_27</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_HOT_VR" datatypeIDREF="tpem_counter" sampleID="PEM_HOT_VR">
+			<TELC:description>Hot VR</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_26_27</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_146" sampleID="146" sampleGroupID="Container_146">
+		<TELC:description>Groupname 0x464490</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_RSVD28" datatypeIDREF="tpem_counter" sampleID="PEM_RSVD28">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_28_29</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_RSVD29" datatypeIDREF="tpem_counter" sampleID="PEM_RSVD29">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_28_29</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_147" sampleID="147" sampleGroupID="Container_147">
+		<TELC:description>Groupname 0x464498</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PEM_PCS_PSTATE" datatypeIDREF="tpem_counter" sampleID="PEM_PCS_PSTATE">
+			<TELC:description>PCS Pstate Clipping</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_30_31</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PEM_RSVD31" datatypeIDREF="tpem_counter" sampleID="PEM_RSVD31">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>PEM_COUNTER_30_31</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_148" sampleID="148" sampleGroupID="Container_148">
+		<TELC:description>Groupname 0x4644a0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_0" datatypeIDREF="tstring" sampleID="core_input_eepolicy_0">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_0[0]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_1" datatypeIDREF="tstring" sampleID="core_input_eepolicy_1">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_1[1]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_149" sampleID="149" sampleGroupID="Container_149">
+		<TELC:description>Groupname 0x4644a8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_2" datatypeIDREF="tstring" sampleID="core_input_eepolicy_2">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_2[2]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_3" datatypeIDREF="tstring" sampleID="core_input_eepolicy_3">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_3[3]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_150" sampleID="150" sampleGroupID="Container_150">
+		<TELC:description>Groupname 0x4644b0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_4" datatypeIDREF="tstring" sampleID="core_input_eepolicy_4">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_4[4]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_5" datatypeIDREF="tstring" sampleID="core_input_eepolicy_5">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_5[5]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_151" sampleID="151" sampleGroupID="Container_151">
+		<TELC:description>Groupname 0x4644b8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_6" datatypeIDREF="tstring" sampleID="core_input_eepolicy_6">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_6[6]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_7" datatypeIDREF="tstring" sampleID="core_input_eepolicy_7">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_7[7]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_152" sampleID="152" sampleGroupID="Container_152">
+		<TELC:description>Groupname 0x4644c0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_8" datatypeIDREF="tstring" sampleID="core_input_eepolicy_8">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_8[8]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_9" datatypeIDREF="tstring" sampleID="core_input_eepolicy_9">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_9[9]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_153" sampleID="153" sampleGroupID="Container_153">
+		<TELC:description>Groupname 0x4644c8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_10" datatypeIDREF="tstring" sampleID="core_input_eepolicy_10">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_10[10]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_11" datatypeIDREF="tstring" sampleID="core_input_eepolicy_11">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_11[11]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_154" sampleID="154" sampleGroupID="Container_154">
+		<TELC:description>Groupname 0x4644d0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_12" datatypeIDREF="tstring" sampleID="core_input_eepolicy_12">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_12[12]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_13" datatypeIDREF="tstring" sampleID="core_input_eepolicy_13">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_13[13]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_155" sampleID="155" sampleGroupID="Container_155">
+		<TELC:description>Groupname 0x4644d8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_14" datatypeIDREF="tstring" sampleID="core_input_eepolicy_14">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_14[14]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_15" datatypeIDREF="tstring" sampleID="core_input_eepolicy_15">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_15[15]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_156" sampleID="156" sampleGroupID="Container_156">
+		<TELC:description>Groupname 0x4644e0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_16" datatypeIDREF="tstring" sampleID="core_input_eepolicy_16">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_16[16]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_17" datatypeIDREF="tstring" sampleID="core_input_eepolicy_17">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_17[17]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_157" sampleID="157" sampleGroupID="Container_157">
+		<TELC:description>Groupname 0x4644e8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_18" datatypeIDREF="tstring" sampleID="core_input_eepolicy_18">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_18[18]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_19" datatypeIDREF="tstring" sampleID="core_input_eepolicy_19">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_19[19]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_158" sampleID="158" sampleGroupID="Container_158">
+		<TELC:description>Groupname 0x4644f0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_20" datatypeIDREF="tstring" sampleID="core_input_eepolicy_20">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_20[20]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_21" datatypeIDREF="tstring" sampleID="core_input_eepolicy_21">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_21[21]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_159" sampleID="159" sampleGroupID="Container_159">
+		<TELC:description>Groupname 0x4644f8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_22" datatypeIDREF="tstring" sampleID="core_input_eepolicy_22">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_22[22]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_23" datatypeIDREF="tstring" sampleID="core_input_eepolicy_23">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_23[23]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_160" sampleID="160" sampleGroupID="Container_160">
+		<TELC:description>Groupname 0x464500</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_24" datatypeIDREF="tstring" sampleID="core_input_eepolicy_24">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_24[24]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_25" datatypeIDREF="tstring" sampleID="core_input_eepolicy_25">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_25[25]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_161" sampleID="161" sampleGroupID="Container_161">
+		<TELC:description>Groupname 0x464508</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_26" datatypeIDREF="tstring" sampleID="core_input_eepolicy_26">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_26[26]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_27" datatypeIDREF="tstring" sampleID="core_input_eepolicy_27">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_27[27]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_162" sampleID="162" sampleGroupID="Container_162">
+		<TELC:description>Groupname 0x464510</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_28" datatypeIDREF="tstring" sampleID="core_input_eepolicy_28">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_28[28]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_29" datatypeIDREF="tstring" sampleID="core_input_eepolicy_29">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_29[29]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_163" sampleID="163" sampleGroupID="Container_163">
+		<TELC:description>Groupname 0x464518</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_30" datatypeIDREF="tstring" sampleID="core_input_eepolicy_30">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_30[30]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_31" datatypeIDREF="tstring" sampleID="core_input_eepolicy_31">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_31[31]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_164" sampleID="164" sampleGroupID="Container_164">
+		<TELC:description>Groupname 0x464520</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_32" datatypeIDREF="tstring" sampleID="core_input_eepolicy_32">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_32[32]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_33" datatypeIDREF="tstring" sampleID="core_input_eepolicy_33">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_33[33]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_165" sampleID="165" sampleGroupID="Container_165">
+		<TELC:description>Groupname 0x464528</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_34" datatypeIDREF="tstring" sampleID="core_input_eepolicy_34">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_34[34]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_35" datatypeIDREF="tstring" sampleID="core_input_eepolicy_35">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_35[35]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_166" sampleID="166" sampleGroupID="Container_166">
+		<TELC:description>Groupname 0x464530</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_36" datatypeIDREF="tstring" sampleID="core_input_eepolicy_36">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_36[36]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_37" datatypeIDREF="tstring" sampleID="core_input_eepolicy_37">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_37[37]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_167" sampleID="167" sampleGroupID="Container_167">
+		<TELC:description>Groupname 0x464538</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_38" datatypeIDREF="tstring" sampleID="core_input_eepolicy_38">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_38[38]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_39" datatypeIDREF="tstring" sampleID="core_input_eepolicy_39">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_39[39]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_168" sampleID="168" sampleGroupID="Container_168">
+		<TELC:description>Groupname 0x464540</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_40" datatypeIDREF="tstring" sampleID="core_input_eepolicy_40">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_40[40]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_41" datatypeIDREF="tstring" sampleID="core_input_eepolicy_41">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_41[41]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_169" sampleID="169" sampleGroupID="Container_169">
+		<TELC:description>Groupname 0x464548</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_42" datatypeIDREF="tstring" sampleID="core_input_eepolicy_42">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_42[42]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_43" datatypeIDREF="tstring" sampleID="core_input_eepolicy_43">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_43[43]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_170" sampleID="170" sampleGroupID="Container_170">
+		<TELC:description>Groupname 0x464550</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_44" datatypeIDREF="tstring" sampleID="core_input_eepolicy_44">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_44[44]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_45" datatypeIDREF="tstring" sampleID="core_input_eepolicy_45">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_45[45]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_171" sampleID="171" sampleGroupID="Container_171">
+		<TELC:description>Groupname 0x464558</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_46" datatypeIDREF="tstring" sampleID="core_input_eepolicy_46">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_46[46]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_47" datatypeIDREF="tstring" sampleID="core_input_eepolicy_47">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_47[47]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_172" sampleID="172" sampleGroupID="Container_172">
+		<TELC:description>Groupname 0x464560</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_48" datatypeIDREF="tstring" sampleID="core_input_eepolicy_48">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_48[48]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_49" datatypeIDREF="tstring" sampleID="core_input_eepolicy_49">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_49[49]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_173" sampleID="173" sampleGroupID="Container_173">
+		<TELC:description>Groupname 0x464568</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_50" datatypeIDREF="tstring" sampleID="core_input_eepolicy_50">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_50[50]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_51" datatypeIDREF="tstring" sampleID="core_input_eepolicy_51">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_51[51]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_174" sampleID="174" sampleGroupID="Container_174">
+		<TELC:description>Groupname 0x464570</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_52" datatypeIDREF="tstring" sampleID="core_input_eepolicy_52">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_52[52]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_53" datatypeIDREF="tstring" sampleID="core_input_eepolicy_53">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_53[53]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_175" sampleID="175" sampleGroupID="Container_175">
+		<TELC:description>Groupname 0x464578</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_54" datatypeIDREF="tstring" sampleID="core_input_eepolicy_54">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_54[54]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_55" datatypeIDREF="tstring" sampleID="core_input_eepolicy_55">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_55[55]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_176" sampleID="176" sampleGroupID="Container_176">
+		<TELC:description>Groupname 0x464580</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_56" datatypeIDREF="tstring" sampleID="core_input_eepolicy_56">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_56[56]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_57" datatypeIDREF="tstring" sampleID="core_input_eepolicy_57">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_57[57]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_177" sampleID="177" sampleGroupID="Container_177">
+		<TELC:description>Groupname 0x464588</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_58" datatypeIDREF="tstring" sampleID="core_input_eepolicy_58">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_58[58]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_59" datatypeIDREF="tstring" sampleID="core_input_eepolicy_59">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_59[59]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_178" sampleID="178" sampleGroupID="Container_178">
+		<TELC:description>Groupname 0x464590</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_60" datatypeIDREF="tstring" sampleID="core_input_eepolicy_60">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_60[60]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_61" datatypeIDREF="tstring" sampleID="core_input_eepolicy_61">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_61[61]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_179" sampleID="179" sampleGroupID="Container_179">
+		<TELC:description>Groupname 0x464598</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="core_input_eepolicy_62" datatypeIDREF="tstring" sampleID="core_input_eepolicy_62">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_62[62]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="core_input_eepolicy_63" datatypeIDREF="tstring" sampleID="core_input_eepolicy_63">
+			<TELC:description>Core EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>CORE_EPB_63[63]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_180" sampleID="180" sampleGroupID="Container_180">
+		<TELC:description>Groupname 0x4645a0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="FIVR_HEALTH_MONITOR_0" datatypeIDREF="tstring" sampleID="FIVR_HEALTH_MONITOR_0">
+			<TELC:description>FIVR Health Indicator Status - 2bits per FIVR</TELC:description>
+			<TELC:sampleSubGroup>FIVR_HEALTH_MONITOR_0[0]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_181" sampleID="181" sampleGroupID="Container_181">
+		<TELC:description>Groupname 0x4645a8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="FIVR_HEALTH_MONITOR_1" datatypeIDREF="tstring" sampleID="FIVR_HEALTH_MONITOR_1">
+			<TELC:description>FIVR Health Indicator Status - 2bits per FIVR</TELC:description>
+			<TELC:sampleSubGroup>FIVR_HEALTH_MONITOR_1[1]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_182" sampleID="182" sampleGroupID="Container_182">
+		<TELC:description>Groupname 0x4645b0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="FIVR_HEALTH_MONITOR_2" datatypeIDREF="tstring" sampleID="FIVR_HEALTH_MONITOR_2">
+			<TELC:description>FIVR Health Indicator Status - 2bits per FIVR</TELC:description>
+			<TELC:sampleSubGroup>FIVR_HEALTH_MONITOR_2[2]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_183" sampleID="183" sampleGroupID="Container_183">
+		<TELC:description>Groupname 0x4645b8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_READ_BW_COUNTER_CH0" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_READ_BW_COUNTER_CH0">
+			<TELC:description>Memory Read Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_READ_BW_COUNTER_CH0[0]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_184" sampleID="184" sampleGroupID="Container_184">
+		<TELC:description>Groupname 0x4645c0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_READ_BW_COUNTER_CH1" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_READ_BW_COUNTER_CH1">
+			<TELC:description>Memory Read Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_READ_BW_COUNTER_CH1[1]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_185" sampleID="185" sampleGroupID="Container_185">
+		<TELC:description>Groupname 0x4645c8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_READ_BW_COUNTER_CH2" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_READ_BW_COUNTER_CH2">
+			<TELC:description>Memory Read Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_READ_BW_COUNTER_CH2[2]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_186" sampleID="186" sampleGroupID="Container_186">
+		<TELC:description>Groupname 0x4645d0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_READ_BW_COUNTER_CH3" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_READ_BW_COUNTER_CH3">
+			<TELC:description>Memory Read Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_READ_BW_COUNTER_CH3[3]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_187" sampleID="187" sampleGroupID="Container_187">
+		<TELC:description>Groupname 0x4645d8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_READ_BW_COUNTER_CH4" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_READ_BW_COUNTER_CH4">
+			<TELC:description>Memory Read Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_READ_BW_COUNTER_CH4[4]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_188" sampleID="188" sampleGroupID="Container_188">
+		<TELC:description>Groupname 0x4645e0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_READ_BW_COUNTER_CH5" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_READ_BW_COUNTER_CH5">
+			<TELC:description>Memory Read Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_READ_BW_COUNTER_CH5[5]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_189" sampleID="189" sampleGroupID="Container_189">
+		<TELC:description>Groupname 0x4645e8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_READ_BW_COUNTER_CH6" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_READ_BW_COUNTER_CH6">
+			<TELC:description>Memory Read Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_READ_BW_COUNTER_CH6[6]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_190" sampleID="190" sampleGroupID="Container_190">
+		<TELC:description>Groupname 0x4645f0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_READ_BW_COUNTER_CH7" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_READ_BW_COUNTER_CH7">
+			<TELC:description>Memory Read Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_READ_BW_COUNTER_CH7[7]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_191" sampleID="191" sampleGroupID="Container_191">
+		<TELC:description>Groupname 0x4645f8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_WRITE_BW_COUNTER_CH0" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_WRITE_BW_COUNTER_CH0">
+			<TELC:description>Memory Write Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_WRITE_BW_COUNTER_CH0[0]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_192" sampleID="192" sampleGroupID="Container_192">
+		<TELC:description>Groupname 0x464600</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_WRITE_BW_COUNTER_CH1" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_WRITE_BW_COUNTER_CH1">
+			<TELC:description>Memory Write Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_WRITE_BW_COUNTER_CH1[1]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_193" sampleID="193" sampleGroupID="Container_193">
+		<TELC:description>Groupname 0x464608</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_WRITE_BW_COUNTER_CH2" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_WRITE_BW_COUNTER_CH2">
+			<TELC:description>Memory Write Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_WRITE_BW_COUNTER_CH2[2]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_194" sampleID="194" sampleGroupID="Container_194">
+		<TELC:description>Groupname 0x464610</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_WRITE_BW_COUNTER_CH3" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_WRITE_BW_COUNTER_CH3">
+			<TELC:description>Memory Write Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_WRITE_BW_COUNTER_CH3[3]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_195" sampleID="195" sampleGroupID="Container_195">
+		<TELC:description>Groupname 0x464618</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_WRITE_BW_COUNTER_CH4" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_WRITE_BW_COUNTER_CH4">
+			<TELC:description>Memory Write Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_WRITE_BW_COUNTER_CH4[4]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_196" sampleID="196" sampleGroupID="Container_196">
+		<TELC:description>Groupname 0x464620</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_WRITE_BW_COUNTER_CH5" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_WRITE_BW_COUNTER_CH5">
+			<TELC:description>Memory Write Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_WRITE_BW_COUNTER_CH5[5]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_197" sampleID="197" sampleGroupID="Container_197">
+		<TELC:description>Groupname 0x464628</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_WRITE_BW_COUNTER_CH6" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_WRITE_BW_COUNTER_CH6">
+			<TELC:description>Memory Write Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_WRITE_BW_COUNTER_CH6[6]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_198" sampleID="198" sampleGroupID="Container_198">
+		<TELC:description>Groupname 0x464630</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MEMORY_WRITE_BW_COUNTER_CH7" datatypeIDREF="tmem_bw_counter" sampleID="MEMORY_WRITE_BW_COUNTER_CH7">
+			<TELC:description>Memory Write Bandwidth Counter</TELC:description>
+			<TELC:sampleSubGroup>MEMORY_WRITE_BW_COUNTER_CH7[7]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_199" sampleID="199" sampleGroupID="Container_199">
+		<TELC:description>Groupname 0x464638</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_0" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_0">
+			<TELC:description>Mesh frequency histogram bin 0</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_0_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_1" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_1">
+			<TELC:description>Mesh frequency histogram bin 1</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_0_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_200" sampleID="200" sampleGroupID="Container_200">
+		<TELC:description>Groupname 0x464640</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_2" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_2">
+			<TELC:description>Mesh frequency histogram bin 2</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_2_3</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_3" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_3">
+			<TELC:description>Mesh frequency histogram bin 3</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_2_3</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_201" sampleID="201" sampleGroupID="Container_201">
+		<TELC:description>Groupname 0x464648</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_4" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_4">
+			<TELC:description>Mesh frequency histogram bin 4</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_4_5</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_5" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_5">
+			<TELC:description>Mesh frequency histogram bin 5</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_4_5</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_202" sampleID="202" sampleGroupID="Container_202">
+		<TELC:description>Groupname 0x464650</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_6" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_6">
+			<TELC:description>Mesh frequency histogram bin 6</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_6_7</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_7" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_7">
+			<TELC:description>Mesh frequency histogram bin 7</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_6_7</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_203" sampleID="203" sampleGroupID="Container_203">
+		<TELC:description>Groupname 0x464658</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_8" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_8">
+			<TELC:description>Mesh frequency histogram bin 8</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_8_9</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_9" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_9">
+			<TELC:description>Mesh frequency histogram bin 9</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_8_9</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_204" sampleID="204" sampleGroupID="Container_204">
+		<TELC:description>Groupname 0x464660</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_10" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_10">
+			<TELC:description>Mesh frequency histogram bin 10</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_10_11</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_11" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_11">
+			<TELC:description>Mesh frequency histogram bin 11</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_10_11</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_205" sampleID="205" sampleGroupID="Container_205">
+		<TELC:description>Groupname 0x464668</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_GV_COUNTER" datatypeIDREF="tstring" sampleID="MESH_GV_COUNTER">
+			<TELC:description>Mesh GV counter</TELC:description>
+			<TELC:sampleSubGroup>MESH_GV_COUNTER</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_GV_COUNTER_RESERVED" datatypeIDREF="tstring" sampleID="MESH_GV_COUNTER_RESERVED">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>MESH_GV_COUNTER</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+</TELEM:Aggregator>
