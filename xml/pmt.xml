@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2024-09-18</lastupdated>
+	<lastupdated>2024-10-30</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -115,6 +115,30 @@
 			<description>Granite Rapids OOBMSM QAT Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>GNR/OOBMSM/QAT</basedir>
+				<prefix>gnr</prefix>
+				<common>gnr_common.xml</common>
+				<aggregator>gnr_aggregator.xml</aggregator>
+				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x22806802" size="1648">
+			<lastupdated>2024-10-30</lastupdated>
+			<status>production</status>
+			<description>Granite Rapids PUNIT C-Die Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>GNR/PUNIT/CDIE</basedir>
+				<prefix>gnr</prefix>
+				<common>gnr_common.xml</common>
+				<aggregator>gnr_aggregator.xml</aggregator>
+				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x22491753" size="112">
+			<lastupdated>2024-10-30</lastupdated>
+			<status>production</status>
+			<description>Granite Rapids PUNIT IO-Die Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>GNR/PUNIT/IODIE</basedir>
 				<prefix>gnr</prefix>
 				<common>gnr_common.xml</common>
 				<aggregator>gnr_aggregator.xml</aggregator>
