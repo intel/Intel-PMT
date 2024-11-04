@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Aggregator [<!ENTITY otherfile SYSTEM "gnr_common.xml">]>
+<TELEM:Aggregator xmlns="http://schemas.intel.com/telemetry/base/1/" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common" 
+	xmlns:TELEM="http://schemas.intel.com/telemetry/base/aggregator" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+ 	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/aggregator telemetryAggregator.xsd"> 
+
+	<TELC:DataTypesInclude>&otherfile;</TELC:DataTypesInclude>
+	<TELEM:name>gnr</TELEM:name>
+	<TELEM:description>Granite Rapids PUNIT IO-Die Telemetry samples definition and transformation rules</TELEM:description>
+	<TELEM:uniqueid>0x22491753</TELEM:uniqueid>
+	<TELEM:productid>gnr</TELEM:productid>
+	<TELEM:address>0</TELEM:address>
+
+	<TELEM:SampleGroup name="Container_0" sampleID="0" sampleGroupID="Container_0">
+		<TELC:description>Groupname 0x464000</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="FIRMWARE_VERSION" datatypeIDREF="tstring" sampleID="FIRMWARE_VERSION">
+			<TELC:description>Version of Firmware Image</TELC:description>
+			<TELC:sampleSubGroup>GLOBAL_INFO</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="RESERVED" datatypeIDREF="tstring" sampleID="RESERVED">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>GLOBAL_INFO</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_1" sampleID="1" sampleGroupID="Container_1">
+		<TELC:description>Groupname 0x464008</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PACKAGE_CSTATE_RESIDENCY_C2" datatypeIDREF="tstring" sampleID="PACKAGE_CSTATE_RESIDENCY_C2">
+			<TELC:description>Package C2 Cstate Residency</TELC:description>
+			<TELC:sampleSubGroup>PACKAGE_CSTATE_RESIDENCY_C2</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>63</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>62</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_2" sampleID="2" sampleGroupID="Container_2">
+		<TELC:description>Groupname 0x464010</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PACKAGE_CSTATE_RESIDENCY_C6" datatypeIDREF="tstring" sampleID="PACKAGE_CSTATE_RESIDENCY_C6">
+			<TELC:description>Package C6 Cstate Residency</TELC:description>
+			<TELC:sampleSubGroup>PACKAGE_CSTATE_RESIDENCY_C6</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>63</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>62</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_3" sampleID="3" sampleGroupID="Container_3">
+		<TELC:description>Groupname 0x464018</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="resolved_socket_epb" datatypeIDREF="tstring" sampleID="resolved_socket_epb">
+			<TELC:description>Resolved socket EPB Policy</TELC:description>
+			<TELC:sampleSubGroup>SOCKET_EPB</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="RESERVED" datatypeIDREF="tstring" sampleID="RESERVED_1">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>SOCKET_EPB</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_4" sampleID="4" sampleGroupID="Container_4">
+		<TELC:description>Groupname 0x464020</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="FIVR_HEALTH_MONITOR_0" datatypeIDREF="tstring" sampleID="FIVR_HEALTH_MONITOR_0">
+			<TELC:description>FIVR Health Indicator Status - 2bits per FIVR</TELC:description>
+			<TELC:sampleSubGroup>FIVR_HEALTH_MONITOR_0[0]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_5" sampleID="5" sampleGroupID="Container_5">
+		<TELC:description>Groupname 0x464028</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="FIVR_HEALTH_MONITOR_1" datatypeIDREF="tstring" sampleID="FIVR_HEALTH_MONITOR_1">
+			<TELC:description>FIVR Health Indicator Status - 2bits per FIVR</TELC:description>
+			<TELC:sampleSubGroup>FIVR_HEALTH_MONITOR_1[1]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_6" sampleID="6" sampleGroupID="Container_6">
+		<TELC:description>Groupname 0x464030</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="FIVR_HEALTH_MONITOR_2" datatypeIDREF="tstring" sampleID="FIVR_HEALTH_MONITOR_2">
+			<TELC:description>FIVR Health Indicator Status - 2bits per FIVR</TELC:description>
+			<TELC:sampleSubGroup>FIVR_HEALTH_MONITOR_2[2]</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_7" sampleID="7" sampleGroupID="Container_7">
+		<TELC:description>Groupname 0x464038</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_0" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_0">
+			<TELC:description>Mesh frequency histogram bin 0</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_0_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_1" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_1">
+			<TELC:description>Mesh frequency histogram bin 1</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_0_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_8" sampleID="8" sampleGroupID="Container_8">
+		<TELC:description>Groupname 0x464040</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_2" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_2">
+			<TELC:description>Mesh frequency histogram bin 2</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_2_3</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_3" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_3">
+			<TELC:description>Mesh frequency histogram bin 3</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_2_3</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_9" sampleID="9" sampleGroupID="Container_9">
+		<TELC:description>Groupname 0x464048</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_4" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_4">
+			<TELC:description>Mesh frequency histogram bin 4</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_4_5</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_5" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_5">
+			<TELC:description>Mesh frequency histogram bin 5</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_4_5</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_10" sampleID="10" sampleGroupID="Container_10">
+		<TELC:description>Groupname 0x464050</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_6" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_6">
+			<TELC:description>Mesh frequency histogram bin 6</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_6_7</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_7" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_7">
+			<TELC:description>Mesh frequency histogram bin 7</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_6_7</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_11" sampleID="11" sampleGroupID="Container_11">
+		<TELC:description>Groupname 0x464058</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_8" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_8">
+			<TELC:description>Mesh frequency histogram bin 8</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_8_9</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_9" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_9">
+			<TELC:description>Mesh frequency histogram bin 9</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_8_9</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_12" sampleID="12" sampleGroupID="Container_12">
+		<TELC:description>Groupname 0x464060</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_10" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_10">
+			<TELC:description>Mesh frequency histogram bin 10</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_10_11</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_FREQ_HISTOGRAM_BIN_11" datatypeIDREF="tstring" sampleID="MESH_FREQ_HISTOGRAM_BIN_11">
+			<TELC:description>Mesh frequency histogram bin 11</TELC:description>
+			<TELC:sampleSubGroup>MESH_FREQ_HISTOGRAM_BINS_10_11</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_13" sampleID="13" sampleGroupID="Container_13">
+		<TELC:description>Groupname 0x464068</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="MESH_GV_COUNTER" datatypeIDREF="tstring" sampleID="MESH_GV_COUNTER">
+			<TELC:description>Mesh GV counter</TELC:description>
+			<TELC:sampleSubGroup>MESH_GV_COUNTER</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="MESH_GV_COUNTER_RESERVED" datatypeIDREF="tstring" sampleID="MESH_GV_COUNTER_RESERVED">
+			<TELC:description>Reserved</TELC:description>
+			<TELC:sampleSubGroup>MESH_GV_COUNTER</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+</TELEM:Aggregator>

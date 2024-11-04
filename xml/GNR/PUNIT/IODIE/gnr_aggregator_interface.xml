@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TELI:AggregatorInterface
+	xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELI="http://schemas.intel.com/telemetry/interface/aggregatorinterface"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/interface/aggregatorinterface telemetry.xsd" >
+
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gnr_aggregator.xml"/>
+
+	<TransFormations xmlns="http://schemas.intel.com/telemetry/base/common">
+		<TransFormation name="xtal_time" transformID="xtal_time">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / 25e6 </transform>
+		</TransFormation>
+		<TransFormation name="core_residency_time" transformID="core_residency_time">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / 25e6 </transform>
+		</TransFormation>
+		<TransFormation name="passthru" transformID="passthru">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0</transform>
+		</TransFormation>
+	</TransFormations>
+
+	<TELI:name>gnr</TELI:name>
+	<TELI:description>Granite Rapids PUNIT IO-Die Telemetry samples definition and transformation rules</TELI:description>
+	<TELI:uniqueid>0x22491753</TELI:uniqueid>
+	<TELI:NDA>Public</TELI:NDA>
+	<TELI:samplePeriod>10</TELI:samplePeriod>
+	<TELI:revisionDate>2024-10-30</TELI:revisionDate>
+	<TELI:AggregatorSamples>
+		<TELI:T_AggregatorSample sampleName="FIRMWARE_VERSION" sampleGroup="GLOBAL_INFO" datatypeIDREF="tstring" sampleID="0">
+			<TELI:description>Version of Firmware Image</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>FIRMWARE_VERSION</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED" sampleGroup="GLOBAL_INFO" datatypeIDREF="tstring" sampleID="1">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>RESERVED</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PACKAGE_CSTATE_RESIDENCY_C2" sampleGroup="PACKAGE_CSTATE_RESIDENCY_C2" datatypeIDREF="tstring" sampleID="2">
+			<TELI:description>Package C2 Cstate Residency</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>PACKAGE_CSTATE_RESIDENCY_C2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PACKAGE_CSTATE_RESIDENCY_C6" sampleGroup="PACKAGE_CSTATE_RESIDENCY_C6" datatypeIDREF="tstring" sampleID="3">
+			<TELI:description>Package C6 Cstate Residency</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>PACKAGE_CSTATE_RESIDENCY_C6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="resolved_socket_epb" sampleGroup="SOCKET_EPB" datatypeIDREF="tstring" sampleID="4">
+			<TELI:description>Resolved socket EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>resolved_socket_epb</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED" sampleGroup="SOCKET_EPB" datatypeIDREF="tstring" sampleID="5">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIVR_HEALTH_MONITOR_0" sampleGroup="FIVR_HEALTH_MONITOR_0_0" datatypeIDREF="tstring" sampleID="6">
+			<TELI:description>FIVR Health Indicator Status - 2bits per FIVR</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>FIVR_HEALTH_MONITOR_0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIVR_HEALTH_MONITOR_1" sampleGroup="FIVR_HEALTH_MONITOR_1_1" datatypeIDREF="tstring" sampleID="7">
+			<TELI:description>FIVR Health Indicator Status - 2bits per FIVR</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>FIVR_HEALTH_MONITOR_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIVR_HEALTH_MONITOR_2" sampleGroup="FIVR_HEALTH_MONITOR_2_2" datatypeIDREF="tstring" sampleID="8">
+			<TELI:description>FIVR Health Indicator Status - 2bits per FIVR</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
+					<sampleIDREF>FIVR_HEALTH_MONITOR_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_0" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_0_1" datatypeIDREF="tstring" sampleID="9">
+			<TELI:description>Mesh frequency histogram bin 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_1" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_0_1" datatypeIDREF="tstring" sampleID="10">
+			<TELI:description>Mesh frequency histogram bin 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_2" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_2_3" datatypeIDREF="tstring" sampleID="11">
+			<TELI:description>Mesh frequency histogram bin 2</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_3" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_2_3" datatypeIDREF="tstring" sampleID="12">
+			<TELI:description>Mesh frequency histogram bin 3</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_4" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_4_5" datatypeIDREF="tstring" sampleID="13">
+			<TELI:description>Mesh frequency histogram bin 4</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_5" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_4_5" datatypeIDREF="tstring" sampleID="14">
+			<TELI:description>Mesh frequency histogram bin 5</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_6" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_6_7" datatypeIDREF="tstring" sampleID="15">
+			<TELI:description>Mesh frequency histogram bin 6</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_7" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_6_7" datatypeIDREF="tstring" sampleID="16">
+			<TELI:description>Mesh frequency histogram bin 7</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_7</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_8" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_8_9" datatypeIDREF="tstring" sampleID="17">
+			<TELI:description>Mesh frequency histogram bin 8</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_11</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_8</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_9" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_8_9" datatypeIDREF="tstring" sampleID="18">
+			<TELI:description>Mesh frequency histogram bin 9</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_11</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_9</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_10" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_10_11" datatypeIDREF="tstring" sampleID="19">
+			<TELI:description>Mesh frequency histogram bin 10</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_12</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_10</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_11" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_10_11" datatypeIDREF="tstring" sampleID="20">
+			<TELI:description>Mesh frequency histogram bin 11</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_12</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_11</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_GV_COUNTER" sampleGroup="MESH_GV_COUNTER" datatypeIDREF="tstring" sampleID="21">
+			<TELI:description>Mesh GV counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_13</sampleGroupIDREF>
+					<sampleIDREF>MESH_GV_COUNTER</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_GV_COUNTER_RESERVED" sampleGroup="MESH_GV_COUNTER" datatypeIDREF="tstring" sampleID="22">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_13</sampleGroupIDREF>
+					<sampleIDREF>MESH_GV_COUNTER_RESERVED</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+	</TELI:AggregatorSamples>
+</TELI:AggregatorInterface>

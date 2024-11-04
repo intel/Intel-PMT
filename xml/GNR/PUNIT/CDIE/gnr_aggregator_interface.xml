@@ -1,0 +1,2926 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TELI:AggregatorInterface
+	xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELI="http://schemas.intel.com/telemetry/interface/aggregatorinterface"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/interface/aggregatorinterface telemetry.xsd" >
+
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="gnr_aggregator.xml"/>
+
+	<TransFormations xmlns="http://schemas.intel.com/telemetry/base/common">
+		<TransFormation name="xtal_time" transformID="xtal_time">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / 25e6 </transform>
+		</TransFormation>
+		<TransFormation name="core_residency_time" transformID="core_residency_time">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / 25e6 </transform>
+		</TransFormation>
+		<TransFormation name="passthru" transformID="passthru">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0</transform>
+		</TransFormation>
+	</TransFormations>
+
+	<TELI:name>gnr</TELI:name>
+	<TELI:description>Granite Rapids PUNIT C-Die Telemetry samples definition and transformation rules</TELI:description>
+	<TELI:uniqueid>0x22806802</TELI:uniqueid>
+	<TELI:NDA>Public</TELI:NDA>
+	<TELI:samplePeriod>10</TELI:samplePeriod>
+	<TELI:revisionDate>2024-10-30</TELI:revisionDate>
+	<TELI:AggregatorSamples>
+		<TELI:T_AggregatorSample sampleName="FIRMWARE_VERSION" sampleGroup="GLOBAL_INFO" datatypeIDREF="tstring" sampleID="0">
+			<TELI:description>Version of Firmware Image</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>FIRMWARE_VERSION</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="GLOBAL_INFO_RESERVED" sampleGroup="GLOBAL_INFO" datatypeIDREF="tstring" sampleID="1">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>GLOBAL_INFO_RESERVED</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_RESIDENCY_C1E" sampleGroup="DIE_CSTATE_RESIDENCY_C1E" datatypeIDREF="tcore_residency_time" sampleID="2">
+			<TELI:description>Die C1E Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_RESIDENCY_C1E</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="AGGREGATE_CORE_CSTATE_RESIDENCY_C0" sampleGroup="AGGREGATE_CORE_CSTATE_RESIDENCY_C0" datatypeIDREF="tcore_residency_time" sampleID="3">
+			<TELI:description>Aggregate Core C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>AGGREGATE_CORE_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_0_CSTATE_RESIDENCY_C0" sampleGroup="CORE_0_CSTATE_RESIDENCY_C0_0" datatypeIDREF="tcore_residency_time" sampleID="4">
+			<TELI:description>Core  0 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>CORE_0_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_1_CSTATE_RESIDENCY_C0" sampleGroup="CORE_1_CSTATE_RESIDENCY_C0_1" datatypeIDREF="tcore_residency_time" sampleID="5">
+			<TELI:description>Core  1 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>CORE_1_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_2_CSTATE_RESIDENCY_C0" sampleGroup="CORE_2_CSTATE_RESIDENCY_C0_2" datatypeIDREF="tcore_residency_time" sampleID="6">
+			<TELI:description>Core  2 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>CORE_2_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_3_CSTATE_RESIDENCY_C0" sampleGroup="CORE_3_CSTATE_RESIDENCY_C0_3" datatypeIDREF="tcore_residency_time" sampleID="7">
+			<TELI:description>Core  3 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
+					<sampleIDREF>CORE_3_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_4_CSTATE_RESIDENCY_C0" sampleGroup="CORE_4_CSTATE_RESIDENCY_C0_4" datatypeIDREF="tcore_residency_time" sampleID="8">
+			<TELI:description>Core  4 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
+					<sampleIDREF>CORE_4_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_5_CSTATE_RESIDENCY_C0" sampleGroup="CORE_5_CSTATE_RESIDENCY_C0_5" datatypeIDREF="tcore_residency_time" sampleID="9">
+			<TELI:description>Core  5 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>CORE_5_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_6_CSTATE_RESIDENCY_C0" sampleGroup="CORE_6_CSTATE_RESIDENCY_C0_6" datatypeIDREF="tcore_residency_time" sampleID="10">
+			<TELI:description>Core  6 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>CORE_6_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_7_CSTATE_RESIDENCY_C0" sampleGroup="CORE_7_CSTATE_RESIDENCY_C0_7" datatypeIDREF="tcore_residency_time" sampleID="11">
+			<TELI:description>Core  7 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>CORE_7_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_8_CSTATE_RESIDENCY_C0" sampleGroup="CORE_8_CSTATE_RESIDENCY_C0_8" datatypeIDREF="tcore_residency_time" sampleID="12">
+			<TELI:description>Core  8 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_11</sampleGroupIDREF>
+					<sampleIDREF>CORE_8_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_9_CSTATE_RESIDENCY_C0" sampleGroup="CORE_9_CSTATE_RESIDENCY_C0_9" datatypeIDREF="tcore_residency_time" sampleID="13">
+			<TELI:description>Core  9 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_12</sampleGroupIDREF>
+					<sampleIDREF>CORE_9_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_10_CSTATE_RESIDENCY_C0" sampleGroup="CORE_10_CSTATE_RESIDENCY_C0_10" datatypeIDREF="tcore_residency_time" sampleID="14">
+			<TELI:description>Core  10 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_13</sampleGroupIDREF>
+					<sampleIDREF>CORE_10_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_11_CSTATE_RESIDENCY_C0" sampleGroup="CORE_11_CSTATE_RESIDENCY_C0_11" datatypeIDREF="tcore_residency_time" sampleID="15">
+			<TELI:description>Core  11 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_14</sampleGroupIDREF>
+					<sampleIDREF>CORE_11_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_12_CSTATE_RESIDENCY_C0" sampleGroup="CORE_12_CSTATE_RESIDENCY_C0_12" datatypeIDREF="tcore_residency_time" sampleID="16">
+			<TELI:description>Core  12 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_15</sampleGroupIDREF>
+					<sampleIDREF>CORE_12_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_13_CSTATE_RESIDENCY_C0" sampleGroup="CORE_13_CSTATE_RESIDENCY_C0_13" datatypeIDREF="tcore_residency_time" sampleID="17">
+			<TELI:description>Core  13 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_16</sampleGroupIDREF>
+					<sampleIDREF>CORE_13_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_14_CSTATE_RESIDENCY_C0" sampleGroup="CORE_14_CSTATE_RESIDENCY_C0_14" datatypeIDREF="tcore_residency_time" sampleID="18">
+			<TELI:description>Core  14 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_17</sampleGroupIDREF>
+					<sampleIDREF>CORE_14_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_15_CSTATE_RESIDENCY_C0" sampleGroup="CORE_15_CSTATE_RESIDENCY_C0_15" datatypeIDREF="tcore_residency_time" sampleID="19">
+			<TELI:description>Core  15 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_18</sampleGroupIDREF>
+					<sampleIDREF>CORE_15_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_16_CSTATE_RESIDENCY_C0" sampleGroup="CORE_16_CSTATE_RESIDENCY_C0_16" datatypeIDREF="tcore_residency_time" sampleID="20">
+			<TELI:description>Core  16 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_19</sampleGroupIDREF>
+					<sampleIDREF>CORE_16_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_17_CSTATE_RESIDENCY_C0" sampleGroup="CORE_17_CSTATE_RESIDENCY_C0_17" datatypeIDREF="tcore_residency_time" sampleID="21">
+			<TELI:description>Core  17 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_20</sampleGroupIDREF>
+					<sampleIDREF>CORE_17_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_18_CSTATE_RESIDENCY_C0" sampleGroup="CORE_18_CSTATE_RESIDENCY_C0_18" datatypeIDREF="tcore_residency_time" sampleID="22">
+			<TELI:description>Core  18 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_21</sampleGroupIDREF>
+					<sampleIDREF>CORE_18_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_19_CSTATE_RESIDENCY_C0" sampleGroup="CORE_19_CSTATE_RESIDENCY_C0_19" datatypeIDREF="tcore_residency_time" sampleID="23">
+			<TELI:description>Core  19 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_22</sampleGroupIDREF>
+					<sampleIDREF>CORE_19_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_20_CSTATE_RESIDENCY_C0" sampleGroup="CORE_20_CSTATE_RESIDENCY_C0_20" datatypeIDREF="tcore_residency_time" sampleID="24">
+			<TELI:description>Core  20 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_23</sampleGroupIDREF>
+					<sampleIDREF>CORE_20_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_21_CSTATE_RESIDENCY_C0" sampleGroup="CORE_21_CSTATE_RESIDENCY_C0_21" datatypeIDREF="tcore_residency_time" sampleID="25">
+			<TELI:description>Core  21 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_24</sampleGroupIDREF>
+					<sampleIDREF>CORE_21_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_22_CSTATE_RESIDENCY_C0" sampleGroup="CORE_22_CSTATE_RESIDENCY_C0_22" datatypeIDREF="tcore_residency_time" sampleID="26">
+			<TELI:description>Core  22 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_25</sampleGroupIDREF>
+					<sampleIDREF>CORE_22_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_23_CSTATE_RESIDENCY_C0" sampleGroup="CORE_23_CSTATE_RESIDENCY_C0_23" datatypeIDREF="tcore_residency_time" sampleID="27">
+			<TELI:description>Core  23 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_26</sampleGroupIDREF>
+					<sampleIDREF>CORE_23_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_24_CSTATE_RESIDENCY_C0" sampleGroup="CORE_24_CSTATE_RESIDENCY_C0_24" datatypeIDREF="tcore_residency_time" sampleID="28">
+			<TELI:description>Core  24 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_27</sampleGroupIDREF>
+					<sampleIDREF>CORE_24_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_25_CSTATE_RESIDENCY_C0" sampleGroup="CORE_25_CSTATE_RESIDENCY_C0_25" datatypeIDREF="tcore_residency_time" sampleID="29">
+			<TELI:description>Core  25 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_28</sampleGroupIDREF>
+					<sampleIDREF>CORE_25_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_26_CSTATE_RESIDENCY_C0" sampleGroup="CORE_26_CSTATE_RESIDENCY_C0_26" datatypeIDREF="tcore_residency_time" sampleID="30">
+			<TELI:description>Core  26 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_29</sampleGroupIDREF>
+					<sampleIDREF>CORE_26_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_27_CSTATE_RESIDENCY_C0" sampleGroup="CORE_27_CSTATE_RESIDENCY_C0_27" datatypeIDREF="tcore_residency_time" sampleID="31">
+			<TELI:description>Core  27 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_30</sampleGroupIDREF>
+					<sampleIDREF>CORE_27_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_28_CSTATE_RESIDENCY_C0" sampleGroup="CORE_28_CSTATE_RESIDENCY_C0_28" datatypeIDREF="tcore_residency_time" sampleID="32">
+			<TELI:description>Core  28 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_31</sampleGroupIDREF>
+					<sampleIDREF>CORE_28_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_29_CSTATE_RESIDENCY_C0" sampleGroup="CORE_29_CSTATE_RESIDENCY_C0_29" datatypeIDREF="tcore_residency_time" sampleID="33">
+			<TELI:description>Core  29 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_32</sampleGroupIDREF>
+					<sampleIDREF>CORE_29_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_30_CSTATE_RESIDENCY_C0" sampleGroup="CORE_30_CSTATE_RESIDENCY_C0_30" datatypeIDREF="tcore_residency_time" sampleID="34">
+			<TELI:description>Core  30 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_33</sampleGroupIDREF>
+					<sampleIDREF>CORE_30_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_31_CSTATE_RESIDENCY_C0" sampleGroup="CORE_31_CSTATE_RESIDENCY_C0_31" datatypeIDREF="tcore_residency_time" sampleID="35">
+			<TELI:description>Core  31 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_34</sampleGroupIDREF>
+					<sampleIDREF>CORE_31_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_32_CSTATE_RESIDENCY_C0" sampleGroup="CORE_32_CSTATE_RESIDENCY_C0_32" datatypeIDREF="tcore_residency_time" sampleID="36">
+			<TELI:description>Core  32 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_35</sampleGroupIDREF>
+					<sampleIDREF>CORE_32_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_33_CSTATE_RESIDENCY_C0" sampleGroup="CORE_33_CSTATE_RESIDENCY_C0_33" datatypeIDREF="tcore_residency_time" sampleID="37">
+			<TELI:description>Core  33 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_36</sampleGroupIDREF>
+					<sampleIDREF>CORE_33_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_34_CSTATE_RESIDENCY_C0" sampleGroup="CORE_34_CSTATE_RESIDENCY_C0_34" datatypeIDREF="tcore_residency_time" sampleID="38">
+			<TELI:description>Core  34 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_37</sampleGroupIDREF>
+					<sampleIDREF>CORE_34_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_35_CSTATE_RESIDENCY_C0" sampleGroup="CORE_35_CSTATE_RESIDENCY_C0_35" datatypeIDREF="tcore_residency_time" sampleID="39">
+			<TELI:description>Core  35 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_38</sampleGroupIDREF>
+					<sampleIDREF>CORE_35_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_36_CSTATE_RESIDENCY_C0" sampleGroup="CORE_36_CSTATE_RESIDENCY_C0_36" datatypeIDREF="tcore_residency_time" sampleID="40">
+			<TELI:description>Core  36 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_39</sampleGroupIDREF>
+					<sampleIDREF>CORE_36_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_37_CSTATE_RESIDENCY_C0" sampleGroup="CORE_37_CSTATE_RESIDENCY_C0_37" datatypeIDREF="tcore_residency_time" sampleID="41">
+			<TELI:description>Core  37 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_40</sampleGroupIDREF>
+					<sampleIDREF>CORE_37_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_38_CSTATE_RESIDENCY_C0" sampleGroup="CORE_38_CSTATE_RESIDENCY_C0_38" datatypeIDREF="tcore_residency_time" sampleID="42">
+			<TELI:description>Core  38 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_41</sampleGroupIDREF>
+					<sampleIDREF>CORE_38_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_39_CSTATE_RESIDENCY_C0" sampleGroup="CORE_39_CSTATE_RESIDENCY_C0_39" datatypeIDREF="tcore_residency_time" sampleID="43">
+			<TELI:description>Core  39 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_42</sampleGroupIDREF>
+					<sampleIDREF>CORE_39_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_40_CSTATE_RESIDENCY_C0" sampleGroup="CORE_40_CSTATE_RESIDENCY_C0_40" datatypeIDREF="tcore_residency_time" sampleID="44">
+			<TELI:description>Core  40 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_43</sampleGroupIDREF>
+					<sampleIDREF>CORE_40_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_41_CSTATE_RESIDENCY_C0" sampleGroup="CORE_41_CSTATE_RESIDENCY_C0_41" datatypeIDREF="tcore_residency_time" sampleID="45">
+			<TELI:description>Core  41 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_44</sampleGroupIDREF>
+					<sampleIDREF>CORE_41_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_42_CSTATE_RESIDENCY_C0" sampleGroup="CORE_42_CSTATE_RESIDENCY_C0_42" datatypeIDREF="tcore_residency_time" sampleID="46">
+			<TELI:description>Core  42 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_45</sampleGroupIDREF>
+					<sampleIDREF>CORE_42_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_43_CSTATE_RESIDENCY_C0" sampleGroup="CORE_43_CSTATE_RESIDENCY_C0_43" datatypeIDREF="tcore_residency_time" sampleID="47">
+			<TELI:description>Core  43 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_46</sampleGroupIDREF>
+					<sampleIDREF>CORE_43_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_44_CSTATE_RESIDENCY_C0" sampleGroup="CORE_44_CSTATE_RESIDENCY_C0_44" datatypeIDREF="tcore_residency_time" sampleID="48">
+			<TELI:description>Core  44 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_47</sampleGroupIDREF>
+					<sampleIDREF>CORE_44_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_45_CSTATE_RESIDENCY_C0" sampleGroup="CORE_45_CSTATE_RESIDENCY_C0_45" datatypeIDREF="tcore_residency_time" sampleID="49">
+			<TELI:description>Core  45 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_48</sampleGroupIDREF>
+					<sampleIDREF>CORE_45_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_46_CSTATE_RESIDENCY_C0" sampleGroup="CORE_46_CSTATE_RESIDENCY_C0_46" datatypeIDREF="tcore_residency_time" sampleID="50">
+			<TELI:description>Core  46 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_49</sampleGroupIDREF>
+					<sampleIDREF>CORE_46_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_47_CSTATE_RESIDENCY_C0" sampleGroup="CORE_47_CSTATE_RESIDENCY_C0_47" datatypeIDREF="tcore_residency_time" sampleID="51">
+			<TELI:description>Core  47 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_50</sampleGroupIDREF>
+					<sampleIDREF>CORE_47_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_48_CSTATE_RESIDENCY_C0" sampleGroup="CORE_48_CSTATE_RESIDENCY_C0_48" datatypeIDREF="tcore_residency_time" sampleID="52">
+			<TELI:description>Core  48 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_51</sampleGroupIDREF>
+					<sampleIDREF>CORE_48_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_49_CSTATE_RESIDENCY_C0" sampleGroup="CORE_49_CSTATE_RESIDENCY_C0_49" datatypeIDREF="tcore_residency_time" sampleID="53">
+			<TELI:description>Core  49 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_52</sampleGroupIDREF>
+					<sampleIDREF>CORE_49_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_50_CSTATE_RESIDENCY_C0" sampleGroup="CORE_50_CSTATE_RESIDENCY_C0_50" datatypeIDREF="tcore_residency_time" sampleID="54">
+			<TELI:description>Core  50 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_53</sampleGroupIDREF>
+					<sampleIDREF>CORE_50_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_51_CSTATE_RESIDENCY_C0" sampleGroup="CORE_51_CSTATE_RESIDENCY_C0_51" datatypeIDREF="tcore_residency_time" sampleID="55">
+			<TELI:description>Core  51 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_54</sampleGroupIDREF>
+					<sampleIDREF>CORE_51_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_52_CSTATE_RESIDENCY_C0" sampleGroup="CORE_52_CSTATE_RESIDENCY_C0_52" datatypeIDREF="tcore_residency_time" sampleID="56">
+			<TELI:description>Core  52 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_55</sampleGroupIDREF>
+					<sampleIDREF>CORE_52_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_53_CSTATE_RESIDENCY_C0" sampleGroup="CORE_53_CSTATE_RESIDENCY_C0_53" datatypeIDREF="tcore_residency_time" sampleID="57">
+			<TELI:description>Core  53 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_56</sampleGroupIDREF>
+					<sampleIDREF>CORE_53_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_54_CSTATE_RESIDENCY_C0" sampleGroup="CORE_54_CSTATE_RESIDENCY_C0_54" datatypeIDREF="tcore_residency_time" sampleID="58">
+			<TELI:description>Core  54 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_57</sampleGroupIDREF>
+					<sampleIDREF>CORE_54_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_55_CSTATE_RESIDENCY_C0" sampleGroup="CORE_55_CSTATE_RESIDENCY_C0_55" datatypeIDREF="tcore_residency_time" sampleID="59">
+			<TELI:description>Core  55 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_58</sampleGroupIDREF>
+					<sampleIDREF>CORE_55_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_56_CSTATE_RESIDENCY_C0" sampleGroup="CORE_56_CSTATE_RESIDENCY_C0_56" datatypeIDREF="tcore_residency_time" sampleID="60">
+			<TELI:description>Core  56 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_59</sampleGroupIDREF>
+					<sampleIDREF>CORE_56_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_57_CSTATE_RESIDENCY_C0" sampleGroup="CORE_57_CSTATE_RESIDENCY_C0_57" datatypeIDREF="tcore_residency_time" sampleID="61">
+			<TELI:description>Core  57 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_60</sampleGroupIDREF>
+					<sampleIDREF>CORE_57_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_58_CSTATE_RESIDENCY_C0" sampleGroup="CORE_58_CSTATE_RESIDENCY_C0_58" datatypeIDREF="tcore_residency_time" sampleID="62">
+			<TELI:description>Core  58 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_61</sampleGroupIDREF>
+					<sampleIDREF>CORE_58_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_59_CSTATE_RESIDENCY_C0" sampleGroup="CORE_59_CSTATE_RESIDENCY_C0_59" datatypeIDREF="tcore_residency_time" sampleID="63">
+			<TELI:description>Core  59 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_62</sampleGroupIDREF>
+					<sampleIDREF>CORE_59_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_60_CSTATE_RESIDENCY_C0" sampleGroup="CORE_60_CSTATE_RESIDENCY_C0_60" datatypeIDREF="tcore_residency_time" sampleID="64">
+			<TELI:description>Core  60 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_63</sampleGroupIDREF>
+					<sampleIDREF>CORE_60_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_61_CSTATE_RESIDENCY_C0" sampleGroup="CORE_61_CSTATE_RESIDENCY_C0_61" datatypeIDREF="tcore_residency_time" sampleID="65">
+			<TELI:description>Core  61 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_64</sampleGroupIDREF>
+					<sampleIDREF>CORE_61_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_62_CSTATE_RESIDENCY_C0" sampleGroup="CORE_62_CSTATE_RESIDENCY_C0_62" datatypeIDREF="tcore_residency_time" sampleID="66">
+			<TELI:description>Core  62 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_65</sampleGroupIDREF>
+					<sampleIDREF>CORE_62_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_63_CSTATE_RESIDENCY_C0" sampleGroup="CORE_63_CSTATE_RESIDENCY_C0_63" datatypeIDREF="tcore_residency_time" sampleID="67">
+			<TELI:description>Core  63 C0 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_66</sampleGroupIDREF>
+					<sampleIDREF>CORE_63_CSTATE_RESIDENCY_C0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_0_CSTATE_RESIDENCY_C1" sampleGroup="CORE_0_CSTATE_RESIDENCY_C1_0" datatypeIDREF="tcore_residency_time" sampleID="68">
+			<TELI:description>Core  0 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_67</sampleGroupIDREF>
+					<sampleIDREF>CORE_0_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_1_CSTATE_RESIDENCY_C1" sampleGroup="CORE_1_CSTATE_RESIDENCY_C1_1" datatypeIDREF="tcore_residency_time" sampleID="69">
+			<TELI:description>Core  1 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_68</sampleGroupIDREF>
+					<sampleIDREF>CORE_1_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_2_CSTATE_RESIDENCY_C1" sampleGroup="CORE_2_CSTATE_RESIDENCY_C1_2" datatypeIDREF="tcore_residency_time" sampleID="70">
+			<TELI:description>Core  2 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_69</sampleGroupIDREF>
+					<sampleIDREF>CORE_2_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_3_CSTATE_RESIDENCY_C1" sampleGroup="CORE_3_CSTATE_RESIDENCY_C1_3" datatypeIDREF="tcore_residency_time" sampleID="71">
+			<TELI:description>Core  3 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_70</sampleGroupIDREF>
+					<sampleIDREF>CORE_3_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_4_CSTATE_RESIDENCY_C1" sampleGroup="CORE_4_CSTATE_RESIDENCY_C1_4" datatypeIDREF="tcore_residency_time" sampleID="72">
+			<TELI:description>Core  4 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_71</sampleGroupIDREF>
+					<sampleIDREF>CORE_4_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_5_CSTATE_RESIDENCY_C1" sampleGroup="CORE_5_CSTATE_RESIDENCY_C1_5" datatypeIDREF="tcore_residency_time" sampleID="73">
+			<TELI:description>Core  5 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_72</sampleGroupIDREF>
+					<sampleIDREF>CORE_5_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_6_CSTATE_RESIDENCY_C1" sampleGroup="CORE_6_CSTATE_RESIDENCY_C1_6" datatypeIDREF="tcore_residency_time" sampleID="74">
+			<TELI:description>Core  6 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_73</sampleGroupIDREF>
+					<sampleIDREF>CORE_6_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_7_CSTATE_RESIDENCY_C1" sampleGroup="CORE_7_CSTATE_RESIDENCY_C1_7" datatypeIDREF="tcore_residency_time" sampleID="75">
+			<TELI:description>Core  7 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_74</sampleGroupIDREF>
+					<sampleIDREF>CORE_7_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_8_CSTATE_RESIDENCY_C1" sampleGroup="CORE_8_CSTATE_RESIDENCY_C1_8" datatypeIDREF="tcore_residency_time" sampleID="76">
+			<TELI:description>Core  8 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_75</sampleGroupIDREF>
+					<sampleIDREF>CORE_8_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_9_CSTATE_RESIDENCY_C1" sampleGroup="CORE_9_CSTATE_RESIDENCY_C1_9" datatypeIDREF="tcore_residency_time" sampleID="77">
+			<TELI:description>Core  9 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_76</sampleGroupIDREF>
+					<sampleIDREF>CORE_9_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_10_CSTATE_RESIDENCY_C1" sampleGroup="CORE_10_CSTATE_RESIDENCY_C1_10" datatypeIDREF="tcore_residency_time" sampleID="78">
+			<TELI:description>Core  10 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_77</sampleGroupIDREF>
+					<sampleIDREF>CORE_10_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_11_CSTATE_RESIDENCY_C1" sampleGroup="CORE_11_CSTATE_RESIDENCY_C1_11" datatypeIDREF="tcore_residency_time" sampleID="79">
+			<TELI:description>Core  11 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_78</sampleGroupIDREF>
+					<sampleIDREF>CORE_11_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_12_CSTATE_RESIDENCY_C1" sampleGroup="CORE_12_CSTATE_RESIDENCY_C1_12" datatypeIDREF="tcore_residency_time" sampleID="80">
+			<TELI:description>Core  12 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_79</sampleGroupIDREF>
+					<sampleIDREF>CORE_12_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_13_CSTATE_RESIDENCY_C1" sampleGroup="CORE_13_CSTATE_RESIDENCY_C1_13" datatypeIDREF="tcore_residency_time" sampleID="81">
+			<TELI:description>Core  13 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_80</sampleGroupIDREF>
+					<sampleIDREF>CORE_13_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_14_CSTATE_RESIDENCY_C1" sampleGroup="CORE_14_CSTATE_RESIDENCY_C1_14" datatypeIDREF="tcore_residency_time" sampleID="82">
+			<TELI:description>Core  14 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_81</sampleGroupIDREF>
+					<sampleIDREF>CORE_14_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_15_CSTATE_RESIDENCY_C1" sampleGroup="CORE_15_CSTATE_RESIDENCY_C1_15" datatypeIDREF="tcore_residency_time" sampleID="83">
+			<TELI:description>Core  15 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_82</sampleGroupIDREF>
+					<sampleIDREF>CORE_15_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_16_CSTATE_RESIDENCY_C1" sampleGroup="CORE_16_CSTATE_RESIDENCY_C1_16" datatypeIDREF="tcore_residency_time" sampleID="84">
+			<TELI:description>Core  16 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_83</sampleGroupIDREF>
+					<sampleIDREF>CORE_16_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_17_CSTATE_RESIDENCY_C1" sampleGroup="CORE_17_CSTATE_RESIDENCY_C1_17" datatypeIDREF="tcore_residency_time" sampleID="85">
+			<TELI:description>Core  17 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_84</sampleGroupIDREF>
+					<sampleIDREF>CORE_17_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_18_CSTATE_RESIDENCY_C1" sampleGroup="CORE_18_CSTATE_RESIDENCY_C1_18" datatypeIDREF="tcore_residency_time" sampleID="86">
+			<TELI:description>Core  18 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_85</sampleGroupIDREF>
+					<sampleIDREF>CORE_18_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_19_CSTATE_RESIDENCY_C1" sampleGroup="CORE_19_CSTATE_RESIDENCY_C1_19" datatypeIDREF="tcore_residency_time" sampleID="87">
+			<TELI:description>Core  19 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_86</sampleGroupIDREF>
+					<sampleIDREF>CORE_19_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_20_CSTATE_RESIDENCY_C1" sampleGroup="CORE_20_CSTATE_RESIDENCY_C1_20" datatypeIDREF="tcore_residency_time" sampleID="88">
+			<TELI:description>Core  20 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_87</sampleGroupIDREF>
+					<sampleIDREF>CORE_20_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_21_CSTATE_RESIDENCY_C1" sampleGroup="CORE_21_CSTATE_RESIDENCY_C1_21" datatypeIDREF="tcore_residency_time" sampleID="89">
+			<TELI:description>Core  21 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_88</sampleGroupIDREF>
+					<sampleIDREF>CORE_21_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_22_CSTATE_RESIDENCY_C1" sampleGroup="CORE_22_CSTATE_RESIDENCY_C1_22" datatypeIDREF="tcore_residency_time" sampleID="90">
+			<TELI:description>Core  22 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_89</sampleGroupIDREF>
+					<sampleIDREF>CORE_22_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_23_CSTATE_RESIDENCY_C1" sampleGroup="CORE_23_CSTATE_RESIDENCY_C1_23" datatypeIDREF="tcore_residency_time" sampleID="91">
+			<TELI:description>Core  23 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_90</sampleGroupIDREF>
+					<sampleIDREF>CORE_23_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_24_CSTATE_RESIDENCY_C1" sampleGroup="CORE_24_CSTATE_RESIDENCY_C1_24" datatypeIDREF="tcore_residency_time" sampleID="92">
+			<TELI:description>Core  24 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_91</sampleGroupIDREF>
+					<sampleIDREF>CORE_24_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_25_CSTATE_RESIDENCY_C1" sampleGroup="CORE_25_CSTATE_RESIDENCY_C1_25" datatypeIDREF="tcore_residency_time" sampleID="93">
+			<TELI:description>Core  25 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_92</sampleGroupIDREF>
+					<sampleIDREF>CORE_25_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_26_CSTATE_RESIDENCY_C1" sampleGroup="CORE_26_CSTATE_RESIDENCY_C1_26" datatypeIDREF="tcore_residency_time" sampleID="94">
+			<TELI:description>Core  26 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_93</sampleGroupIDREF>
+					<sampleIDREF>CORE_26_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_27_CSTATE_RESIDENCY_C1" sampleGroup="CORE_27_CSTATE_RESIDENCY_C1_27" datatypeIDREF="tcore_residency_time" sampleID="95">
+			<TELI:description>Core  27 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_94</sampleGroupIDREF>
+					<sampleIDREF>CORE_27_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_28_CSTATE_RESIDENCY_C1" sampleGroup="CORE_28_CSTATE_RESIDENCY_C1_28" datatypeIDREF="tcore_residency_time" sampleID="96">
+			<TELI:description>Core  28 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_95</sampleGroupIDREF>
+					<sampleIDREF>CORE_28_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_29_CSTATE_RESIDENCY_C1" sampleGroup="CORE_29_CSTATE_RESIDENCY_C1_29" datatypeIDREF="tcore_residency_time" sampleID="97">
+			<TELI:description>Core  29 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_96</sampleGroupIDREF>
+					<sampleIDREF>CORE_29_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_30_CSTATE_RESIDENCY_C1" sampleGroup="CORE_30_CSTATE_RESIDENCY_C1_30" datatypeIDREF="tcore_residency_time" sampleID="98">
+			<TELI:description>Core  30 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_97</sampleGroupIDREF>
+					<sampleIDREF>CORE_30_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_31_CSTATE_RESIDENCY_C1" sampleGroup="CORE_31_CSTATE_RESIDENCY_C1_31" datatypeIDREF="tcore_residency_time" sampleID="99">
+			<TELI:description>Core  31 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_98</sampleGroupIDREF>
+					<sampleIDREF>CORE_31_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_32_CSTATE_RESIDENCY_C1" sampleGroup="CORE_32_CSTATE_RESIDENCY_C1_32" datatypeIDREF="tcore_residency_time" sampleID="100">
+			<TELI:description>Core  32 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_99</sampleGroupIDREF>
+					<sampleIDREF>CORE_32_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_33_CSTATE_RESIDENCY_C1" sampleGroup="CORE_33_CSTATE_RESIDENCY_C1_33" datatypeIDREF="tcore_residency_time" sampleID="101">
+			<TELI:description>Core  33 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_100</sampleGroupIDREF>
+					<sampleIDREF>CORE_33_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_34_CSTATE_RESIDENCY_C1" sampleGroup="CORE_34_CSTATE_RESIDENCY_C1_34" datatypeIDREF="tcore_residency_time" sampleID="102">
+			<TELI:description>Core  34 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_101</sampleGroupIDREF>
+					<sampleIDREF>CORE_34_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_35_CSTATE_RESIDENCY_C1" sampleGroup="CORE_35_CSTATE_RESIDENCY_C1_35" datatypeIDREF="tcore_residency_time" sampleID="103">
+			<TELI:description>Core  35 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_102</sampleGroupIDREF>
+					<sampleIDREF>CORE_35_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_36_CSTATE_RESIDENCY_C1" sampleGroup="CORE_36_CSTATE_RESIDENCY_C1_36" datatypeIDREF="tcore_residency_time" sampleID="104">
+			<TELI:description>Core  36 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_103</sampleGroupIDREF>
+					<sampleIDREF>CORE_36_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_37_CSTATE_RESIDENCY_C1" sampleGroup="CORE_37_CSTATE_RESIDENCY_C1_37" datatypeIDREF="tcore_residency_time" sampleID="105">
+			<TELI:description>Core  37 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_104</sampleGroupIDREF>
+					<sampleIDREF>CORE_37_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_38_CSTATE_RESIDENCY_C1" sampleGroup="CORE_38_CSTATE_RESIDENCY_C1_38" datatypeIDREF="tcore_residency_time" sampleID="106">
+			<TELI:description>Core  38 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_105</sampleGroupIDREF>
+					<sampleIDREF>CORE_38_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_39_CSTATE_RESIDENCY_C1" sampleGroup="CORE_39_CSTATE_RESIDENCY_C1_39" datatypeIDREF="tcore_residency_time" sampleID="107">
+			<TELI:description>Core  39 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_106</sampleGroupIDREF>
+					<sampleIDREF>CORE_39_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_40_CSTATE_RESIDENCY_C1" sampleGroup="CORE_40_CSTATE_RESIDENCY_C1_40" datatypeIDREF="tcore_residency_time" sampleID="108">
+			<TELI:description>Core  40 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_107</sampleGroupIDREF>
+					<sampleIDREF>CORE_40_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_41_CSTATE_RESIDENCY_C1" sampleGroup="CORE_41_CSTATE_RESIDENCY_C1_41" datatypeIDREF="tcore_residency_time" sampleID="109">
+			<TELI:description>Core  41 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_108</sampleGroupIDREF>
+					<sampleIDREF>CORE_41_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_42_CSTATE_RESIDENCY_C1" sampleGroup="CORE_42_CSTATE_RESIDENCY_C1_42" datatypeIDREF="tcore_residency_time" sampleID="110">
+			<TELI:description>Core  42 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_109</sampleGroupIDREF>
+					<sampleIDREF>CORE_42_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_43_CSTATE_RESIDENCY_C1" sampleGroup="CORE_43_CSTATE_RESIDENCY_C1_43" datatypeIDREF="tcore_residency_time" sampleID="111">
+			<TELI:description>Core  43 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_110</sampleGroupIDREF>
+					<sampleIDREF>CORE_43_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_44_CSTATE_RESIDENCY_C1" sampleGroup="CORE_44_CSTATE_RESIDENCY_C1_44" datatypeIDREF="tcore_residency_time" sampleID="112">
+			<TELI:description>Core  44 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_111</sampleGroupIDREF>
+					<sampleIDREF>CORE_44_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_45_CSTATE_RESIDENCY_C1" sampleGroup="CORE_45_CSTATE_RESIDENCY_C1_45" datatypeIDREF="tcore_residency_time" sampleID="113">
+			<TELI:description>Core  45 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_112</sampleGroupIDREF>
+					<sampleIDREF>CORE_45_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_46_CSTATE_RESIDENCY_C1" sampleGroup="CORE_46_CSTATE_RESIDENCY_C1_46" datatypeIDREF="tcore_residency_time" sampleID="114">
+			<TELI:description>Core  46 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_113</sampleGroupIDREF>
+					<sampleIDREF>CORE_46_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_47_CSTATE_RESIDENCY_C1" sampleGroup="CORE_47_CSTATE_RESIDENCY_C1_47" datatypeIDREF="tcore_residency_time" sampleID="115">
+			<TELI:description>Core  47 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_114</sampleGroupIDREF>
+					<sampleIDREF>CORE_47_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_48_CSTATE_RESIDENCY_C1" sampleGroup="CORE_48_CSTATE_RESIDENCY_C1_48" datatypeIDREF="tcore_residency_time" sampleID="116">
+			<TELI:description>Core  48 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_115</sampleGroupIDREF>
+					<sampleIDREF>CORE_48_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_49_CSTATE_RESIDENCY_C1" sampleGroup="CORE_49_CSTATE_RESIDENCY_C1_49" datatypeIDREF="tcore_residency_time" sampleID="117">
+			<TELI:description>Core  49 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_116</sampleGroupIDREF>
+					<sampleIDREF>CORE_49_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_50_CSTATE_RESIDENCY_C1" sampleGroup="CORE_50_CSTATE_RESIDENCY_C1_50" datatypeIDREF="tcore_residency_time" sampleID="118">
+			<TELI:description>Core  50 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_117</sampleGroupIDREF>
+					<sampleIDREF>CORE_50_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_51_CSTATE_RESIDENCY_C1" sampleGroup="CORE_51_CSTATE_RESIDENCY_C1_51" datatypeIDREF="tcore_residency_time" sampleID="119">
+			<TELI:description>Core  51 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_118</sampleGroupIDREF>
+					<sampleIDREF>CORE_51_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_52_CSTATE_RESIDENCY_C1" sampleGroup="CORE_52_CSTATE_RESIDENCY_C1_52" datatypeIDREF="tcore_residency_time" sampleID="120">
+			<TELI:description>Core  52 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_119</sampleGroupIDREF>
+					<sampleIDREF>CORE_52_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_53_CSTATE_RESIDENCY_C1" sampleGroup="CORE_53_CSTATE_RESIDENCY_C1_53" datatypeIDREF="tcore_residency_time" sampleID="121">
+			<TELI:description>Core  53 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_120</sampleGroupIDREF>
+					<sampleIDREF>CORE_53_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_54_CSTATE_RESIDENCY_C1" sampleGroup="CORE_54_CSTATE_RESIDENCY_C1_54" datatypeIDREF="tcore_residency_time" sampleID="122">
+			<TELI:description>Core  54 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_121</sampleGroupIDREF>
+					<sampleIDREF>CORE_54_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_55_CSTATE_RESIDENCY_C1" sampleGroup="CORE_55_CSTATE_RESIDENCY_C1_55" datatypeIDREF="tcore_residency_time" sampleID="123">
+			<TELI:description>Core  55 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_122</sampleGroupIDREF>
+					<sampleIDREF>CORE_55_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_56_CSTATE_RESIDENCY_C1" sampleGroup="CORE_56_CSTATE_RESIDENCY_C1_56" datatypeIDREF="tcore_residency_time" sampleID="124">
+			<TELI:description>Core  56 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_123</sampleGroupIDREF>
+					<sampleIDREF>CORE_56_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_57_CSTATE_RESIDENCY_C1" sampleGroup="CORE_57_CSTATE_RESIDENCY_C1_57" datatypeIDREF="tcore_residency_time" sampleID="125">
+			<TELI:description>Core  57 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_124</sampleGroupIDREF>
+					<sampleIDREF>CORE_57_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_58_CSTATE_RESIDENCY_C1" sampleGroup="CORE_58_CSTATE_RESIDENCY_C1_58" datatypeIDREF="tcore_residency_time" sampleID="126">
+			<TELI:description>Core  58 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_125</sampleGroupIDREF>
+					<sampleIDREF>CORE_58_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_59_CSTATE_RESIDENCY_C1" sampleGroup="CORE_59_CSTATE_RESIDENCY_C1_59" datatypeIDREF="tcore_residency_time" sampleID="127">
+			<TELI:description>Core  59 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_126</sampleGroupIDREF>
+					<sampleIDREF>CORE_59_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_60_CSTATE_RESIDENCY_C1" sampleGroup="CORE_60_CSTATE_RESIDENCY_C1_60" datatypeIDREF="tcore_residency_time" sampleID="128">
+			<TELI:description>Core  60 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_127</sampleGroupIDREF>
+					<sampleIDREF>CORE_60_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_61_CSTATE_RESIDENCY_C1" sampleGroup="CORE_61_CSTATE_RESIDENCY_C1_61" datatypeIDREF="tcore_residency_time" sampleID="129">
+			<TELI:description>Core  61 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_128</sampleGroupIDREF>
+					<sampleIDREF>CORE_61_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_62_CSTATE_RESIDENCY_C1" sampleGroup="CORE_62_CSTATE_RESIDENCY_C1_62" datatypeIDREF="tcore_residency_time" sampleID="130">
+			<TELI:description>Core  62 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_129</sampleGroupIDREF>
+					<sampleIDREF>CORE_62_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CORE_63_CSTATE_RESIDENCY_C1" sampleGroup="CORE_63_CSTATE_RESIDENCY_C1_63" datatypeIDREF="tcore_residency_time" sampleID="131">
+			<TELI:description>Core  63 C1 Residency in units of ?</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_130</sampleGroupIDREF>
+					<sampleIDREF>CORE_63_CSTATE_RESIDENCY_C1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>core_residency_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_CONTROL" sampleGroup="PEM_CONTROL_AND_STATUS" datatypeIDREF="tstring" sampleID="132">
+			<TELI:description>PEM Control</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_131</sampleGroupIDREF>
+					<sampleIDREF>PEM_CONTROL</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_STATUS" sampleGroup="PEM_CONTROL_AND_STATUS" datatypeIDREF="tstring" sampleID="133">
+			<TELI:description>PEM Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_131</sampleGroupIDREF>
+					<sampleIDREF>PEM_STATUS</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_ANY" sampleGroup="PEM_COUNTER_0_1" datatypeIDREF="tpem_counter" sampleID="134">
+			<TELI:description>PEM_ANY - Increments if any of the events are true</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_132</sampleGroupIDREF>
+					<sampleIDREF>PEM_ANY</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_RSVD1" sampleGroup="PEM_COUNTER_0_1" datatypeIDREF="tpem_counter" sampleID="135">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_132</sampleGroupIDREF>
+					<sampleIDREF>PEM_RSVD1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_RSVD2" sampleGroup="PEM_COUNTER_2_3" datatypeIDREF="tpem_counter" sampleID="136">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_133</sampleGroupIDREF>
+					<sampleIDREF>PEM_RSVD2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_RSVD3" sampleGroup="PEM_COUNTER_2_3" datatypeIDREF="tpem_counter" sampleID="137">
+			<TELI:description>PEM_RSVD3</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_133</sampleGroupIDREF>
+					<sampleIDREF>PEM_RSVD3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_RSVD5" sampleGroup="PEM_COUNTER_4_5" datatypeIDREF="tpem_counter" sampleID="138">
+			<TELI:description>PEM_RSVD1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_134</sampleGroupIDREF>
+					<sampleIDREF>PEM_RSVD5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_FCT" sampleGroup="PEM_COUNTER_6_7" datatypeIDREF="tpem_counter" sampleID="139">
+			<TELI:description>Favored Core Technology</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_135</sampleGroupIDREF>
+					<sampleIDREF>PEM_FCT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_SST_PP" sampleGroup="PEM_COUNTER_6_7" datatypeIDREF="tpem_counter" sampleID="140">
+			<TELI:description>Speed Select Technology - Performance Profile</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_135</sampleGroupIDREF>
+					<sampleIDREF>PEM_SST_PP</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_MT_PMAX" sampleGroup="PEM_COUNTER_8_9" datatypeIDREF="tpem_counter" sampleID="141">
+			<TELI:description>Mulit-Threshold PMAX</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_136</sampleGroupIDREF>
+					<sampleIDREF>PEM_MT_PMAX</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_RSVD9" sampleGroup="PEM_COUNTER_8_9" datatypeIDREF="tpem_counter" sampleID="142">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_136</sampleGroupIDREF>
+					<sampleIDREF>PEM_RSVD9</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_FAST_RAPL" sampleGroup="PEM_COUNTER_10_11" datatypeIDREF="tpem_counter" sampleID="143">
+			<TELI:description>Fast RAPL</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_137</sampleGroupIDREF>
+					<sampleIDREF>PEM_FAST_RAPL</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PKG_PL1_MSR_TPMI" sampleGroup="PEM_COUNTER_10_11" datatypeIDREF="tpem_counter" sampleID="144">
+			<TELI:description>Package PL1 from MSR/TPMI</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_137</sampleGroupIDREF>
+					<sampleIDREF>PEM_PKG_PL1_MSR_TPMI</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PKG_PL1_MMIO" sampleGroup="PEM_COUNTER_12_13" datatypeIDREF="tpem_counter" sampleID="145">
+			<TELI:description>Package PL1 from MMIO</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_138</sampleGroupIDREF>
+					<sampleIDREF>PEM_PKG_PL1_MMIO</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PKG_PL1_PCS" sampleGroup="PEM_COUNTER_12_13" datatypeIDREF="tpem_counter" sampleID="146">
+			<TELI:description>Package PL1 from PCS</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_138</sampleGroupIDREF>
+					<sampleIDREF>PEM_PKG_PL1_PCS</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PKG_PL2_MSR_TPMI" sampleGroup="PEM_COUNTER_14_15" datatypeIDREF="tpem_counter" sampleID="147">
+			<TELI:description>Package PL2 from MSR/TPMI</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_139</sampleGroupIDREF>
+					<sampleIDREF>PEM_PKG_PL2_MSR_TPMI</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PKG_PL2_MMIO" sampleGroup="PEM_COUNTER_14_15" datatypeIDREF="tpem_counter" sampleID="148">
+			<TELI:description>Package PL1 from MMIO</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_139</sampleGroupIDREF>
+					<sampleIDREF>PEM_PKG_PL2_MMIO</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PKG_PL2_PCS" sampleGroup="PEM_COUNTER_16_17" datatypeIDREF="tpem_counter" sampleID="149">
+			<TELI:description>Package PL2 from PCS</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_140</sampleGroupIDREF>
+					<sampleIDREF>PEM_PKG_PL2_PCS</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PLATFORM_PL1_MSR_TPMI" sampleGroup="PEM_COUNTER_16_17" datatypeIDREF="tpem_counter" sampleID="150">
+			<TELI:description>Platform PL1 from MSR/TPMI</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_140</sampleGroupIDREF>
+					<sampleIDREF>PEM_PLATFORM_PL1_MSR_TPMI</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PLATFORM_PL1_MMIO" sampleGroup="PEM_COUNTER_18_19" datatypeIDREF="tpem_counter" sampleID="151">
+			<TELI:description>Platform PL1 from MMIO</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_141</sampleGroupIDREF>
+					<sampleIDREF>PEM_PLATFORM_PL1_MMIO</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PLATFORM_PL1_PCS" sampleGroup="PEM_COUNTER_18_19" datatypeIDREF="tpem_counter" sampleID="152">
+			<TELI:description>Platform PL1 from PCS</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_141</sampleGroupIDREF>
+					<sampleIDREF>PEM_PLATFORM_PL1_PCS</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PLATFORM_PL2_MSR_TPMI" sampleGroup="PEM_COUNTER_20_21" datatypeIDREF="tpem_counter" sampleID="153">
+			<TELI:description>Platform PL2 from MSR/TPMI</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_142</sampleGroupIDREF>
+					<sampleIDREF>PEM_PLATFORM_PL2_MSR_TPMI</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PLATFORM_PL2_MMIO" sampleGroup="PEM_COUNTER_20_21" datatypeIDREF="tpem_counter" sampleID="154">
+			<TELI:description>Platform PL1 from MMIO</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_142</sampleGroupIDREF>
+					<sampleIDREF>PEM_PLATFORM_PL2_MMIO</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PLATFORM_PL2_PCS" sampleGroup="PEM_COUNTER_22_23" datatypeIDREF="tpem_counter" sampleID="155">
+			<TELI:description>Platform PL2 from PCS</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_143</sampleGroupIDREF>
+					<sampleIDREF>PEM_PLATFORM_PL2_PCS</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_RSVD23" sampleGroup="PEM_COUNTER_22_23" datatypeIDREF="tpem_counter" sampleID="156">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_143</sampleGroupIDREF>
+					<sampleIDREF>PEM_RSVD23</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PER_CORE_THERMAL" sampleGroup="PEM_COUNTER_24_25" datatypeIDREF="tpem_counter" sampleID="157">
+			<TELI:description>Per Core Thermal</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_144</sampleGroupIDREF>
+					<sampleIDREF>PEM_PER_CORE_THERMAL</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_RSVD25" sampleGroup="PEM_COUNTER_24_25" datatypeIDREF="tpem_counter" sampleID="158">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_144</sampleGroupIDREF>
+					<sampleIDREF>PEM_RSVD25</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_XXPROCHOT" sampleGroup="PEM_COUNTER_26_27" datatypeIDREF="tpem_counter" sampleID="159">
+			<TELI:description>XXPROCHOT</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_145</sampleGroupIDREF>
+					<sampleIDREF>PEM_XXPROCHOT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_HOT_VR" sampleGroup="PEM_COUNTER_26_27" datatypeIDREF="tpem_counter" sampleID="160">
+			<TELI:description>Hot VR</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_145</sampleGroupIDREF>
+					<sampleIDREF>PEM_HOT_VR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_RSVD28" sampleGroup="PEM_COUNTER_28_29" datatypeIDREF="tpem_counter" sampleID="161">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_146</sampleGroupIDREF>
+					<sampleIDREF>PEM_RSVD28</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_RSVD29" sampleGroup="PEM_COUNTER_28_29" datatypeIDREF="tpem_counter" sampleID="162">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_146</sampleGroupIDREF>
+					<sampleIDREF>PEM_RSVD29</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_PCS_PSTATE" sampleGroup="PEM_COUNTER_30_31" datatypeIDREF="tpem_counter" sampleID="163">
+			<TELI:description>PCS Pstate Clipping</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_147</sampleGroupIDREF>
+					<sampleIDREF>PEM_PCS_PSTATE</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PEM_RSVD31" sampleGroup="PEM_COUNTER_30_31" datatypeIDREF="tpem_counter" sampleID="164">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_147</sampleGroupIDREF>
+					<sampleIDREF>PEM_RSVD31</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_0" sampleGroup="CORE_EPB_0_0" datatypeIDREF="tstring" sampleID="165">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_148</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_1" sampleGroup="CORE_EPB_1_1" datatypeIDREF="tstring" sampleID="166">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_148</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_2" sampleGroup="CORE_EPB_2_2" datatypeIDREF="tstring" sampleID="167">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_149</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_3" sampleGroup="CORE_EPB_3_3" datatypeIDREF="tstring" sampleID="168">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_149</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_4" sampleGroup="CORE_EPB_4_4" datatypeIDREF="tstring" sampleID="169">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_150</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_5" sampleGroup="CORE_EPB_5_5" datatypeIDREF="tstring" sampleID="170">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_150</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_6" sampleGroup="CORE_EPB_6_6" datatypeIDREF="tstring" sampleID="171">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_151</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_7" sampleGroup="CORE_EPB_7_7" datatypeIDREF="tstring" sampleID="172">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_151</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_7</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_8" sampleGroup="CORE_EPB_8_8" datatypeIDREF="tstring" sampleID="173">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_152</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_8</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_9" sampleGroup="CORE_EPB_9_9" datatypeIDREF="tstring" sampleID="174">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_152</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_9</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_10" sampleGroup="CORE_EPB_10_10" datatypeIDREF="tstring" sampleID="175">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_153</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_10</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_11" sampleGroup="CORE_EPB_11_11" datatypeIDREF="tstring" sampleID="176">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_153</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_11</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_12" sampleGroup="CORE_EPB_12_12" datatypeIDREF="tstring" sampleID="177">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_154</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_12</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_13" sampleGroup="CORE_EPB_13_13" datatypeIDREF="tstring" sampleID="178">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_154</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_13</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_14" sampleGroup="CORE_EPB_14_14" datatypeIDREF="tstring" sampleID="179">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_155</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_14</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_15" sampleGroup="CORE_EPB_15_15" datatypeIDREF="tstring" sampleID="180">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_155</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_15</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_16" sampleGroup="CORE_EPB_16_16" datatypeIDREF="tstring" sampleID="181">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_156</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_16</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_17" sampleGroup="CORE_EPB_17_17" datatypeIDREF="tstring" sampleID="182">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_156</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_17</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_18" sampleGroup="CORE_EPB_18_18" datatypeIDREF="tstring" sampleID="183">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_157</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_18</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_19" sampleGroup="CORE_EPB_19_19" datatypeIDREF="tstring" sampleID="184">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_157</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_19</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_20" sampleGroup="CORE_EPB_20_20" datatypeIDREF="tstring" sampleID="185">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_158</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_20</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_21" sampleGroup="CORE_EPB_21_21" datatypeIDREF="tstring" sampleID="186">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_158</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_21</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_22" sampleGroup="CORE_EPB_22_22" datatypeIDREF="tstring" sampleID="187">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_159</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_22</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_23" sampleGroup="CORE_EPB_23_23" datatypeIDREF="tstring" sampleID="188">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_159</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_23</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_24" sampleGroup="CORE_EPB_24_24" datatypeIDREF="tstring" sampleID="189">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_160</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_24</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_25" sampleGroup="CORE_EPB_25_25" datatypeIDREF="tstring" sampleID="190">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_160</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_25</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_26" sampleGroup="CORE_EPB_26_26" datatypeIDREF="tstring" sampleID="191">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_161</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_26</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_27" sampleGroup="CORE_EPB_27_27" datatypeIDREF="tstring" sampleID="192">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_161</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_27</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_28" sampleGroup="CORE_EPB_28_28" datatypeIDREF="tstring" sampleID="193">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_162</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_28</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_29" sampleGroup="CORE_EPB_29_29" datatypeIDREF="tstring" sampleID="194">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_162</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_29</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_30" sampleGroup="CORE_EPB_30_30" datatypeIDREF="tstring" sampleID="195">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_163</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_30</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_31" sampleGroup="CORE_EPB_31_31" datatypeIDREF="tstring" sampleID="196">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_163</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_31</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_32" sampleGroup="CORE_EPB_32_32" datatypeIDREF="tstring" sampleID="197">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_164</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_32</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_33" sampleGroup="CORE_EPB_33_33" datatypeIDREF="tstring" sampleID="198">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_164</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_33</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_34" sampleGroup="CORE_EPB_34_34" datatypeIDREF="tstring" sampleID="199">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_165</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_34</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_35" sampleGroup="CORE_EPB_35_35" datatypeIDREF="tstring" sampleID="200">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_165</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_35</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_36" sampleGroup="CORE_EPB_36_36" datatypeIDREF="tstring" sampleID="201">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_166</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_36</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_37" sampleGroup="CORE_EPB_37_37" datatypeIDREF="tstring" sampleID="202">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_166</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_37</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_38" sampleGroup="CORE_EPB_38_38" datatypeIDREF="tstring" sampleID="203">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_167</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_38</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_39" sampleGroup="CORE_EPB_39_39" datatypeIDREF="tstring" sampleID="204">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_167</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_39</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_40" sampleGroup="CORE_EPB_40_40" datatypeIDREF="tstring" sampleID="205">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_168</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_40</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_41" sampleGroup="CORE_EPB_41_41" datatypeIDREF="tstring" sampleID="206">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_168</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_41</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_42" sampleGroup="CORE_EPB_42_42" datatypeIDREF="tstring" sampleID="207">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_169</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_42</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_43" sampleGroup="CORE_EPB_43_43" datatypeIDREF="tstring" sampleID="208">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_169</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_43</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_44" sampleGroup="CORE_EPB_44_44" datatypeIDREF="tstring" sampleID="209">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_170</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_44</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_45" sampleGroup="CORE_EPB_45_45" datatypeIDREF="tstring" sampleID="210">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_170</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_45</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_46" sampleGroup="CORE_EPB_46_46" datatypeIDREF="tstring" sampleID="211">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_171</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_46</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_47" sampleGroup="CORE_EPB_47_47" datatypeIDREF="tstring" sampleID="212">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_171</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_47</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_48" sampleGroup="CORE_EPB_48_48" datatypeIDREF="tstring" sampleID="213">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_172</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_48</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_49" sampleGroup="CORE_EPB_49_49" datatypeIDREF="tstring" sampleID="214">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_172</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_49</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_50" sampleGroup="CORE_EPB_50_50" datatypeIDREF="tstring" sampleID="215">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_173</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_50</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_51" sampleGroup="CORE_EPB_51_51" datatypeIDREF="tstring" sampleID="216">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_173</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_51</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_52" sampleGroup="CORE_EPB_52_52" datatypeIDREF="tstring" sampleID="217">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_174</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_52</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_53" sampleGroup="CORE_EPB_53_53" datatypeIDREF="tstring" sampleID="218">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_174</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_53</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_54" sampleGroup="CORE_EPB_54_54" datatypeIDREF="tstring" sampleID="219">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_175</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_54</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_55" sampleGroup="CORE_EPB_55_55" datatypeIDREF="tstring" sampleID="220">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_175</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_55</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_56" sampleGroup="CORE_EPB_56_56" datatypeIDREF="tstring" sampleID="221">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_176</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_56</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_57" sampleGroup="CORE_EPB_57_57" datatypeIDREF="tstring" sampleID="222">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_176</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_57</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_58" sampleGroup="CORE_EPB_58_58" datatypeIDREF="tstring" sampleID="223">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_177</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_58</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_59" sampleGroup="CORE_EPB_59_59" datatypeIDREF="tstring" sampleID="224">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_177</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_59</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_60" sampleGroup="CORE_EPB_60_60" datatypeIDREF="tstring" sampleID="225">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_178</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_60</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_61" sampleGroup="CORE_EPB_61_61" datatypeIDREF="tstring" sampleID="226">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_178</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_61</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_62" sampleGroup="CORE_EPB_62_62" datatypeIDREF="tstring" sampleID="227">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_179</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_62</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="core_input_eepolicy_63" sampleGroup="CORE_EPB_63_63" datatypeIDREF="tstring" sampleID="228">
+			<TELI:description>Core EPB Policy</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_179</sampleGroupIDREF>
+					<sampleIDREF>core_input_eepolicy_63</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIVR_HEALTH_MONITOR_0" sampleGroup="FIVR_HEALTH_MONITOR_0_0" datatypeIDREF="tstring" sampleID="229">
+			<TELI:description>FIVR Health Indicator Status - 2bits per FIVR</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_180</sampleGroupIDREF>
+					<sampleIDREF>FIVR_HEALTH_MONITOR_0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIVR_HEALTH_MONITOR_1" sampleGroup="FIVR_HEALTH_MONITOR_1_1" datatypeIDREF="tstring" sampleID="230">
+			<TELI:description>FIVR Health Indicator Status - 2bits per FIVR</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_181</sampleGroupIDREF>
+					<sampleIDREF>FIVR_HEALTH_MONITOR_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIVR_HEALTH_MONITOR_2" sampleGroup="FIVR_HEALTH_MONITOR_2_2" datatypeIDREF="tstring" sampleID="231">
+			<TELI:description>FIVR Health Indicator Status - 2bits per FIVR</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_182</sampleGroupIDREF>
+					<sampleIDREF>FIVR_HEALTH_MONITOR_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_READ_BW_COUNTER_CH0" sampleGroup="MEMORY_READ_BW_COUNTER_CH0_0" datatypeIDREF="tmem_bw_counter" sampleID="232">
+			<TELI:description>Memory Read Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_183</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_READ_BW_COUNTER_CH0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_READ_BW_COUNTER_CH1" sampleGroup="MEMORY_READ_BW_COUNTER_CH1_1" datatypeIDREF="tmem_bw_counter" sampleID="233">
+			<TELI:description>Memory Read Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_184</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_READ_BW_COUNTER_CH1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_READ_BW_COUNTER_CH2" sampleGroup="MEMORY_READ_BW_COUNTER_CH2_2" datatypeIDREF="tmem_bw_counter" sampleID="234">
+			<TELI:description>Memory Read Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_185</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_READ_BW_COUNTER_CH2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_READ_BW_COUNTER_CH3" sampleGroup="MEMORY_READ_BW_COUNTER_CH3_3" datatypeIDREF="tmem_bw_counter" sampleID="235">
+			<TELI:description>Memory Read Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_186</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_READ_BW_COUNTER_CH3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_READ_BW_COUNTER_CH4" sampleGroup="MEMORY_READ_BW_COUNTER_CH4_4" datatypeIDREF="tmem_bw_counter" sampleID="236">
+			<TELI:description>Memory Read Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_187</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_READ_BW_COUNTER_CH4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_READ_BW_COUNTER_CH5" sampleGroup="MEMORY_READ_BW_COUNTER_CH5_5" datatypeIDREF="tmem_bw_counter" sampleID="237">
+			<TELI:description>Memory Read Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_188</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_READ_BW_COUNTER_CH5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_READ_BW_COUNTER_CH6" sampleGroup="MEMORY_READ_BW_COUNTER_CH6_6" datatypeIDREF="tmem_bw_counter" sampleID="238">
+			<TELI:description>Memory Read Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_189</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_READ_BW_COUNTER_CH6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_READ_BW_COUNTER_CH7" sampleGroup="MEMORY_READ_BW_COUNTER_CH7_7" datatypeIDREF="tmem_bw_counter" sampleID="239">
+			<TELI:description>Memory Read Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_190</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_READ_BW_COUNTER_CH7</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_WRITE_BW_COUNTER_CH0" sampleGroup="MEMORY_WRITE_BW_COUNTER_CH0_0" datatypeIDREF="tmem_bw_counter" sampleID="240">
+			<TELI:description>Memory Write Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_191</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_WRITE_BW_COUNTER_CH0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_WRITE_BW_COUNTER_CH1" sampleGroup="MEMORY_WRITE_BW_COUNTER_CH1_1" datatypeIDREF="tmem_bw_counter" sampleID="241">
+			<TELI:description>Memory Write Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_192</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_WRITE_BW_COUNTER_CH1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_WRITE_BW_COUNTER_CH2" sampleGroup="MEMORY_WRITE_BW_COUNTER_CH2_2" datatypeIDREF="tmem_bw_counter" sampleID="242">
+			<TELI:description>Memory Write Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_193</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_WRITE_BW_COUNTER_CH2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_WRITE_BW_COUNTER_CH3" sampleGroup="MEMORY_WRITE_BW_COUNTER_CH3_3" datatypeIDREF="tmem_bw_counter" sampleID="243">
+			<TELI:description>Memory Write Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_194</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_WRITE_BW_COUNTER_CH3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_WRITE_BW_COUNTER_CH4" sampleGroup="MEMORY_WRITE_BW_COUNTER_CH4_4" datatypeIDREF="tmem_bw_counter" sampleID="244">
+			<TELI:description>Memory Write Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_195</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_WRITE_BW_COUNTER_CH4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_WRITE_BW_COUNTER_CH5" sampleGroup="MEMORY_WRITE_BW_COUNTER_CH5_5" datatypeIDREF="tmem_bw_counter" sampleID="245">
+			<TELI:description>Memory Write Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_196</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_WRITE_BW_COUNTER_CH5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_WRITE_BW_COUNTER_CH6" sampleGroup="MEMORY_WRITE_BW_COUNTER_CH6_6" datatypeIDREF="tmem_bw_counter" sampleID="246">
+			<TELI:description>Memory Write Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_197</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_WRITE_BW_COUNTER_CH6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_WRITE_BW_COUNTER_CH7" sampleGroup="MEMORY_WRITE_BW_COUNTER_CH7_7" datatypeIDREF="tmem_bw_counter" sampleID="247">
+			<TELI:description>Memory Write Bandwidth Counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_198</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_WRITE_BW_COUNTER_CH7</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_0" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_0_1" datatypeIDREF="tstring" sampleID="248">
+			<TELI:description>Mesh frequency histogram bin 0</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_199</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_1" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_0_1" datatypeIDREF="tstring" sampleID="249">
+			<TELI:description>Mesh frequency histogram bin 1</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_199</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_2" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_2_3" datatypeIDREF="tstring" sampleID="250">
+			<TELI:description>Mesh frequency histogram bin 2</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_200</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_3" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_2_3" datatypeIDREF="tstring" sampleID="251">
+			<TELI:description>Mesh frequency histogram bin 3</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_200</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_4" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_4_5" datatypeIDREF="tstring" sampleID="252">
+			<TELI:description>Mesh frequency histogram bin 4</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_201</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_5" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_4_5" datatypeIDREF="tstring" sampleID="253">
+			<TELI:description>Mesh frequency histogram bin 5</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_201</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_6" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_6_7" datatypeIDREF="tstring" sampleID="254">
+			<TELI:description>Mesh frequency histogram bin 6</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_202</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_7" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_6_7" datatypeIDREF="tstring" sampleID="255">
+			<TELI:description>Mesh frequency histogram bin 7</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_202</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_7</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_8" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_8_9" datatypeIDREF="tstring" sampleID="256">
+			<TELI:description>Mesh frequency histogram bin 8</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_203</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_8</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_9" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_8_9" datatypeIDREF="tstring" sampleID="257">
+			<TELI:description>Mesh frequency histogram bin 9</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_203</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_9</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_10" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_10_11" datatypeIDREF="tstring" sampleID="258">
+			<TELI:description>Mesh frequency histogram bin 10</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_204</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_10</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_FREQ_HISTOGRAM_BIN_11" sampleGroup="MESH_FREQ_HISTOGRAM_BINS_10_11" datatypeIDREF="tstring" sampleID="259">
+			<TELI:description>Mesh frequency histogram bin 11</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_204</sampleGroupIDREF>
+					<sampleIDREF>MESH_FREQ_HISTOGRAM_BIN_11</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_GV_COUNTER" sampleGroup="MESH_GV_COUNTER" datatypeIDREF="tstring" sampleID="260">
+			<TELI:description>Mesh GV counter</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_205</sampleGroupIDREF>
+					<sampleIDREF>MESH_GV_COUNTER</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MESH_GV_COUNTER_RESERVED" sampleGroup="MESH_GV_COUNTER" datatypeIDREF="tstring" sampleID="261">
+			<TELI:description>Reserved</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_205</sampleGroupIDREF>
+					<sampleIDREF>MESH_GV_COUNTER_RESERVED</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>passthru</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+	</TELI:AggregatorSamples>
+</TELI:AggregatorInterface>
