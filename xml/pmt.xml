@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2024-10-30</lastupdated>
+	<lastupdated>2025-01-07</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -227,6 +227,30 @@
 				<common>lnla0_1r5_common.xml</common>
 				<aggregator>lnla0_1r5_aggregator.xml</aggregator>
 				<aggregatorinterface>lnla0_1r5_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1e2f8200" size="4104">
+			<lastupdated>2025-01-07</lastupdated>
+			<status>production</status>
+			<description>BMG PUNIT PMT Telemetry aggregator samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>BMG/PUNIT</basedir>
+				<prefix>bmg_punit</prefix>
+				<common>bmg_punit_common.xml</common>
+				<aggregator>bmg_punit_aggregator.xml</aggregator>
+				<aggregatorinterface>bmg_punit_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x5e2f8211" size="3704">
+			<lastupdated>2025-01-07</lastupdated>
+			<status>production</status>
+			<description>BMG OOBMSM PMT Telemetry aggregator samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>BMG/OOBMSM/BMG_X2</basedir>
+				<prefix>bmg_oobmsm</prefix>
+				<common>bmg_oobmsm_common.xml</common>
+				<aggregator>bmg_oobmsm_aggregator.xml</aggregator>
+				<aggregatorinterface>bmg_oobmsm_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
 	</mappings>
