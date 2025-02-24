@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2025-01-07</lastupdated>
+	<lastupdated>2025-02-20</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -251,6 +251,30 @@
 				<common>bmg_oobmsm_common.xml</common>
 				<aggregator>bmg_oobmsm_aggregator.xml</aggregator>
 				<aggregatorinterface>bmg_oobmsm_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x26557651" size="32280">
+			<lastupdated>2025-02-20</lastupdated>
+			<status>alpha</status>
+			<description>Clearwater Forest OOBMSM Core RMID Performance Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>CWF/OOBMSM/RMID-PERF</basedir>
+				<prefix>cwf</prefix>
+				<common>cwf_common.xml</common>
+				<aggregator>cwf_aggregator.xml</aggregator>
+				<aggregatorinterface>cwf_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x26696143" size="9240">
+			<lastupdated>2025-02-20</lastupdated>
+			<status>alpha</status>
+			<description>Clearwater Forest OOBMSM Core RMID Energy Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>CWF/OOBMSM/RMID-ENERGY</basedir>
+				<prefix>cwf</prefix>
+				<common>cwf_common.xml</common>
+				<aggregator>cwf_aggregator.xml</aggregator>
+				<aggregatorinterface>cwf_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
 	</mappings>
