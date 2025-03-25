@@ -463,6 +463,26 @@ class PmtPlugin:
             raise IOError(
                 f'Unable to open file at path {path}. Per security policy usage of symbolic links shall be avoided.')
 
+    @staticmethod
+    def numsort_folder(str_arr):
+        ret = []
+        nummap = {}
+        for s in str_arr:
+            bn = path.basename(s)
+            if not bn.startswith("telem"):
+                continue
+            try:
+                idx = int(bn[5:])
+                nummap[idx]=s
+            except:
+                pass
+        keys = list(nummap.keys())
+        keys.sort()
+        for i in keys:
+            ret.append(nummap[i])
+
+        return ret
+
     def init(self):
         """Collectd init callback."""
         self.pmt_files = {}
@@ -472,6 +492,8 @@ class PmtPlugin:
         if url_type[0] == 'application/xml' or url_type[0] == 'text/xml':
             xmlbaseurl = path.dirname(self.conf['PMT_URL'])
             pmtmeta = PmtXmlParser.get_metadata(self.conf['PMT_URL'])
+            if pmtmeta == {}:
+                return False
         elif url_type[0] == 'application/json':
             with urllib.request.urlopen(self.conf['PMT_URL']) as url:
                 pmtmeta = json.loads(url.read().decode())
@@ -487,7 +509,7 @@ class PmtPlugin:
             if path.exists("/hostfs"):
                 pmt_root = "/hostfs" + pmt_root
             try:
-                pmt_dir = listdir(pmt_root)
+                pmt_dir = self.numsort_folder(listdir(pmt_root))
             except FileNotFoundError:
                 self.logger("Cannot find PMT data (%s)." % pmt_root, level=self.LOG_ERROR)
                 return False
@@ -779,8 +801,8 @@ else:
     parser = argparse.ArgumentParser(description="PMT agent, reporting telemetry to stdout.")
     parser.add_argument("-s", required=True, dest='url',
                         help="PMT repository XML metadata", type=str)
-    parser.add_argument("-i", required=False, dest='interval', type=int,
-                        default=5, help="Interval between reads (in seconds).")
+    parser.add_argument("-i", required=False, dest='interval', type=float,
+                        default=5.0, help="Interval between reads (in seconds).")
     parser.add_argument("-r", required=False, dest='read', help="Read metrics and exit", action="store_true")
     parser.add_argument("-a", required=False, dest='id', help="Append sampleID to sample identifier",
                         action="store_true")
