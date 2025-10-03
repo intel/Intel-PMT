@@ -513,13 +513,18 @@ class PmtXmlParser:
             return ret
         parser = etree.XMLParser(
             ns_clean=True, remove_comments=True, remove_blank_text=True)
-        opener = urllib.request.build_opener()
         try:
-            tree = etree.parse(opener.open(url), parser)
+            # Check if it's a URL with a scheme or a local file path
+            parsed_url = urlparse(url) if url else None
+            if parsed_url and parsed_url.scheme:
+                opener = urllib.request.build_opener()
+                tree = etree.parse(opener.open(url), parser)
+            else:
+                # Treat as local file path
+                tree = etree.parse(url, parser)
             ret = PmtXmlParser.convert_pmt_to_dict(tree.getroot())
-        except:
-            pass
-            # log(f"Exception: {sys.exc_info()[0]}")
+        except Exception as e:
+            print(f"Exception during xml parsing: {e}")
 
         return ret
 
@@ -940,17 +945,17 @@ else:
 
     parser = argparse.ArgumentParser(description="PMT agent, reporting telemetry to stdout.")
     parser.add_argument("-s", required=True, dest='url',
-                        help="PMT repository XML metadata", type=str)
+                        help="Path to PMT repository XML metadata (pmt.xml). URL or local file path.", type=str)
     parser.add_argument("-i", required=False, dest='interval', type=float,
                         default=5.0, help="Interval between reads (in seconds).")
-    parser.add_argument("-r", required=False, dest='read', help="Read metrics and exit", action="store_true")
-    parser.add_argument("-a", required=False, dest='id', help="Append sampleID to sample identifier",
+    parser.add_argument("-r", required=False, dest='read', help="Read metrics and exit.", action="store_true")
+    parser.add_argument("-a", required=False, dest='id', help="Append sampleID to sample identifier.",
                         action="store_true")
     parser.add_argument("-w", required=False, default=['.*'], dest='allowlist',
-                        help="Path to file containing allowed metrics in form of list of regular expressions "
-                             "split by new line", type=file_lines_to_list)
+                        help="Path to file containing allowed metrics in form of list of regular expressions."
+                             " Split by new line.", type=file_lines_to_list)
     parser.add_argument("-o", required=False, dest='output_log_file',
-                        help="Output log file. If file is not defined, logging is redirected to stdout", type=str)
+                        help="Output log file. If file is not defined, logging is redirected to stdout.", type=str)
     args = parser.parse_args()
 
     plugin = PmtPlugin(mode=PmtPlugin.AGENT, conf_url=args.url, interval=args.interval,

@@ -11,21 +11,18 @@ pip install urllib3
 ## General Usage
 
 ```
-usage: pmt.py [-h] -s URL [-i INTERVAL] [-r] [-a] [-w ALLOWLIST]
-              [-o OUTPUT_LOG_FILE]
+usage: pmt.py [-h] -s URL [-i INTERVAL] [-r] [-a] [-w ALLOWLIST] [-o OUTPUT_LOG_FILE]
 
 PMT agent, reporting telemetry to stdout.
 
 options:
   -h, --help          show this help message and exit
-  -s URL              PMT repository XML metadata
+  -s URL              Path to PMT repository XML metadata (pmt.xml). URL or local file path.
   -i INTERVAL         Interval between reads (in seconds).
-  -r                  Read metrics and exit
-  -a                  Append sampleID to sample identifier
-  -w ALLOWLIST        Path to file containing allowed metrics in form of list
-                      of regular expressions split by new line
-  -o OUTPUT_LOG_FILE  Output log file. If file is not defined, logging is
-                      redirected to stdout
+  -r                  Read metrics and exit.
+  -a                  Append sampleID to sample identifier.
+  -w ALLOWLIST        Path to file containing allowed metrics in form of list of regular expressions. Split by new line.
+  -o OUTPUT_LOG_FILE  Output log file. If file is not defined, logging is redirected to stdout.
 ```
 
 ## Collection telemetry data via command line interface
