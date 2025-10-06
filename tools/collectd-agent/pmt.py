@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-# Copyright (C) 2021-2022 Intel Corporation
-# SPDX-License-Identifier: MIT
+# Copyright (C) 2021-2025 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
 
 """This module provides means of PMT telemetry retrieval.
     When imported, it is used with collectd Python plugin and reports via collect API.
@@ -22,7 +22,7 @@ import math
 from lxml import etree
 import argparse
 
-if sys.platform == "win32":
+if platform.system() == "Windows":
     import wmi
     import win32file
     import winioctlcon
@@ -60,7 +60,7 @@ if sys.platform == "win32":
 
             if ret == None:
                 # print("Get discovery failed!")
-                exit
+                sys.exit(1)
 
             # typedef struct _PMTSW_TELEMETRY_DISCOVERY {
             #     ULONG Version;
@@ -72,7 +72,7 @@ if sys.platform == "win32":
 
             if discovery == None:
                 # print("Get discovery failed!")
-                exit
+                sys.exit(1)
 
             telemetry = []
             _, count = struct.unpack("LL", discovery[0:8])
@@ -105,6 +105,130 @@ if sys.platform == "win32":
 
         finally:
             win32file.CloseHandle(handle)
+
+if platform.system() == "VMkernel":
+    import ctypes
+    import subprocess
+
+    class pmt_read_args(ctypes.Structure):
+        _fields_ = [
+            ("entry_id", ctypes.c_uint32),
+            ("guid", ctypes.c_uint32),
+            ("size", ctypes.c_uint32),
+            ("offset", ctypes.c_uint32),
+            ("count", ctypes.c_uint32),
+            ("buffer", ctypes.c_uint64),
+            ("ret", ctypes.c_int32),
+        ]
+
+    class pmt_sig(ctypes.Structure):
+        _fields_ = [
+            ("f0", ctypes.c_uint32),
+            ("f1", ctypes.c_char * 32),
+            ("f2", ctypes.c_char * 32),
+            ("f3", ctypes.c_int32),
+            ("f4", ctypes.c_void_p),
+        ]
+
+    class mgmt_callback_info(ctypes.Structure):
+        _fields_ = [
+            ("f0", ctypes.c_uint32),
+            ("f1", ctypes.c_void_p),
+            ("f2", ctypes.c_char),
+            ("f3", ctypes.c_char),
+            ("f4", ctypes.c_uint32 * 4),
+            ("f5", ctypes.c_uint32 * 4),
+            ("f6", ctypes.c_uint64),
+        ]
+
+    def get_instances():
+        """Retrieve PMT instances from VMkernel."""
+        pmt_pattern = r"(\S+#2)/ipmt"
+        try:
+            output = subprocess.run(
+                ["/usr/lib/vmware/vmkmgmt_keyval/vmkmgmt_keyval", "-d"],
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            return re.findall(pmt_pattern, output.stdout)
+        except:
+            print("Error retrieving PMT instances")
+            sys.exit(1)
+
+    def get_telemetry(instance):
+        """Retrieve telemetry data for a given PMT instance."""
+        try:
+            mgmt_dll = ctypes.cdll.LoadLibrary("libvmkmgmt.so")
+        except:
+            print("Error loading management library")
+            sys.exit(1)
+
+        mgmt_handle = ctypes.c_void_p()
+        pmt_callbacks = mgmt_callback_info(
+            1,
+            None,
+            1,
+            1,
+            (ctypes.c_uint32 * 4)(ctypes.sizeof(pmt_read_args)),
+            (ctypes.c_uint32 * 4)(2),
+            16,
+        )
+        mgmt_sig = pmt_sig(
+            0x01000000,
+            instance.encode(),
+            b"ipmt",
+            1,
+            ctypes.cast(ctypes.pointer(pmt_callbacks), ctypes.c_void_p),
+        )
+        ret = mgmt_dll.vmk_MgmtUserInit(
+            ctypes.byref(mgmt_sig), 0, ctypes.byref(mgmt_handle)
+        )
+        if ret:
+            print("Error opening management interface")
+            sys.exit(1)
+
+        try:
+            telemetry = []
+            entry_id = 0
+            MAX_ENTRIES = 256  # Prevent infinite loops
+
+            while entry_id < MAX_ENTRIES:
+                pmt_args = pmt_read_args(entry_id)
+
+                # Get the size of telemetry data
+                ret = mgmt_dll.vmk_MgmtUserCallbackInvokeInt(
+                    mgmt_handle, 0, 16, 1, ctypes.byref(pmt_args)
+                )
+                if ret:
+                    print("Error invoking management callback")
+                    sys.exit(1)
+
+                # Check if we've reached the end of entries
+                if pmt_args.ret:
+                    break
+
+                # Allocate buffer for telemetry data
+                buffer = (ctypes.c_uint8 * pmt_args.size)()
+                pmt_args.buffer = ctypes.addressof(buffer)
+                pmt_args.count = pmt_args.size
+
+                # Retrieve actual telemetry data
+                ret = mgmt_dll.vmk_MgmtUserCallbackInvokeInt(
+                    mgmt_handle, 0, 16, 1, ctypes.byref(pmt_args)
+                )
+                if ret or pmt_args.ret:
+                    print("Error invoking management callback")
+                    sys.exit(1)
+
+                byte_buffer = ctypes.string_at(ctypes.addressof(buffer), pmt_args.size)
+                telemetry.append({"guid": pmt_args.guid, "data": byte_buffer})
+                entry_id += 1
+
+            return telemetry
+
+        finally:
+            mgmt_dll.vmk_MgmtUserDestroy(mgmt_handle)
 
 
 class PmtXmlParser:
@@ -389,13 +513,18 @@ class PmtXmlParser:
             return ret
         parser = etree.XMLParser(
             ns_clean=True, remove_comments=True, remove_blank_text=True)
-        opener = urllib.request.build_opener()
         try:
-            tree = etree.parse(opener.open(url), parser)
+            # Check if it's a URL with a scheme or a local file path
+            parsed_url = urlparse(url) if url else None
+            if parsed_url and parsed_url.scheme:
+                opener = urllib.request.build_opener()
+                tree = etree.parse(opener.open(url), parser)
+            else:
+                # Treat as local file path
+                tree = etree.parse(url, parser)
             ret = PmtXmlParser.convert_pmt_to_dict(tree.getroot())
-        except:
-            pass
-            # log(f"Exception: {sys.exc_info()[0]}")
+        except Exception as e:
+            print(f"Exception during xml parsing: {e}")
 
         return ret
 
@@ -505,7 +634,7 @@ class PmtPlugin:
         # discover pmt sysfs structure
         pmt_root = "/sys/class/intel_pmt"
         pmt_dir = []
-        if sys.platform == "linux":
+        if platform.system() == "Linux":
             if path.exists("/hostfs"):
                 pmt_root = "/hostfs" + pmt_root
             try:
@@ -543,7 +672,7 @@ class PmtPlugin:
                         self.pmt_files[t_id].append(t_path)
                     # print(self.pmt_files)
                     self.logger("Plugin PMT found PMT endpoint %s at %s" % (t_id, t_path))
-        if sys.platform == "win32":
+        if platform.system() == "Windows":
             device_ids = getDriverDeviceIds()
             for device_id in device_ids:
                 interface = "//?/" + device_id.DeviceID.replace("\\",
@@ -556,6 +685,17 @@ class PmtPlugin:
                     else:
                         self.pmt_files[t_id] = []
                         self.pmt_files[t_id].append(interface)
+        if platform.system() == "VMkernel":
+            instances = get_instances()
+            for instance in instances:
+                telemetry = get_telemetry(instance)
+                for t in telemetry:
+                    t_id = hex(t["guid"]) + "_" + str(len(t["data"]))
+                    if t_id in self.pmt_files:
+                        self.pmt_files[t_id].append(instance)
+                    else:
+                        self.pmt_files[t_id] = []
+                        self.pmt_files[t_id].append(instance)
         # find discovered guid from pmt meta, load the dictionary, if not found, remove it
         self.pmt = {}
         tmp_pmt_files = copy.deepcopy(self.pmt_files)
@@ -629,7 +769,7 @@ class PmtPlugin:
         sample id is added to sample name"""
         ret = {}
         buffer = ""
-        if sys.platform == "linux":
+        if platform.system() == "Linux":
             try:
                 self.assert_is_not_symlink(fname)
                 with open(fname, 'rb') as fd:
@@ -637,8 +777,13 @@ class PmtPlugin:
             except IOError:
                 self.logger("Unable to read file %s." % fname)
                 return ret
-        elif sys.platform == "win32":
+        elif platform.system() == "Windows":
             telemetry = get_telemetry(fname, use_qwords=True)
+            for t in telemetry:
+                if str(hex(t['guid'])) in uid:
+                    buffer = t['data']
+        elif platform.system() == "VMkernel":
+            telemetry = get_telemetry(fname)
             for t in telemetry:
                 if str(hex(t['guid'])) in uid:
                     buffer = t['data']
@@ -800,17 +945,17 @@ else:
 
     parser = argparse.ArgumentParser(description="PMT agent, reporting telemetry to stdout.")
     parser.add_argument("-s", required=True, dest='url',
-                        help="PMT repository XML metadata", type=str)
+                        help="Path to PMT repository XML metadata (pmt.xml). URL or local file path.", type=str)
     parser.add_argument("-i", required=False, dest='interval', type=float,
                         default=5.0, help="Interval between reads (in seconds).")
-    parser.add_argument("-r", required=False, dest='read', help="Read metrics and exit", action="store_true")
-    parser.add_argument("-a", required=False, dest='id', help="Append sampleID to sample identifier",
+    parser.add_argument("-r", required=False, dest='read', help="Read metrics and exit.", action="store_true")
+    parser.add_argument("-a", required=False, dest='id', help="Append sampleID to sample identifier.",
                         action="store_true")
     parser.add_argument("-w", required=False, default=['.*'], dest='allowlist',
-                        help="Path to file containing allowed metrics in form of list of regular expressions "
-                             "split by new line", type=file_lines_to_list)
+                        help="Path to file containing allowed metrics in form of list of regular expressions."
+                             " Split by new line.", type=file_lines_to_list)
     parser.add_argument("-o", required=False, dest='output_log_file',
-                        help="Output log file. If file is not defined, logging is redirected to stdout", type=str)
+                        help="Output log file. If file is not defined, logging is redirected to stdout.", type=str)
     args = parser.parse_args()
 
     plugin = PmtPlugin(mode=PmtPlugin.AGENT, conf_url=args.url, interval=args.interval,
