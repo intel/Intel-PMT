@@ -89,7 +89,7 @@ def add_description_comments(description_map, header_map, yaml):
     """Writes description of metrics to yaml file"""
     header = f'''
         # Metedata generated for following Telemetry Aggregator:
-        
+
         # name : {header_map['name']}
         # description : {header_map['description']}
         # uniqueId : {hex(header_map['uniqueId'] & (2**32-1))}

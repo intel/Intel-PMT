@@ -7,13 +7,13 @@ file. The Avro file contains minimal subset of information stored in these XMLs.
 
 ### Version
 Inventory-converter is versioned and currently support
-2 versions: 0 and 1. 
+2 versions: 0 and 1.
 - Version 0 enables user to specify which
-metrics publish using Redfish sensor. 
-- Version 1 extends user specifications to data sources selection and 
-  streaming through Kafka for specific metric. 
+metrics publish using Redfish sensor.
+- Version 1 extends user specifications to data sources selection and
+  streaming through Kafka for specific metric.
 
-Keep in mind that version distinguishes dependencies and each platform supports 
+Keep in mind that version distinguishes dependencies and each platform supports
 one version. Versioning is not backwards compatible from the platform point of view.
 
 
@@ -27,7 +27,7 @@ one version. Versioning is not backwards compatible from the platform point of v
   - Intel PMT Aggregator Avro Schema avsc
     - Available at `schemas/`
     - Choose between `AggregatorSchemaVer0.avsc` and `AggregatorSchemaVer1.avsc` according to the version
-      
+
 - User defined - should be created by you
   - YAML with Metric metadata
     - User specified. Example file included in `./examples`.
@@ -83,10 +83,10 @@ r     └──────────┘                                      
 ### YAML with Metric metadata
 
 This file contains list of metrics to be extracted from XML and extra metadata
-not originally present in XMLs. It can be used by external software utilizing 
+not originally present in XMLs. It can be used by external software utilizing
 generated Avro file to obtain extra information about metrics which controls
-how it should handle them. It is recommended to not select metrics that are reserved. 
-Inventory-converter is versioned and currently support 2 versions of yaml. 
+how it should handle them. It is recommended to not select metrics that are reserved.
+Inventory-converter is versioned and currently support 2 versions of yaml.
 Version 1 is an extension of the version 0.
 
 #### YAML format for version 0
@@ -107,15 +107,15 @@ Example of correct YAML metadata for version 0 looks like this:
 
 Version 1 extends information from version 0 with:
 - Whether given metric should be available through push model (over Kafka stream)
-- Whether data source of this metric is Streaming watcher/Threshold watcher for Kafka stream and 
+- Whether data source of this metric is Streaming watcher/Threshold watcher for Kafka stream and
   Streaming watcher/Threshold watcher/Aggregator for Redfish sensor
 
 Keep in mind that there are some limitations for this yaml:
 - Watcher is ignored for all destinations and shouldn't be used
 - Kafka stream doesn't support Aggregator source
-- If you provide in list more than one data source then only one data source will be streamed. 
-Data source will be chosen according to priority list: 
-  1. ThresholdWatcher, 
+- If you provide in list more than one data source then only one data source will be streamed.
+Data source will be chosen according to priority list:
+  1. ThresholdWatcher,
   2. StreamingWatcher,
   3. Aggregator
 
@@ -125,9 +125,9 @@ Format of YAML metadata file in Version 1 is as following:
 # (...)
 386: # Identifies sampleID attribute from $(name)_aggregator_interface.xml
     type: Count # Maps to one of available Sensor types
-    kafkaStream: 
+    kafkaStream:
       - StreamingWatcher # Configures whether metric should be published using push model
-    redfishSensor: 
+    redfishSensor:
       - Aggregator # Configures whether metric should be published using Redfish sensor
 389:
     type: Count
@@ -136,19 +136,19 @@ Format of YAML metadata file in Version 1 is as following:
 474:
     type: Count
     kafkaStream: # Metric will be published using Kafka Stream and
-      - ThresholdWatcher # data source of this metric will be Threshold Watcher                          
-    redfishSensor: # Metric will be published using Redfish Sensor and 
-      - StreamingWatcher  # data source of this metric will be Streaming Watcher            
+      - ThresholdWatcher # data source of this metric will be Threshold Watcher
+    redfishSensor: # Metric will be published using Redfish Sensor and
+      - StreamingWatcher  # data source of this metric will be Streaming Watcher
 475:
     type: Count
-    kafkaStream: 
-      - StreamingWatcher  # Data source of this metric will 
-      - ThresholdWatcher  # be Threshold Watcher                                             
-    redfishSensor: 
+    kafkaStream:
+      - StreamingWatcher  # Data source of this metric will
+      - ThresholdWatcher  # be Threshold Watcher
+    redfishSensor:
       - StreamingWatcher  # Data source of this metric will
       - ThresholdWatcher  # be Threshold Watcher
       - Aggregator
-                                                                         
+
 # (...)
 ```
 
@@ -157,9 +157,9 @@ Example of WRONG YAML metadata for Version 1 is as following:
 # (...)
 474: #WRONG YAML metadata !
     type: Count
-    kafkaStream: # As aggregator cannot be data source of Kafka streaming 
-        - Aggregator # this config won't work          
-    redfishSensor: # Data source of Redfish sensor can be empty and it just means that   
+    kafkaStream: # As aggregator cannot be data source of Kafka streaming
+        - Aggregator # this config won't work
+    redfishSensor: # Data source of Redfish sensor can be empty and it just means that
                    # this metric won't be published using Redfish sensor
 # (...)
 ```

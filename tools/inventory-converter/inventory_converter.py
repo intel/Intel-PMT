@@ -30,7 +30,7 @@ from avro.errors import AvroException
 
 logger = logging.getLogger()
 versions = {"EGS": 0, "BHS": 1}
-allowed_yaml_values = {"kafkaStream": ["ThresholdWatcher", "StreamingWatcher"], 
+allowed_yaml_values = {"kafkaStream": ["ThresholdWatcher", "StreamingWatcher"],
                      "redfishSensor" : ["Aggregator", "ThresholdWatcher", "StreamingWatcher"]}
 
 def opener(path, flags):
@@ -267,7 +267,7 @@ def extract_metric(elem, agg_nsmap, sensor_types, version):
     sample_id = int(elem.get("sampleID"))
 
     metric = {}
-    metric["name"] = elem.get("sampleName")
+    metric["name"] = f"{elem.get('sampleName')}_{sample_id}"
     metric["sampleGroup"] = elem.get("sampleGroup")
     metric["datatypeIDREF"] = elem.get("datatypeIDREF")
     metric["sampleId"] = sample_id
