@@ -11,7 +11,7 @@ setup(name='inventory-converter',
       description='Convert XML Telemetry Aggregator data to Avro binary file with schema.',
       py_modules=['inventory_converter', 'schema_generator', 'yaml_metadata_from_avro'],
       entry_points={
-          'console_scripts': ['inventory-converter=inventory_converter:main', 
+          'console_scripts': ['inventory-converter=inventory_converter:main',
                               'schema-generator=schema_generator:main',
                               'yaml-metadata-from-avro=yaml_metadata_from_avro:main'],
       },
