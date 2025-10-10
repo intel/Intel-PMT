@@ -1,0 +1,23 @@
+# Copyright (C) 2025 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+
+receivers:
+  intelpmtreceiver:
+    interval: 20s
+    metadata: "../../../xml/pmt.xml"
+    mode: local
+    path: /sys/class/intel_pmt/
+
+exporters:
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+
+processors:
+  batch:
+
+service:
+  pipelines:
+    metrics:
+      receivers: [intelpmtreceiver]
+      processors: [batch]
+      exporters: [prometheus]
