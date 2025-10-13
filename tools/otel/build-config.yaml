@@ -232,7 +232,6 @@ providers:
   - gomod: go.opentelemetry.io/collector/confmap/provider/httpsprovider v1.40.0
   - gomod: go.opentelemetry.io/collector/confmap/provider/yamlprovider v1.40.0
 
-# When adding a replace, add a comment before it to document why it's needed and when it can be removed
-replaces:
-  # redirect for intelpmtreceiver
-  - github.com/intel/Intel-PMT/tools/otel/intelpmtreceiver => ../intelpmtreceiver
+# If you want to use a local version of the intelpmtreceiver, uncomment the following lines and adjust the path
+# replaces:
+  # - github.com/intel/Intel-PMT/tools/otel/intelpmtreceiver => ../intelpmtreceiver
