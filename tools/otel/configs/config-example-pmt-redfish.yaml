@@ -1,0 +1,30 @@
+# Copyright (C) 2025 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+
+receivers:
+  intelpmtreceiver:
+    interval: 10s
+    metadata: "../../../xml/pmt.xml"
+    mode: "redfish"
+    endpoints:
+      endpoint1:
+        endpoint: https://bmc_ip/redfish/v1/TelemetryService/TelemetryData/0/Data
+        headers:
+          Authorization: "Basic Somebase64encodedCredential"
+        trigger_action: https://bmc_ip/redfish/v1/TelemetryService/Actions/CollectTelemetryData
+
+exporters:
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+
+  debug:
+
+processors:
+  batch:
+
+service:
+  pipelines:
+    metrics:
+      receivers: [intelpmtreceiver]
+      processors: [batch]
+      exporters: [debug, prometheus]
