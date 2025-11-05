@@ -1,0 +1,25 @@
+name: Question
+description: Ask a question about usage, architecture, or schemas
+labels: [question]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: Topic
+      description: Short summary of your question
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Include context, what you've tried, relevant XML/commands
+    validations:
+      required: true
+  - type: checkboxes
+    id: prior
+    attributes:
+      label: Prior Steps
+      options:
+        - label: I have read the FAQ
+          required: true

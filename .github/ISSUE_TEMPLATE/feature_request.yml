@@ -1,0 +1,24 @@
+name: Feature Request
+description: Suggest an idea to improve Intel PMT
+labels: [enhancement]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Feature Title
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation / Use Case
+      description: Why is this feature needed?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: High-level design, config changes, schema additions, etc.
+    validations:
+      required: false
