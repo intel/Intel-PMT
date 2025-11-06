@@ -28,6 +28,45 @@ Intel PMT support on Linux has been added to mainline Linux kernel under platfor
 
 Using _guid_ and _size_ information, the associated Intel PMT XML files set can be identified using repository metadata at _xml/pmt.xml_.
 
-## How is Intel PMT XML to be used in a telemetry agent
+## How Intel PMT XMLs are used with telemetry agent
 
 Intel PMT kernel driver is typically loaded to discover and manage Intel PMT providers on a platform. Once the kernel driver is loaded, telemetry agent shall scan the discovered PMT unique IDs. For every known unique ID, telemetry agent shall load the matching set of XML files. Using the specification in the XML files, telemetry agent then reads low level samples/counters followed up by evaluation of high level samples/counters as defined by each high level transformation formula. Telemetry agent may also furnish the result of the evaluation with appropriate unit. Telemetry agent then can report out the collected data to designated data collectors for further processing (i.e. observability visualization, machine learning, inference).
+
+---
+
+## Maintainers & Ownership
+
+Lead Maintainer: **@jwasiuki (Jedrzej Wasiukiewicz)**
+Contact: **jedrzej.wasiukiewicz@intel.com**
+
+## Quick Start
+Collect local aggregators with python script
+```bash
+git clone https://github.com/intel/Intel-PMT.git
+cd Intel-PMT
+sudo python tools/collectd-agent/pmt.py -s file://$(pwd)/xml/pmt.xml -r
+```
+
+Build and run custom OpenTelemetry collector:
+```bash
+cd tools/otel
+# Build via ocb (see tools/otel/Readme.md)
+./build/otelcol-pmt --config configs/config-example-pmt-local.yaml
+```
+
+## Repository Layout
+
+| Path | Purpose |
+|------|---------|
+| `xml/` | Platform telemetry XML schemas + GUID registry |
+| `tools/collectd-agent/` | Reference Python telemetry reader |
+| `tools/inventory-converter/` | XML -> Avro conversion tooling |
+| `tools/otel/` | Custom OpenTelemetry Collector receiver |
+| `tools/docker/` | Containerised environment |
+| `docs/` | FAQ, guides |
+
+## Documentation
+Additional documentation lives under `docs/`:
+- FAQ: `docs/FAQ.md`
+- Getting Started Guide: `docs/getting-started.md`
+- Use cases: `docs/use-cases.md`
