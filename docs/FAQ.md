@@ -24,8 +24,8 @@ No - XMLs are defined by platform architects and should not be modified.
 It can, but currently it doesn't.
 
 For the telemetry to be gathered from the whole platform, each component would have to either
-- implement PMT spec and expose it's metrics in aggregator described by GUID or
-- have it's sensors aggregated directly by BMC
+- implement PMT spec and expose its metrics in aggregator described by GUID or
+- have its sensors aggregated directly by BMC
 
 Bulk Telemetry supports only continuous metric gathering. Event-driven telemetry (like crashlog) is currently not supported, but might be in the future.
 
