@@ -277,5 +277,17 @@
 				<aggregatorinterface>cwf_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
+		<mapping guid="0x14421519" size="21552">
+			<lastupdated>2026-02-16</lastupdated>
+			<status>production</status>
+			<description>Clearwater Forest OOBMSM Core Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>CWF/OOBMSM/CORE</basedir>
+				<prefix>cwf</prefix>
+				<common>cwf_common.xml</common>
+				<aggregator>cwf_aggregator.xml</aggregator>
+				<aggregatorinterface>cwf_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
 	</mappings>
 </pmt>
