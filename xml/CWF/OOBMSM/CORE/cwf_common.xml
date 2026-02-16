@@ -19,6 +19,9 @@
 	</TELC:dataType>
 	<TELC:dataType name="tcore_usage" datatypeID="tcore_usage">
 		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="core_usage">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
 		<TELC:format>U64.38.26</TELC:format>
 	</TELC:dataType>
 	<TELC:dataType name="tcrystal_tsc_timestamp" datatypeID="tcrystal_tsc_timestamp">

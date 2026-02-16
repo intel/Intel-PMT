@@ -59,7 +59,7 @@
 	<TELI:uniqueid>14421519</TELI:uniqueid>
 	<TELI:NDA>Public</TELI:NDA>
 	<TELI:samplePeriod>10</TELI:samplePeriod>
-	<TELI:revisionDate>2025-12-02</TELI:revisionDate>
+	<TELI:revisionDate>2026-02-16</TELI:revisionDate>
 	<TELI:AggregatorSamples>
 		<TELI:T_AggregatorSample sampleName="MOD_0_CORE_0_FREQ_HIST_R0" sampleGroup="MOD_0_CORE_0_FREQ_HIST_R0_R1" datatypeIDREF="tcore_time" sampleID="0">
 			<TELI:description>Frequency histogram range 0 (core in C6) counter for module 0 core 0</TELI:description>

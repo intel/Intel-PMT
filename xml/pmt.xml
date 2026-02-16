@@ -278,7 +278,7 @@
 			</xmlset>
 		</mapping>
 		<mapping guid="0x14421519" size="21552">
-			<lastupdated>2025-12-02</lastupdated>
+			<lastupdated>2026-02-16</lastupdated>
 			<status>production</status>
 			<description>Clearwater Forest OOBMSM Core Telemetry samples definition and transformation rules</description>
 			<xmlset>
