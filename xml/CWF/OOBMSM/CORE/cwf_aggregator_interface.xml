@@ -22,7 +22,7 @@
 			<TransFormParameters>
 				<parameterName>parameter_0</parameterName>
 			</TransFormParameters>
-			<transform>( $parameter_0 &amp; 0xffffffffffffffff ) / ( 2**26 ) </transform>
+			<transform>$parameter_0 / ( 2**26 ) </transform>
 		</TransFormation>
 		<TransFormation name="tsc100_time" transformID="tsc100_time">
 			<output_dataclass>float</output_dataclass>
