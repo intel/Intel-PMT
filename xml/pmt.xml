@@ -301,5 +301,17 @@
 				<aggregatorinterface>cwf_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
+		<mapping guid="0x24859395" size="8192">
+			<lastupdated>2026-02-16</lastupdated>
+			<status>production</status>
+			<description>Clearwater Forest PUNIT C-Die Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>CWF/PUNIT/CDIE</basedir>
+				<prefix>cwf</prefix>
+				<common>cwf_common.xml</common>
+				<aggregator>cwf_aggregator.xml</aggregator>
+				<aggregatorinterface>cwf_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
 	</mappings>
 </pmt>
