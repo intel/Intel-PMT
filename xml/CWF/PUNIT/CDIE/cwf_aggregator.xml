@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE Aggregator [<!ENTITY otherfile SYSTEM "cwf_common.xml">]>
-<TELEM:Aggregator xmlns="http://schemas.intel.com/telemetry/base/1/" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns:TELC="http://schemas.intel.com/telemetry/base/common" 
-	xmlns:TELEM="http://schemas.intel.com/telemetry/base/aggregator" 
-	xmlns:xi="http://www.w3.org/2001/XInclude" 
- 	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/aggregator telemetryAggregator.xsd"> 
+<TELEM:Aggregator xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xmlns:TELEM="http://schemas.intel.com/telemetry/base/aggregator"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+ 	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/aggregator telemetryAggregator.xsd">
 
 	<TELC:DataTypesInclude>&otherfile;</TELC:DataTypesInclude>
 	<TELEM:name>cwf</TELEM:name>
