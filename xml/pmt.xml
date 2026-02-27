@@ -313,5 +313,29 @@
 				<aggregatorinterface>cwf_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
+		<mapping guid="0x3086000" size="3352">
+			<lastupdated>2026-02-27</lastupdated>
+			<status>production</status>
+			<description>PTL normal telemetry in Punit</description>
+			<xmlset>
+				<basedir>PTL/0</basedir>
+				<prefix>ptl</prefix>
+				<common>ptl_common.xml</common>
+				<aggregator>ptl_aggregator.xml</aggregator>
+				<aggregatorinterface>ptl_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x3086100" size="744">
+			<lastupdated>2026-02-27</lastupdated>
+			<status>production</status>
+			<description>PTL fixed telemetry in Punit</description>
+			<xmlset>
+				<basedir>PTL/1</basedir>
+				<prefix>ptl</prefix>
+				<common>ptl_common.xml</common>
+				<aggregator>ptl_aggregator.xml</aggregator>
+				<aggregatorinterface>ptl_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
 	</mappings>
 </pmt>
