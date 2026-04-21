@@ -17,7 +17,7 @@ setup(name='inventory-converter',
       },
       install_requires=[
           'avro==1.11.3',
-          'lxml==4.9.2',
+          'lxml==6.1.0',
           'PyYAML==6.0'
       ]
       )
