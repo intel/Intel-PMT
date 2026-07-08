@@ -337,5 +337,29 @@
 				<aggregatorinterface>ptl_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
+				<mapping guid="0x308d100" size="744">
+			<lastupdated>2026-07-08</lastupdated>
+			<status>production</status>
+			<description>WCL fixed telemetry in Punit</description>
+			<xmlset>
+				<basedir>WCL/0</basedir>
+				<prefix>wcl</prefix>
+				<common>wcl_common.xml</common>
+				<aggregator>wcl_aggregator.xml</aggregator>
+				<aggregatorinterface>wcl_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x308d000" size="3352">
+			<lastupdated>2026-07-08</lastupdated>
+			<status>production</status>
+			<description>WCL normal telemetry in Punit</description>
+			<xmlset>
+				<basedir>WCL/1</basedir>
+				<prefix>wcl</prefix>
+				<common>wcl_common.xml</common>
+				<aggregator>wcl_aggregator.xml</aggregator>
+				<aggregatorinterface>wcl_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
 	</mappings>
 </pmt>
