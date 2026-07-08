@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TELC:DataTypes xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/common telemetry_common.xsd">
+
+	<TELC:dataType name="txtal_time" datatypeID="txtal_time">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="seconds">
+				<TELC:symbol>s</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tpkgc_wake_cause" datatypeID="tpkgc_wake_cause">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="percent">
+				<TELC:symbol>%</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tpkgc_block_cause" datatypeID="tpkgc_block_cause">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="percent">
+				<TELC:symbol>%</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="twp_volts" datatypeID="twp_volts">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="volts">
+				<TELC:symbol>V</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tbw_64B" datatypeID="tbw_64B">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="megabytes">
+				<TELC:symbol>MB</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tbw_B" datatypeID="tbw_B">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="megabytes">
+				<TELC:symbol>MB</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tbw_32B" datatypeID="tbw_32B">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="megabytes">
+				<TELC:symbol>MB</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tltr" datatypeID="tltr">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="microseconds">
+				<TELC:symbol>us</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tclk_freq" datatypeID="tclk_freq">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="megahertz">
+				<TELC:symbol>MHz</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tenergy_J" datatypeID="tenergy_J">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="joules">
+				<TELC:symbol>J</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvid" datatypeID="tvid">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="volts">
+				<TELC:symbol>V</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="ttemperature" datatypeID="ttemperature">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="celcius">
+				<TELC:symbol>C</TELC:symbol>
+			</TELC:units>
+		<TELC:format>S8.7.0</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tevent_counter" datatypeID="tevent_counter">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="count">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tshort_volts" datatypeID="tshort_volts">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="volts">
+				<TELC:symbol>V</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U8.1.7</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="ticc" datatypeID="ticc">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="amps">
+				<TELC:symbol>A</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U10.7.3</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tratio_100" datatypeID="tratio_100">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="gigahertz">
+				<TELC:symbol>GHz</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tratio_16" datatypeID="tratio_16">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="gigahertz">
+				<TELC:symbol>GHz</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tratio_25" datatypeID="tratio_25">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="gigahertz">
+				<TELC:symbol>GHz</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tratio_33" datatypeID="tratio_33">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="gigahertz">
+				<TELC:symbol>GHz</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tratio_50" datatypeID="tratio_50">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="gigahertz">
+				<TELC:symbol>GHz</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvr_icc" datatypeID="tvr_icc">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="amps">
+				<TELC:symbol>A</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U16.8.8</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tscalability" datatypeID="tscalability">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="percent">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>U9.1.8</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tipu_icc" datatypeID="tipu_icc">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="percent">
+				<TELC:symbol>%</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tbeta" datatypeID="tbeta">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="scalar">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>U16.1.15</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tcep_volts" datatypeID="tcep_volts">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="volts">
+				<TELC:symbol>V</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tsirp_icc" datatypeID="tsirp_icc">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="amps">
+				<TELC:symbol>A</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U11.9.2</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tenergy" datatypeID="tenergy">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="joules">
+				<TELC:symbol>J</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U32.18.14</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvr_energy" datatypeID="tvr_energy">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="joules">
+				<TELC:symbol>J</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tgt_clk_cnt" datatypeID="tgt_clk_cnt">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="cycles">
+				<TELC:symbol>cycles</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tgeneric_counter" datatypeID="tgeneric_counter">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tmc_cycles" datatypeID="tmc_cycles">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="cycles">
+				<TELC:symbol>cycles</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tsb_time" datatypeID="tsb_time">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="seconds">
+				<TELC:symbol>s</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tcycle_count" datatypeID="tcycle_count">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="cycles">
+				<TELC:symbol>cycles</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tgeneric_sample" datatypeID="tgeneric_sample">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tslowloop" datatypeID="tslowloop">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="seconds">
+				<TELC:symbol>s</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tplatform_temperature" datatypeID="tplatform_temperature">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="celcius">
+				<TELC:symbol>C</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tsb_0.5_time" datatypeID="tsb_0.5_time">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="seconds">
+				<TELC:symbol>s</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tbw_1024B" datatypeID="tbw_1024B">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="megabytes">
+				<TELC:symbol>MB</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="txtal_time_19_2" datatypeID="txtal_time_19_2">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="seconds">
+				<TELC:symbol>s</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tstring" datatypeID="tstring">
+		<TELC:dataclass>string</TELC:dataclass>
+	</TELC:dataType>
+</TELC:DataTypes>
