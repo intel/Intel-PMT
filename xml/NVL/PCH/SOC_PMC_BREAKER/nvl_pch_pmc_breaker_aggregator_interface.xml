@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TELI:AggregatorInterface
+	xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELI="http://schemas.intel.com/telemetry/interface/aggregatorinterface"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/interface/aggregatorinterface telemetry.xsd" >
+
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nvl_pch_pmc_breaker_aggregator.xml"/>
+
+	<TransFormations xmlns="http://schemas.intel.com/telemetry/base/common">
+		<TransFormation name="generic_counter" transformID="generic_counter">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="blk_brk_cntr" transformID="blk_brk_cntr">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * ( 30.5 ) / 1e6 </transform>
+		</TransFormation>
+		<TransFormation name="generic_sample" transformID="generic_sample">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="passthru" transformID="passthru">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0</transform>
+		</TransFormation>
+	</TransFormations>
+
+	<TELI:name>NVL</TELI:name>
+	<TELI:description>NVL PCH PMC BREAKER</TELI:description>
+	<TELI:uniqueid>0x01092D02</TELI:uniqueid>
+	<TELI:NDA>Public</TELI:NDA>
+	<TELI:samplePeriod>10</TELI:samplePeriod>
+	<TELI:revisionDate>2026-08-11</TELI:revisionDate>
+	<TELI:AggregatorSamples>
+		<TELI:T_AggregatorSample sampleName="LPM_Breaker_COUNTER_CONTROL" sampleGroup="CONFIG" datatypeIDREF="tgeneric_sample" sampleID="0">
+			<TELI:description>LPM Breaker Counter Control (RESERVED)</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>LPM_Breaker_COUNTER_CONTROL</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PXPA_PG_BRK_CNTR" sampleGroup="PXPA_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="1">
+			<TELI:description>PXPA PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>PXPA_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PXPB_PG_BRK_CNTR" sampleGroup="PXPB_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="2">
+			<TELI:description>PXPB PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>PXPB_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="GBE_LAN_PG_BRK_CNTR" sampleGroup="GBE_LAN_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="3">
+			<TELI:description>GBE LAN PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>GBE_LAN_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LPSS_PG_BRK_CNTR" sampleGroup="LPSS_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="4">
+			<TELI:description>LPSS PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>LPSS_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="XDCI_PG_BRK_CNTR" sampleGroup="XDCI_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="5">
+			<TELI:description>XDCI PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>XDCI_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CSE_PG_BRK_CNTR" sampleGroup="CSE_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="6">
+			<TELI:description>CSE PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>CSE_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="KVMCC_PG_BRK_CNTR" sampleGroup="KVMCC_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="7">
+			<TELI:description>KVMCC PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>KVMCC_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PMT_PG_BRK_CNTR" sampleGroup="PMT_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="8">
+			<TELI:description>PMT PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>PMT_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="CLINK_PG_BRK_CNTR" sampleGroup="CLINK_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="9">
+			<TELI:description>CLINK PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>CLINK_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PTIO_PG_BRK_CNTR" sampleGroup="PTIO_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="10">
+			<TELI:description>PTIO PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>PTIO_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="USBR0_PG_BRK_CNTR" sampleGroup="USBR0_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="11">
+			<TELI:description>USBR0 PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>USBR0_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="SMT1_PG_BRK_CNTR" sampleGroup="SMT1_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="12">
+			<TELI:description>SMT1 PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
+					<sampleIDREF>SMT1_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="SMS2_PG_BRK_CNTR" sampleGroup="SMS2_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="13">
+			<TELI:description>SMS2 PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
+					<sampleIDREF>SMS2_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="SMS1_PG_BRK_CNTR" sampleGroup="SMS1_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="14">
+			<TELI:description>SMS1 PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
+					<sampleIDREF>SMS1_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="ESE_PG_BRK_CNTR" sampleGroup="ESE_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="15">
+			<TELI:description>ESE PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
+					<sampleIDREF>ESE_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="SMT4_PG_BRK_CNTR" sampleGroup="SMT4_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="16">
+			<TELI:description>SMT4 PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>SMT4_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DMI3_PG_BRK_CNTR" sampleGroup="DMI3_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="17">
+			<TELI:description>DMI3 PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>DMI3_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="THC0_PG_BRK_CNTR" sampleGroup="THC0_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="18">
+			<TELI:description>THC0 PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>THC0_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="THC1_PG_BRK_CNTR" sampleGroup="THC1_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="19">
+			<TELI:description>THC1 PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>THC1_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PXPC_PG_BRK_CNTR" sampleGroup="PXPC_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="20">
+			<TELI:description>PXPC PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>PXPC_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="SATA_PG_BRK_CNTR" sampleGroup="SATA_PG_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="21">
+			<TELI:description>SATA PG Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>SATA_PG_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_RSCREQ_BRK_CNTR" sampleGroup="MEMORY_RSCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="22">
+			<TELI:description>MEMORY RSC_REQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_11</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_RSCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MEMORY_NS_RSCREQ_BRK_CNTR" sampleGroup="MEMORY_NS_RSCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="23">
+			<TELI:description>MEMORY_NS RSC_REQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_11</sampleGroupIDREF>
+					<sampleIDREF>MEMORY_NS_RSCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PSF1_RSCREQ_BRK_CNTR" sampleGroup="PSF1_RSCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="24">
+			<TELI:description>PSF0 RSC_REQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_12</sampleGroupIDREF>
+					<sampleIDREF>PSF1_RSCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PSF2_RSCREQ_BRK_CNTR" sampleGroup="PSF2_RSCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="25">
+			<TELI:description>PSF4 RSC_REQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_12</sampleGroupIDREF>
+					<sampleIDREF>PSF2_RSCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PSF3_RSCREQ_BRK_CNTR" sampleGroup="PSF3_RSCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="26">
+			<TELI:description>PSF6 RSC_REQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_13</sampleGroupIDREF>
+					<sampleIDREF>PSF3_RSCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="REF_PLL_RSCREQ_BRK_CNTR" sampleGroup="REF_PLL_RSCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="27">
+			<TELI:description>REF_PLL RSC_REQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_13</sampleGroupIDREF>
+					<sampleIDREF>REF_PLL_RSCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="SB_RSCREQ_BRK_CNTR" sampleGroup="SB_RSCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="28">
+			<TELI:description>SB RSC_REQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_14</sampleGroupIDREF>
+					<sampleIDREF>SB_RSCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LPSS_D3_BRK_CNTR" sampleGroup="LPSS_D3_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="29">
+			<TELI:description>LPSS D3 Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_14</sampleGroupIDREF>
+					<sampleIDREF>LPSS_D3_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="XDCI_D3_BRK_CNTR" sampleGroup="XDCI_D3_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="30">
+			<TELI:description>XDCI D3 Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_15</sampleGroupIDREF>
+					<sampleIDREF>XDCI_D3_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="SATA_D3_BRK_CNTR" sampleGroup="SATA_D3_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="31">
+			<TELI:description>SATA D3 Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_15</sampleGroupIDREF>
+					<sampleIDREF>SATA_D3_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="AON2_SPL_CSOFF_BRK_CNTR" sampleGroup="AON2_SPL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="32">
+			<TELI:description>AON2_SPL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_16</sampleGroupIDREF>
+					<sampleIDREF>AON2_SPL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="USB3_PLL_CSOFF_BRK_CNTR" sampleGroup="USB3_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="33">
+			<TELI:description>USB3_PLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_16</sampleGroupIDREF>
+					<sampleIDREF>USB3_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="MAINDIVIDER_CSOFF_BRK_CNTR" sampleGroup="MAINDIVIDER_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="34">
+			<TELI:description>MAIN DIVIDER CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_17</sampleGroupIDREF>
+					<sampleIDREF>MAINDIVIDER_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="REF_PLL_NON_OC_CSOFF_BRK_CNTR" sampleGroup="REF_PLL_NON_OC_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="35">
+			<TELI:description>REF_PLL_NON_OC CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_17</sampleGroupIDREF>
+					<sampleIDREF>REF_PLL_NON_OC_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DMI_PLL_CSOFF_BRK_CNTR" sampleGroup="DMI_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="36">
+			<TELI:description>DMI PLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_18</sampleGroupIDREF>
+					<sampleIDREF>DMI_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PHY_EXT_INJ_CSOFF_BRK_CNTR" sampleGroup="PHY_EXT_INJ_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="37">
+			<TELI:description>PHY_EXT_INJ CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_18</sampleGroupIDREF>
+					<sampleIDREF>PHY_EXT_INJ_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="USB2_PLL_CSOFF_BRK_CNTR" sampleGroup="USB2_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="38">
+			<TELI:description>USB2 PLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_19</sampleGroupIDREF>
+					<sampleIDREF>USB2_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="GBE_PLL_CSOFF_BRK_CNTR" sampleGroup="GBE_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="39">
+			<TELI:description>GbE LAN PLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_19</sampleGroupIDREF>
+					<sampleIDREF>GBE_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="SATA_PLL_CSOFF_BRK_CNTR" sampleGroup="SATA_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="40">
+			<TELI:description>SATA PLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_20</sampleGroupIDREF>
+					<sampleIDREF>SATA_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PCIE0_PLL_CSOFF_BRK_CNTR" sampleGroup="PCIE0_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="41">
+			<TELI:description>PCIE0 PLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_20</sampleGroupIDREF>
+					<sampleIDREF>PCIE0_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PCIE1_PLL_CSOFF_BRK_CNTR" sampleGroup="PCIE1_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="42">
+			<TELI:description>PCIE1 PLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_21</sampleGroupIDREF>
+					<sampleIDREF>PCIE1_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FABRIC_PLL_CSOFF_BRK_CNTR" sampleGroup="FABRIC_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="43">
+			<TELI:description>Fabric PLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_21</sampleGroupIDREF>
+					<sampleIDREF>FABRIC_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PCIE2_PLL_CSOFF_BRK_CNTR" sampleGroup="PCIE2_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="44">
+			<TELI:description>PCIE2 PLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_22</sampleGroupIDREF>
+					<sampleIDREF>PCIE2_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="REF_PLL_CSOFF_BRK_CNTR" sampleGroup="REF_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="45">
+			<TELI:description>REFPLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_22</sampleGroupIDREF>
+					<sampleIDREF>REF_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="REF38P4_PLL_CSOFF_BRK_CNTR" sampleGroup="REF38P4_PLL_CSOFF_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="46">
+			<TELI:description>REF38P4PLL CSOFF Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_23</sampleGroupIDREF>
+					<sampleIDREF>REF38P4_PLL_CSOFF_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PNDEMET_MISCREQ_BRK_CNTR" sampleGroup="PNDEMET_MISCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="47">
+			<TELI:description>PNDE_MET MISCREQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_23</sampleGroupIDREF>
+					<sampleIDREF>PNDEMET_MISCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PG5PMA0GVNN_MISCREQ_BRK_CNTR" sampleGroup="PG5PMA0GVNN_MISCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="48">
+			<TELI:description>PG5_PMA0_GVNN MISCREQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_24</sampleGroupIDREF>
+					<sampleIDREF>PG5PMA0GVNN_MISCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PLTGREATER_MISCREQ_BRK_CNTR" sampleGroup="PLTGREATER_MISCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="49">
+			<TELI:description>PLT_GREATER MISCREQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_24</sampleGroupIDREF>
+					<sampleIDREF>PLTGREATER_MISCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="ITSSCLKSRC_MISCREQ_BRK_CNTR" sampleGroup="ITSSCLKSRC_MISCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="50">
+			<TELI:description>ITSS_CLK_REQ MISCREQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_25</sampleGroupIDREF>
+					<sampleIDREF>ITSSCLKSRC_MISCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PG5PMA1GVNN_MISCREQ_BRK_CNTR" sampleGroup="PG5PMA1GVNN_MISCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="51">
+			<TELI:description>PG4_PMA1_GVNN MISCREQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_25</sampleGroupIDREF>
+					<sampleIDREF>PG5PMA1GVNN_MISCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PREWAKE0_MISCREQ_BRK_CNTR" sampleGroup="PREWAKE0_MISCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="52">
+			<TELI:description>PREWAKE0 MISCREQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_26</sampleGroupIDREF>
+					<sampleIDREF>PREWAKE0_MISCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PREWAKE1_MISCREQ_BRK_CNTR" sampleGroup="PREWAKE1_MISCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="53">
+			<TELI:description>PREWAKE1 MISCREQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_26</sampleGroupIDREF>
+					<sampleIDREF>PREWAKE1_MISCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="PG5PMA2GVNN_MISCREQ_BRK_CNTR" sampleGroup="PG5PMA2GVNN_MISCREQ_BRK_CNTR" datatypeIDREF="tblk_brk_cntr" sampleID="54">
+			<TELI:description>PG5_PMA2_GVNN MISCREQ Breaker Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_27</sampleGroupIDREF>
+					<sampleIDREF>PG5PMA2GVNN_MISCREQ_BRK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="RESERVED_1" sampleGroup="RESERVED_1" datatypeIDREF="tblk_brk_cntr" sampleID="55">
+			<TELI:description>RESERVED</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_27</sampleGroupIDREF>
+					<sampleIDREF>RESERVED_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>blk_brk_cntr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+	</TELI:AggregatorSamples>
+</TELI:AggregatorInterface>

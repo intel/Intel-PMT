@@ -361,5 +361,341 @@
 				<aggregatorinterface>wcl_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
+		<mapping guid="0x13000001" size="4032">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL Normal PMT Telemetry aggregator at Punit samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>NVL/PUNIT_DMU/0</basedir>
+				<prefix>nvl_0</prefix>
+				<common>nvl_0_common.xml</common>
+				<aggregator>nvl_0_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_0_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x13000101" size="960">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL Fixed PMT Telemetry aggregator at Punit samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>NVL/PUNIT_DMU/1</basedir>
+				<prefix>nvl_1</prefix>
+				<common>nvl_1_common.xml</common>
+				<aggregator>nvl_1_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_1_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1a000001" size="5376">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL Normal PMT Telemetry aggregator at DMU samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>NVL/PUNIT_DMU/2</basedir>
+				<prefix>nvl_2</prefix>
+				<common>nvl_2_common.xml</common>
+				<aggregator>nvl_2_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_2_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1a000101" size="512">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL Fixed PMT Telemetry aggregator at DMU samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>NVL/PUNIT_DMU/3</basedir>
+				<prefix>nvl_3</prefix>
+				<common>nvl_3_common.xml</common>
+				<aggregator>nvl_3_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_3_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x29787064" size="24">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL SOC PMC LPM RES</description>
+			<xmlset>
+				<basedir>NVL/PCD/SOC_PMC_LPM_RES</basedir>
+				<prefix>nvl_soc_pmc_lpm_res</prefix>
+				<common>nvl_soc_pmc_lpm_res_common.xml</common>
+				<aggregator>nvl_soc_pmc_lpm_res_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_pmc_lpm_res_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x30923280" size="8">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL SOC PMC SLP_S0</description>
+			<xmlset>
+				<basedir>NVL/PCD/SOC_PMC_SLP_S0</basedir>
+				<prefix>nvl_soc_pmc_slp_s0</prefix>
+				<common>nvl_soc_pmc_slp_s0_common.xml</common>
+				<aggregator>nvl_soc_pmc_slp_s0_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_pmc_slp_s0_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1093001" size="120">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL PCD-H Firmware Version</description>
+			<xmlset>
+				<basedir>NVL/PCD-H/FW_VERSION</basedir>
+				<prefix>nvl_fw</prefix>
+				<common>nvl_fw_common.xml</common>
+				<aggregator>nvl_fw_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_fw_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1093901" size="24">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL SOC PMC LPM RES PCD-H</description>
+			<xmlset>
+				<basedir>NVL/PCD-H/SOC_PMC_LPM_RES</basedir>
+				<prefix>nvl_soc_pmc_lpm_res</prefix>
+				<common>nvl_soc_pmc_lpm_res_common.xml</common>
+				<aggregator>nvl_soc_pmc_lpm_res_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_pmc_lpm_res_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1093801" size="432">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL S0C PMC BLOCKER PCD-H</description>
+			<xmlset>
+				<basedir>NVL/PCD-H/SOC_PMC_BLOCKER</basedir>
+				<prefix>nvl_soc_pmc_blocker</prefix>
+				<common>nvl_soc_pmc_blocker_common.xml</common>
+				<aggregator>nvl_soc_pmc_blocker_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_pmc_blocker_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1093e01" size="432">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL S0C PMC BREAKER PCD-H</description>
+			<xmlset>
+				<basedir>NVL/PCD-H/SOC_PMC_BREAKER</basedir>
+				<prefix>nvl_soc_pmc_breaker</prefix>
+				<common>nvl_soc_pmc_breaker_common.xml</common>
+				<aggregator>nvl_soc_pmc_breaker_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_pmc_breaker_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1093a01" size="88">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL S0C PMC LTR BLOCKER PCD-H</description>
+			<xmlset>
+				<basedir>NVL/PCD-H/SOC_PMC_LTR_BLOCKER</basedir>
+				<prefix>nvl_soc_pmc_ltr_blocker</prefix>
+				<common>nvl_soc_pmc_ltr_blocker_common.xml</common>
+				<aggregator>nvl_soc_pmc_ltr_blocker_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_pmc_ltr_blocker_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1093b01" size="176">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL S0C LTR STS PCD-H</description>
+			<xmlset>
+				<basedir>NVL/PCD-H/SOC_PMC_LTR_STS</basedir>
+				<prefix>nvl_soc_LTR_STS</prefix>
+				<common>nvl_soc_LTR_STS_common.xml</common>
+				<aggregator>nvl_soc_LTR_STS_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_LTR_STS_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1093c01" size="40">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>alpproductionha</status>
+			<description>NVL S0C LTR STS C2P2 PCD-H</description>
+			<xmlset>
+				<basedir>NVL/PCD-H/SOC_PMC_LTR_STS_C2P2</basedir>
+				<prefix>nvl_soc_LTR_STS_C2P2</prefix>
+				<common>nvl_soc_LTR_STS_C2P2_common.xml</common>
+				<aggregator>nvl_soc_LTR_STS_C2P2_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_LTR_STS_C2P2_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1091001" size="120">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL PCD-S Firmware Version</description>
+			<xmlset>
+				<basedir>NVL/PCD-S/FW_VERSION</basedir>
+				<prefix>nvl_fw</prefix>
+				<common>nvl_fw_common.xml</common>
+				<aggregator>nvl_fw_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_fw_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1091901" size="24">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL SOC PMC LPM RES PCD-S</description>
+			<xmlset>
+				<basedir>NVL/PCD-S/SOC_PMC_LPM_RES</basedir>
+				<prefix>nvl_soc_pmc_lpm_res</prefix>
+				<common>nvl_soc_pmc_lpm_res_common.xml</common>
+				<aggregator>nvl_soc_pmc_lpm_res_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_pmc_lpm_res_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1091802" size="288">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL S0C PMC BLOCKER PCD-S</description>
+			<xmlset>
+				<basedir>NVL/PCD-S/SOC_PMC_BLOCKER</basedir>
+				<prefix>nvl_soc_pmc_blocker</prefix>
+				<common>nvl_soc_pmc_blocker_common.xml</common>
+				<aggregator>nvl_soc_pmc_blocker_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_pmc_blocker_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1091e02" size="288">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL S0C PMC BREAKER PCD-S</description>
+			<xmlset>
+				<basedir>NVL/PCD-S/SOC_PMC_BREAKER</basedir>
+				<prefix>nvl_soc_pmc_breaker</prefix>
+				<common>nvl_soc_pmc_breaker_common.xml</common>
+				<aggregator>nvl_soc_pmc_breaker_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_pmc_breaker_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1091a01" size="64">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL S0C PMC LTR BLOCKER PCD-S</description>
+			<xmlset>
+				<basedir>NVL/PCD-S/SOC_PMC_LTR_BLOCKER</basedir>
+				<prefix>nvl_soc_pmc_ltr_blocker</prefix>
+				<common>nvl_soc_pmc_ltr_blocker_common.xml</common>
+				<aggregator>nvl_soc_pmc_ltr_blocker_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_pmc_ltr_blocker_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1091b01" size="176">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL S0C LTR STS PCD-S</description>
+			<xmlset>
+				<basedir>NVL/PCD-S/SOC_PMC_LTR_STS</basedir>
+				<prefix>nvl_soc_LTR_STS</prefix>
+				<common>nvl_soc_LTR_STS_common.xml</common>
+				<aggregator>nvl_soc_LTR_STS_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_LTR_STS_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1091c02" size="24">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL S0C LTR STS C2P2 PCD-S</description>
+			<xmlset>
+				<basedir>NVL/PCD-S/SOC_PMC_LTR_STS_C2P2</basedir>
+				<prefix>nvl_soc_LTR_STS_C2P2</prefix>
+				<common>nvl_soc_LTR_STS_C2P2_common.xml</common>
+				<aggregator>nvl_soc_LTR_STS_C2P2_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_soc_LTR_STS_C2P2_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1092001" size="120">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL PCH Firmware Version</description>
+			<xmlset>
+				<basedir>NVL/PCH/FW_VERSION</basedir>
+				<prefix>nvl_fw</prefix>
+				<common>nvl_fw_common.xml</common>
+				<aggregator>nvl_fw_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_fw_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1092802" size="8">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL PCH PMC LPM RES</description>
+			<xmlset>
+				<basedir>NVL/PCH/SOC_PMC_LPM_RES</basedir>
+				<prefix>nvl_pch_pmc_lpm_res</prefix>
+				<common>nvl_pch_pmc_lpm_res_common.xml</common>
+				<aggregator>nvl_pch_pmc_lpm_res_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_pch_pmc_lpm_res_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1000e01" size="8">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL PCH PMC SLP_S0</description>
+			<xmlset>
+				<basedir>NVL/PCH/SOC_PMC_SLP_S0</basedir>
+				<prefix>nvl_pch_pmc_slp_s0</prefix>
+				<common>nvl_pch_pmc_slp_s0_common.xml</common>
+				<aggregator>nvl_pch_pmc_slp_s0_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_pch_pmc_slp_s0_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1092702" size="224">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL PCH PMC BLOCKER</description>
+			<xmlset>
+				<basedir>NVL/PCH/SOC_PMC_BLOCKER</basedir>
+				<prefix>nvl_pch_pmc_blocker</prefix>
+				<common>nvl_pch_pmc_blocker_common.xml</common>
+				<aggregator>nvl_pch_pmc_blocker_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_pch_pmc_blocker_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1092d02" size="224">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL PCH PMC BREAKER</description>
+			<xmlset>
+				<basedir>NVL/PCH/SOC_PMC_BREAKER</basedir>
+				<prefix>nvl_pch_pmc_breaker</prefix>
+				<common>nvl_pch_pmc_breaker_common.xml</common>
+				<aggregator>nvl_pch_pmc_breaker_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_pch_pmc_breaker_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1092901" size="88">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL PCH PMC LTR BLOCKER</description>
+			<xmlset>
+				<basedir>NVL/PCH/SOC_PMC_LTR_BLOCKER</basedir>
+				<prefix>nvl_pch_pmc_ltr_blocker</prefix>
+				<common>nvl_pch_pmc_ltr_blocker_common.xml</common>
+				<aggregator>nvl_pch_pmc_ltr_blocker_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_pch_pmc_ltr_blocker_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1092a01" size="176">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL PCH LTR STS</description>
+			<xmlset>
+				<basedir>NVL/PCH/SOC_PMC_LTR_STS</basedir>
+				<prefix>nvl_pch_LTR_STS</prefix>
+				<common>nvl_pch_LTR_STS_common.xml</common>
+				<aggregator>nvl_pch_LTR_STS_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_pch_LTR_STS_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1092b01" size="32">
+			<lastupdated>2026-08-11</lastupdated>
+			<status>production</status>
+			<description>NVL PCH LTR STS C2P2</description>
+			<xmlset>
+				<basedir>NVL/PCH/SOC_PMC_LTR_STS_C2P2</basedir>
+				<prefix>nvl_pch_LTR_STS_C2P2</prefix>
+				<common>nvl_pch_LTR_STS_C2P2_common.xml</common>
+				<aggregator>nvl_pch_LTR_STS_C2P2_aggregator.xml</aggregator>
+				<aggregatorinterface>nvl_pch_LTR_STS_C2P2_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
 	</mappings>
 </pmt>

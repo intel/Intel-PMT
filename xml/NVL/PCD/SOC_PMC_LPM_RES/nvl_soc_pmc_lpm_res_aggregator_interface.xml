@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TELI:AggregatorInterface
+	xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELI="http://schemas.intel.com/telemetry/interface/aggregatorinterface"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/interface/aggregatorinterface telemetry.xsd" >
+
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nvl_soc_pmc_lpm_res_aggregator.xml"/>
+
+	<TransFormations xmlns="http://schemas.intel.com/telemetry/base/common">
+		<TransFormation name="generic_counter" transformID="generic_counter">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="pch_time_s" transformID="pch_time_s">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * ( 30.5 ) / 1e6 </transform>
+		</TransFormation>
+		<TransFormation name="generic_sample" transformID="generic_sample">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="passthru" transformID="passthru">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0</transform>
+		</TransFormation>
+	</TransFormations>
+
+	<TELI:name>NVL</TELI:name>
+	<TELI:description>NVL SOC PMC LPM RES</TELI:description>
+	<TELI:uniqueid>0x29787064</TELI:uniqueid>
+	<TELI:NDA>Public</TELI:NDA>
+	<TELI:samplePeriod>10</TELI:samplePeriod>
+	<TELI:revisionDate>2026-08-11</TELI:revisionDate>
+	<TELI:AggregatorSamples>
+		<TELI:T_AggregatorSample sampleName="LPM_0_S0_RES" sampleGroup="LPM_0_S0_RES" datatypeIDREF="tpch_time_s" sampleID="0">
+			<TELI:description>Low Power Mode 0 S0 Residency Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>LPM_0_S0_RES</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LPM_1_S0_RES" sampleGroup="LPM_1_S0_RES" datatypeIDREF="tpch_time_s" sampleID="1">
+			<TELI:description>Low Power Mode 1 S0 Residency Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>LPM_1_S0_RES</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LPM_2_S0_RES" sampleGroup="LPM_2_S0_RES" datatypeIDREF="tpch_time_s" sampleID="2">
+			<TELI:description>Low Power Mode 2 S0 Residency Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>LPM_2_S0_RES</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LPM_0_SX_RES" sampleGroup="LPM_0_SX_RES" datatypeIDREF="tpch_time_s" sampleID="3">
+			<TELI:description>Low Power Mode 0 SX Residency Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>LPM_0_SX_RES</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LPM_1_SX_RES" sampleGroup="LPM_1_SX_RES" datatypeIDREF="tpch_time_s" sampleID="4">
+			<TELI:description>Low Power Mode 1 SX Residency Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>LPM_1_SX_RES</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LPM_2_SX_RES" sampleGroup="LPM_2_SX_RES" datatypeIDREF="tpch_time_s" sampleID="5">
+			<TELI:description>Low Power Mode 2 SX Residency Counter</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>LPM_2_SX_RES</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+	</TELI:AggregatorSamples>
+</TELI:AggregatorInterface>

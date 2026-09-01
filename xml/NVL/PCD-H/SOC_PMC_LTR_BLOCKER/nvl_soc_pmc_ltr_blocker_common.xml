@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TELC:DataTypes xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/common telemetry_common.xsd">
+
+	<TELC:dataType name="tgeneric_counter" datatypeID="tgeneric_counter">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tltr_blk_time_s" datatypeID="tltr_blk_time_s">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="second">
+				<TELC:symbol>s</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tpch_ltr_time_s" datatypeID="tpch_ltr_time_s">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="second">
+				<TELC:symbol>s</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tgeneric_sample" datatypeID="tgeneric_sample">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tstring" datatypeID="tstring">
+		<TELC:dataclass>string</TELC:dataclass>
+	</TELC:dataType>
+</TELC:DataTypes>

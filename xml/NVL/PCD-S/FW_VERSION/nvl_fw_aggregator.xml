@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Aggregator [<!ENTITY otherfile SYSTEM "nvl_fw_common.xml">]>
+<TELEM:Aggregator xmlns="http://schemas.intel.com/telemetry/base/1/" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common" 
+	xmlns:TELEM="http://schemas.intel.com/telemetry/base/aggregator" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+ 	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/aggregator telemetryAggregator.xsd"> 
+
+	<TELC:DataTypesInclude>&otherfile;</TELC:DataTypesInclude>
+	<TELEM:name>NVL</TELEM:name>
+	<TELEM:description>NVL PCD-S Firmware Version</TELEM:description>
+	<TELEM:uniqueid>0x01091001</TELEM:uniqueid>
+	<TELEM:productid>NVL</TELEM:productid>
+	<TELEM:address>0</TELEM:address>
+
+	<TELEM:SampleGroup name="Container_0" sampleID="0" sampleGroupID="Container_0">
+		<TELC:description>Groupname 0x0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="FW_VERSION_0" datatypeIDREF="tgeneric_sample" sampleID="FW_VERSION_0">
+			<TELC:description>PMC FW Version DW0</TELC:description>
+			<TELC:sampleSubGroup>FW_VERS_0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="FW_VERSION_1" datatypeIDREF="tgeneric_sample" sampleID="FW_VERSION_1">
+			<TELC:description>PMC FW Version DW1</TELC:description>
+			<TELC:sampleSubGroup>FW_VERS_0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_1" sampleID="1" sampleGroupID="Container_1">
+		<TELC:description>Groupname 0x8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="FW_VERSION_2" datatypeIDREF="tgeneric_sample" sampleID="FW_VERSION_2">
+			<TELC:description>PMC FW Version DW2</TELC:description>
+			<TELC:sampleSubGroup>FW_VERS_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="FW_VERSION_3" datatypeIDREF="tgeneric_sample" sampleID="FW_VERSION_3">
+			<TELC:description>PMC FW Version DW3</TELC:description>
+			<TELC:sampleSubGroup>FW_VERS_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_2" sampleID="2" sampleGroupID="Container_2">
+		<TELC:description>Groupname 0x10</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="RESERVED_0" datatypeIDREF="tgeneric_sample" sampleID="RESERVED_0">
+			<TELC:description>RESERVED</TELC:description>
+			<TELC:sampleSubGroup>PWRMBASE_0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PWRMBASE" datatypeIDREF="tgeneric_sample" sampleID="PWRMBASE">
+			<TELC:description>Power Management Base Address</TELC:description>
+			<TELC:sampleSubGroup>PWRMBASE_0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_3" sampleID="3" sampleGroupID="Container_3">
+		<TELC:description>Groupname 0x18</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PWRMBASE_HIGH" datatypeIDREF="tgeneric_sample" sampleID="PWRMBASE_HIGH">
+			<TELC:description>Power Management Base Address High</TELC:description>
+			<TELC:sampleSubGroup>PWRMBASE_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="LPM_TELEMETRY_OFFSET" datatypeIDREF="tgeneric_sample" sampleID="LPM_TELEMETRY_OFFSET">
+			<TELC:description>Address offset within Shared SRAM to the LPM Telemetry tables</TELC:description>
+			<TELC:sampleSubGroup>PWRMBASE_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_4" sampleID="4" sampleGroupID="Container_4">
+		<TELC:description>Groupname 0x20</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="OEM_SOC_DATA_PACKAGE_VERSION_0" datatypeIDREF="tgeneric_sample" sampleID="OEM_SOC_DATA_PACKAGE_VERSION_0">
+			<TELC:description>OEM SOC Data Package Version DW0</TELC:description>
+			<TELC:sampleSubGroup>OEM_VERSION_0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="OEM_SOC_DATA_PACKAGE_VERSION_1" datatypeIDREF="tgeneric_sample" sampleID="OEM_SOC_DATA_PACKAGE_VERSION_1">
+			<TELC:description>OEM SOC Data Package Version DW1</TELC:description>
+			<TELC:sampleSubGroup>OEM_VERSION_0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_5" sampleID="5" sampleGroupID="Container_5">
+		<TELC:description>Groupname 0x28</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="OEM_SOC_DATA_PACKAGE_VERSION_2" datatypeIDREF="tgeneric_sample" sampleID="OEM_SOC_DATA_PACKAGE_VERSION_2">
+			<TELC:description>OEM SOC Data Package Version DW2</TELC:description>
+			<TELC:sampleSubGroup>OEM_VERSION_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="OEM_CHIPSETINIT_VERSION_0" datatypeIDREF="tgeneric_sample" sampleID="OEM_CHIPSETINIT_VERSION_0">
+			<TELC:description>OEM Chipsetinit Version DW0</TELC:description>
+			<TELC:sampleSubGroup>OEM_VERSION_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_6" sampleID="6" sampleGroupID="Container_6">
+		<TELC:description>Groupname 0x30</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="OEM_CHIPSETINIT_VERSION_1" datatypeIDREF="tgeneric_sample" sampleID="OEM_CHIPSETINIT_VERSION_1">
+			<TELC:description>OEM Chipsetinit Version DW1</TELC:description>
+			<TELC:sampleSubGroup>OEM_VERSION_2</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="OEM_CHIPSETINIT_VERSION_2" datatypeIDREF="tgeneric_sample" sampleID="OEM_CHIPSETINIT_VERSION_2">
+			<TELC:description>OEM Chipsetinit Version DW2</TELC:description>
+			<TELC:sampleSubGroup>OEM_VERSION_2</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_7" sampleID="7" sampleGroupID="Container_7">
+		<TELC:description>Groupname 0x38</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="INTEL_SOC_DATA_PACKAGE_VERSION_0" datatypeIDREF="tgeneric_sample" sampleID="INTEL_SOC_DATA_PACKAGE_VERSION_0">
+			<TELC:description>Intel SOC Data Package Version DW0</TELC:description>
+			<TELC:sampleSubGroup>INTEL_VERSION_0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="INTEL_SOC_DATA_PACKAGE_VERSION_1" datatypeIDREF="tgeneric_sample" sampleID="INTEL_SOC_DATA_PACKAGE_VERSION_1">
+			<TELC:description>Intel SOC Data Package Version DW1</TELC:description>
+			<TELC:sampleSubGroup>INTEL_VERSION_0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_8" sampleID="8" sampleGroupID="Container_8">
+		<TELC:description>Groupname 0x40</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="INTEL_SOC_DATA_PACKAGE_VERSION_2" datatypeIDREF="tgeneric_sample" sampleID="INTEL_SOC_DATA_PACKAGE_VERSION_2">
+			<TELC:description>Intel SOC Data Package Version DW2</TELC:description>
+			<TELC:sampleSubGroup>INTEL_VERSION_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="INTEL_CHIPSETINIT_VERSION_0" datatypeIDREF="tgeneric_sample" sampleID="INTEL_CHIPSETINIT_VERSION_0">
+			<TELC:description>Intel Chipsetinit Version DW0</TELC:description>
+			<TELC:sampleSubGroup>INTEL_VERSION_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_9" sampleID="9" sampleGroupID="Container_9">
+		<TELC:description>Groupname 0x48</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="INTEL_CHIPSETINIT_VERSION_1" datatypeIDREF="tgeneric_sample" sampleID="INTEL_CHIPSETINIT_VERSION_1">
+			<TELC:description>Intel Chipsetinit Version DW1</TELC:description>
+			<TELC:sampleSubGroup>INTEL_VERSION_2</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="INTEL_CHIPSETINIT_VERSION_2" datatypeIDREF="tgeneric_sample" sampleID="INTEL_CHIPSETINIT_VERSION_2">
+			<TELC:description>Intel Chipsetinit Version DW2</TELC:description>
+			<TELC:sampleSubGroup>INTEL_VERSION_2</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_10" sampleID="10" sampleGroupID="Container_10">
+		<TELC:description>Groupname 0x50</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="RESERVED_1" datatypeIDREF="tgeneric_sample" sampleID="RESERVED_1">
+			<TELC:description>RESERVED</TELC:description>
+			<TELC:sampleSubGroup>RESERVED_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="RESERVED_2" datatypeIDREF="tgeneric_sample" sampleID="RESERVED_2">
+			<TELC:description>RESERVED</TELC:description>
+			<TELC:sampleSubGroup>RESERVED_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_11" sampleID="11" sampleGroupID="Container_11">
+		<TELC:description>Groupname 0x58</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="RESERVED_3" datatypeIDREF="tgeneric_sample" sampleID="RESERVED_3">
+			<TELC:description>RESERVED</TELC:description>
+			<TELC:sampleSubGroup>RESERVED_2</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="RESERVED_4" datatypeIDREF="tgeneric_sample" sampleID="RESERVED_4">
+			<TELC:description>RESERVED</TELC:description>
+			<TELC:sampleSubGroup>RESERVED_2</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_12" sampleID="12" sampleGroupID="Container_12">
+		<TELC:description>Groupname 0x60</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="PCH_SHARED_SRAM_BAR" datatypeIDREF="tgeneric_sample" sampleID="PCH_SHARED_SRAM_BAR">
+			<TELC:description>PCH Shared SRAM BAR value</TELC:description>
+			<TELC:sampleSubGroup>SHARED_SRAM_0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PCH_SHARED_SRAM_BAR_HIGH" datatypeIDREF="tgeneric_sample" sampleID="PCH_SHARED_SRAM_BAR_HIGH">
+			<TELC:description>PCH Shared SRAM BAR HIGH value</TELC:description>
+			<TELC:sampleSubGroup>SHARED_SRAM_0</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_13" sampleID="13" sampleGroupID="Container_13">
+		<TELC:description>Groupname 0x68</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="IOE_SHARED_SRAM_BAR" datatypeIDREF="tgeneric_sample" sampleID="IOE_SHARED_SRAM_BAR">
+			<TELC:description>IOE shared SRAM BAR value</TELC:description>
+			<TELC:sampleSubGroup>SHARED_SRAM_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="IOE_SHARED_SRAM_BAR_HIGH" datatypeIDREF="tgeneric_sample" sampleID="IOE_SHARED_SRAM_BAR_HIGH">
+			<TELC:description>IOE Shared SRAM BAR HIGH value</TELC:description>
+			<TELC:sampleSubGroup>SHARED_SRAM_1</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_14" sampleID="14" sampleGroupID="Container_14">
+		<TELC:description>Groupname 0x70</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="IOE_PMC_SHARED_SRAM_DEVID" datatypeIDREF="tgeneric_sample" sampleID="IOE_PMC_SHARED_SRAM_DEVID">
+			<TELC:description>IOE Shared SRAM Device ID value initialized by Chipsetinit</TELC:description>
+			<TELC:sampleSubGroup>SHARED_SRAM_2</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="PCH_PMC_SHARED_SRAM_DEVID" datatypeIDREF="tgeneric_sample" sampleID="PCH_PMC_SHARED_SRAM_DEVID">
+			<TELC:description>PCH Shared SRAM Device ID value initialized by Chipsetinit</TELC:description>
+			<TELC:sampleSubGroup>SHARED_SRAM_2</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+</TELEM:Aggregator>
