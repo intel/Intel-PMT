@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Aggregator [<!ENTITY otherfile SYSTEM "nvl_soc_pmc_ltr_blocker_common.xml">]>
+<TELEM:Aggregator xmlns="http://schemas.intel.com/telemetry/base/1/" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common" 
+	xmlns:TELEM="http://schemas.intel.com/telemetry/base/aggregator" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+ 	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/aggregator telemetryAggregator.xsd"> 
+
+	<TELC:DataTypesInclude>&otherfile;</TELC:DataTypesInclude>
+	<TELEM:name>NVL</TELEM:name>
+	<TELEM:description>NVL S0C PMC LTR BLOCKER PCD-S</TELEM:description>
+	<TELEM:uniqueid>0x01091A01</TELEM:uniqueid>
+	<TELEM:productid>NVL</TELEM:productid>
+	<TELEM:address>0</TELEM:address>
+
+	<TELEM:SampleGroup name="Container_0" sampleID="0" sampleGroupID="Container_0">
+		<TELC:description>Groupname 0x2300</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="LTR_COUNTER_TRESHOLD" datatypeIDREF="tgeneric_sample" sampleID="LTR_COUNTER_TRESHOLD">
+			<TELC:description>LTR Blocker Counter config register (to be ignored)</TELC:description>
+			<TELC:sampleSubGroup>CONFIG</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="LTR_SPB_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_SPB_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for SPB/PXPB</TELC:description>
+			<TELC:sampleSubGroup>LTR_SPB_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_1" sampleID="1" sampleGroupID="Container_1">
+		<TELC:description>Groupname 0x2308</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="LTR_UFSX2_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_UFSX2_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for UFSX2</TELC:description>
+			<TELC:sampleSubGroup>LTR_UFSX2_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="LTR_ESPISPI_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_ESPISPI_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for ESPISPI</TELC:description>
+			<TELC:sampleSubGroup>LTR_ESPISPI_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_2" sampleID="2" sampleGroupID="Container_2">
+		<TELC:description>Groupname 0x2310</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="LTR_XHCI_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_XHCI_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for XHCI</TELC:description>
+			<TELC:sampleSubGroup>LTR_XHCI_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="LTR_GBE_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_GBE_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for GbE LAN</TELC:description>
+			<TELC:sampleSubGroup>LTR_GBE_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_3" sampleID="3" sampleGroupID="Container_3">
+		<TELC:description>Groupname 0x2318</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="LTR_SPA_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_SPA_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for SPA/PXPA</TELC:description>
+			<TELC:sampleSubGroup>LTR_SPA_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="LTR_LPSS_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_LPSS_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for LPSS</TELC:description>
+			<TELC:sampleSubGroup>LTR_LPSS_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_4" sampleID="4" sampleGroupID="Container_4">
+		<TELC:description>Groupname 0x2320</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="LTR_OSSE_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_OSSE_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for OSSE</TELC:description>
+			<TELC:sampleSubGroup>LTR_OSSE_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="LTR_CSE_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_CSE_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for CSE</TELC:description>
+			<TELC:sampleSubGroup>LTR_CSE_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_5" sampleID="5" sampleGroupID="Container_5">
+		<TELC:description>Groupname 0x2328</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="LTR_ISH_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_ISH_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for ISH</TELC:description>
+			<TELC:sampleSubGroup>LTR_ISH_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="LTR_PG5_PMA0_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_PG5_PMA0_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for PXP Gen5 PMA0</TELC:description>
+			<TELC:sampleSubGroup>LTR_PG5_PMA0_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_6" sampleID="6" sampleGroupID="Container_6">
+		<TELC:description>Groupname 0x2330</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="LTR_TCSS_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_TCSS_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for TCSS</TELC:description>
+			<TELC:sampleSubGroup>LTR_TCSS_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="LTR_PG5_PMA1_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_PG5_PMA1_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for PXP Gen5 PMA1</TELC:description>
+			<TELC:sampleSubGroup>LTR_PG5_PMA1_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_7" sampleID="7" sampleGroupID="Container_7">
+		<TELC:description>Groupname 0x2338</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="LTR_PCH_PMC_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_PCH_PMC_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for PCH_PMC</TELC:description>
+			<TELC:sampleSubGroup>LTR_PCH_PMC_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="LTR_DG5_PMA0_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="LTR_DG5_PMA0_BLK_CNTR">
+			<TELC:description>LTR Blocker Counter for DMI Gen5 PMA 0</TELC:description>
+			<TELC:sampleSubGroup>LTR_DG5_PMA0_BLK_CNTR</TELC:sampleSubGroup>
+			<TELC:sampleType>Counter</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+</TELEM:Aggregator>

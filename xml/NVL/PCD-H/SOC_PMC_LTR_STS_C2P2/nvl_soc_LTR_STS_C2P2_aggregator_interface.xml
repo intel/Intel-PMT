@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TELI:AggregatorInterface
+	xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELI="http://schemas.intel.com/telemetry/interface/aggregatorinterface"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/interface/aggregatorinterface telemetry.xsd" >
+
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nvl_soc_LTR_STS_C2P2_aggregator.xml"/>
+
+	<TransFormations xmlns="http://schemas.intel.com/telemetry/base/common">
+		<TransFormation name="generic_counter" transformID="generic_counter">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="generic_sample" transformID="generic_sample">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="passthru" transformID="passthru">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0</transform>
+		</TransFormation>
+	</TransFormations>
+
+	<TELI:name>NVL</TELI:name>
+	<TELI:description>NVL S0C LTR STS C2P2 PCD-H</TELI:description>
+	<TELI:uniqueid>0x01093C01</TELI:uniqueid>
+	<TELI:NDA>Public</TELI:NDA>
+	<TELI:samplePeriod>10</TELI:samplePeriod>
+	<TELI:revisionDate>2026-08-11</TELI:revisionDate>
+	<TELI:AggregatorSamples>
+		<TELI:T_AggregatorSample sampleName="LTR_C2P2_IP_THC1" sampleGroup="BDF_LTR_STS_C2P2_MASK_0" datatypeIDREF="tgeneric_sample" sampleID="0">
+			<TELI:description>THC1 Chasis 2p2 LTR Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>LTR_C2P2_IP_THC1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_C2P2_IP_PG5_PMA0" sampleGroup="BDF_LTR_STS_C2P2_MASK_0" datatypeIDREF="tgeneric_sample" sampleID="1">
+			<TELI:description>PG5_PMA0 Chassis 2p2 LTR Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>LTR_C2P2_IP_PG5_PMA0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_C2P2_IP_TCSS" sampleGroup="BDF_LTR_STS_C2P2_MASK_1" datatypeIDREF="tgeneric_sample" sampleID="2">
+			<TELI:description>TCSS Chassis 2p2 LTR Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>LTR_C2P2_IP_TCSS</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_C2P2_IP_PCH_PMC_IOE" sampleGroup="BDF_LTR_STS_C2P2_MASK_1" datatypeIDREF="tgeneric_sample" sampleID="3">
+			<TELI:description>PCH_PMC_IOE Chassis 2p2 LTR Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>LTR_C2P2_IP_PCH_PMC_IOE</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_C2P2_IP_CNVI_BT" sampleGroup="BDF_LTR_STS_C2P2_MASK_2" datatypeIDREF="tgeneric_sample" sampleID="4">
+			<TELI:description>CNV_BT Chassis 2p2 LTR Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>LTR_C2P2_IP_CNVI_BT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_C2P2_IP_PG5_PMA1" sampleGroup="BDF_LTR_STS_C2P2_MASK_2" datatypeIDREF="tgeneric_sample" sampleID="5">
+			<TELI:description>PG5_PMA1 Chassis 2p2 LTR Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>LTR_C2P2_IP_PG5_PMA1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_C2P2_IP_PG5_PMA2" sampleGroup="BDF_LTR_STS_C2P2_MASK_3" datatypeIDREF="tgeneric_sample" sampleID="6">
+			<TELI:description>PG5_PMA2 Chassis 2p2 LTR Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>LTR_C2P2_IP_PG5_PMA2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_C2P2_IP_CNV_WIFI" sampleGroup="BDF_LTR_STS_C2P2_MASK_3" datatypeIDREF="tgeneric_sample" sampleID="7">
+			<TELI:description>CNV_WIFI Chassis 2p2 LTR Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>LTR_C2P2_IP_CNV_WIFI</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_C2P2_IP_ACE" sampleGroup="BDF_LTR_STS_C2P2_MASK_4" datatypeIDREF="tgeneric_sample" sampleID="8">
+			<TELI:description>ACE Chassis 2p2 LTR Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>LTR_C2P2_IP_ACE</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_C2P2_IP_THC0" sampleGroup="BDF_LTR_STS_C2P2_MASK_4" datatypeIDREF="tgeneric_sample" sampleID="9">
+			<TELI:description>THC0 Chasis 2p2 LTR Status</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>LTR_C2P2_IP_THC0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+	</TELI:AggregatorSamples>
+</TELI:AggregatorInterface>

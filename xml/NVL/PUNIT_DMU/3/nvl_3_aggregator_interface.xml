@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TELI:AggregatorInterface
+	xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELI="http://schemas.intel.com/telemetry/interface/aggregatorinterface"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/interface/aggregatorinterface telemetry.xsd" >
+
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nvl_3_aggregator.xml"/>
+
+	<TransFormations xmlns="http://schemas.intel.com/telemetry/base/common">
+		<TransFormation name="U16.1.15" transformID="U16.1.15">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>( $parameter_0 &amp; 0xffff ) / ( 2**15 ) </transform>
+		</TransFormation>
+		<TransFormation name="bw_1024B" transformID="bw_1024B">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 1024 / 1e6 </transform>
+		</TransFormation>
+		<TransFormation name="bw_32B" transformID="bw_32B">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform> ( $parameter_0 * 32 ) / 1e6 </transform>
+		</TransFormation>
+		<TransFormation name="bw_64B" transformID="bw_64B">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 64 / 1e6 </transform>
+		</TransFormation>
+		<TransFormation name="bw_B" transformID="bw_B">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / 1e6 </transform>
+		</TransFormation>
+		<TransFormation name="bw_KB" transformID="bw_KB">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / 1e3 </transform>
+		</TransFormation>
+		<TransFormation name="cep_volts" transformID="cep_volts">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 0.002 </transform>
+		</TransFormation>
+		<TransFormation name="clk_freq" transformID="clk_freq">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="cycle_count" transformID="cycle_count">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="diec_block_cause" transformID="diec_block_cause">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 10 </transform>
+		</TransFormation>
+		<TransFormation name="disp_clk_freq" transformID="disp_clk_freq">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 19.2 </transform>
+		</TransFormation>
+		<TransFormation name="U32.18.14" transformID="U32.18.14">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>( $parameter_0 &amp; 0xffffffff ) / ( 2**14 ) </transform>
+		</TransFormation>
+		<TransFormation name="energy_J" transformID="energy_J">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / 16384 </transform>
+		</TransFormation>
+		<TransFormation name="event_counter" transformID="event_counter">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="generic_counter" transformID="generic_counter">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="generic_sample" transformID="generic_sample">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="gt_clk_cnt" transformID="gt_clk_cnt">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 64 </transform>
+		</TransFormation>
+		<TransFormation name="U9.7.2" transformID="U9.7.2">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>( $parameter_0 &amp; 0x1ff ) / ( 2**2 ) </transform>
+		</TransFormation>
+		<TransFormation name="ipu_icc" transformID="ipu_icc">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 100 / 128 </transform>
+		</TransFormation>
+		<TransFormation name="ltr" transformID="ltr">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="mc_cycles" transformID="mc_cycles">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 0.0025 * 33.33 </transform>
+		</TransFormation>
+		<TransFormation name="mc_on_time" transformID="mc_on_time">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform> ( $parameter_0 * 0.0025 ) / 1e6 </transform>
+		</TransFormation>
+		<TransFormation name="pkgc_block_cause" transformID="pkgc_block_cause">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 10 </transform>
+		</TransFormation>
+		<TransFormation name="platform_temp" transformID="platform_temp">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / 32 </transform>
+		</TransFormation>
+		<TransFormation name="ratio_100" transformID="ratio_100">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 0.1 </transform>
+		</TransFormation>
+		<TransFormation name="ratio_16" transformID="ratio_16">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 0.01667 </transform>
+		</TransFormation>
+		<TransFormation name="ratio_25" transformID="ratio_25">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 0.025 </transform>
+		</TransFormation>
+		<TransFormation name="ratio_33" transformID="ratio_33">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 0.033 </transform>
+		</TransFormation>
+		<TransFormation name="ratio_50" transformID="ratio_50">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 0.05 </transform>
+		</TransFormation>
+		<TransFormation name="residency" transformID="residency">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 10 </transform>
+		</TransFormation>
+		<TransFormation name="U9.1.8" transformID="U9.1.8">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>( $parameter_0 &amp; 0x1ff ) / ( 2**8 ) </transform>
+		</TransFormation>
+		<TransFormation name="seconds" transformID="seconds">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / ( 400 * 1e6 )  </transform>
+		</TransFormation>
+		<TransFormation name="U8.1.7" transformID="U8.1.7">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>( $parameter_0 &amp; 0xff ) / ( 2**7 ) </transform>
+		</TransFormation>
+		<TransFormation name="U11.9.2" transformID="U11.9.2">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>( $parameter_0 &amp; 0x7ff ) / ( 2**2 ) </transform>
+		</TransFormation>
+		<TransFormation name="slowloop" transformID="slowloop">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="U10.9.1" transformID="U10.9.1">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>( $parameter_0 &amp; 0x3ff ) / ( 2**1 ) </transform>
+		</TransFormation>
+		<TransFormation name="S8.7.0" transformID="S8.7.0">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>( ( ( 1 - ( ( $parameter_0 &gt;&gt; 7 ) &amp; 0x1 ) ) * ( $parameter_0 &amp; 0xff ) ) - ( ( ( $parameter_0 &gt;&gt; 7 ) &amp; 0x1 ) * ( ( ( $parameter_0 &amp; 0x7f ) ^  0x7f ) + 1 ) ) )</transform>
+		</TransFormation>
+		<TransFormation name="vid" transformID="vid">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform> ( 49 + $parameter_0 ) * 0.005 </transform>
+		</TransFormation>
+		<TransFormation name="vr_energy" transformID="vr_energy">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / 16384 </transform>
+		</TransFormation>
+		<TransFormation name="U16.12.4" transformID="U16.12.4">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>( $parameter_0 &amp; 0xffff ) / ( 2**4 ) </transform>
+		</TransFormation>
+		<TransFormation name="U8.8.0" transformID="U8.8.0">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>( $parameter_0 &amp; 0xff )</transform>
+		</TransFormation>
+		<TransFormation name="wp_volts" transformID="wp_volts">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * 0.0025 </transform>
+		</TransFormation>
+		<TransFormation name="xtal_time" transformID="xtal_time">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / ( 38.4 * 1e6 )  </transform>
+		</TransFormation>
+		<TransFormation name="xtal_time_19_2" transformID="xtal_time_19_2">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 / ( 19.2 * 1e6 )  </transform>
+		</TransFormation>
+		<TransFormation name="passthru" transformID="passthru">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0</transform>
+		</TransFormation>
+	</TransFormations>
+
+	<TELI:name>NVL</TELI:name>
+	<TELI:description>NVL Fixed PMT Telemetry aggregator at DMU samples definition and transformation rules</TELI:description>
+	<TELI:uniqueid>0x1A000101</TELI:uniqueid>
+	<TELI:NDA>Public</TELI:NDA>
+	<TELI:samplePeriod>10</TELI:samplePeriod>
+	<TELI:revisionDate>2026-08-11</TELI:revisionDate>
+	<TELI:AggregatorSamples>
+		<TELI:T_AggregatorSample sampleName="XTAL" sampleGroup="XTAL" datatypeIDREF="txtal_time" sampleID="0">
+			<TELI:description>Crystal clock count. Used as a reference count in converting many of the counters presented in this telemetry space.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>XTAL</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>xtal_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_REFCNT" sampleGroup="DIE_CSTATE_BLOCK_REFCNT" datatypeIDREF="tdiec_block_cause" sampleID="1">
+			<TELI:description>Reference count for block cause counters. Counts the number of 10us intervals during which DieCstate entry was blocked at least once by any reason. To calculate percent blocked by a specific reason, divide corresponding block reason counter by this counter value.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_REFCNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_REFCNT" sampleGroup="DIE_CSTATE_PREVENT_REFCNT" datatypeIDREF="tevent_counter" sampleID="2">
+			<TELI:description>Reference count for prevent cause counters. Counts the number of times DieCstate entry was blocked at least once by any reason. To calculate percent blocked by a specific reason, divide corresponding prevent reason counter by this counter value.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_REFCNT</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_1" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_1" datatypeIDREF="tdiec_block_cause" sampleID="3">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: DieC_Reason_1</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_2" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_2" datatypeIDREF="tdiec_block_cause" sampleID="4">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: DieC_Reason_2</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_3" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_3" datatypeIDREF="tdiec_block_cause" sampleID="5">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: DieC_Reason_3</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_4" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_4" datatypeIDREF="tdiec_block_cause" sampleID="6">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: DieC_Reason_4</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_5" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_5" datatypeIDREF="tdiec_block_cause" sampleID="7">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: DieC_Reason_5</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_6" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_6" datatypeIDREF="tdiec_block_cause" sampleID="8">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: DieC_Reason_6</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_7" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_7" datatypeIDREF="tdiec_block_cause" sampleID="9">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: DieC_Reason_7</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_7</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_8" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_8" datatypeIDREF="tdiec_block_cause" sampleID="10">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: DieC_Reason_8</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_8</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_9" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_9" datatypeIDREF="tdiec_block_cause" sampleID="11">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: DieC_Reason_9</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_9</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_10" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_10" datatypeIDREF="tdiec_block_cause" sampleID="12">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: DieC_Reason_10</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_10</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_BLOCK_RESIDENCY_MISC" sampleGroup="DIE_CSTATE_BLOCK_RESIDENCY_MISC" datatypeIDREF="tdiec_block_cause" sampleID="13">
+			<TELI:description>Counts the number of 10us intervals during which any BCLK entry was blocked by: MISC</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_BLOCK_RESIDENCY_MISC</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>diec_block_cause</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_1" sampleGroup="DIE_CSTATE_PREVENT_1" datatypeIDREF="tevent_counter" sampleID="14">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to: DieC_Reason_1</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_2" sampleGroup="DIE_CSTATE_PREVENT_2" datatypeIDREF="tevent_counter" sampleID="15">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to: DieC_Reason_2</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_3" sampleGroup="DIE_CSTATE_PREVENT_3" datatypeIDREF="tevent_counter" sampleID="16">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to: DieC_Reason_3</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_4" sampleGroup="DIE_CSTATE_PREVENT_4" datatypeIDREF="tevent_counter" sampleID="17">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to: DieC_Reason_4</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_5" sampleGroup="DIE_CSTATE_PREVENT_5" datatypeIDREF="tevent_counter" sampleID="18">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to: DieC_Reason_5</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_6" sampleGroup="DIE_CSTATE_PREVENT_6" datatypeIDREF="tevent_counter" sampleID="19">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to: DieC_Reason_6</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_7" sampleGroup="DIE_CSTATE_PREVENT_7" datatypeIDREF="tevent_counter" sampleID="20">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to: DieC_Reason_7</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_7</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_8" sampleGroup="DIE_CSTATE_PREVENT_8" datatypeIDREF="tevent_counter" sampleID="21">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to: DieC_Reason_8</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_11</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_8</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_9" sampleGroup="DIE_CSTATE_PREVENT_9" datatypeIDREF="tevent_counter" sampleID="22">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to: DieC_Reason_9</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_11</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_9</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_10" sampleGroup="DIE_CSTATE_PREVENT_10" datatypeIDREF="tevent_counter" sampleID="23">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to: DieC_Reason_10</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_12</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_10</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_PREVENT_MISC" sampleGroup="DIE_CSTATE_PREVENT_MISC" datatypeIDREF="tevent_counter" sampleID="24">
+			<TELI:description>Count the number of times any BCLK entry is blocked due to reason: MISC</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_12</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_PREVENT_MISC</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_DEMOTION_COUNT_1" sampleGroup="DIE_CSTATE_DEMOTION_COUNT_1" datatypeIDREF="tevent_counter" sampleID="25">
+			<TELI:description>Count the number of times type1 Demotion occcured</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_13</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_DEMOTION_COUNT_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_DEMOTION_COUNT_2" sampleGroup="DIE_CSTATE_DEMOTION_COUNT_2" datatypeIDREF="tevent_counter" sampleID="26">
+			<TELI:description>Count the number of times type2 Demotion was applied</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_13</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_DEMOTION_COUNT_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_1" sampleGroup="DIE_CSTATE_WAKE_REASON_1" datatypeIDREF="tevent_counter" sampleID="27">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_1</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_14</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_2" sampleGroup="DIE_CSTATE_WAKE_REASON_2" datatypeIDREF="tevent_counter" sampleID="28">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_2</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_14</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_3" sampleGroup="DIE_CSTATE_WAKE_REASON_3" datatypeIDREF="tevent_counter" sampleID="29">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_3</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_15</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_4" sampleGroup="DIE_CSTATE_WAKE_REASON_4" datatypeIDREF="tevent_counter" sampleID="30">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_4</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_15</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_5" sampleGroup="DIE_CSTATE_WAKE_REASON_5" datatypeIDREF="tevent_counter" sampleID="31">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_5</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_16</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_6" sampleGroup="DIE_CSTATE_WAKE_REASON_6" datatypeIDREF="tevent_counter" sampleID="32">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_6</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_16</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_7" sampleGroup="DIE_CSTATE_WAKE_REASON_7" datatypeIDREF="tevent_counter" sampleID="33">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_7</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_17</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_7</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_8" sampleGroup="DIE_CSTATE_WAKE_REASON_8" datatypeIDREF="tevent_counter" sampleID="34">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_8</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_17</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_8</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_9" sampleGroup="DIE_CSTATE_WAKE_REASON_9" datatypeIDREF="tevent_counter" sampleID="35">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_9</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_18</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_9</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_10" sampleGroup="DIE_CSTATE_WAKE_REASON_10" datatypeIDREF="tevent_counter" sampleID="36">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_10</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_18</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_10</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_11" sampleGroup="DIE_CSTATE_WAKE_REASON_11" datatypeIDREF="tevent_counter" sampleID="37">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_11</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_19</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_11</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_12" sampleGroup="DIE_CSTATE_WAKE_REASON_12" datatypeIDREF="tevent_counter" sampleID="38">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_12</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_19</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_12</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_WAKE_REASON_13" sampleGroup="DIE_CSTATE_WAKE_REASON_13" datatypeIDREF="tevent_counter" sampleID="39">
+			<TELI:description>Count the number of times bootfsm exited from DieC state due to: DieC_Reason_13</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_20</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_WAKE_REASON_13</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_LTR_THRESHOLDS_0" sampleGroup="DIE_CSTATE_LTR_THRESHOLDS_0" datatypeIDREF="tltr" sampleID="40">
+			<TELI:description>Die C State LTR thresholds. Provides the exit latency</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_20</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_LTR_THRESHOLDS_0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>ltr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_LTR_THRESHOLDS_1" sampleGroup="DIE_CSTATE_LTR_THRESHOLDS_1" datatypeIDREF="tltr" sampleID="41">
+			<TELI:description>Die C State LTR thresholds. Provides the exit latency</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_21</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_LTR_THRESHOLDS_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>ltr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_LTR_THRESHOLDS_2" sampleGroup="DIE_CSTATE_LTR_THRESHOLDS_2" datatypeIDREF="tltr" sampleID="42">
+			<TELI:description>Die C State LTR thresholds. Provides the exit latency</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_21</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_LTR_THRESHOLDS_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>ltr</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_RESIDENCY_0" sampleGroup="DIE_CSTATE_RESIDENCY_0" datatypeIDREF="txtal_time" sampleID="43">
+			<TELI:description>Measures the residency in Die C-state. Units are XTAL clocks.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_22</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_RESIDENCY_0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>xtal_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_RESIDENCY_1" sampleGroup="DIE_CSTATE_RESIDENCY_1" datatypeIDREF="txtal_time" sampleID="44">
+			<TELI:description>Measures the residency in Die C-state. Units are XTAL clocks.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_23</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_RESIDENCY_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>xtal_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_RESIDENCY_2" sampleGroup="DIE_CSTATE_RESIDENCY_2" datatypeIDREF="txtal_time" sampleID="45">
+			<TELI:description>Measures the residency in Die C-state. Units are XTAL clocks.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_24</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_RESIDENCY_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>xtal_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_RESIDENCY_3" sampleGroup="DIE_CSTATE_RESIDENCY_3" datatypeIDREF="txtal_time" sampleID="46">
+			<TELI:description>Measures the residency in Die C-state. Units are XTAL clocks.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_25</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_RESIDENCY_3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>xtal_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_RESIDENCY_4" sampleGroup="DIE_CSTATE_RESIDENCY_4" datatypeIDREF="txtal_time" sampleID="47">
+			<TELI:description>Measures the residency in Die C-state. Units are XTAL clocks.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_26</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_RESIDENCY_4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>xtal_time</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_COUNT_0" sampleGroup="DIE_CSTATE_COUNT_0" datatypeIDREF="tevent_counter" sampleID="48">
+			<TELI:description>Count the number of transitions to DieC state</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_27</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_COUNT_0</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_COUNT_1" sampleGroup="DIE_CSTATE_COUNT_1" datatypeIDREF="tevent_counter" sampleID="49">
+			<TELI:description>Count the number of transitions to DieC state</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_27</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_COUNT_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_COUNT_2" sampleGroup="DIE_CSTATE_COUNT_2" datatypeIDREF="tevent_counter" sampleID="50">
+			<TELI:description>Count the number of transitions to DieC state</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_28</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_COUNT_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_COUNT_3" sampleGroup="DIE_CSTATE_COUNT_3" datatypeIDREF="tevent_counter" sampleID="51">
+			<TELI:description>Count the number of transitions to DieC state</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_28</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_COUNT_3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="DIE_CSTATE_COUNT_4" sampleGroup="DIE_CSTATE_COUNT_4" datatypeIDREF="tevent_counter" sampleID="52">
+			<TELI:description>Count the number of transitions to DieC state</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_29</sampleGroupIDREF>
+					<sampleIDREF>DIE_CSTATE_COUNT_4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>event_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_SPARE1" sampleGroup="FIXED_BLOCK_SPARE1" datatypeIDREF="tgeneric_counter" sampleID="53">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_29</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_SPARE1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_SPARE2" sampleGroup="FIXED_BLOCK_SPARE2" datatypeIDREF="tgeneric_counter" sampleID="54">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_30</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_SPARE2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_SPARE3" sampleGroup="FIXED_BLOCK_SPARE3" datatypeIDREF="tgeneric_counter" sampleID="55">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_31</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_SPARE3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_SPARE4" sampleGroup="FIXED_BLOCK_SPARE4" datatypeIDREF="tgeneric_counter" sampleID="56">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_32</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_SPARE4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_SPARE5" sampleGroup="FIXED_BLOCK_SPARE5" datatypeIDREF="tgeneric_counter" sampleID="57">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_33</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_SPARE5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_SPARE6" sampleGroup="FIXED_BLOCK_SPARE6" datatypeIDREF="tgeneric_counter" sampleID="58">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_34</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_SPARE6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_SPARE7" sampleGroup="FIXED_BLOCK_SPARE7" datatypeIDREF="tgeneric_counter" sampleID="59">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_35</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_SPARE7</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_SPARE8" sampleGroup="FIXED_BLOCK_SPARE8" datatypeIDREF="tgeneric_counter" sampleID="60">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_36</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_SPARE8</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="61">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_37</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="62">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_38</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_1</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="63">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_39</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_2</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="64">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_40</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_3</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="65">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_41</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_4</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="66">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_42</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_5</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="67">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_43</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_6</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="68">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_44</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_7</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="69">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_45</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_8</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="70">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_46</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_9</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="71">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_47</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_10</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="72">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_48</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_11</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="73">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_49</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_12</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="74">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_50</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_13</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="75">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_51</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_14</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="76">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_52</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_15</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="77">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_53</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_16</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="78">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_54</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_17</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="79">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_55</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_18</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="80">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_56</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_19</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="81">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_57</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_20</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="82">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_58</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_21</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="83">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_59</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_22</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="84">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_60</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_23</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="85">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_61</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_24</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="86">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_62</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_25</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="FIXED_BLOCK_RSVD_1_to_27" sampleGroup="FIXED_BLOCK_RSVD_1_to_27" datatypeIDREF="tgeneric_counter" sampleID="87">
+			<TELI:description>Spare fixed block counters.</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_63</sampleGroupIDREF>
+					<sampleIDREF>FIXED_BLOCK_RSVD_1_to_27_26</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_counter</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+	</TELI:AggregatorSamples>
+</TELI:AggregatorInterface>

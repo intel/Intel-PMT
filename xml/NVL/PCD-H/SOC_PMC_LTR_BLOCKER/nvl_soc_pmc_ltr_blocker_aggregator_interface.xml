@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TELI:AggregatorInterface
+	xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELI="http://schemas.intel.com/telemetry/interface/aggregatorinterface"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/interface/aggregatorinterface telemetry.xsd" >
+
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nvl_soc_pmc_ltr_blocker_aggregator.xml"/>
+
+	<TransFormations xmlns="http://schemas.intel.com/telemetry/base/common">
+		<TransFormation name="generic_counter" transformID="generic_counter">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="ltr_blk_time_s" transformID="ltr_blk_time_s">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * ( 30.5 ) / 1e6 </transform>
+		</TransFormation>
+		<TransFormation name="pch_ltr_time_s" transformID="pch_ltr_time_s">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 * ( 30.5 ) / 1e6 </transform>
+		</TransFormation>
+		<TransFormation name="generic_sample" transformID="generic_sample">
+			<output_dataclass>float</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0 </transform>
+		</TransFormation>
+		<TransFormation name="passthru" transformID="passthru">
+			<output_dataclass>integer</output_dataclass>
+			<TransFormParameters>
+				<parameterName>parameter_0</parameterName>
+			</TransFormParameters>
+			<transform>$parameter_0</transform>
+		</TransFormation>
+	</TransFormations>
+
+	<TELI:name>NVL</TELI:name>
+	<TELI:description>NVL S0C PMC LTR BLOCKER PCD-H</TELI:description>
+	<TELI:uniqueid>0x01093A01</TELI:uniqueid>
+	<TELI:NDA>Public</TELI:NDA>
+	<TELI:samplePeriod>10</TELI:samplePeriod>
+	<TELI:revisionDate>2026-08-11</TELI:revisionDate>
+	<TELI:AggregatorSamples>
+		<TELI:T_AggregatorSample sampleName="LTR_COUNTER_TRESHOLD" sampleGroup="CONFIG" datatypeIDREF="tgeneric_sample" sampleID="0">
+			<TELI:description>LTR Blocker Counter config register (to be ignored)</TELI:description>
+			<TELI:SampleType>Snapshot</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>LTR_COUNTER_TRESHOLD</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>generic_sample</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_SPB_BLK_CNTR" sampleGroup="LTR_SPB_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="1">
+			<TELI:description>LTR Blocker Counter for SPB/PXPB</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_0</sampleGroupIDREF>
+					<sampleIDREF>LTR_SPB_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_UFSX2_BLK_CNTR" sampleGroup="LTR_UFSX2_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="2">
+			<TELI:description>LTR Blocker Counter for UFSX2</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>LTR_UFSX2_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_ESPISPI_BLK_CNTR" sampleGroup="LTR_ESPISPI_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="3">
+			<TELI:description>LTR Blocker Counter for ESPISPI</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_1</sampleGroupIDREF>
+					<sampleIDREF>LTR_ESPISPI_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_ESE_BLK_CNTR" sampleGroup="LTR_ESE_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="4">
+			<TELI:description>LTR Blocker Counter for ESE</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>LTR_ESE_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_XHCI_BLK_CNTR" sampleGroup="LTR_XHCI_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="5">
+			<TELI:description>LTR Blocker Counter for XHCI</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_2</sampleGroupIDREF>
+					<sampleIDREF>LTR_XHCI_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_GBE_BLK_CNTR" sampleGroup="LTR_GBE_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="6">
+			<TELI:description>LTR Blocker Counter for GbE LAN</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>LTR_GBE_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_SPA_BLK_CNTR" sampleGroup="LTR_SPA_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="7">
+			<TELI:description>LTR Blocker Counter for SPA/PXPA</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_3</sampleGroupIDREF>
+					<sampleIDREF>LTR_SPA_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_LPSS_BLK_CNTR" sampleGroup="LTR_LPSS_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="8">
+			<TELI:description>LTR Blocker Counter for LPSS</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>LTR_LPSS_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_OSSE_BLK_CNTR" sampleGroup="LTR_OSSE_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="9">
+			<TELI:description>LTR Blocker Counter for OSSE</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_4</sampleGroupIDREF>
+					<sampleIDREF>LTR_OSSE_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_CSE_BLK_CNTR" sampleGroup="LTR_CSE_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="10">
+			<TELI:description>LTR Blocker Counter for CSE</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>LTR_CSE_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_ISH_BLK_CNTR" sampleGroup="LTR_ISH_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="11">
+			<TELI:description>LTR Blocker Counter for ISH</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_5</sampleGroupIDREF>
+					<sampleIDREF>LTR_ISH_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_THC1_BLK_CNTR" sampleGroup="LTR_THC1_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="12">
+			<TELI:description>LTR Blocker Counter for THC1</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
+					<sampleIDREF>LTR_THC1_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_PG5_PMA0_BLK_CNTR" sampleGroup="LTR_PG5_PMA0_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="13">
+			<TELI:description>LTR Blocker Counter for PXP Gen5 PMA0</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_6</sampleGroupIDREF>
+					<sampleIDREF>LTR_PG5_PMA0_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_TCSS_BLK_CNTR" sampleGroup="LTR_TCSS_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="14">
+			<TELI:description>LTR Blocker Counter for TCSS</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
+					<sampleIDREF>LTR_TCSS_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_PCH_PMC_IOE_BLK_CNTR" sampleGroup="LTR_PCH_PMC_IOE_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="15">
+			<TELI:description>LTR Blocker Counter for PCH_PMC_IOE</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_7</sampleGroupIDREF>
+					<sampleIDREF>LTR_PCH_PMC_IOE_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_CNVI_BT_BLK_CNTR" sampleGroup="LTR_CNVI_BT_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="16">
+			<TELI:description>LTR Blocker Counter for for CNVI_BT</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>LTR_CNVI_BT_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_PG5_PMA1_BLK_CNTR" sampleGroup="LTR_PG5_PMA1_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="17">
+			<TELI:description>LTR Blocker Counter for PXP Gen5 PMA1</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_8</sampleGroupIDREF>
+					<sampleIDREF>LTR_PG5_PMA1_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_PG5_PMA2_BLK_CNTR" sampleGroup="LTR_PG5_PMA2_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="18">
+			<TELI:description>LTR Blocker Counter for PXP Gen5 PMA2</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>LTR_PG5_PMA2_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_CNVI_WIFI_BLK_CNTR" sampleGroup="LTR_CNVI_WIFI_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="19">
+			<TELI:description>LTR Blocker Counter for CNVI_WIFI</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_9</sampleGroupIDREF>
+					<sampleIDREF>LTR_CNVI_WIFI_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_ACE_BLK_CNTR" sampleGroup="LTR_ACE_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="20">
+			<TELI:description>LTR Blocker Counter for ACE</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>LTR_ACE_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+		<TELI:T_AggregatorSample sampleName="LTR_THC0_BLK_CNTR" sampleGroup="LTR_THC0_BLK_CNTR" datatypeIDREF="tpch_ltr_time_s" sampleID="21">
+			<TELI:description>LTR Blocker Counter for THC0</TELI:description>
+			<TELI:SampleType>Counter</TELI:SampleType>
+			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
+				<TransFormInput varName="parameter_0">
+					<sampleGroupIDREF>Container_10</sampleGroupIDREF>
+					<sampleIDREF>LTR_THC0_BLK_CNTR</sampleIDREF>
+				</TransFormInput>
+			</TransFormInputs>
+			<TELI:transformREF>pch_ltr_time_s</TELI:transformREF>
+		</TELI:T_AggregatorSample>
+	</TELI:AggregatorSamples>
+</TELI:AggregatorInterface>
