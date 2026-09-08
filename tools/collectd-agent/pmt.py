@@ -8,8 +8,11 @@
     When run stand-alone, it reports to standard output.
 """
 
+import ast
 import copy
 import json
+import math
+import operator
 import platform
 import re
 import sys
@@ -18,7 +21,6 @@ from urllib.parse import urlparse
 from mimetypes import guess_type
 from os import path, listdir
 from pathlib import Path
-import math
 from lxml import etree
 import argparse
 
@@ -734,20 +736,74 @@ class PmtPlugin:
 
     @staticmethod
     def safe_eval(eqts):
-        """The safe_eval utility is to clean up accepted math equation statement,
-        any left over is considered harmful and should not be executed as security precaution."""
-
-        math_names = {
-            k: v for k, v in math.__dict__.items() if not k.startswith("__")
+        """Evaluate an arithmetic expression without executing Python code."""
+        max_expression_length = 4096
+        max_ast_nodes = 128
+        max_integer_bits = 256
+        max_exponent = 64
+        max_shift = 63
+        binary_operators = {
+            ast.Add: operator.add,
+            ast.Sub: operator.sub,
+            ast.Mult: operator.mul,
+            ast.Div: operator.truediv,
+            ast.Pow: operator.pow,
+            ast.BitOr: operator.or_,
+            ast.BitAnd: operator.and_,
+            ast.BitXor: operator.xor,
+            ast.LShift: operator.lshift,
+            ast.RShift: operator.rshift,
+        }
+        unary_operators = {
+            ast.UAdd: operator.pos,
+            ast.USub: operator.neg,
+            ast.Invert: operator.invert,
         }
 
-        code = compile(eqts.strip(), "<string>", "eval")
-        harmful_input = [name for name in code.co_names if name not in math_names]
+        if not isinstance(eqts, str) or len(eqts) > max_expression_length:
+            raise ValueError("Invalid equation", eqts)
 
-        if len(harmful_input) != 0:
-            raise ValueError("Malicious equation", eqts)
+        expression = ast.parse(eqts.strip(), mode="eval")
+        if sum(1 for _ in ast.walk(expression)) > max_ast_nodes:
+            raise ValueError("Equation is too complex", eqts)
 
-        return eval(eqts, {"__builtins__": {}}, math_names)
+        def evaluate(node):
+            if isinstance(node, ast.Expression):
+                return evaluate(node.body)
+            if isinstance(node, ast.Constant):
+                if type(node.value) not in (int, float):
+                    raise ValueError("Invalid constant", eqts)
+                result = node.value
+            elif isinstance(node, ast.BinOp) and type(node.op) in binary_operators:
+                left = evaluate(node.left)
+                right = evaluate(node.right)
+                if isinstance(node.op, ast.Pow):
+                    if abs(right) > max_exponent:
+                        raise ValueError("Exponent is out of range", eqts)
+                    if type(left) is int and type(right) is int and right >= 0:
+                        if left.bit_length() * right > max_integer_bits:
+                            raise ValueError("Power result is out of range", eqts)
+                elif isinstance(node.op, (ast.LShift, ast.RShift)):
+                    if type(right) is not int or not 0 <= right <= max_shift:
+                        raise ValueError("Shift is out of range", eqts)
+                    if isinstance(node.op, ast.LShift):
+                        if left.bit_length() + right > max_integer_bits:
+                            raise ValueError("Shift result is out of range", eqts)
+                result = binary_operators[type(node.op)](left, right)
+            elif isinstance(node, ast.UnaryOp) and type(node.op) in unary_operators:
+                result = unary_operators[type(node.op)](evaluate(node.operand))
+            else:
+                raise ValueError("Invalid operation", eqts)
+
+            if type(result) is int and result.bit_length() > max_integer_bits:
+                raise ValueError("Integer result is out of range", eqts)
+            if type(result) is float and not math.isfinite(result):
+                raise ValueError("Non-finite result", eqts)
+            if type(result) not in (int, float):
+                raise ValueError("Invalid result", eqts)
+            return result
+
+        return evaluate(expression)
 
     def get_telem_sample(self, sample_spec, buf):
         """Function get_telem_sample slices bits from buffer buf at the container offset
