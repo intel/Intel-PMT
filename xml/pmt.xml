@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2026-09-10</lastupdated>
+	<lastupdated>2025-02-20</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -66,19 +66,7 @@
 			<status>alpha</status>
 			<description>Granite Rapids OOBMSM RMID Telemetry samples definition and transformation rules</description>
 			<xmlset>
-				<basedir>GNR/OOBMSM/RMID/rev0</basedir>
-				<prefix>gnr</prefix>
-				<common>gnr_common.xml</common>
-				<aggregator>gnr_aggregator.xml</aggregator>
-				<aggregatorinterface>gnr_aggregator_interface.xml</aggregatorinterface>
-			</xmlset>
-		</mapping>
-		<mapping guid="0x477e9374" size="12304">
-			<lastupdated>2026-09-10</lastupdated>
-			<status>alpha</status>
-			<description>Granite Rapids OOBMSM RMID Telemetry samples definition and transformation rules</description>
-			<xmlset>
-				<basedir>GNR/OOBMSM/RMID/rev1</basedir>
+				<basedir>GNR/OOBMSM/RMID</basedir>
 				<prefix>gnr</prefix>
 				<common>gnr_common.xml</common>
 				<aggregator>gnr_aggregator.xml</aggregator>
