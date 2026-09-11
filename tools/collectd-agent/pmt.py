@@ -8,8 +8,11 @@
     When run stand-alone, it reports to standard output.
 """
 
+import ast
 import copy
 import json
+import math
+import operator
 import platform
 import re
 import sys
@@ -18,7 +21,6 @@ from urllib.parse import urlparse
 from mimetypes import guess_type
 from os import path, listdir
 from pathlib import Path
-import math
 from lxml import etree
 import argparse
 
@@ -451,6 +453,11 @@ class PmtXmlParser:
                 f"GUID mismatched: expecting {guid} found {detected_guid}", file=sys.stderr)
             return ret
 
+        for transformation in trans.values():
+            equation = transformation['transform'].replace("$", "")
+            parameters = set(transformation['TransFormParameters'])
+            transformation['expression'] = PmtPlugin.prepare_safe_expression(equation, parameters)
+
         ret[guid]["lastupdated"] = rev_date
         ret[guid]['samples'] = samp_groups
         ret[guid]['datatypes'] = datatypes
@@ -537,6 +544,29 @@ class PmtPlugin:
 
     LOG_INFO = 1
     LOG_ERROR = 2
+
+    MAX_EXPRESSION_LENGTH = 4096
+    MAX_AST_NODES = 128
+    MAX_INTEGER_BITS = 256
+    MAX_EXPONENT = 64
+    MAX_SHIFT = 63
+    BINARY_OPERATORS = {
+        ast.Add: operator.add,
+        ast.Sub: operator.sub,
+        ast.Mult: operator.mul,
+        ast.Div: operator.truediv,
+        ast.Pow: operator.pow,
+        ast.BitOr: operator.or_,
+        ast.BitAnd: operator.and_,
+        ast.BitXor: operator.xor,
+        ast.LShift: operator.lshift,
+        ast.RShift: operator.rshift,
+    }
+    UNARY_OPERATORS = {
+        ast.UAdd: operator.pos,
+        ast.USub: operator.neg,
+        ast.Invert: operator.invert,
+    }
 
     def __init__(self, mode=AGENT, conf_url='', interval=5, allowlist=[]):
         self.conf = {}
@@ -733,21 +763,82 @@ class PmtPlugin:
         return True
 
     @staticmethod
+    def prepare_safe_expression(eqts, parameters=None):
+        """Parse and validate an arithmetic expression for repeated evaluation."""
+        parameters = set() if parameters is None else parameters
+        if not isinstance(eqts, str) or len(eqts) > PmtPlugin.MAX_EXPRESSION_LENGTH:
+            raise ValueError("Invalid equation", eqts)
+
+        expression = ast.parse(eqts.strip(), mode="eval")
+        if sum(1 for _ in ast.walk(expression)) > PmtPlugin.MAX_AST_NODES:
+            raise ValueError("Equation is too complex", eqts)
+
+        for node in ast.walk(expression):
+            if isinstance(node, ast.Constant):
+                if type(node.value) not in (int, float):
+                    raise ValueError("Invalid constant", eqts)
+            elif isinstance(node, ast.Name):
+                if node.id not in parameters:
+                    raise ValueError("Invalid parameter", eqts)
+            elif isinstance(node, ast.BinOp):
+                if type(node.op) not in PmtPlugin.BINARY_OPERATORS:
+                    raise ValueError("Invalid operation", eqts)
+            elif isinstance(node, ast.UnaryOp):
+                if type(node.op) not in PmtPlugin.UNARY_OPERATORS:
+                    raise ValueError("Invalid operation", eqts)
+            elif not isinstance(node, (ast.Expression, ast.Load, tuple(PmtPlugin.BINARY_OPERATORS),
+                                       tuple(PmtPlugin.UNARY_OPERATORS))):
+                raise ValueError("Invalid operation", eqts)
+
+        return expression
+
+    @staticmethod
+    def evaluate_safe_expression(expression, values, eqts):
+        """Evaluate a prevalidated arithmetic expression with parameter values."""
+
+        def evaluate(node):
+            if isinstance(node, ast.Expression):
+                return evaluate(node.body)
+            if isinstance(node, ast.Name):
+                result = values[node.id]
+            elif isinstance(node, ast.Constant):
+                result = node.value
+            elif isinstance(node, ast.BinOp) and type(node.op) in PmtPlugin.BINARY_OPERATORS:
+                left = evaluate(node.left)
+                right = evaluate(node.right)
+                if isinstance(node.op, ast.Pow):
+                    if abs(right) > PmtPlugin.MAX_EXPONENT:
+                        raise ValueError("Exponent is out of range", eqts)
+                    if type(left) is int and type(right) is int and right >= 0:
+                        if left.bit_length() * right > PmtPlugin.MAX_INTEGER_BITS:
+                            raise ValueError("Power result is out of range", eqts)
+                elif isinstance(node.op, (ast.LShift, ast.RShift)):
+                    if type(right) is not int or not 0 <= right <= PmtPlugin.MAX_SHIFT:
+                        raise ValueError("Shift is out of range", eqts)
+                    if isinstance(node.op, ast.LShift):
+                        if left.bit_length() + right > PmtPlugin.MAX_INTEGER_BITS:
+                            raise ValueError("Shift result is out of range", eqts)
+                result = PmtPlugin.BINARY_OPERATORS[type(node.op)](left, right)
+            elif isinstance(node, ast.UnaryOp) and type(node.op) in PmtPlugin.UNARY_OPERATORS:
+                result = PmtPlugin.UNARY_OPERATORS[type(node.op)](evaluate(node.operand))
+            else:
+                raise ValueError("Invalid operation", eqts)
+
+            if type(result) is int and result.bit_length() > PmtPlugin.MAX_INTEGER_BITS:
+                raise ValueError("Integer result is out of range", eqts)
+            if type(result) is float and not math.isfinite(result):
+                raise ValueError("Non-finite result", eqts)
+            if type(result) not in (int, float):
+                raise ValueError("Invalid result", eqts)
+            return result
+
+        return evaluate(expression)
+
+    @staticmethod
     def safe_eval(eqts):
-        """The safe_eval utility is to clean up accepted math equation statement,
-        any left over is considered harmful and should not be executed as security precaution."""
-
-        math_names = {
-            k: v for k, v in math.__dict__.items() if not k.startswith("__")
-        }
-
-        code = compile(eqts.strip(), "<string>", "eval")
-        harmful_input = [name for name in code.co_names if name not in math_names]
-
-        if len(harmful_input) != 0:
-            raise ValueError("Malicious equation", eqts)
-
-        return eval(eqts, {"__builtins__": {}}, math_names)
+        """Evaluate an arithmetic expression without executing Python code."""
+        expression = PmtPlugin.prepare_safe_expression(eqts)
+        return PmtPlugin.evaluate_safe_expression(expression, {}, eqts)
 
     def get_telem_sample(self, sample_spec, buf):
         """Function get_telem_sample slices bits from buffer buf at the container offset
@@ -819,17 +910,16 @@ class PmtPlugin:
             t['transform_name'] = tm['transformREF']
             # initial transformation
             tf = tt['transform'].replace("$", "")
-            tv = tf
+            values = {}
             for p in tm['inputs']:
                 sn = tm['inputs'][p]
                 tf = tf.replace(p, sn)
-                tv = tv.replace(p, str(parsed_samples[sn]))
+                values[p] = parsed_samples[sn]
             t['inputs'] = tm['inputs']
             t['transform_formula'] = tf
-            t['transform_value'] = tv
 
             try:
-                t['value'] = self.safe_eval(tv)
+                t['value'] = self.evaluate_safe_expression(tt['expression'], values, tt['transform'])
             except Exception:
                 # Ignore failed equation evaluations
                 continue
