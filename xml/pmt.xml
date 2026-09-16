@@ -709,5 +709,17 @@
 				<aggregatorinterface>nvl_pch_LTR_STS_C2P2_aggregator_interface.xml</aggregatorinterface>
 			</xmlset>
 		</mapping>
+		<mapping guid="0x47903099" size="4120">
+			<lastupdated>2026-09-14</lastupdated>
+			<status>production</status>
+			<description>Diamond Rapids OOBMSM Core RMID Energy Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>DMR/OOBMSM/RMID-ENERGY</basedir>
+				<prefix>dmr</prefix>
+				<common>dmr_common.xml</common>
+				<aggregator>dmr_aggregator.xml</aggregator>
+				<aggregatorinterface>dmr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
 	</mappings>
 </pmt>

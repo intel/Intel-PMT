@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TELC:DataTypes xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/common telemetry_common.xsd">
+
+	<TELC:dataType name="tactivity" datatypeID="tactivity">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="nanofarad">
+				<TELC:symbol>nF</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U63.45.18</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tagg_data_loss_count" datatypeID="tagg_data_loss_count">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tcrystal_tsc_timestamp" datatypeID="tcrystal_tsc_timestamp">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tenergy" datatypeID="tenergy">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="joule">
+				<TELC:symbol>J</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U63.45.18</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tcounter_valid" datatypeID="tcounter_valid">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>VALID</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>VALID</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Associated counter reading is valid</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>INVALID</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>INVALID</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Associated counter reading is invalid</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="tstring" datatypeID="tstring">
+		<TELC:dataclass>string</TELC:dataclass>
+	</TELC:dataType>
+</TELC:DataTypes>
