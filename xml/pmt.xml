@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2026-09-10</lastupdated>
+	<lastupdated>2026-09-17</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -715,6 +715,18 @@
 			<description>Diamond Rapids OOBMSM Core RMID Energy Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>DMR/OOBMSM/RMID-ENERGY</basedir>
+				<prefix>dmr</prefix>
+				<common>dmr_common.xml</common>
+				<aggregator>dmr_aggregator.xml</aggregator>
+				<aggregatorinterface>dmr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x1415910a" size="8216">
+			<lastupdated>2026-09-17</lastupdated>
+			<status>production</status>
+			<description>Diamond Rapids OOBMSM Core RMID Performance Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>DMR/OOBMSM/RMID-PERF</basedir>
 				<prefix>dmr</prefix>
 				<common>dmr_common.xml</common>
 				<aggregator>dmr_aggregator.xml</aggregator>
