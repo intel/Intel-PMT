@@ -7,6 +7,13 @@
 	<TELC:dataType name="tagg_data_loss_count" datatypeID="tagg_data_loss_count">
 		<TELC:dataclass>counter</TELC:dataclass>
 	</TELC:dataType>
+	<TELC:dataType name="tcdyn_level_res" datatypeID="tcdyn_level_res">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="microsecond">
+				<TELC:symbol>us</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
 	<TELC:dataType name="tcore_time" datatypeID="tcore_time">
 		<TELC:dataclass>counter</TELC:dataclass>
 			<TELC:units name="second">
@@ -51,7 +58,7 @@
 	</TELC:dataType>
 	<TELC:dataType name="ttemperature" datatypeID="ttemperature">
 		<TELC:dataclass>status</TELC:dataclass>
-			<TELC:units name="celcius">
+			<TELC:units name="celsius">
 				<TELC:symbol>C</TELC:symbol>
 			</TELC:units>
 		<TELC:format>S16.15.1</TELC:format>

@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2026-09-17</lastupdated>
+	<lastupdated>2026-10-07</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -50,8 +50,8 @@
 			</xmlset>
 		</mapping>
 		<mapping guid="0x22473996" size="14496">
-			<lastupdated>2024-07-18</lastupdated>
-			<status>alpha</status>
+			<lastupdated>2026-10-07</lastupdated>
+			<status>production</status>
 			<description>Granite Rapids OOBMSM Core Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>GNR/OOBMSM/CORE</basedir>
