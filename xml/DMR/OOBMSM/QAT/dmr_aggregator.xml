@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Aggregator [<!ENTITY otherfile SYSTEM "dmr_common.xml">]>
+<TELEM:Aggregator xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xmlns:TELEM="http://schemas.intel.com/telemetry/base/aggregator"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/aggregator telemetryAggregator.xsd">
+
+	<TELC:DataTypesInclude>&otherfile;</TELC:DataTypesInclude>
+	<TELEM:name>dmr</TELEM:name>
+	<TELEM:description>Diamond Rapids OOBMSM QAT Accelerator Telemetry samples definition and transformation rules</TELEM:description>
+	<TELEM:uniqueid>13693726</TELEM:uniqueid>
+	<TELEM:productid>dmr</TELEM:productid>
+	<TELEM:address>0</TELEM:address>
+
+	<TELEM:SampleGroup name="Container_0" sampleID="0" sampleGroupID="Container_0">
+		<TELC:description>Groupname 0x0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_TL_PRT_TRANS_CNT" datatypeIDREF="tqat_counter" sampleID="QAT0_TL_PRT_TRANS_CNT">
+			<TELC:description>Count of PCIe partial transactions across all rings of QAT device 0. Counts write splits at maximum payload size or 4 KB boundaries and read splits at maximum read request size or 4 KB boundaries.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_PRT_TRANS_CNT_MAX_RD_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT0_TL_MAX_RD_LAT" datatypeIDREF="tqat_latency" sampleID="QAT0_TL_MAX_RD_LAT">
+			<TELC:description>Maximum read latency across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_PRT_TRANS_CNT_MAX_RD_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_1" sampleID="1" sampleGroupID="Container_1">
+		<TELC:description>Groupname 0x8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_TL_RD_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="QAT0_TL_RD_LAT_ACC">
+			<TELC:description>Read latency accumulator for QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_RD_LAT_ACC</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_2" sampleID="2" sampleGroupID="Container_2">
+		<TELC:description>Groupname 0x10</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_TL_RD_CMPL_CNT" datatypeIDREF="tqat_counter" sampleID="QAT0_TL_RD_CMPL_CNT">
+			<TELC:description>Count of read transactions across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_RD_CMPL_CNT_MAX_GP_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT0_TL_MAX_GP_LAT" datatypeIDREF="tqat_latency" sampleID="QAT0_TL_MAX_GP_LAT">
+			<TELC:description>Maximum get-to-put latency across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_RD_CMPL_CNT_MAX_GP_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_3" sampleID="3" sampleGroupID="Container_3">
+		<TELC:description>Groupname 0x18</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_TL_GP_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="QAT0_TL_GP_LAT_ACC">
+			<TELC:description>Get-to-put latency accumulator across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_GP_LAT_ACC</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_4" sampleID="4" sampleGroupID="Container_4">
+		<TELC:description>Groupname 0x20</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_TL_ME_PUT_CNT" datatypeIDREF="tqat_counter" sampleID="QAT0_TL_ME_PUT_CNT">
+			<TELC:description>Count of put operations across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_ME_PUT_CNT_BW_IN</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT0_TL_BW_IN" datatypeIDREF="tqat_bandwidth" sampleID="QAT0_TL_BW_IN">
+			<TELC:description>PCIe write bandwidth metric across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_ME_PUT_CNT_BW_IN</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_5" sampleID="5" sampleGroupID="Container_5">
+		<TELC:description>Groupname 0x28</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_TL_BW_OUT" datatypeIDREF="tqat_bandwidth" sampleID="QAT0_TL_BW_OUT">
+			<TELC:description>PCIe read bandwidth metric across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_BW_OUT_AT_PAGE_REQ_CNT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT0_TL_AT_PAGE_REQ_CNT" datatypeIDREF="tqat_counter" sampleID="QAT0_TL_AT_PAGE_REQ_CNT">
+			<TELC:description>Count of page requests across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_BW_OUT_AT_PAGE_REQ_CNT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_6" sampleID="6" sampleGroupID="Container_6">
+		<TELC:description>Groupname 0x30</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_TL_AT_PAGE_REQ_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="QAT0_TL_AT_PAGE_REQ_LAT_ACC">
+			<TELC:description>Page-request latency accumulator across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_AT_PAGE_REQ_LAT_ACC</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_7" sampleID="7" sampleGroupID="Container_7">
+		<TELC:description>Groupname 0x38</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_TL_AT_TRANS_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="QAT0_TL_AT_TRANS_LAT_ACC">
+			<TELC:description>Translation latency accumulator across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_AT_TRANS_LAT_ACC</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_8" sampleID="8" sampleGroupID="Container_8">
+		<TELC:description>Groupname 0x40</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_TL_AT_TRANS_LAT_CNT" datatypeIDREF="tqat_counter" sampleID="QAT0_TL_AT_TRANS_LAT_CNT">
+			<TELC:description>Translation latency count across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_AT_TRANS_LAT_CNT_MAX_UTLB_USED</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT0_TL_AT_MAX_UTLB_USED" datatypeIDREF="tqat_max_utlb_used" sampleID="QAT0_TL_AT_MAX_UTLB_USED">
+			<TELC:description>Maximum reported uTLB usage for QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_TL_AT_TRANS_LAT_CNT_MAX_UTLB_USED</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_9" sampleID="9" sampleGroupID="Container_9">
+		<TELC:description>Groupname 0x48</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_AVG_RD_LAT" datatypeIDREF="tqat_latency" sampleID="QAT0_AVG_RD_LAT">
+			<TELC:description>Average read latency across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_AVG_RD_LAT_GP_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT0_AVG_GP_LAT" datatypeIDREF="tqat_latency" sampleID="QAT0_AVG_GP_LAT">
+			<TELC:description>Average get-to-put latency across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_AVG_RD_LAT_GP_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_10" sampleID="10" sampleGroupID="Container_10">
+		<TELC:description>Groupname 0x50</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT0_AVG_PAGE_REQ_LAT" datatypeIDREF="tqat_latency" sampleID="QAT0_AVG_PAGE_REQ_LAT">
+			<TELC:description>Average page-request latency across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_AVG_PAGE_REQ_LAT_TRANS_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT0_AVG_TRANS_LAT" datatypeIDREF="tqat_latency" sampleID="QAT0_AVG_TRANS_LAT">
+			<TELC:description>Average translation latency across all rings of QAT device 0.</TELC:description>
+			<TELC:sampleSubGroup>QAT0_AVG_PAGE_REQ_LAT_TRANS_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_11" sampleID="11" sampleGroupID="Container_11">
+		<TELC:description>Groupname 0x58</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_TL_PRT_TRANS_CNT" datatypeIDREF="tqat_counter" sampleID="QAT1_TL_PRT_TRANS_CNT">
+			<TELC:description>Count of PCIe partial transactions across all rings of QAT device 1. Counts write splits at maximum payload size or 4 KB boundaries and read splits at maximum read request size or 4 KB boundaries.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_PRT_TRANS_CNT_MAX_RD_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT1_TL_MAX_RD_LAT" datatypeIDREF="tqat_latency" sampleID="QAT1_TL_MAX_RD_LAT">
+			<TELC:description>Maximum read latency across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_PRT_TRANS_CNT_MAX_RD_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_12" sampleID="12" sampleGroupID="Container_12">
+		<TELC:description>Groupname 0x60</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_TL_RD_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="QAT1_TL_RD_LAT_ACC">
+			<TELC:description>Read latency accumulator for QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_RD_LAT_ACC</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_13" sampleID="13" sampleGroupID="Container_13">
+		<TELC:description>Groupname 0x68</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_TL_RD_CMPL_CNT" datatypeIDREF="tqat_counter" sampleID="QAT1_TL_RD_CMPL_CNT">
+			<TELC:description>Count of read transactions across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_RD_CMPL_CNT_MAX_GP_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT1_TL_MAX_GP_LAT" datatypeIDREF="tqat_latency" sampleID="QAT1_TL_MAX_GP_LAT">
+			<TELC:description>Maximum get-to-put latency across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_RD_CMPL_CNT_MAX_GP_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_14" sampleID="14" sampleGroupID="Container_14">
+		<TELC:description>Groupname 0x70</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_TL_GP_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="QAT1_TL_GP_LAT_ACC">
+			<TELC:description>Get-to-put latency accumulator across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_GP_LAT_ACC</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_15" sampleID="15" sampleGroupID="Container_15">
+		<TELC:description>Groupname 0x78</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_TL_ME_PUT_CNT" datatypeIDREF="tqat_counter" sampleID="QAT1_TL_ME_PUT_CNT">
+			<TELC:description>Count of put operations across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_ME_PUT_CNT_BW_IN</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT1_TL_BW_IN" datatypeIDREF="tqat_bandwidth" sampleID="QAT1_TL_BW_IN">
+			<TELC:description>PCIe write bandwidth metric across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_ME_PUT_CNT_BW_IN</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_16" sampleID="16" sampleGroupID="Container_16">
+		<TELC:description>Groupname 0x80</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_TL_BW_OUT" datatypeIDREF="tqat_bandwidth" sampleID="QAT1_TL_BW_OUT">
+			<TELC:description>PCIe read bandwidth metric across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_BW_OUT_AT_PAGE_REQ_CNT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT1_TL_AT_PAGE_REQ_CNT" datatypeIDREF="tqat_counter" sampleID="QAT1_TL_AT_PAGE_REQ_CNT">
+			<TELC:description>Count of page requests across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_BW_OUT_AT_PAGE_REQ_CNT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_17" sampleID="17" sampleGroupID="Container_17">
+		<TELC:description>Groupname 0x88</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_TL_AT_PAGE_REQ_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="QAT1_TL_AT_PAGE_REQ_LAT_ACC">
+			<TELC:description>Page-request latency accumulator across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_AT_PAGE_REQ_LAT_ACC</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_18" sampleID="18" sampleGroupID="Container_18">
+		<TELC:description>Groupname 0x90</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_TL_AT_TRANS_LAT_ACC" datatypeIDREF="tqat_latency_acc" sampleID="QAT1_TL_AT_TRANS_LAT_ACC">
+			<TELC:description>Translation latency accumulator across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_AT_TRANS_LAT_ACC</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>64</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_19" sampleID="19" sampleGroupID="Container_19">
+		<TELC:description>Groupname 0x98</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_TL_AT_TRANS_LAT_CNT" datatypeIDREF="tqat_counter" sampleID="QAT1_TL_AT_TRANS_LAT_CNT">
+			<TELC:description>Translation latency count across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_AT_TRANS_LAT_CNT_MAX_UTLB_USED</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT1_TL_AT_MAX_UTLB_USED" datatypeIDREF="tqat_max_utlb_used" sampleID="QAT1_TL_AT_MAX_UTLB_USED">
+			<TELC:description>Maximum reported uTLB usage for QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_TL_AT_TRANS_LAT_CNT_MAX_UTLB_USED</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_20" sampleID="20" sampleGroupID="Container_20">
+		<TELC:description>Groupname 0xa0</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_AVG_RD_LAT" datatypeIDREF="tqat_latency" sampleID="QAT1_AVG_RD_LAT">
+			<TELC:description>Average read latency across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_AVG_RD_LAT_GP_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT1_AVG_GP_LAT" datatypeIDREF="tqat_latency" sampleID="QAT1_AVG_GP_LAT">
+			<TELC:description>Average get-to-put latency across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_AVG_RD_LAT_GP_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+	<TELEM:SampleGroup name="Container_21" sampleID="21" sampleGroupID="Container_21">
+		<TELC:description>Groupname 0xa8</TELC:description>
+		<TELC:length>64</TELC:length>
+		<TELC:sample name="QAT1_AVG_PAGE_REQ_LAT" datatypeIDREF="tqat_latency" sampleID="QAT1_AVG_PAGE_REQ_LAT">
+			<TELC:description>Average page-request latency across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_AVG_PAGE_REQ_LAT_TRANS_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>0</TELC:lsb>
+			<TELC:msb>31</TELC:msb>
+		</TELC:sample>
+		<TELC:sample name="QAT1_AVG_TRANS_LAT" datatypeIDREF="tqat_latency" sampleID="QAT1_AVG_TRANS_LAT">
+			<TELC:description>Average translation latency across all rings of QAT device 1.</TELC:description>
+			<TELC:sampleSubGroup>QAT1_AVG_PAGE_REQ_LAT_TRANS_LAT</TELC:sampleSubGroup>
+			<TELC:sampleType>Snapshot</TELC:sampleType>
+			<TELC:size>32</TELC:size>
+			<TELC:lsb>32</TELC:lsb>
+			<TELC:msb>63</TELC:msb>
+		</TELC:sample>
+	</TELEM:SampleGroup>
+</TELEM:Aggregator>

@@ -15,7 +15,7 @@
 			<TransFormParameters>
 				<parameterName>parameter_0</parameterName>
 			</TransFormParameters>
-			<transform>( $parameter_0 &amp; 0x7fffffffffffffff ) / ( 2**18 ) </transform>
+			<transform>$parameter_0 / ( 2**18 ) </transform>
 		</TransFormation>
 		<TransFormation name="passthru" transformID="passthru">
 			<output_dataclass>integer</output_dataclass>
@@ -31,7 +31,7 @@
 	<TELI:uniqueid>47903099</TELI:uniqueid>
 	<TELI:NDA>Public</TELI:NDA>
 	<TELI:samplePeriod>10</TELI:samplePeriod>
-	<TELI:revisionDate>2026-04-17</TELI:revisionDate>
+	<TELI:revisionDate>2026-10-09</TELI:revisionDate>
 	<TELI:AggregatorSamples>
 		<TELI:T_AggregatorSample sampleName="RMID_0_CORE_ENERGY" sampleGroup="RMID_0_CORE_ENERGY" datatypeIDREF="tenergy" sampleID="0">
 			<TELI:description>Accumulated core energy usage for all cores running RMID 0</TELI:description>
