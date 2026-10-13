@@ -332,7 +332,7 @@
 	<TELI:uniqueid>0x13000001</TELI:uniqueid>
 	<TELI:NDA>Public</TELI:NDA>
 	<TELI:samplePeriod>10</TELI:samplePeriod>
-	<TELI:revisionDate>2026-08-11</TELI:revisionDate>
+	<TELI:revisionDate>2026-10-13</TELI:revisionDate>
 	<TELI:AggregatorSamples>
 		<TELI:T_AggregatorSample sampleName="VPU_MEMORY_TRAFFIC" sampleGroup="VPU_MEMORY_TRAFFIC" datatypeIDREF="tbw_1024B" sampleID="0">
 			<TELI:description>Total number of KiB (1024 bytes) transferred by the NPU since the last NPU Driver reload or NPU Cold Boot. This is the combined read and write traffic counter for the NPU in units of 1024 bytes.</TELI:description>
@@ -1830,49 +1830,49 @@
 			</TransFormInputs>
 			<TELI:transformREF>U16.12.4</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="reserved_V0" sampleGroup="RESERVED_SAMPLE_T" datatypeIDREF="tgeneric_sample" sampleID="136">
-			<TELI:description>reserved</TELI:description>
+		<TELI:T_AggregatorSample sampleName="VCCSA_TEMP" sampleGroup="VR_TEMPERATURE" datatypeIDREF="tvr_temp" sampleID="136">
+			<TELI:description>Current temperature from VCCSA SVID VR.</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_58</sampleGroupIDREF>
-					<sampleIDREF>reserved_V0</sampleIDREF>
+					<sampleIDREF>VCCSA_TEMP</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>generic_sample</TELI:transformREF>
+			<TELI:transformREF>U8.8.0</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="reserved_V1" sampleGroup="RESERVED_SAMPLE_T" datatypeIDREF="tgeneric_sample" sampleID="137">
-			<TELI:description>reserved</TELI:description>
+		<TELI:T_AggregatorSample sampleName="VCCLPATOM_TEMP" sampleGroup="VR_TEMPERATURE" datatypeIDREF="tvr_temp" sampleID="137">
+			<TELI:description>Current temperature from VCCLPATOM(HUB atom) SVID VR.</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_58</sampleGroupIDREF>
-					<sampleIDREF>reserved_V1</sampleIDREF>
+					<sampleIDREF>VCCLPATOM_TEMP</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>generic_sample</TELI:transformREF>
+			<TELI:transformREF>U8.8.0</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="reserved_V2" sampleGroup="RESERVED_SAMPLE_T" datatypeIDREF="tgeneric_sample" sampleID="138">
-			<TELI:description>reserved</TELI:description>
+		<TELI:T_AggregatorSample sampleName="VCCIA_TEMP" sampleGroup="VR_TEMPERATURE" datatypeIDREF="tvr_temp" sampleID="138">
+			<TELI:description>Current temperature from VCCIA SVID VR.</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_58</sampleGroupIDREF>
-					<sampleIDREF>reserved_V2</sampleIDREF>
+					<sampleIDREF>VCCIA_TEMP</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>generic_sample</TELI:transformREF>
+			<TELI:transformREF>U8.8.0</TELI:transformREF>
 		</TELI:T_AggregatorSample>
-		<TELI:T_AggregatorSample sampleName="reserved_V3" sampleGroup="RESERVED_SAMPLE_T" datatypeIDREF="tgeneric_sample" sampleID="139">
-			<TELI:description>reserved</TELI:description>
+		<TELI:T_AggregatorSample sampleName="VCCGT_TEMP" sampleGroup="VR_TEMPERATURE" datatypeIDREF="tvr_temp" sampleID="139">
+			<TELI:description>Current temperature from VCCGT SVID VR.</TELI:description>
 			<TELI:SampleType>Snapshot</TELI:SampleType>
 			<TransFormInputs xmlns="http://schemas.intel.com/telemetry/base/common">
 				<TransFormInput varName="parameter_0">
 					<sampleGroupIDREF>Container_58</sampleGroupIDREF>
-					<sampleIDREF>reserved_V3</sampleIDREF>
+					<sampleIDREF>VCCGT_TEMP</sampleIDREF>
 				</TransFormInput>
 			</TransFormInputs>
-			<TELI:transformREF>generic_sample</TELI:transformREF>
+			<TELI:transformREF>U8.8.0</TELI:transformREF>
 		</TELI:T_AggregatorSample>
 		<TELI:T_AggregatorSample sampleName="reserved" sampleGroup="RESERVED_SAMPLE_TH_0" datatypeIDREF="tgeneric_sample" sampleID="140">
 			<TELI:description>reserved</TELI:description>

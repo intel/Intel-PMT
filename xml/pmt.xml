@@ -374,7 +374,7 @@
 			</xmlset>
 		</mapping>
 		<mapping guid="0x13000001" size="4032">
-			<lastupdated>2026-08-11</lastupdated>
+			<lastupdated>2026-10-13</lastupdated>
 			<status>production</status>
 			<description>NVL Normal PMT Telemetry aggregator at Punit samples definition and transformation rules</description>
 			<xmlset>
