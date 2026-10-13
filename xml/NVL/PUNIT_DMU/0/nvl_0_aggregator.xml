@@ -1337,33 +1337,33 @@
 	<TELEM:SampleGroup name="Container_58" sampleID="58" sampleGroupID="Container_58">
 		<TELC:description>Groupname 0x8590</TELC:description>
 		<TELC:length>64</TELC:length>
-		<TELC:sample name="reserved_V0" datatypeIDREF="tgeneric_sample" sampleID="reserved_V0">
-			<TELC:description>reserved</TELC:description>
-			<TELC:sampleSubGroup>RESERVED_SAMPLE_T</TELC:sampleSubGroup>
+		<TELC:sample name="VCCSA_TEMP" datatypeIDREF="tvr_temp" sampleID="VCCSA_TEMP">
+			<TELC:description>Current temperature from VCCSA SVID VR.</TELC:description>
+			<TELC:sampleSubGroup>VR_TEMPERATURE</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
 			<TELC:size>8</TELC:size>
 			<TELC:lsb>0</TELC:lsb>
 			<TELC:msb>7</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="reserved_V1" datatypeIDREF="tgeneric_sample" sampleID="reserved_V1">
-			<TELC:description>reserved</TELC:description>
-			<TELC:sampleSubGroup>RESERVED_SAMPLE_T</TELC:sampleSubGroup>
+		<TELC:sample name="VCCLPATOM_TEMP" datatypeIDREF="tvr_temp" sampleID="VCCLPATOM_TEMP">
+			<TELC:description>Current temperature from VCCLPATOM(HUB atom) SVID VR.</TELC:description>
+			<TELC:sampleSubGroup>VR_TEMPERATURE</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
 			<TELC:size>8</TELC:size>
 			<TELC:lsb>8</TELC:lsb>
 			<TELC:msb>15</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="reserved_V2" datatypeIDREF="tgeneric_sample" sampleID="reserved_V2">
-			<TELC:description>reserved</TELC:description>
-			<TELC:sampleSubGroup>RESERVED_SAMPLE_T</TELC:sampleSubGroup>
+		<TELC:sample name="VCCIA_TEMP" datatypeIDREF="tvr_temp" sampleID="VCCIA_TEMP">
+			<TELC:description>Current temperature from VCCIA SVID VR.</TELC:description>
+			<TELC:sampleSubGroup>VR_TEMPERATURE</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
 			<TELC:size>8</TELC:size>
 			<TELC:lsb>16</TELC:lsb>
 			<TELC:msb>23</TELC:msb>
 		</TELC:sample>
-		<TELC:sample name="reserved_V3" datatypeIDREF="tgeneric_sample" sampleID="reserved_V3">
-			<TELC:description>reserved</TELC:description>
-			<TELC:sampleSubGroup>RESERVED_SAMPLE_T</TELC:sampleSubGroup>
+		<TELC:sample name="VCCGT_TEMP" datatypeIDREF="tvr_temp" sampleID="VCCGT_TEMP">
+			<TELC:description>Current temperature from VCCGT SVID VR.</TELC:description>
+			<TELC:sampleSubGroup>VR_TEMPERATURE</TELC:sampleSubGroup>
 			<TELC:sampleType>Snapshot</TELC:sampleType>
 			<TELC:size>8</TELC:size>
 			<TELC:lsb>24</TELC:lsb>
