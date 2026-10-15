@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2026-10-07</lastupdated>
+	<lastupdated>2026-10-09</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -710,7 +710,7 @@
 			</xmlset>
 		</mapping>
 		<mapping guid="0x47903099" size="4120">
-			<lastupdated>2026-09-14</lastupdated>
+			<lastupdated>2026-10-09</lastupdated>
 			<status>production</status>
 			<description>Diamond Rapids OOBMSM Core RMID Energy Telemetry samples definition and transformation rules</description>
 			<xmlset>
@@ -727,6 +727,30 @@
 			<description>Diamond Rapids OOBMSM Core RMID Performance Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>DMR/OOBMSM/RMID-PERF</basedir>
+				<prefix>dmr</prefix>
+				<common>dmr_common.xml</common>
+				<aggregator>dmr_aggregator.xml</aggregator>
+				<aggregatorinterface>dmr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x13704937" size="3952">
+			<lastupdated>2026-10-09</lastupdated>
+			<status>production</status>
+			<description>Diamond Rapids OOBMSM D2D ULA and IO-CA Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>DMR/OOBMSM/D2D-IO-CA</basedir>
+				<prefix>dmr</prefix>
+				<common>dmr_common.xml</common>
+				<aggregator>dmr_aggregator.xml</aggregator>
+				<aggregatorinterface>dmr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x13693726" size="176">
+			<lastupdated>2026-10-09</lastupdated>
+			<status>production</status>
+			<description>Diamond Rapids OOBMSM QAT Accelerator Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>DMR/OOBMSM/QAT</basedir>
 				<prefix>dmr</prefix>
 				<common>dmr_common.xml</common>
 				<aggregator>dmr_aggregator.xml</aggregator>
