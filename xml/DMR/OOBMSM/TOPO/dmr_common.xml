@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TELC:DataTypes xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/common telemetry_common.xsd">
+
+	<TELC:dataType name="treserved" datatypeID="treserved">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tcores_per_module" datatypeID="tcores_per_module">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tcpuid_family" datatypeID="tcpuid_family">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tcpuid_model" datatypeID="tcpuid_model">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tcpuid_stepping" datatypeID="tcpuid_stepping">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tcpuid_type" datatypeID="tcpuid_type">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tdomain_id" datatypeID="tdomain_id">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tenabled_state" datatypeID="tenabled_state">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>ENABLED</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>ENABLED</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Enabled</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>DISABLED</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>DISABLED</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Disabled</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="tmctp_eid" datatypeID="tmctp_eid">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tminor_stepping" datatypeID="tminor_stepping">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tplatform_id" datatypeID="tplatform_id">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tpmt_die_assoc" datatypeID="tpmt_die_assoc">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>IS_ASSOC</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>IS_ASSOC</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>This PMT object is associated with given die</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>NOT_ASSOC</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>NOT_ASSOC</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>This PMT object is not associated with given die</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="tsocket_id" datatypeID="tsocket_id">
+		<TELC:dataclass>status</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tstring" datatypeID="tstring">
+		<TELC:dataclass>string</TELC:dataclass>
+	</TELC:dataType>
+</TELC:DataTypes>
