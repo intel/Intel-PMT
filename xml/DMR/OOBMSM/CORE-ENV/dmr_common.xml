@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TELC:DataTypes xmlns="http://schemas.intel.com/telemetry/base/1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:TELC="http://schemas.intel.com/telemetry/base/common"
+	xsi:schemaLocation="http://schemas.intel.com/telemetry/base/common telemetry_common.xsd">
+
+	<TELC:dataType name="tagg_data_loss_count" datatypeID="tagg_data_loss_count">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tcore_time" datatypeID="tcore_time">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="second">
+				<TELC:symbol>s</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tcore_usage" datatypeID="tcore_usage">
+		<TELC:dataclass>counter</TELC:dataclass>
+			<TELC:units name="core_usage">
+				<TELC:symbol></TELC:symbol>
+			</TELC:units>
+		<TELC:format>U64.38.26</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tcrystal_tsc_timestamp" datatypeID="tcrystal_tsc_timestamp">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tpvp_throttle_counter" datatypeID="tpvp_throttle_counter">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="treserved" datatypeID="treserved">
+		<TELC:dataclass>counter</TELC:dataclass>
+	</TELC:dataType>
+	<TELC:dataType name="tcore_state" datatypeID="tcore_state">
+		<TELC:dataclass>status</TELC:dataclass>
+		<TELC:enum>
+			<TELC:enum_item>
+				<TELC:name>ENABLED</TELC:name>
+				<TELC:encoding>1</TELC:encoding>
+				<TELC:value>ENABLED</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Enabled</TELC:description>
+			</TELC:enum_item>
+			<TELC:enum_item>
+				<TELC:name>DISABLED</TELC:name>
+				<TELC:encoding>0</TELC:encoding>
+				<TELC:value>DISABLED</TELC:value>
+				<TELC:dataType>string</TELC:dataType>
+				<TELC:description>Disabled</TELC:description>
+			</TELC:enum_item>
+		</TELC:enum>
+	</TELC:dataType>
+	<TELC:dataType name="ttemperature" datatypeID="ttemperature">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="celsius">
+				<TELC:symbol>C</TELC:symbol>
+			</TELC:units>
+		<TELC:format>S16.15.1</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="ttemperature_u8_1" datatypeID="ttemperature_u8_1">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="celsius">
+				<TELC:symbol>C</TELC:symbol>
+			</TELC:units>
+		<TELC:format>U8.1</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tvoltage" datatypeID="tvoltage">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="millivolt">
+				<TELC:symbol>mV</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tfrequency" datatypeID="tfrequency">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="megahertz">
+				<TELC:symbol>MHz</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tcore_current_frequency" datatypeID="tcore_current_frequency">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="megahertz">
+				<TELC:symbol>MHz</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tcore_current_voltage" datatypeID="tcore_current_voltage">
+		<TELC:dataclass>status</TELC:dataclass>
+			<TELC:units name="millivolt">
+				<TELC:symbol>mV</TELC:symbol>
+			</TELC:units>
+		<TELC:format>ANY</TELC:format>
+	</TELC:dataType>
+	<TELC:dataType name="tstring" datatypeID="tstring">
+		<TELC:dataclass>string</TELC:dataclass>
+	</TELC:dataType>
+</TELC:DataTypes>

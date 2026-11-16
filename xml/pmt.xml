@@ -1,5 +1,5 @@
 <pmt>
-	<lastupdated>2026-10-09</lastupdated>
+	<lastupdated>2026-11-16</lastupdated>
 	<mappings>
 		<mapping guid="0x87b6fef1" size="13456">
 			<lastupdated>2022-09-08</lastupdated>
@@ -751,6 +751,42 @@
 			<description>Diamond Rapids OOBMSM QAT Accelerator Telemetry samples definition and transformation rules</description>
 			<xmlset>
 				<basedir>DMR/OOBMSM/QAT</basedir>
+				<prefix>dmr</prefix>
+				<common>dmr_common.xml</common>
+				<aggregator>dmr_aggregator.xml</aggregator>
+				<aggregatorinterface>dmr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x14302515" size="10656">
+			<lastupdated>2026-11-16</lastupdated>
+			<status>production</status>
+			<description>Diamond Rapids OOBMSM Core Environmental Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>DMR/OOBMSM/CORE-ENV</basedir>
+				<prefix>dmr</prefix>
+				<common>dmr_common.xml</common>
+				<aggregator>dmr_aggregator.xml</aggregator>
+				<aggregatorinterface>dmr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x14151486" size="3104">
+			<lastupdated>2026-11-16</lastupdated>
+			<status>production</status>
+			<description>Diamond Rapids OOBMSM Core Performance Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>DMR/OOBMSM/CORE-PERF</basedir>
+				<prefix>dmr</prefix>
+				<common>dmr_common.xml</common>
+				<aggregator>dmr_aggregator.xml</aggregator>
+				<aggregatorinterface>dmr_aggregator_interface.xml</aggregatorinterface>
+			</xmlset>
+		</mapping>
+		<mapping guid="0x47324885" size="104">
+			<lastupdated>2026-11-16</lastupdated>
+			<status>production</status>
+			<description>Diamond Rapids OOBMSM SoC Topology Telemetry samples definition and transformation rules</description>
+			<xmlset>
+				<basedir>DMR/OOBMSM/TOPO</basedir>
 				<prefix>dmr</prefix>
 				<common>dmr_common.xml</common>
 				<aggregator>dmr_aggregator.xml</aggregator>
